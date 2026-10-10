@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Sketching — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Graph Sketching &amp; MC Sign Questions</h2>
+      <p class="section-subtitle">Sketch a parabola and read off the signs.</p>
+
+      <nav class="part-nav">
+        <a href="#part-sketching" class="part-btn">Sketching</a>
+        <a href="#part-mc" class="part-btn">MC Sign Questions</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-sketching">Sketching the Graph</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Order of features</h3>
+          <p>You may follow the following order of features to sketch the graph of a quadratic function:</p>
+          <ol>
+            <li>y-intercept</li>
+            <li>Direction of opening</li>
+            <li>x-intercepts (if any)</li>
+            <li>Vertex (if needed)</li>
+          </ol>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>Sketch the quadratic function <span class="math-inline">y = x² − 3x + 2</span>.</p>
+          <p>Locating the x-intercepts: 1 and 2; y-intercept: 2. Direction: open upwards.</p>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>Sketch the quadratic function <span class="math-inline">y = x² + 4x + 10</span>.</p>
+          <p>y-intercept: 10; direction: open upwards; AOS: <span class="math-inline">x = −2</span>. Since there is no x-intercepts, sub <span class="math-inline">x = −2</span> to find the vertex: <span class="math-inline">(−2, 6)</span>.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-mc">Multiple Choice Questions</h3>
+      <div class="skill-grid">
+
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>The figure shows the graph of <span class="math-inline">y = ax² + bx + c</span>. Which of the following is true?</p>
+          <p>A. <span class="math-inline">a &gt; 0</span>, <span class="math-inline">c &gt; 0</span> and <span class="math-inline">b² &gt; 4ac</span><br />
+             B. <span class="math-inline">a &gt; 0</span>, <span class="math-inline">c &lt; 0</span> and <span class="math-inline">b² &lt; 4ac</span><br />
+             C. <span class="math-inline">a &lt; 0</span>, <span class="math-inline">c &lt; 0</span> and <span class="math-inline">b² &gt; 4ac</span><br />
+             D. <span class="math-inline">a &lt; 0</span>, <span class="math-inline">c &lt; 0</span> and <span class="math-inline">b² &lt; 4ac</span></p>
+          <ol>
+            <li>Open downwards → <span class="math-inline">a &lt; 0</span></li>
+            <li>y-intercept → <span class="math-inline">c &lt; 0</span></li>
+            <li>Two x-intercepts → <span class="math-inline">b² − 4ac &gt; 0</span></li>
+          </ol>
+          <p>P.S. Sign of <em>b</em> can be evaluated in two ways:</p>
+          <ol>
+            <li><span class="math-inline">−b/(2a) &gt; 0 → b &gt; 0</span></li>
+            <li><span class="math-inline">f(x) &lt; 0, b &lt; 0; f(x) &gt; 0, b &gt; 0</span></li>
+          </ol>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>The figure shows the graph of <span class="math-inline">y = a(x − b)²</span>. Which of the following is true?</p>
+          <p>A. <span class="math-inline">a &gt; 0</span> and <span class="math-inline">b &gt; 0</span><br />
+             B. <span class="math-inline">a &gt; 0</span> and <span class="math-inline">b &lt; 0</span><br />
+             C. <span class="math-inline">a &lt; 0</span> and <span class="math-inline">b &gt; 0</span><br />
+             D. <span class="math-inline">a &lt; 0</span> and <span class="math-inline">b &lt; 0</span></p>
+          <ol>
+            <li>Open upwards → <span class="math-inline">a &gt; 0</span></li>
+            <li>Axis of symmetry: <span class="math-inline">x = b &gt; 0</span></li>
+          </ol>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 3</h3>
+          <p>Refer to the graph <span class="math-inline">y = ax² − 2bx + c</span>. Which of the following is true?</p>
+          <p>I. <span class="math-inline">a &lt; 0</span><br />
+             II. <span class="math-inline">c &lt; 0</span><br />
+             III. <span class="math-inline">b &lt; 0</span><br />
+             IV. <span class="math-inline">ac &lt; b²</span></p>
+          <p>A. I and III only</p>
+          <div class="math-block">
+            <span class="math-line">2. y-intercept → c &gt; 0</span>
+            <span class="math-line">3. Axis of symmetry:</span>
+            <span class="math-line indent">x = −(−2b)/(2a) = b/a &gt; 0</span>
+            <span class="math-line">Given that a &lt; 0, which means b &lt; 0</span>
+            <span class="math-line">4. Two x-intercepts:</span>
+            <span class="math-line indent">(−2b)² − 4ac &gt; 0</span>
+            <span class="math-line indent">4b² &gt; 4ac</span>
+            <span class="math-line indent">b² &gt; ac</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 4</h3>
+          <p>Refer to the graph of <span class="math-inline">y = a(x − h)² + k</span>. Which of the following is true?</p>
+          <p>I. <span class="math-inline">a &gt; 0</span><br />
+             II. <span class="math-inline">h &gt; 0</span><br />
+             III. <span class="math-inline">k &lt; 0</span></p>
+          <p>A. I and II only<br />B. I and III only<br />C. II and III only<br />D. I, II and III</p>
+          <ol>
+            <li>Open upwards → <span class="math-inline">a &gt; 0</span></li>
+            <li>Vertex <span class="math-inline">(h, k)</span>, where <em>h</em> is positive and <em>k</em> is negative</li>
+          </ol>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
