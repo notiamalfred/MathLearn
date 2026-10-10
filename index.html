@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathLearn — HKDSE Mathematics Study Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+          </svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )"
+                 autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden
+                  aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Master Mathematics, One Step at a Time</h1>
+      <p>
+        Study quadratic equations, completing the square, complex numbers,
+        quadratic functions and coordinate geometry with clear explanations
+        for HKDSE Mathematics.
+      </p>
+      <a href="solving-equations.html" class="btn">Start Learning</a>
+    </div>
+  </section>
+
+  <section class="quote-of-the-day">
+    <div class="container">
+      <h2>Quote of the Day</h2>
+      <blockquote id="daily-quote" class="daily-quote"></blockquote>
+    </div>
+  </section>
+
+  <section id="concepts" class="concepts">
+    <div class="container">
+      <h2>Key Topics</h2>
+      <p class="section-subtitle">The building blocks every HKDSE Mathematics student must master.</p>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3>Solving Quadratic Equations</h3>
+          <p>Four methods: general form + FMLA 01, factorization, taking square roots, quadratic formula.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Completing Square</h3>
+          <p>Rewrite ax² + bx + c in the form a(x − h)² + k for two types of leading coefficients.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Discriminant Proofs</h3>
+          <p>Use Δ = b² − 4ac with completing square to prove statements always hold true.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Sum &amp; Product of Roots</h3>
+          <p>α + β = −b/a and αβ = c/a — forming equations, and applications in graphs.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Complex Numbers</h3>
+          <p>Definition of i, general form a + bi, conjugates, reciprocals, large powers.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Triangle Centers</h3>
+          <p>Centroid, orthocenter, circumcenter, incenter — properties and coordinates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>All Topics</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3><a href="solving-equations.html">Solving Equations</a></h3>
+          <p>Four methods, when to use each, and MC shortcuts.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="completing-square.html">Completing Square</a></h3>
+          <p>Type 1 and Type 2 — leading coefficient 1 and non-1.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="discriminant.html">Discriminant</a></h3>
+          <p>Prove statements about roots using Δ = b² − 4ac.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="roots.html">Sum &amp; Product of Roots</a></h3>
+          <p>Form equations, find unknowns, apply to graphs.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="complex-numbers.html">Complex Numbers</a></h3>
+          <p>i, a + bi, conjugates, powers of i, series.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="quadratic-functions.html">Quadratic Functions</a></h3>
+          <p>General, vertex and intercept forms — build any function.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="graph-sketching.html">Graph Sketching</a></h3>
+          <p>Sketch parabolas and solve MC sign questions.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="functions.html">Functions</a></h3>
+          <p>Find f(x) values, transformations, real-life applications.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="coordinate-geometry.html">Coordinate Geometry</a></h3>
+          <p>Distance, slope, midpoint, section formula, parallel/perpendicular.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="triangle-centers.html">Triangle Centers</a></h3>
+          <p>Centroid, orthocenter, circumcenter, incenter, Euler's line.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="glossary.html">Glossary</a></h3>
+          <p>All key definitions in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+  <script src="quotes.js"></script>
+  <script src="daily-quote.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
