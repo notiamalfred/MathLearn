@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Completing Square — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Completing Square</h2>
+      <p class="section-subtitle">Rewrite ax² + bx + c as a(x − h)² + k.</p>
+
+      <nav class="part-nav">
+        <a href="#part-intro" class="part-btn">Introduction</a>
+        <a href="#part-type1" class="part-btn">Type 1</a>
+        <a href="#part-type2" class="part-btn">Type 2</a>
+        <a href="#part-examples" class="part-btn">Examples</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-intro">Introduction</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>What is Completing Square?</h3>
+          <p>A quadratic expression with form <span class="math-inline">ax² + bx + c</span> can be rewritten in the form of <span class="math-inline">a(x − h)² + k</span>, which we name this process as "Completing Square".</p>
+          <p>For example, <span class="math-inline">x² + 4x + 5 = (x + 2)² + 1</span>.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type1">Type 1 — Leading Coefficient as 1</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Quadratic expressions in the form x² + bx + c</h3>
+          <ol>
+            <li>
+              <p>Divide the coefficient of x (i.e. b) by 2 to obtain the value of h in the form of (x + h)² + k.</p>
+              <div class="math-block">
+                <span class="math-line">e.g. For x² + 4x + 5, h = 4/2 = 2, i.e. (x + 2)² + k</span>
+                <span class="math-line">e.g. For x² − 6x − 3, h = −6/2 = −3, i.e. (x + (−3))² + k</span>
+              </div>
+            </li>
+            <li>
+              <p>Add the term (b/2)² (you may neglect the negative sign), and subtract back (b/2)² such that x² + bx + (b/2)² form a perfect square.</p>
+              <div class="math-block">
+                <span class="math-line">e.g. x² + 4x + 5 = x² + 4x + (2)² − (2)² + 5</span>
+                <span class="math-line">e.g. x² − 6x − 3 = x² − 6x + (3)² − (3)² − 3</span>
+              </div>
+            </li>
+            <li>
+              <p>Simplify the residue expression (−(b/2)² + c).</p>
+              <div class="math-block">
+                <span class="math-line">e.g. x² + 4x + 5 = (x + 2)² − 4 + 5 = (x + 2)² + 1</span>
+                <span class="math-line">e.g. x² − 6x − 3 = (x − 3)² − 9 − 3 = (x − 3)² − 12</span>
+              </div>
+            </li>
+          </ol>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type2">Type 2 — Leading Coefficient in Forms of Non-1</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Quadratic expressions in the form ax² + bx + c</h3>
+          <ol>
+            <li>
+              <p>Take out the factor <em>a</em> for the terms ax² and bx; ignore the constant term c.</p>
+              <div class="math-block">
+                <span class="math-line">e.g. −x² + 4x + 8 = −(x² − 4x) + 8</span>
+                <span class="math-line">e.g. 3x² + 6x − 1 = 3(x² + 2x) − 1</span>
+              </div>
+            </li>
+            <li>
+              <p>Add and subtract the term (b/2)² such that x² + bx + (b/2)² inside the bracket form a perfect square.</p>
+              <div class="math-block">
+                <span class="math-line">e.g. −x² + 4x + 8 = −(x² − 4x + (2)² − (2)²) + 8</span>
+                <span class="math-line">e.g. 3x² + 6x − 1 = 3(x² + 2x + (1)² − (1)²) − 1</span>
+              </div>
+            </li>
+            <li>
+              <p>Simplify the residue expression by −a(b/2)² + c; be careful on dealing with brackets.</p>
+              <div class="math-block">
+                <span class="math-line">e.g. −x² + 4x + 8 = −(x² − 4x + 4) + 4 + 8 = −(x − 2)² + 12</span>
+                <span class="math-line">e.g. 3x² + 6x − 1 = 3(x² + 2x + 1) − 3 − 1 = 3(x + 1)² − 4</span>
+              </div>
+            </li>
+          </ol>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-examples">Examples</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Type 1 — Example 1</h3>
+          <div class="math-block">
+            <span class="math-line">y = x² − 3x + 2</span>
+            <span class="math-line">y = x² − 3x + 1.5² − 1.5² + 2</span>
+            <span class="math-line">y = (x − 1.5)² − 0.25</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Type 1 — Example 2</h3>
+          <div class="math-block">
+            <span class="math-line">y = x² + (1/3)x + 1</span>
+            <span class="math-line">y = x² + (1/3)x + (1/6)² − (1/6)² + 1</span>
+            <span class="math-line">y = (x + 1/6)² + 35/36</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Type 2 — Example 1</h3>
+          <div class="math-block">
+            <span class="math-line">y = −2x² + 2x − 1</span>
+            <span class="math-line">y = −2(x² − x) − 1</span>
+            <span class="math-line">y = −2[x² − x + (1/2)² − (1/2)²] − 1</span>
+            <span class="math-line">y = −2(x − 1/2)² + 1/2 − 1</span>
+            <span class="math-line">y = −2(x − 1/2)² − 1/2</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Type 2 — Example 2</h3>
+          <div class="math-block">
+            <span class="math-line">y = (1/3)x² − x + 2</span>
+            <span class="math-line">y = (1/3)(x² − 3x) + 2</span>
+            <span class="math-line">y = (1/3)[x² − 3x + (3/2)² − (3/2)²] + 2</span>
+            <span class="math-line">y = (1/3)(x − 3/2)² − 3/4 + 2</span>
+            <span class="math-line">y = (1/3)(x − 3/2)² + 5/4</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Type 2 — Example 3</h3>
+          <div class="math-block">
+            <span class="math-line">y = 2x² + 4kx + 3k² − 1</span>
+            <span class="math-line">y = 2(x² + 2kx) + 3k² − 1</span>
+            <span class="math-line">y = 2[x² + 2kx + k² − k²] + 3k² − 1</span>
+            <span class="math-line">y = 2(x + k)² − 2k² + 3k² − 1</span>
+            <span class="math-line">y = 2(x + k)² + k² − 1</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
