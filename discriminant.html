@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discriminant — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Discriminant — Proof of Statements</h2>
+      <p class="section-subtitle">Using Δ = b² − 4ac with completing square.</p>
+
+      <nav class="part-nav">
+        <a href="#part-intro" class="part-btn">Introduction</a>
+        <a href="#part-proof" class="part-btn">Proof Type 1</a>
+        <a href="#part-example" class="part-btn">Graph Example</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-intro">Introduction</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>What the discriminant can do</h3>
+          <p>The discriminant of a quadratic equation <span class="math-inline">Δ = b² − 4ac</span> is not only useful for finding unknown values; with the aid of completing the square, it can also <strong>prove that a statement or equation always holds true for all real values</strong>.</p>
+          <ol>
+            <li><strong>Express and simplify</strong> the discriminant.</li>
+            <li><strong>Completing the square</strong> for the discriminant to find max/min values.</li>
+            <li><strong>Comparing values</strong> to complete the proof.</li>
+          </ol>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-proof">Type 1 — Proof of Statements Always Hold True</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>For the equation <span class="math-inline">x² + ax + (a − 2) = 0</span>, prove that it has 2 distinct real roots for any real values of <span class="math-inline">a</span>.</p>
+          <div class="math-block">
+            <span class="math-line">Δ = a² − 4(1)(a − 2)</span>
+            <span class="math-line indent">= a² − 4a + 8</span>
+            <span class="math-line indent">= a² − 4a + 2² − 2² + 8</span>
+            <span class="math-line indent">= (a − 2)² + 4</span>
+            <span class="math-line indent">≥ 4</span>
+            <span class="math-line indent">&gt; 0</span>
+          </div>
+          <p>∴ For any real number <span class="math-inline">a</span>, the equation has 2 distinct real roots.</p>
+          <p>★ Complete the square if the expression of Δ is not a perfect square. Then, you will notice that the minimum value of the expression is 4.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-example">Graph Example</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>The figure shows the graph of <span class="math-inline">y = x² + mx + n</span>, where <span class="math-inline">m &lt; 0</span>. The graph touches the x-axis at the point P, and it cuts the y-axis at the point Q. QR is a horizontal line.</p>
+
+          <p>Make use of the information given: "touch the x-axis" to deduce the relationship between unknowns.</p>
+
+          <h4>(a) Express n in terms of m.</h4>
+          <div class="math-block">
+            <span class="math-line">Δ = 0</span>
+            <span class="math-line">m² − 4(1)(n) = 0</span>
+            <span class="math-line">n = m²/4</span>
+          </div>
+
+          <h4>(b) Find, in terms of m, the coordinates of P, Q and R.</h4>
+          <p>By substituting <span class="math-inline">n = m²/4</span> into <span class="math-inline">y = x² + mx + n</span>, we have <span class="math-inline">y = x² + mx + m²/4</span>.</p>
+          <div class="math-block">
+            <span class="math-line">When y = 0, x² + mx + m²/4 = 0</span>
+            <span class="math-line">(x + m/2)² = 0</span>
+            <span class="math-line">x = −m/2</span>
+          </div>
+          <p>The coordinates of P are <span class="math-inline">(−m/2, 0)</span>.</p>
+          <div class="math-block">
+            <span class="math-line">When x = 0, y = (0)² + m(0) + m²/4 = m²/4</span>
+          </div>
+          <p>The coordinates of Q are <span class="math-inline">(0, m²/4)</span>.</p>
+          <div class="math-block">
+            <span class="math-line">When y = m²/4, m²/4 = x² + mx + m²/4</span>
+            <span class="math-line">x² + mx = 0</span>
+            <span class="math-line">x = −m or x = 0</span>
+          </div>
+          <p>The coordinates of R are <span class="math-inline">(−m, m²/4)</span>.</p>
+
+          <h4>(c) Find the values of m and n if the area of ΔPQR is 27 sq units.</h4>
+          <p>Let H be a point on QR such that PH ⊥ QR.</p>
+          <div class="math-block">
+            <span class="math-line">QR = −m − 0 = −m, PH = m²/4</span>
+          </div>
+          <div class="math-block">
+            <span class="math-line">(1/2)(−m)(m²/4) = 27</span>
+            <span class="math-line">m³ = −216</span>
+            <span class="math-line">m = −6</span>
+          </div>
+          <p>By substituting <span class="math-inline">m = −6</span> into <span class="math-inline">n = m²/4</span>, we have <span class="math-inline">n = (−6)²/4 = 9</span>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
