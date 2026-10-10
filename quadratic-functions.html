@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quadratic Functions — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Quadratic Functions</h2>
+      <p class="section-subtitle">Three forms — and how to build a function from given information.</p>
+
+      <nav class="part-nav">
+        <a href="#part-forms" class="part-btn">Three Forms</a>
+        <a href="#part-type1" class="part-btn">General Form</a>
+        <a href="#part-type2" class="part-btn">Vertex Form</a>
+        <a href="#part-type3" class="part-btn">Intercept Form</a>
+        <a href="#part-build" class="part-btn">Building Functions</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-forms">Three Forms</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Comparison table</h3>
+          <p>A quadratic function has 3 different forms which show different geometric features of its graph (a parabola).</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Form</th>
+                  <th>Algebraic Expression</th>
+                  <th>Features</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>General form</td><td class="center">y = ax² + bx + c</td><td>Opening, axis of symmetry, y-intercept</td></tr>
+                <tr><td>Vertex form</td><td class="center">y = a(x − h)² + k</td><td>Vertex, axis of symmetry</td></tr>
+                <tr><td>Intercept form</td><td class="center">y = a(x − α)(x − β)</td><td>x-intercepts</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type1">Type 1 — General Form y = ax² + bx + c</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Coefficients and their roles</h3>
+          <p>Coefficient <em>a</em> determines 1) Direction of opening and 2) Wideness of the parabola.</p>
+          <ul>
+            <li>If <span class="math-inline">a &lt; 0</span>, the parabola will open downward.</li>
+            <li>If <span class="math-inline">a &gt; 0</span>, the parabola will open upward.</li>
+            <li>The larger <span class="math-inline">|a|</span> is, the narrower the opening gets.</li>
+          </ul>
+
+          <p>Coefficient <em>c</em> determines the y-intercept of the parabola.</p>
+          <p>By substituting <span class="math-inline">x = 0</span> to the quadratic equation, the value of <em>y</em> is always equal to the constant <em>c</em>.</p>
+
+          <p>Coefficient <em>b</em> determines the axis of symmetry of the parabola.</p>
+          <p>The axis of symmetry is a vertical line that passes through the vertex of the parabola and lies exactly midway between the two x-intercepts (if they exist).</p>
+          <p>Equation of the axis of symmetry is <span class="math-inline">x = −b/(2a)</span> (x-coordinate of the vertex).</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type2">Type 2 — Vertex Form y = a(x − h)² + k</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Geometric features from vertex form</h3>
+          <p>By converting the General Form <span class="math-inline">y = ax² + bx + c</span> into the Vertex Form <span class="math-inline">y = a(x − h)² + k</span>, we can directly identify the critical geometric features of the parabola:</p>
+          <ul>
+            <li>Coordinates of the vertex: <span class="math-inline">(h, k)</span>, which is the lowest point (for <span class="math-inline">a &gt; 0</span>) or the highest point (for <span class="math-inline">a &lt; 0</span>).</li>
+            <li>Equation of the axis of symmetry: the vertical line <span class="math-inline">x = h</span>.</li>
+            <li>Minimum value <em>k</em> (for <span class="math-inline">a &gt; 0</span>) or maximum value <em>k</em> (for <span class="math-inline">a &lt; 0</span>) of <em>y</em>.</li>
+          </ul>
+
+          <h4>Two methods to find the vertex</h4>
+          <p><strong>1. Method of completing square</strong></p>
+          <div class="math-block">
+            <span class="math-line">ax² + bx + c</span>
+            <span class="math-line">= a(x² + (b/a)x) + c</span>
+            <span class="math-line">= a(x² + (b/a)x + (b/(2a))²) − a(b/(2a))² + c</span>
+            <span class="math-line">= a(x + b/(2a))² − a(b/(2a))² + c</span>
+          </div>
+
+          <p><strong>2. By substitution</strong></p>
+          <p>By comparing the two forms, <span class="math-inline">h = −b/(2a)</span>. Since we know that the axis of symmetry passes through the vertex as well, we can find the value of <em>k</em> by substituting the value of <em>h</em> into <em>x</em> after computation.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type3">Type 3 — Intercept Form y = a(x − α)(x − β)</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>From roots to function</h3>
+          <p>By solving quadratic equation <span class="math-inline">y = 0</span>, we can rewrite a quadratic function in forms of <em>α</em> and <em>β</em>. However, in a function sense, the graph can be enlarged or reflected in different scales, such that adding a leading coefficient <em>a</em> is necessary.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-build">Building a Quadratic Function</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Which form to use</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Forms</th><th>Geometric Information given</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>General Form <span class="math-inline">y = ax² + bx + c</span></td><td>3 Random Points</td></tr>
+                <tr><td>Vertex Form <span class="math-inline">y = a(x − h)² + k</span></td><td>Vertex (h, k) or Axis of symmetry x = h</td></tr>
+                <tr><td>Intercept Form <span class="math-inline">y = a(x − α)(x − β)</span></td><td>x-intercepts α or β</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 1 — Given 3 Random Points</h3>
+          <p>Find the quadratic function passing through points (0, 10), (1, 20) and (5, 0).</p>
+          <div class="math-block">
+            <span class="math-line">Let the function be y = ax² + bx + 10</span>
+            <span class="math-line">By putting (1, 20) and (5, 0),</span>
+            <span class="math-line">(20) = a(1)² + b(1) + 10 … (1)</span>
+            <span class="math-line">(0) = a(5)² + b(5) + 10 … (2)</span>
+            <span class="math-line">Solving, a = −3, b = 13</span>
+            <span class="math-line">y = −3x² + 13x + 10</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 2 — Given Vertex</h3>
+          <p>Find the quadratic function with vertex (1, 2), and passes through the point (2, −1).</p>
+          <div class="math-block">
+            <span class="math-line">Let the function be y = a(x − 1)² + 2</span>
+            <span class="math-line">Sub (2, −1),</span>
+            <span class="math-line">−1 = a(2 − 1)² + 2</span>
+            <span class="math-line">a = −3</span>
+          </div>
+          <p>The quadratic function: <span class="math-inline">y = −3(x − 1)² + 2</span>.</p>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 3 — Given x-intercepts</h3>
+          <p>Find the quadratic function with x-intercepts 4 and 5, and y-intercept 10.</p>
+          <div class="math-block">
+            <span class="math-line">Let the function be y = a(x − 4)(x − 5)</span>
+            <span class="math-line">By putting y-intercept,</span>
+            <span class="math-line">10 = a(0 − 4)(0 − 5)</span>
+            <span class="math-line">a = 1/2</span>
+            <span class="math-line">y = (1/2)(x − 4)(x − 5)</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
