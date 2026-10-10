@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sum &amp; Product of Roots — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Sum and Product of Roots</h2>
+      <p class="section-subtitle">α + β = −b/a and αβ = c/a.</p>
+
+      <nav class="part-nav">
+        <a href="#part-basics" class="part-btn">Basics</a>
+        <a href="#part-type1" class="part-btn">Type 1</a>
+        <a href="#part-type2" class="part-btn">Type 2</a>
+        <a href="#part-type3" class="part-btn">Type 3</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-basics">Basics</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Formulas and identities</h3>
+          <p>For a quadratic equation that is in form of <span class="math-inline">ax² + bx + c = 0</span>:</p>
+          <div class="math-block">
+            <span class="math-line">(x − α)(x − β) = 0</span>
+            <span class="math-line">x² − (α + β)x + αβ = 0 … (1)</span>
+            <span class="math-line">ax² + bx + c = 0</span>
+            <span class="math-line">x² + (b/a)x + (c/a) = 0 … (2)</span>
+            <span class="math-line">∴ α + β = −b/a, αβ = c/a</span>
+          </div>
+
+          <h4>Three useful identities</h4>
+          <div class="math-block">
+            <span class="math-line">1. α² + β² = (α + β)² − 2αβ</span>
+            <span class="math-line">2. (α − β)² = (α + β)² − 4αβ</span>
+            <span class="math-line">3. α − β</span>
+            <span class="math-line indent">= √[(α + β)² − 4αβ]&nbsp;&nbsp;(for α &gt; β)</span>
+            <span class="math-line indent">= −√[(α + β)² − 4αβ]&nbsp;&nbsp;(for α &lt; β)</span>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type1">Type 1 — Forming Quadratic Equations with Roots</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>If the roots of the equation <span class="math-inline">x² + √3 x − 4 = 0</span> are α and β, form a quadratic equation in <em>t</em> whose roots are α − β and β − α.</p>
+
+          <h4>Step 1: write down the sum and product of roots of the original equation.</h4>
+          <div class="math-block">
+            <span class="math-line">α + β = −√3 / 1 = −√3</span>
+            <span class="math-line">αβ = −4 / 1 = −4</span>
+          </div>
+
+          <h4>Step 2: find the new sum and product of roots in terms of the original one.</h4>
+          <div class="math-block">
+            <span class="math-line">New sum of roots = (α − β) + (β − α) = 0</span>
+            <span class="math-line">New product of roots = (α − β)(β − α)</span>
+            <span class="math-line indent">= −(α − β)²</span>
+            <span class="math-line indent">= −[(α + β)² − 4αβ]</span>
+            <span class="math-line indent">= −[(−√3)² − 4(−4)]</span>
+            <span class="math-line indent">= −19</span>
+          </div>
+
+          <h4>Step 3: express the answer in terms of the format t² − (sum of roots)t + (product of roots) = 0.</h4>
+          <p>The required quadratic equation: <span class="math-inline">t² − 19 = 0</span>.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type2">Type 2 — Making Use of the Unknown with Given Roots</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>It is given that α and β are the roots of the quadratic equation <span class="math-inline">x² + mx + n = 0</span>; <span class="math-inline">α + 2</span> and <span class="math-inline">β + 2</span> are the roots of the equation <span class="math-inline">x² + nx + m = 0</span>. Find the values of <em>m</em> and <em>n</em>.</p>
+
+          <p>★ Step 1: list the original and new sum/product of roots.</p>
+          <div class="math-block">
+            <span class="math-line">α + β = −m, αβ = n</span>
+            <span class="math-line">∴ (α + 2) + (β + 2) = −n</span>
+            <span class="math-line">α + β + 4 = −n</span>
+            <span class="math-line">−m + 4 = −n</span>
+            <span class="math-line">m − n = 4 … (1)</span>
+          </div>
+
+          <p>★ Step 2: Substitute the values from original sum/product of roots to the new one.</p>
+          <div class="math-block">
+            <span class="math-line">(α + 2)(β + 2) = m</span>
+            <span class="math-line">αβ + 2(α + β) + 4 = m</span>
+            <span class="math-line">n + 2(−m) + 4 = m</span>
+            <span class="math-line">3m − n = 4 … (2)</span>
+            <span class="math-line">(2) − (1): 2m = 0</span>
+            <span class="math-line">m = 0</span>
+          </div>
+          <p>By substituting <span class="math-inline">m = 0</span> into (1), we have:</p>
+          <div class="math-block">
+            <span class="math-line">0 − n = 4</span>
+            <span class="math-line">n = −4</span>
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 3</h3>
+          <p>If α and β are the roots of the quadratic equation <span class="math-inline">x² − 5x + p = 0</span>, then <span class="math-inline">α² + 5β =</span></p>
+          <p>A. 10 − p<br />B. 15 − p<br />C. 20 − p<br />D. 25 − p</p>
+
+          <p>★ … are the roots →</p>
+          <ol>
+            <li>Sub to the equation</li>
+            <li>Apply sum/product of roots</li>
+          </ol>
+          <p>For those with different powers, try to reduce them into same powers (1 or 2).</p>
+
+          <div class="math-block">
+            <span class="math-line">α² − 5α + p = 0</span>
+            <span class="math-line">α² = 5α − p</span>
+            <span class="math-line">α² + 5β = 5α + 5β − p</span>
+            <span class="math-line indent">= 5(5) − p</span>
+            <span class="math-line indent">= 25 − p</span>
+          </div>
+
+          <p>MC: Sub a value to <em>p</em> and then press calculator.</p>
+          <p>e.g. When <span class="math-inline">p = 4</span>, <span class="math-inline">x² − 5x + 4 = 0 ⇒ x = 1 or x = 4</span>.</p>
+          <div class="math-block">
+            <span class="math-line">α² + 5β = 1² + 5(4) = 21 (D)</span>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-type3">Type 3 — Applications of Sum and Product of Roots in Graphs</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 4</h3>
+          <p>The figure shows the graph of <span class="math-inline">y = −4x² + 12x − (k + 3)</span>. It cuts the x-axis at two points A and B, and OA : OB = 1 : 5. Find the value of <span class="math-inline">k</span>.</p>
+
+          <p>Set up unknowns to represent the roots.</p>
+          <p>Let <span class="math-inline">(α, 0)</span> and <span class="math-inline">(β, 0)</span> be the coordinates of A and B respectively.</p>
+          <p>∵ OA : OB = 1 : 5</p>
+          <p>Note that OA and OB are distances which are equal to the roots.</p>
+          <p>∴ <span class="math-inline">α</span> and <span class="math-inline">5α</span> are roots of <span class="math-inline">−4x² + 12x − (k + 3) = 0</span>.</p>
+          <div class="math-block">
+            <span class="math-line">∴ α + 5α = −12 / −4 and α · 5α = −(k + 3) / −4</span>
+            <span class="math-line">6α = 3 and 20α² = k + 3</span>
+            <span class="math-line">α = 1/2 and 20(1/2)² = k + 3</span>
+            <span class="math-line">k = 2</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
