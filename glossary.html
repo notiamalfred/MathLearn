@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Glossary of Key Terms</h2>
+      <p class="section-subtitle">Every definition from the notes, in one place.</p>
+
+      <div class="skill-grid">
+        <article class="skill-card" id="discriminant-def">
+          <h3>Discriminant (Δ)</h3>
+          <p>The expression Δ = b² − 4ac for a quadratic equation ax² + bx + c = 0.</p>
+        </article>
+
+        <article class="skill-card" id="completing-square-def">
+          <h3>Completing Square</h3>
+          <p>Rewriting a quadratic expression ax² + bx + c in the form a(x − h)² + k.</p>
+        </article>
+
+        <article class="skill-card" id="sum-of-roots">
+          <h3>Sum of roots</h3>
+          <p>For ax² + bx + c = 0, α + β = −b/a.</p>
+        </article>
+
+        <article class="skill-card" id="product-of-roots">
+          <h3>Product of roots</h3>
+          <p>For ax² + bx + c = 0, αβ = c/a.</p>
+        </article>
+
+        <article class="skill-card" id="complex-number">
+          <h3>Complex number</h3>
+          <p>A number of the form a + bi, where a and b are real numbers and i = √(−1).</p>
+        </article>
+
+        <article class="skill-card" id="conjugate">
+          <h3>Conjugate</h3>
+          <p>The conjugate of a + bi is a − bi.</p>
+        </article>
+
+        <article class="skill-card" id="general-form">
+          <h3>General form (quadratic)</h3>
+          <p>y = ax² + bx + c. Shows opening, axis of symmetry and y-intercept.</p>
+        </article>
+
+        <article class="skill-card" id="vertex-form">
+          <h3>Vertex form (quadratic)</h3>
+          <p>y = a(x − h)² + k. Shows vertex (h, k) and axis of symmetry x = h.</p>
+        </article>
+
+        <article class="skill-card" id="intercept-form">
+          <h3>Intercept form (quadratic)</h3>
+          <p>y = a(x − α)(x − β). Shows x-intercepts α and β.</p>
+        </article>
+
+        <article class="skill-card" id="axis-of-symmetry">
+          <h3>Axis of symmetry</h3>
+          <p>A vertical line that passes through the vertex of the parabola and lies exactly midway between the two x-intercepts (if they exist). Equation: x = −b/(2a).</p>
+        </article>
+
+        <article class="skill-card" id="centroid">
+          <h3>Centroid (G)</h3>
+          <p>The point where the three medians of a triangle meet. Always lies inside the triangle. Coordinates: ((x_a + x_b + x_c)/3, (y_a + y_b + y_c)/3). AG : GD = 2 : 1.</p>
+        </article>
+
+        <article class="skill-card" id="orthocenter">
+          <h3>Orthocenter (H)</h3>
+          <p>The point where the three altitudes of a triangle meet. Inside for acute, at the right-angle vertex for right-angled, outside for obtuse.</p>
+        </article>
+
+        <article class="skill-card" id="circumcenter">
+          <h3>Circumcenter (O)</h3>
+          <p>The center of the circumscribed circle, formed by the intersection of the perpendicular bisectors. OA = OB = OC (radii).</p>
+        </article>
+
+        <article class="skill-card" id="incenter">
+          <h3>Incenter (I)</h3>
+          <p>The center of the inscribed circle, formed by the intersection of the angle bisectors. DI = EI = FI (radii). pr = 2A. Coordinates: ((ax_a + bx_b + cx_c)/(a + b + c), (ay_a + by_b + cy_c)/(a + b + c)).</p>
+        </article>
+
+        <article class="skill-card" id="euler-line">
+          <h3>Euler's line</h3>
+          <p>For all triangles, the circumcenter O, the centroid V and the orthocenter H lie on the same line.</p>
+        </article>
+
+        <article class="skill-card" id="perpendicular-bisector">
+          <h3>Perpendicular Bisector Property</h3>
+          <p>If PQ is a perpendicular bisector of BC, then any points on PQ can form isosceles sides with BC (e.g. PB = PC and OB = OC).</p>
+        </article>
+
+        <article class="skill-card" id="angle-bisector">
+          <h3>Angle Bisector Property</h3>
+          <p>If BI is an angle bisector of ABC with AB ⊥ DI and BC ⊥ IF, then DI = IF.</p>
+        </article>
+
+        <article class="skill-card" id="angle-bisector-theorem">
+          <h3>Angle Bisector Theorem</h3>
+          <p>BM/MC = AB/AC, similarly for other two pairs.</p>
+        </article>
+
+        <article class="skill-card" id="i-def">
+          <h3>i (imaginary unit)</h3>
+          <p>Definition: i = √(−1). Also i^(4n + r) = i^r for non-negative integers n and r.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
