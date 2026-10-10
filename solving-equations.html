@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solving Quadratic Equations — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Solving Quadratic Equations</h2>
+      <p class="section-subtitle">Four methods, and how to pick the right one.</p>
+
+      <nav class="part-nav">
+        <a href="#part-methods" class="part-btn">Four Methods</a>
+        <a href="#part-examples" class="part-btn">Worked Examples</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-methods">Four Methods to Solve a Quadratic Equation</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Comparison table</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Methods</th>
+                  <th>Best use when…</th>
+                  <th>Examples</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1. Changing into general form and FMLA 01</td>
+                  <td>Equations that can be converted to general form easily</td>
+                  <td class="center">x² − 3x = −2</td>
+                </tr>
+                <tr>
+                  <td>2. Performing factorization</td>
+                  <td>Both sides contain Common Factors / Identity</td>
+                  <td class="center">x² − 3x = 2(x − 3)</td>
+                </tr>
+                <tr>
+                  <td>3. Taking square roots on both sides</td>
+                  <td>Both sides are Perfect Squares.<br /><em>Note: A² = B² → A = ±B</em></td>
+                  <td class="center">(x − 3)² = 4x²</td>
+                </tr>
+                <tr>
+                  <td>4. Using quadratic formula</td>
+                  <td>Cannot be factorized. Last resort.</td>
+                  <td class="center">x² − 3x − 3 = 0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>It is important to determine which method to use when solving a complicated equation, particularly in MC questions which always consists of extra variables.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-examples">Worked Examples</h3>
+      <div class="skill-grid">
+
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>If β is a root of the equation <span class="math-inline">3x² + 2x − 3 = 0</span>, then <span class="math-inline">6β² + 4β − 7 =</span></p>
+          <p>A. 0&nbsp;&nbsp;&nbsp;B. −1&nbsp;&nbsp;&nbsp;C. 4&nbsp;&nbsp;&nbsp;D. −4</p>
+
+          <p>When seeing <em>"… is a root"</em>, immediately substitute into the equation. Rewrite the expressions into multiples of the unknowns in the equation.</p>
+
+          <h4>Method 1 (LQ)</h4>
+          <div class="math-block">
+            <span class="math-line">3β² + 2β − 3 = 0</span>
+            <span class="math-line">3β² + 2β = 3</span>
+            <span class="math-line">6β² + 4β = 6</span>
+            <span class="math-line">∴ 6β² + 4β − 7 = 6 − 7 = −1</span>
+          </div>
+
+          <h4>Method 2 (MC)</h4>
+          <p>Press FMLA 01 to get the value of β. Substitute either value into <span class="math-inline">6β² + 4β − 7</span> would get −1.</p>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>If <span class="math-inline">(a − 1)² − 3(a − 1) + 2 = 0</span> and <span class="math-inline">(b − 1)² − 3(b − 1) + 2 = 0</span>, where <span class="math-inline">a &lt; b</span>, find the value of <span class="math-inline">b − a</span>.</p>
+          <p>A. −1&nbsp;&nbsp;&nbsp;B. 0&nbsp;&nbsp;&nbsp;C. 1&nbsp;&nbsp;&nbsp;D. 2</p>
+
+          <p>Consider the expression as a quadratic equation: <span class="math-inline">x² − 3x + 2 = 0</span>, where <span class="math-inline">a − 1</span> and <span class="math-inline">b − 1</span> are roots of the equation.</p>
+          <p>★ Observe that the two equations given has exactly the same format of positioning of unknown.</p>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 3</h3>
+          <p>Solve the equation <span class="math-inline">2ax(2 − ax) + ax = 2</span>, where <span class="math-inline">a ≠ 0</span>.</p>
+          <p>A. <span class="math-inline">x = 0</span><br />
+             B. <span class="math-inline">x = 1 / (2a)</span><br />
+             C. <span class="math-inline">x = 1 / (2a)</span> or <span class="math-inline">2 / a</span><br />
+             D. <span class="math-inline">x = 2a</span> or <span class="math-inline">a</span></p>
+
+          <h4>Method 1 (LQ)</h4>
+          <div class="math-block">
+            <span class="math-line">2ax(2 − ax) + ax = 2</span>
+            <span class="math-line">2ax(2 − ax) − (2 − ax) = 0</span>
+            <span class="math-line">(2 − ax)(2ax − 1) = 0</span>
+            <span class="math-line">x = 2/a or x = 1/(2a)</span>
+          </div>
+
+          <h4>Method 2 (MC)</h4>
+          <p>Substitute a random number into the extra variable <em>a</em>, note that the number you choose needs to be unique for each of the options.</p>
+          <p>For example, when <span class="math-inline">a = 2</span>, the equation becomes <span class="math-inline">8x² − 10x + 2 = 0</span>, solution becomes <span class="math-inline">x = 1/4</span> or <span class="math-inline">x = 1</span>. By checking the options, option C matches the substitution.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
