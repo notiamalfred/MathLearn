@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions &amp; Applications — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Functions &amp; Applications</h2>
+      <p class="section-subtitle">MC questions on functions and real-life applications.</p>
+
+      <nav class="part-nav">
+        <a href="#part-mc" class="part-btn">MC Questions</a>
+        <a href="#part-app1" class="part-btn">Application Type 1</a>
+        <a href="#part-app2" class="part-btn">Application Type 2</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-mc">MC Questions Related to Functions</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Type 1 — Finding values of a certain function</h3>
+          <h4>Question 1</h4>
+          <p><em>[2017-DSE-II-Q6]</em></p>
+          <p>Let <span class="math-inline">f(x) = 2x² − 5x + k</span>, then <span class="math-inline">f(2) − f(−2) =</span></p>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Question 2</h3>
+          <p>If <span class="math-inline">f(2x + 1) = 4x² + 2x + 3</span>, then <span class="math-inline">f(2x) =</span></p>
+          <p>A. <span class="math-inline">4x² − 2x − 3</span><br />
+             B. <span class="math-inline">4x² − 2x + 3</span><br />
+             C. <span class="math-inline">4x² + 2x − 3</span><br />
+             D. <span class="math-inline">4x² + 2x + 3</span></p>
+
+          <h4>Method 1</h4>
+          <div class="math-block">
+            <span class="math-line">Let u = 2x + 1, x = (u − 1)/2</span>
+            <span class="math-line">f(u)</span>
+            <span class="math-line indent">= 4((u − 1)/2)² + 2((u − 1)/2) + 3</span>
+            <span class="math-line indent">= u² − u + 3</span>
+            <span class="math-line">f(2x)</span>
+            <span class="math-line indent">= (2x)² − (2x) + 3</span>
+            <span class="math-line indent">= 4x² − 2x + 3</span>
+          </div>
+
+          <h4>Method 2</h4>
+          <p>Observe that <span class="math-inline">f(2x + 1) = (2x)² + (2x) + 3</span> and <span class="math-inline">2x = (2x + 1) − 1</span>.</p>
+          <div class="math-block">
+            <span class="math-line">f(2x)</span>
+            <span class="math-line indent">= (2x − 1)² + (2x − 1) + 3</span>
+            <span class="math-line indent">= 4x² − 2x + 3</span>
+          </div>
+
+          <h4>Method 3</h4>
+          <p>Sub <span class="math-inline">x = 1</span>, <span class="math-inline">f(2x) = f(2)</span>, at the same time for <span class="math-inline">f(2x + 1)</span>, sub <span class="math-inline">x = 0.5</span>, so <span class="math-inline">f(2 × 0.5 + 1) = 5</span>. Option A: −1, Option B: 5, Option C: 3, Option D: 9.</p>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Question 3</h3>
+          <p><em>[DSE-2021-P2-Q7]</em></p>
+          <p>Let <span class="math-inline">f(x) = (x + h)(x − 3) + k</span>, where <em>h</em> and <em>k</em> are constants. If <span class="math-inline">f(0) = f(8) = 1</span>, find <em>k</em>.</p>
+          <p>A. −14<br />B. −5<br />C. 20<br />D. 31</p>
+
+          <p>★ Axis of symmetry of <span class="math-inline">f(x) = (x − α)(x − β) + k</span> is <span class="math-inline">(α + β)/2</span>, axis of symmetry of <span class="math-inline">f(x) = ax² + bx + c</span> is <span class="math-inline">−b/(2a)</span>.</p>
+
+          <p>Since it is a quadratic function, when <span class="math-inline">f(0) = f(8)</span>, <span class="math-inline">x = 4</span> is the axis of symmetry.</p>
+          <div class="math-block">
+            <span class="math-line">Axis of symmetry:</span>
+            <span class="math-line">(−h + 3)/2 = 4</span>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-app1">Application Type 1 — Area</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example — ABCDE figure</h3>
+          <p>In figure 2, ABCDE is formed by a right-angled triangle ABE and a rectangle BCDE, where AB = 3x cm and AE = 4x cm.</p>
+
+          <h4>(a) Express the length of CD in terms of x.</h4>
+          <div class="math-block">
+            <span class="math-line">BE = √((3x)² + (4x)²) = 5x cm (pyth theorem)</span>
+            <span class="math-line">∴ CD = BE = 5x cm</span>
+          </div>
+
+          <h4>(b) If the perimeter of the figure is 96 cm, express the area of rectangle BCDE in terms of x.</h4>
+          <div class="math-block">
+            <span class="math-line">BC + ED + 3x + 4x + 5x = 96</span>
+            <span class="math-line">2BC = 96 − 12x</span>
+            <span class="math-line">BC = 48 − 6x</span>
+            <span class="math-line">Area of BCDE = (48 − 6x)(5x) = (−30x² + 240x) cm²</span>
+          </div>
+
+          <h4>(c) Find the maximum area of the figure.</h4>
+          <div class="math-block">
+            <span class="math-line">Area of the figure</span>
+            <span class="math-line">= (1/2)(3x)(4x) + (−30x² + 240x)</span>
+            <span class="math-line">= (−24x² + 240x)</span>
+          </div>
+          <p>★ Whenever the question word hints "maximum"/"minimum", usually it is related to completing square.</p>
+          <div class="math-block">
+            <span class="math-line">= −24(x² − 10x + 5² − 5²)</span>
+            <span class="math-line">= −24[(x − 5)² − 25]</span>
+            <span class="math-line">= [−24(x − 5)² + 600] cm²</span>
+            <span class="math-line">∴ The maximum area of the figure is 600 cm²</span>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-app2">Application Type 2 — Coordinate Plane</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example — ΔABD area</h3>
+          <p>The graph of <span class="math-inline">y = −x² − 10x − 16</span> cuts the x-axis at A and B. D is a point on the curve above the x-axis.</p>
+
+          <h4>(a) Find the coordinates of A and B.</h4>
+          <div class="math-block">
+            <span class="math-line">x = −8 or x = −2</span>
+          </div>
+          <p>The coordinates of A and B are <span class="math-inline">(−8, 0)</span> and <span class="math-inline">(−2, 0)</span> respectively.</p>
+
+          <h4>(b) Cathy claims that the area of ΔABD does not exceed 27 sq units. Do you agree? Explain your answer.</h4>
+          <div class="math-block">
+            <span class="math-line">y = −x² − 10x − 16 = −(x² + 10x + 5² − 5²) − 16 = −(x + 5)² + 9</span>
+            <span class="math-line">AB = [−2 − (−8)] = 6 units</span>
+            <span class="math-line">Maximum area of ΔABD</span>
+            <span class="math-line">(1/2) × 6 × 9 sq units = 27 sq units</span>
+          </div>
+          <p>The area of ΔABD does not exceed 27 sq units.<br />Cathy's claim is correct.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
