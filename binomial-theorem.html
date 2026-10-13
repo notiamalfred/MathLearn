@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binomial Theorem — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="binomial-theorem.html">Binomial Theorem</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Binomial Theorem — Solution</h2>
+      <p class="section-subtitle">2026-2027 S.4 Mathematics (Extended Part Module 2) Chapter 2 Binomial Theorem - Solution</p>
+
+      <article class="skill-card">
+        <h3>Notes</h3>
+        <div class="notes-content" style="white-space: pre-wrap; font-family: inherit; line-height: 1.7;">
+===== Page 1 =====
+
+2026- 2027 S.4 Mathematics (Extended Part Module 2) Chapter 2 Binomial Theorem- Solution Name: Class: A) Common Technique in Binomial Theorem  
+
+Name: Class:  
+
+## A) Common Technique in Binomial Theorem  
+
+## Summary \(C_{r}^{n}\)  
+
+Let \(n\) and \(r\) be non- negative integers, where \(n\geq r\cdot C_{n}^{n} = C_{0}^{n} = 1\)  
+
+Factorial Notation: \(n! = n(n - 1)(n - 2)\dots (2)(1)\)  
+
+Combination Symbol: \(C_{r}^{n} = \frac{n!}{r!(n - r)!}\)  
+
+Note: \(C_{r}^{n} = C_{n - r}^{n}\) \(C_{1}^{n} = n\) \(C_{2}^{n} = \frac{n(n - 1)}{2}\) \(C_{3}^{n} = \frac{n(n - 1)(n - 2)}{6}\)  
+
+Binomial Theorem  
+
+\[(a + b)^{n} = C_{0}^{n}a^{n} + C_{1}^{n}a^{n - 1}b + C_{2}^{n}a^{n - 2}b^{2} + \ldots +C_{r}^{n}a^{n - r}b^{r} + \ldots +C_{n}^{n}b^{n}\] \[= \sum_{r = 0}^{n}C_{r}^{n}a^{n - r}b^{r}\]  
+
+The general term \(/(r + 1)^{\mathrm{th}}\) term of the expansion \(= C_{r}^{n}a^{n - r}b^{r}\)  
+
+## Examples:  
+
+Type 1: The \(C_{r}^{n}\) notation  
+
+1. Simplify \(C_{r}^{n} \div C_{r-1}^{n-1}\).
+
+===== Page 2 =====
+
+2. Expand the following expressions in ascending powers of \(x\) .  
+
+(a) \((3x - 1)^3\)  
+
+(b) \((x + 1)^4 (x - 1)^4\)  
+
+(c) \((1 - x + 2x^2)^3\)  
+
+(a)  
+
+\[(3x - 1)^3 = (-1 + 3x)^3\] \[\qquad = (-1)^3 +3(-1)^2 (3x) + 3(-1)(3x)^2 +(3x)^3\] \[\qquad = -1 + 9x - 27x^2 +27x^3\]  
+
+(b)  
+
+\[(x + 1)^4 (x - 1)^4 = (x^2 -1)^4\] \[\qquad = (1 - x^2)^4\] \[\qquad = (-1)^4 +4(-1)^3 (x^2) + 6(-1)^2 (x^2)^2 +4(-1)(x^2)^3 +(x^2)^4\] \[\qquad = 1 - 4x^2 +6x^4 -4x^6 +x^8\]  
+
+(c)  
+
+\[(1 - x + 2x^2)^3 = \left[1 + \left(-x + 2x^2\right)\right]^3\] \[\qquad = 1 + 3\left(-x + 2x^2\right) + 3\left(-x + 2x^2\right)^2 +\left(-x + 2x^2\right)^3\] \[\qquad = 1 - 3x + 6x^2 +3\left(x^2 -4x^3 +4x^4\right) + \left[-x^3 +3\left(-x\right)^2 \left(2x^2\right) + 3\left(-x\right)\left(2x^2\right)^2 +\left(2x^2\right)^3\right]\] \[\qquad = 1 - 3x + 9x^2 -13x^3 +18x^4 -12x^5 +8x^6\]  
+
+Always distinct the constant term in trinomial expansion.
+
+===== Page 3 =====
+
+3. [2024-DSE-M2-Q3]  
+
+Let \(m\) be a positive integer. Consider the expansion of \(\left(x^{m} - \frac{2}{x}\right)^{24}\) in descending powers of \(x\) .  
+
+(a) Find the first 3 terms of the expansion.  
+
+(b) If the \(19^{\mathrm{th}}\) term of the expansion is a constant, find \(m\) and the coefficient of \(x^{60}\) in the expansion.  
+
+\[\left(x^{m} - \frac{2}{x}\right)^{24} = \left(x^{m}\right)^{24} + C_{1}^{24}\left(x^{m}\right)^{23}\left(-\frac{2}{x}\right) + C_{2}^{24}\left(x^{m}\right)^{22}\left(-\frac{2}{x}\right)^{2} + \dots\] \[= x^{24m} - 48x^{23m - 1} + 1104x^{22m - 2} + \dots\]  
+
+First 3 terms: \(x^{24m}\) \(- 48x^{23m - 1}\) and \(1104x^{22m - 2}\)  
+
+(b) General term: \(C_{r}^{24}\left(x^{m}\right)^{24 - r}\left(-\frac{2}{x}\right)^{r} = C_{r}^{24}\left(-2\right)^{r}\left(x\right)^{24m - mr - r}\)  
+
+The \(19^{\mathrm{th}}\) term: \(C_{18}^{24}\left(- 2\right)^{18}\left(x\right)^{6m - 18}\) . For constant term, \(6m - 18 = 0 \rightarrow m = 3\)  
+
+For coefficient of \(x^{60}\) , \(24 \times 3 - 3r - r = 60\)  
+
+\[72 - 4r = 60\]  
+
+\(r = 3\)  
+
+Coefficient: \(= C_{3}^{24}\left(- 2\right)^{3} = - 16192\)  
+
+4.  
+
+[2017-DSE-M2-Q2]  
+
+Let \((1 + ax)^{8} = \sum_{k = 0}^{8}\lambda_{k}x^{k}\) and \((b + x)^{9} = \sum_{k = 0}^{9}\mu_{k}x^{k}\) , where \(a\) and \(b\) are constants. It is given that \(\lambda_{2}:\mu_{7} = 7:4\) and \(\lambda_{1} + \mu_{8} + 6 = 0\) Find \(a\)  
+
+\[(1 + ax)^{8} = \sum_{k = 0}^{8}C_{k}^{8}a^{k}x^{k}\mathrm{and}(b + x)^{9} = \sum_{k = 0}^{9}C_{k}^{9}b^{9 - k}x^{k}\]  
+
+\[\lambda_{k} = C_{k}^{8}a^{k}\mathrm{and}\mu_{k} = C_{k}^{9}b^{9 - k}\]  
+
+\[\frac{C_{2}^{8}a^{2}}{C_{7}^{9}b^{9 - 7}} = \frac{7}{4}\mathrm{and}C_{1}^{8}a + C_{8}^{9}b^{9 - 8} + 6 = 0\]  
+
+\[\frac{a^{2}}{b^{2}} = \frac{9}{4}\mathrm{and}8a + 9b + 6 = 0\]  
+
+\[b = \frac{2}{3} a\mathrm{or}b = -\frac{2}{3} a\]  
+
+When \(b = \frac{2}{3} a\) \(8a + 9\left(\frac{2}{3} a\right) + 6 = 0\) \(a = - \frac{3}{7}\)  
+
+When \(b = - \frac{2}{3} a\) \(8a + 9\left(-\frac{2}{3} a\right) + 6 = 0\) \(a = - 3\)
+
+===== Page 4 =====
+
+5. [2022- DSE- M2- Q5]  
+
+Let \(n\) be an integer greater than 1. Define \((a + x)^n = \sum_{k = 0}^{n}\mu_k x^k\) where \(a\) is a constant. It is given that \(\mu_2 = - 10\) .  
+
+(a) Explain why \(a\) is a negative number and \(n\) is an odd number.  
+
+(b) Let \((bx - 1)^n = \sum_{k = 0}^{n}\lambda_k x^k\) , where \(b\) is a constant. If \(\lambda_0 = \mu_0\) and \(\lambda_1 = 2\mu_1\) , find \(a\) , \(b\) and \(n\) .  
+
+(a)  
+
+\[(a + x)^n = a^n +na^{n - 1}x + \frac{n(n - 1)}{2} a^{n - 2}x^2 +\dots\] \[\mu_2 = -10\] \[\frac{n(n - 1)}{2} a^{n - 2} = -10\] \[n(n - 1)a^{n - 2} = -20\]  
+
+Since \(n\) is an integer greater than 1, \(n(n - 1)\) must a positive integer, which means \(a^{n - 2}\) is a negative number, which means \(a\) is negative number and \(n\) is an odd number.  
+
+(b) Note that \(\mu_0 = a^n\) , \(\mu_1 = na^{n - 1}\)  
+
+\[(bx - 1)^n = (-1 + bx)^n = (-1)^n +n(-1)^{n - 1}(bx) + \frac{n(n - 1)}{2} (-1)^{n - 2}(bx)^2 +\dots\]  
+
+\[\lambda_0 = (-1)^n, \lambda_1 = bn(-1)^{n - 1}\]  
+
+\[a^n = (-1)^n \text{and} 2na^{n - 1} = bn(-1)^{n - 1}\]  
+
+\[a = -1 \text{and} 2n(-1)^{n - 1} = bn(-1)^{n - 1}\]  
+
+\[\therefore b = 2\]  
+
+\[\mu_2 = -10\] \[\frac{n(n - 1)}{2} (-1)^{n - 2} = -10\] \[n(n - 1) = 20\] \[n = 5 \text{or} n = -4 \text{(rej.)\]  
+
+Note that you need 3 equations to solve 3 unknowns.
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
