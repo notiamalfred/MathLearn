@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binomial Theorem — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="solving-equations.html">Solving Equations</a>
+        <a href="completing-square.html">Completing Square</a>
+        <a href="discriminant.html">Discriminant</a>
+        <a href="roots.html">Roots</a>
+        <a href="complex-numbers.html">Complex Numbers</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="graph-sketching.html">Graph Sketching</a>
+        <a href="functions.html">Functions</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="binomial-theorem.html">Binomial Theorem</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Binomial Theorem — Solution</h2>
+      <p class="section-subtitle">2026–2027 S.4 Mathematics (Extended Part Module 2) Chapter 2 — Common technique, expansions and DSE examples.</p>
+
+      <nav class="part-nav">
+        <a href="#part-summary" class="part-btn">Summary</a>
+        <a href="#part-examples" class="part-btn">Examples</a>
+      </nav>
+
+      <!-- ===== Summary ===== -->
+      <h3 class="part-heading" id="part-summary">A) Common Technique in Binomial Theorem</h3>
+      <div class="skill-grid">
+
+        <article class="skill-card">
+          <h3>Summary \(C_r^n\)</h3>
+          <p>Let \(n\) and \(r\) be non-negative integers, where \(n \ge r\). \(C_n^n = C_0^n = 1\).</p>
+          <p><strong>Factorial Notation:</strong> \(n! = n(n-1)(n-2)\dots(2)(1)\)</p>
+          <p><strong>Combination Symbol:</strong> \(C_r^n = \dfrac{n!}{r!(n-r)!}\)</p>
+          <p><strong>Note:</strong></p>
+          <div class="math-block">
+            <span class="math-line">\(C_r^n = C_{n-r}^n\)</span>
+            <span class="math-line">\(C_1^n = n\)</span>
+            <span class="math-line">\(C_2^n = \dfrac{n(n-1)}{2}\)</span>
+            <span class="math-line">\(C_3^n = \dfrac{n(n-1)(n-2)}{6}\)</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>Binomial Theorem</h3>
+          <div class="math-block">
+            <span class="math-line">\((a+b)^n = C_0^n a^n + C_1^n a^{n-1} b + C_2^n a^{n-2} b^2 + \dots + C_r^n a^{n-r} b^r + \dots + C_n^n b^n\)</span>
+            <span class="math-line">\(= \displaystyle\sum_{r=0}^{n} C_r^n a^{n-r} b^r\)</span>
+          </div>
+          <p>The general term / \((r+1)^{\text{th}}\) term of the expansion \(= C_r^n a^{n-r} b^r\).</p>
+        </article>
+
+      </div>
+
+      <!-- ===== Examples ===== -->
+      <h3 class="part-heading" id="part-examples">Examples</h3>
+      <div class="skill-grid">
+
+        <!-- Example 1 -->
+        <article class="skill-card example-card">
+          <h3>Example 1 — Type 1: The \(C_r^n\) notation</h3>
+          <p>Simplify \(C_r^n \div C_{r-1}^{n-1}\).</p>
+        </article>
+
+        <!-- Example 2 -->
+        <article class="skill-card example-card">
+          <h3>Example 2 — Expand in ascending powers of \(x\)</h3>
+          <p>Expand the following expressions in ascending powers of \(x\).</p>
+          <p>(a) \((3x - 1)^3\)<br />
+             (b) \((x + 1)^4 (x - 1)^4\)<br />
+             (c) \((1 - x + 2x^2)^3\)</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            <span class="math-line">\((3x-1)^3 = (-1+3x)^3\)</span>
+            <span class="math-line indent">\(= (-1)^3 + 3(-1)^2(3x) + 3(-1)(3x)^2 + (3x)^3\)</span>
+            <span class="math-line indent">\(= -1 + 9x - 27x^2 + 27x^3\)</span>
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            <span class="math-line">\((x+1)^4 (x-1)^4 = (x^2-1)^4\)</span>
+            <span class="math-line indent">\(= (1-x^2)^4\)</span>
+            <span class="math-line indent">\(= (-1)^4 + 4(-1)^3(x^2) + 6(-1)^2(x^2)^2 + 4(-1)(x^2)^3 + (x^2)^4\)</span>
+            <span class="math-line indent">\(= 1 - 4x^2 + 6x^4 - 4x^6 + x^8\)</span>
+          </div>
+
+          <h4>(c)</h4>
+          <div class="math-block">
+            <span class="math-line">\((1-x+2x^2)^3 = \left[1 + (-x + 2x^2)\right]^3\)</span>
+            <span class="math-line indent">\(= 1 + 3(-x + 2x^2) + 3(-x + 2x^2)^2 + (-x + 2x^2)^3\)</span>
+            <span class="math-line indent">\(= 1 - 3x + 6x^2 + 3(x^2 - 4x^3 + 4x^4)\)</span>
+            <span class="math-line indent">\(\quad + \left[-x^3 + 3(-x)^2(2x^2) + 3(-x)(2x^2)^2 + (2x^2)^3\right]\)</span>
+            <span class="math-line indent">\(= 1 - 3x + 9x^2 - 13x^3 + 18x^4 - 12x^5 + 8x^6\)</span>
+          </div>
+
+          <p>★ Always distinct the constant term in trinomial expansion.</p>
+        </article>
+
+        <!-- Example 3 -->
+        <article class="skill-card example-card">
+          <h3>Example 3 — [2024-DSE-M2-Q3]</h3>
+          <p>Let \(m\) be a positive integer. Consider the expansion of \(\left(x^m - \dfrac{2}{x}\right)^{24}\) in descending powers of \(x\).</p>
+          <p>(a) Find the first 3 terms of the expansion.<br />
+             (b) If the \(19^{\text{th}}\) term of the expansion is a constant, find \(m\) and the coefficient of \(x^{60}\) in the expansion.</p>
+
+          <div class="math-block">
+            <span class="math-line">\(\left(x^m - \dfrac{2}{x}\right)^{24} = (x^m)^{24} + C_1^{24}(x^m)^{23}\left(-\dfrac{2}{x}\right) + C_2^{24}(x^m)^{22}\left(-\dfrac{2}{x}\right)^2 + \dots\)</span>
+            <span class="math-line indent">\(= x^{24m} - 48x^{23m-1} + 1104x^{22m-2} + \dots\)</span>
+          </div>
+          <p><strong>First 3 terms:</strong> \(x^{24m}\), \(-48x^{23m-1}\) and \(1104x^{22m-2}\).</p>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            <span class="math-line">General term: \(C_r^{24}(x^m)^{24-r}\left(-\dfrac{2}{x}\right)^r = C_r^{24}(-2)^r x^{24m-mr-r}\)</span>
+          </div>
+          <p>The \(19^{\text{th}}\) term: \(C_{18}^{24}(-2)^{18} x^{6m-18}\). For constant term, \(6m - 18 = 0 \Rightarrow m = 3\).</p>
+          <p>For coefficient of \(x^{60}\):</p>
+          <div class="math-block">
+            <span class="math-line">\(24 \times 3 - 3r - r = 60\)</span>
+            <span class="math-line">\(72 - 4r = 60\)</span>
+            <span class="math-line">\(r = 3\)</span>
+          </div>
+          <div class="math-block">
+            <span class="math-line">Coefficient \(= C_3^{24}(-2)^3 = -16192\)</span>
+          </div>
+        </article>
+
+        <!-- Example 4 -->
+        <article class="skill-card example-card">
+          <h3>Example 4 — [2017-DSE-M2-Q2]</h3>
+          <p>Let \((1+ax)^8 = \displaystyle\sum_{k=0}^{8} \lambda_k x^k\) and \((b+x)^9 = \displaystyle\sum_{k=0}^{9} \mu_k x^k\), where \(a\) and \(b\) are constants. It is given that \(\lambda_2 : \mu_7 = 7 : 4\) and \(\lambda_1 + \mu_8 + 6 = 0\). Find \(a\).</p>
+
+          <div class="math-block">
+            <span class="math-line">\((1+ax)^8 = \displaystyle\sum_{k=0}^{8} C_k^8 a^k x^k\) and \((b+x)^9 = \displaystyle\sum_{k=0}^{9} C_k^9 b^{9-k} x^k\)</span>
+            <span class="math-line">\(\lambda_k = C_k^8 a^k\) and \(\mu_k = C_k^9 b^{9-k}\)</span>
+          </div>
+
+          <div class="math-block">
+            <span class="math-line">\(\dfrac{C_2^8 a^2}{C_7^9 b^{9-7}} = \dfrac{7}{4}\) and \(C_1^8 a + C_8^9 b^{9-8} + 6 = 0\)</span>
+            <span class="math-line">\(\dfrac{a^2}{b^2} = \dfrac{9}{4}\) and \(8a + 9b + 6 = 0\)</span>
+          </div>
+
+          <div class="math-block">
+            <span class="math-line">\(b = \dfrac{2}{3}a\) or \(b = -\dfrac{2}{3}a\)</span>
+          </div>
+
+          <p>When \(b = \dfrac{2}{3}a\):</p>
+          <div class="math-block">
+            <span class="math-line">\(8a + 9\left(\dfrac{2}{3}a\right) + 6 = 0\)</span>
+            <span class="math-line">\(a = -\dfrac{3}{7}\)</span>
+          </div>
+
+          <p>When \(b = -\dfrac{2}{3}a\):</p>
+          <div class="math-block">
+            <span class="math-line">\(8a + 9\left(-\dfrac{2}{3}a\right) + 6 = 0\)</span>
+            <span class="math-line">\(a = -3\)</span>
+          </div>
+        </article>
+
+        <!-- Example 5 -->
+        <article class="skill-card example-card">
+          <h3>Example 5 — [2022-DSE-M2-Q5]</h3>
+          <p>Let \(n\) be an integer greater than 1. Define \((a+x)^n = \displaystyle\sum_{k=0}^{n} \mu_k x^k\) where \(a\) is a constant. It is given that \(\mu_2 = -10\).</p>
+          <p>(a) Explain why \(a\) is a negative number and \(n\) is an odd number.<br />
+             (b) Let \((bx-1)^n = \displaystyle\sum_{k=0}^{n} \lambda_k x^k\), where \(b\) is a constant. If \(\lambda_0 = \mu_0\) and \(\lambda_1 = 2\mu_1\), find \(a\), \(b\) and \(n\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            <span class="math-line">\((a+x)^n = a^n + na^{n-1}x + \dfrac{n(n-1)}{2} a^{n-2} x^2 + \dots\)</span>
+            <span class="math-line">\(\mu_2 = -10\)</span>
+            <span class="math-line">\(\dfrac{n(n-1)}{2} a^{n-2} = -10\)</span>
+            <span class="math-line">\(n(n-1) a^{n-2} = -20\)</span>
+          </div>
+          <p>Since \(n\) is an integer greater than 1, \(n(n-1)\) must a positive integer, which means \(a^{n-2}\) is a negative number, which means \(a\) is negative number and \(n\) is an odd number.</p>
+
+          <h4>(b)</h4>
+          <p>Note that \(\mu_0 = a^n\), \(\mu_1 = n a^{n-1}\).</p>
+          <div class="math-block">
+            <span class="math-line">\((bx-1)^n = (-1+bx)^n = (-1)^n + n(-1)^{n-1}(bx) + \dfrac{n(n-1)}{2}(-1)^{n-2}(bx)^2 + \dots\)</span>
+            <span class="math-line">\(\lambda_0 = (-1)^n\), \(\lambda_1 = bn(-1)^{n-1}\)</span>
+          </div>
+          <div class="math-block">
+            <span class="math-line">\(a^n = (-1)^n\) and \(2na^{n-1} = bn(-1)^{n-1}\)</span>
+            <span class="math-line">\(a = -1\) and \(2n(-1)^{n-1} = bn(-1)^{n-1}\)</span>
+            <span class="math-line">\(\therefore b = 2\)</span>
+          </div>
+          <div class="math-block">
+            <span class="math-line">\(\mu_2 = -10\)</span>
+            <span class="math-line">\(\dfrac{n(n-1)}{2}(-1)^{n-2} = -10\)</span>
+            <span class="math-line">\(n(n-1) = 20\)</span>
+            <span class="math-line">\(n = 5\) or \(n = -4\) (rej.)</span>
+          </div>
+          <p>★ Note that you need 3 equations to solve 3 unknowns.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
