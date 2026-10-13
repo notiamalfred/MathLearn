@@ -15,7 +15,8 @@ const PAGES = [
   { file: "functions.html",            label: "Functions & Applications" },
   { file: "coordinate-geometry.html",  label: "Coordinate Geometry" },
   { file: "triangle-centers.html",     label: "Triangle Centers" },
-  { file: "glossary.html",             label: "Glossary" }
+  { file: "glossary.html",             label: "Glossary" },
+  { file: "binomial-theorem.html",   label: "Binomial Theorem" }
 ];
 
 const index = [];
