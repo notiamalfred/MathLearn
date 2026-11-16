@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigo Formulas — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        tags: 'none'
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quadratic_equations.html">Quadratic Equations</a>
+        <a href="functions_and_graphs.html">Functions &amp; Graphs</a>
+        <a href="binomial-theorem.html">Binomial Theorem</a>
+        <a href="mathematical-induction.html">Mathematical Induction</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="trigo_formulas.html" class="active">Trigo Formulas</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Chapter 3 More about Trigonometric Functions</h2>
+      <p class="section-subtitle">Trigonometric Formulae, Compound Angles, Double Angles.</p>
+
+      <nav class="part-nav">
+        <a href="#summary" class="part-btn">Summary Formulae</a>
+        <a href="#type1" class="part-btn">Type 1: Reciprocals &amp; Squares</a>
+        <a href="#type2" class="part-btn">Type 2: Compound Angle</a>
+        <a href="#type3" class="part-btn">Type 3: Double Angle</a>
+        <a href="#mixed" class="part-btn">More Examples</a>
+      </nav>
+
+      <!-- Summary Section -->
+      <h3 class="part-heading" id="summary">A) Trigonometric Formulae Summary</h3>
+      <div class="skill-grid">
+        
+        <!-- Left column -->
+        <article class="skill-card">
+          <h3>Square of Trigonometric Ratios</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin^2 A + \cos^2 A &= 1 \\
+            1 + \tan^2 A &= \sec^2 A \\
+            1 + \cot^2 A &= \csc^2 A
+            \end{aligned}
+            \]
+          </div>
+
+          <h3>Compound Angle Formulae</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin(A \pm B) &= \sin A \cos B \pm \cos A \sin B \\
+            \cos(A \pm B) &= \cos A \cos B \mp \sin A \sin B \\
+            \tan(A \pm B) &= \frac{\tan A \pm \tan B}{1 \mp \tan A \tan B}
+            \end{aligned}
+            \]
+          </div>
+
+          <h3>Double Angle Formulae</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin 2A &= 2 \sin A \cos A \\
+            \cos 2A &= \cos^2 A - \sin^2 A \\
+                    &= 1 - 2\sin^2 A \\
+                    &= 2\cos^2 A - 1 \\
+            \tan 2A &= \frac{2\tan A}{1 - \tan^2 A} \\
+            \sin^2 A &= \frac{1 - \cos 2A}{2} \\
+            \cos^2 A &= \frac{1 + \cos 2A}{2}
+            \end{aligned}
+            \]
+          </div>
+        </article>
+
+        <!-- Right column -->
+        <article class="skill-card">
+          <h3>Product-to-sum Formulae</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin A \cos B &= \sin\left(\frac{A+B}{2}\right) + \sin\left(\frac{A-B}{2}\right) \\
+            \cos A \cos B &= \cos\left(\frac{A+B}{2}\right) + \cos\left(\frac{A-B}{2}\right) \\
+            \sin A \sin B &= -\cos\left(\frac{A+B}{2}\right) + \cos\left(\frac{A-B}{2}\right)
+            \end{aligned}
+            \]
+          </div>
+
+          <h3>Sum-to-product Formulae</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin A + \sin B &= 2 \sin\left(\frac{A+B}{2}\right) \cos\left(\frac{A-B}{2}\right) \\
+            \sin A - \sin B &= 2 \cos\left(\frac{A+B}{2}\right) \sin\left(\frac{A-B}{2}\right) \\
+            \cos A + \cos B &= 2 \cos\left(\frac{A+B}{2}\right) \cos\left(\frac{A-B}{2}\right) \\
+            \cos A - \cos B &= -2 \sin\left(\frac{A+B}{2}\right) \sin\left(\frac{A-B}{2}\right)
+            \end{aligned}
+            \]
+          </div>
+        </article>
+      </div>
+
+      <!-- Type 1 Section -->
+      <h3 class="part-heading" id="type1">Type 1: Reciprocals and Squares of Trigonometric Ratios</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>Prove the following identities.</p>
+          <p>(a) \(\frac{\tan^4 x - 1}{1 - 2\cos^2 x} = \sec^4 x\)</p>
+          <p>(b) \(\frac{\csc A + \csc B}{\cot A + \cot B} = \frac{\cot A - \cot B}{\csc A - \csc B}\)</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\tan^4 x - 1}{1 - 2\cos^2 x} &= \frac{(\tan^2 x + 1)(\tan^2 x - 1)}{1 - 2\cos^2 x} \\
+            &= \frac{\sec^2 x \left( \frac{\sin^2 x}{\cos^2 x} - 1 \right)}{1 - 2\cos^2 x} \\
+            &= \frac{\frac{1}{\cos^2 x} \left( \frac{\sin^2 x - \cos^2 x}{\cos^2 x} \right)}{\sin^2 x + \cos^2 x - 2\cos^2 x} \\
+            &= \frac{\sec^4 x (\sin^2 x - \cos^2 x)}{\sin^2 x - \cos^2 x} \\
+            &= \sec^4 x
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Where there are a lot of squares in the question, you can make use of either the <strong>square identities</strong> or <strong>sum of trigonometric square identities</strong>.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\csc A + \csc B}{\cot A + \cot B} \times \frac{\cot A - \cot B}{\cot A - \cot B} &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{\cot^2 A - \cot^2 B} \\
+            &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{(\csc^2 A - 1) - (\csc^2 B - 1)} \\
+            &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{\csc^2 A - \csc^2 B} \\
+            &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{(\csc A + \csc B)(\csc A - \csc B)} \\
+            &= \frac{\cot A - \cot B}{\csc A - \csc B}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Method 1:</strong> Multiply conjugate
+          </div>
+
+          <h4>Alternative</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\csc A + \csc B}{\cot A + \cot B} \times \frac{\csc A - \csc B}{\csc A - \csc B} &= \frac{\csc^2 A - \csc^2 B}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{(1 + \cot^2 A) - (1 + \cot^2 B)}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{\cot^2 A - \cot^2 B}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{(\cot A + \cot B)(\cot A - \cot B)}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{\cot A - \cot B}{\csc A - \csc B}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Method 2:</strong> Multiply opposite denominator
+          </div>
+        </article>
+      </div>
+
+      <!-- Type 2 Section -->
+      <h3 class="part-heading" id="type2">Type 2: Compound Angle Formulae</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 3</h3>
+          <p>Solve the following equations for \(0 \le x \le \pi\).</p>
+          <p>(a) \(\tan 6x - \tan 2x - \tan 6x \tan 2x = 1\)</p>
+          <p>(b) \(\frac{1 + \tan x}{1 - \tan x} = \cot(x + \frac{\pi}{2})\)</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \tan 6x - \tan 2x - \tan 6x \tan 2x &= 1 \\
+            \tan 6x - \tan 2x &= 1 + \tan 6x \tan 2x \\
+            \frac{\tan 6x - \tan 2x}{1 + \tan 6x \tan 2x} &= 1 \\
+            \tan(6x - 2x) &= 1 \\
+            \tan 4x &= 1 \\
+            4x &= \frac{\pi}{4} \text{ or } \frac{5\pi}{4} \text{ or } \frac{9\pi}{4} \text{ or } \frac{13\pi}{4} \\
+            x &= \frac{\pi}{16} \text{ or } \frac{5\pi}{16} \text{ or } \frac{9\pi}{16} \text{ or } \frac{13\pi}{16}
+            \end{aligned}
+            \]
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{1 + \tan x}{1 - \tan x} &= \cot(x + \frac{\pi}{2}) \\
+            \frac{\tan \frac{\pi}{4} + \tan x}{1 - \tan \frac{\pi}{4} \tan x} &= \cot(x + \frac{\pi}{2}) \\
+            \tan(x + \frac{\pi}{4}) &= \tan\left[ \frac{\pi}{2} - (x + \frac{\pi}{2}) \right] \text{ or } \tan(x + \frac{\pi}{4}) = \tan\left[ \frac{3\pi}{2} - (x + \frac{\pi}{2}) \right] \\
+            x + \frac{\pi}{4} &= x \text{ (rej.) or } x + \frac{\pi}{4} = \pi - x \\
+            x &= \frac{3\pi}{8}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> \(\cot x = \tan(90^\circ - x)\)
+          </div>
+        </article>
+      </div>
+
+      <!-- Type 3 Section -->
+      <h3 class="part-heading" id="type3">Type 3: Double Angle Formulae</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 4 [2013-DSE-M2-Q7]</h3>
+          <p>(a) Prove the identity \(\tan x = \frac{\sin 2x}{1 + \cos 2x}\).</p>
+          <p>(b) Using (a), prove the identity \(\tan y = \frac{\sin 8y \cos 4y \cos 2y}{(1 + \cos 8y)(1 + \cos 4y)(1 + \cos 2y)}\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\sin 2x}{1 + \cos 2x} &= \frac{2\sin x \cos x}{1 + (2\cos^2 x - 1)} \\
+            &= \frac{2\sin x \cos x}{2\cos^2 x} \\
+            &= \tan x
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Try to eliminate the 1 when considering which form to use.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            &\frac{\sin 8y \cos 4y \cos 2y}{(1 + \cos 8y)(1 + \cos 4y)(1 + \cos 2y)} \\
+            &= \tan 4y \frac{\cos 4y \cos 2y}{(1 + \cos 4y)(1 + \cos 2y)} \\
+            &= \frac{\sin 4y}{1 + \cos 4y} \times \frac{\cos 2y}{1 + \cos 2y} \\
+            &= \tan 2y \times \frac{\cos 2y}{1 + \cos 2y} \\
+            &= \frac{\sin 2y}{1 + \cos 2y} \\
+            &= \tan y
+            \end{aligned}
+            \]
+          </div>
+        </article>
+      </div>
+
+      <!-- Mixed Examples Section -->
+      <h3 class="part-heading" id="mixed">More Examples</h3>
+      <div class="skill-grid">
+        
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>It is given that \(\csc A + \cot A = k\).</p>
+          <p>(a) Express \(\csc A - \cot A\) in terms of \(k\).</p>
+          <p>(b) If \(\csc A\) and \(\cot A\) are the distinct roots of the quadratic equation \(9x^2 - 27x + p = 0\), where \(p\) is a constant, find the values of \(k\) and \(p\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \csc^2 A - \cot^2 A &= 1 \\
+            (\csc A + \cot A)(\csc A - \cot A) &= 1 \\
+            \csc A - \cot A &= \frac{1}{k}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Instead of squaring both sides, the conjugates have a <strong>difference of reciprocals</strong>.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \csc A + \cot A &= k = \frac{27}{9} \\
+            k &= 3 \\
+            \begin{cases} \csc A + \cot A = 3 \\ \csc A - \cot A = \frac{1}{3} \end{cases} \\
+            \text{Solving, } \csc A &= \frac{5}{3}, \cot A = \frac{4}{3} \\
+            \frac{p}{9} &= \csc A \cot A = \frac{20}{9} \\
+            p &= 20
+            \end{aligned}
+            \]
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 5 [2022-DSE-M2-Q2]</h3>
+          <p>(a) Let \(\frac{\pi}{4} < \theta < \frac{\pi}{2}\). Prove the identity \(\frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} = 1 + \sec \theta \csc \theta\).</p>
+          <p>(b) Solve the equation \(\frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} = 5\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            &\frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} \\
+            &= \frac{\tan^2 \theta}{\tan \theta - 1} + \frac{1}{\tan \theta - \tan^2 \theta} \\
+            &= \frac{\tan^2 \theta}{\tan \theta - 1} - \frac{1}{\tan \theta(\tan \theta - 1)} \\
+            &= \frac{\tan^3 \theta - 1}{\tan \theta(\tan \theta - 1)} \\
+            &= \frac{(\tan \theta - 1)(\tan^2 \theta + \tan \theta + 1)}{\tan \theta(\tan \theta - 1)} \\
+            &= \frac{\sec^2 \theta + \tan \theta}{\tan \theta} \\
+            &= 1 + \frac{\sec^2 \theta}{\tan \theta} \\
+            &= 1 + \frac{\sec^2 \theta \cos \theta}{\sin \theta} \\
+            &= 1 + \sec \theta \csc \theta
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> When simplifying reciprocals, we can multiply on both numerator and denominator.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} &= 5 \\
+            1 + \sec \theta \csc \theta &= 5 \\
+            \frac{1}{\cos \theta \sin \theta} &= 4 \\
+            \frac{2}{2 \cos \theta \sin \theta} &= 4 \\
+            \frac{2}{\sin 2\theta} &= 4 \\
+            \sin 2\theta &= \frac{1}{2} \\
+            2\theta &= \pi - \frac{\pi}{6} \\
+            \theta &= \frac{5\pi}{12}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> When there is \(\cos x \sin x\) usually it is double angle formula.
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Exercise 1 [Level 1]</h3>
+          <p>It is given that \(\tan \theta + \sec \theta = \frac{2}{5}\). By considering \(\tan \theta - \sec \theta\), find \(\tan \theta\) and \(\csc \theta\).</p>
+
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            1 + \tan^2 \theta &= \sec^2 \theta \\
+            (\sec \theta + \tan \theta)(\sec \theta - \tan \theta) &= 1 \\
+            \frac{2}{5}(\sec \theta - \tan \theta) &= 1 \\
+            \sec \theta - \tan \theta &= \frac{5}{2}
+            \end{aligned}
+            \]
+          </div>
+          <div class="math-block">
+            \[
+            \begin{cases} \tan \theta + \sec \theta = \frac{2}{5} \\ \tan \theta - \sec \theta = -\frac{5}{2} \end{cases}
+            \]
+          </div>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \text{Solving, } \tan \theta &= -\frac{21}{20}, \sec \theta = \frac{29}{20} \\
+            \tan \theta < 0 \text{ and } \sec \theta > 0 &\text{ implies } \csc \theta < 0. \\
+            \csc \theta &= -\frac{29}{21}
+            \end{aligned}
+            \]
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
