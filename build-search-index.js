@@ -5,19 +5,13 @@ const cheerio = require("cheerio");
 
 const PAGES = [
   { file: "index.html",                label: "Home" },
-  { file: "solving-equations.html",    label: "Solving Equations" },
-  { file: "completing-square.html",    label: "Completing Square" },
-  { file: "discriminant.html",         label: "Discriminant" },
-  { file: "roots.html",                label: "Sum & Product of Roots" },
-  { file: "complex-numbers.html",      label: "Complex Numbers" },
-  { file: "quadratic-functions.html",  label: "Quadratic Functions" },
-  { file: "graph-sketching.html",      label: "Graph Sketching" },
-  { file: "functions.html",            label: "Functions & Applications" },
-  { file: "coordinate-geometry.html",  label: "Coordinate Geometry" },
-  { file: "triangle-centers.html",     label: "Triangle Centers" },
-  { file: "glossary.html",             label: "Glossary" },
-  { file: "binomial-theorem.html",   label: "Binomial Theorem" },
-  { file: "mathematical-induction.html", label: "Mathematical Induction" }
+  { file: "quadratic_equations.html",    label: "Quadratic Equations" },
+  { file: "functions_and_graphs.html",    label: "Functions & Graphs" },
+  { file: "binomial-theorem.html",         label: "Binomial Theorem" },
+  { file: "mathematical-induction.html",   label: "Mathematical Induction" },
+  { file: "coordinate-geometry.html",      label: "Coordinate Geometry" },
+  { file: "triangle-centers.html",  label: "Triangle Centers" },
+  { file: "glossary.html",      label: "Glossary" },
 ];
 
 const index = [];
