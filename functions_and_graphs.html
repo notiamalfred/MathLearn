@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions &amp; Graphs — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quadratic_equations.html">Quadratic Equations</a>
+        <a href="functions_and_graphs.html">Functions &amp; Graphs</a>
+        <a href="binomial-theorem.html">Binomial Theorem</a>
+        <a href="mathematical-induction.html">Mathematical Induction</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Functions &amp; Graphs</h2>
+
+      <nav class="part-nav">
+        <a href="#fg-quadratic" class="part-btn">Quadratic Functions</a>
+        <a href="#fg-graph-sketching" class="part-btn">Graph Sketching</a>
+        <a href="#fg-functions" class="part-btn">Functions &amp; Applications</a>
+        <a href="#fg-functions-app1" class="part-btn">Application of Completing Square</a>
+      </nav>
+
+      <section id="fg-quadratic">
+        <h2>Quadratic Functions</h2>
+        <p class="section-subtitle">Three forms — and how to build a function from given information.</p>
+
+        <nav class="part-nav">
+          <a href="#fg-quadratic-forms" class="part-btn">Three Forms</a>
+          <a href="#fg-quadratic-general" class="part-btn">General Form</a>
+          <a href="#fg-quadratic-vertex" class="part-btn">Vertex Form</a>
+          <a href="#fg-quadratic-intercept" class="part-btn">Intercept Form</a>
+          <a href="#fg-quadratic-build" class="part-btn">Building Functions</a>
+        </nav>
+
+        <h3 class="part-heading" id="fg-quadratic-forms">Three Forms</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Comparison table</h3>
+            <p>A quadratic function has 3 different forms which show different geometric features of its graph (a parabola).</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Form</th>
+                    <th>Algebraic Expression</th>
+                    <th>Features</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>General form</td><td class="center">y = ax² + bx + c</td><td>Opening, axis of symmetry, y-intercept</td></tr>
+                  <tr><td>Vertex form</td><td class="center">y = a(x − h)² + k</td><td>Vertex, axis of symmetry</td></tr>
+                  <tr><td>Intercept form</td><td class="center">y = a(x − α)(x − β)</td><td>x-intercepts</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-quadratic-general">Type 1 — General Form y = ax² + bx + c</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Coefficients and their roles</h3>
+            <p>Coefficient <em>a</em> determines 1) Direction of opening and 2) Wideness of the parabola.</p>
+            <ul>
+              <li>If <span class="math-inline">a &lt; 0</span>, the parabola will open downward.</li>
+              <li>If <span class="math-inline">a &gt; 0</span>, the parabola will open upward.</li>
+              <li>The larger <span class="math-inline">|a|</span> is, the narrower the opening gets.</li>
+            </ul>
+
+            <p>Coefficient <em>c</em> determines the y-intercept of the parabola.</p>
+            <p>By substituting <span class="math-inline">x = 0</span> to the quadratic equation, the value of <em>y</em> is always equal to the constant <em>c</em>.</p>
+
+            <p>Coefficient <em>b</em> determines the axis of symmetry of the parabola.</p>
+            <p>The axis of symmetry is a vertical line that passes through the vertex of the parabola and lies exactly midway between the two x-intercepts (if they exist).</p>
+            <p>Equation of the axis of symmetry is <span class="math-inline">x = −b/(2a)</span> (x-coordinate of the vertex).</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-quadratic-vertex">Type 2 — Vertex Form y = a(x − h)² + k</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Geometric features from vertex form</h3>
+            <p>By converting the General Form <span class="math-inline">y = ax² + bx + c</span> into the Vertex Form <span class="math-inline">y = a(x − h)² + k</span>, we can directly identify the critical geometric features of the parabola:</p>
+            <ul>
+              <li>Coordinates of the vertex: <span class="math-inline">(h, k)</span>, which is the lowest point (for <span class="math-inline">a &gt; 0</span>) or the highest point (for <span class="math-inline">a &lt; 0</span>).</li>
+              <li>Equation of the axis of symmetry: the vertical line <span class="math-inline">x = h</span>.</li>
+              <li>Minimum value <em>k</em> (for <span class="math-inline">a &gt; 0</span>) or maximum value <em>k</em> (for <span class="math-inline">a &lt; 0</span>) of <em>y</em>.</li>
+            </ul>
+
+            <h4>Two methods to find the vertex</h4>
+            <p><strong>1. Method of completing square</strong></p>
+            <div class="math-block">
+              <span class="math-line">ax² + bx + c</span>
+              <span class="math-line">= a(x² + (b/a)x) + c</span>
+              <span class="math-line">= a(x² + (b/a)x + (b/(2a))²) − a(b/(2a))² + c</span>
+              <span class="math-line">= a(x + b/(2a))² − a(b/(2a))² + c</span>
+            </div>
+
+            <p><strong>2. By substitution</strong></p>
+            <p>By comparing the two forms, <span class="math-inline">h = −b/(2a)</span>. Since we know that the axis of symmetry passes through the vertex as well, we can find the value of <em>k</em> by substituting the value of <em>h</em> into <em>x</em> after computation.</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-quadratic-intercept">Type 3 — Intercept Form y = a(x − α)(x − β)</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>From roots to function</h3>
+            <p>By solving quadratic equation <span class="math-inline">y = 0</span>, we can rewrite a quadratic function in forms of <em>α</em> and <em>β</em>. However, in a function sense, the graph can be enlarged or reflected in different scales, such that adding a leading coefficient <em>a</em> is necessary.</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-quadratic-build">Building a Quadratic Function</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Which form to use</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Forms</th><th>Geometric Information given</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>General Form <span class="math-inline">y = ax² + bx + c</span></td><td>3 Random Points</td></tr>
+                  <tr><td>Vertex Form <span class="math-inline">y = a(x − h)² + k</span></td><td>Vertex (h, k) or Axis of symmetry x = h</td></tr>
+                  <tr><td>Intercept Form <span class="math-inline">y = a(x − α)(x − β)</span></td><td>x-intercepts α or β</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 1 — Given 3 Random Points</h3>
+            <p>Find the quadratic function passing through points (0, 10), (1, 20) and (5, 0).</p>
+            <div class="math-block">
+              <span class="math-line">Let the function be y = ax² + bx + 10</span>
+              <span class="math-line">By putting (1, 20) and (5, 0),</span>
+              <span class="math-line">(20) = a(1)² + b(1) + 10 … (1)</span>
+              <span class="math-line">(0) = a(5)² + b(5) + 10 … (2)</span>
+              <span class="math-line">Solving, a = −3, b = 13</span>
+              <span class="math-line">y = −3x² + 13x + 10</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 2 — Given Vertex</h3>
+            <p>Find the quadratic function with vertex (1, 2), and passes through the point (2, −1).</p>
+            <div class="math-block">
+              <span class="math-line">Let the function be y = a(x − 1)² + 2</span>
+              <span class="math-line">Sub (2, −1),</span>
+              <span class="math-line">−1 = a(2 − 1)² + 2</span>
+              <span class="math-line">a = −3</span>
+            </div>
+            <p>The quadratic function: <span class="math-inline">y = −3(x − 1)² + 2</span>.</p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 3 — Given x-intercepts</h3>
+            <p>Find the quadratic function with x-intercepts 4 and 5, and y-intercept 10.</p>
+            <div class="math-block">
+              <span class="math-line">Let the function be y = a(x − 4)(x − 5)</span>
+              <span class="math-line">By putting y-intercept,</span>
+              <span class="math-line">10 = a(0 − 4)(0 − 5)</span>
+              <span class="math-line">a = 1/2</span>
+              <span class="math-line">y = (1/2)(x − 4)(x − 5)</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="fg-graph-sketching">
+        <h2>Graph Sketching &amp; MC Sign Questions</h2>
+        <p class="section-subtitle">Sketch a parabola and read off the signs.</p>
+
+        <nav class="part-nav">
+          <a href="#fg-graph-sketching-sketching" class="part-btn">Sketching</a>
+          <a href="#fg-graph-sketching-mc" class="part-btn">MC Sign Questions</a>
+        </nav>
+
+        <h3 class="part-heading" id="fg-graph-sketching-sketching">Sketching the Graph</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Order of features</h3>
+            <p>You may follow the following order of features to sketch the graph of a quadratic function:</p>
+            <ol>
+              <li>y-intercept</li>
+              <li>Direction of opening</li>
+              <li>x-intercepts (if any)</li>
+              <li>Vertex (if needed)</li>
+            </ol>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 1</h3>
+            <p>Sketch the quadratic function <span class="math-inline">y = x² − 3x + 2</span>.</p>
+            <p>Locating the x-intercepts: 1 and 2; y-intercept: 2. Direction: open upwards.</p>
+
+            <figure>
+              <img src="images/page-14-fig-1.png" alt="Graph of y = x² − 3x + 2 showing vertex at (1.5, −0.25), x-intercepts 1 and 2, y-intercept 2">
+              <figcaption>Example 1: y = x² − 3x + 2 (Δ &gt; 0). Vertex (1.5, −0.25), AOS x = 1.5.</figcaption>
+            </figure>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 2</h3>
+            <p>Sketch the quadratic function <span class="math-inline">y = x² + 4x + 10</span>.</p>
+            <p>y-intercept: 10; direction: open upwards; AOS: <span class="math-inline">x = −2</span>. Since there is no x-intercepts, sub <span class="math-inline">x = −2</span> to find the vertex: <span class="math-inline">(−2, 6)</span>.</p>
+
+            <figure>
+              <img src="images/page-15-fig-1.png" alt="Graph of y = x² + 4x + 10 showing vertex at (−2, 6), y-intercept 10, no x-intercepts">
+              <figcaption>Example 2: y = x² + 4x + 10 (Δ &lt; 0). Vertex (−2, 6), AOS x = −2.</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-graph-sketching-mc">Multiple Choice Questions</h3>
+        <div class="skill-grid">
+
+          <article class="skill-card example-card">
+            <h3>Example 1</h3>
+            <p>The figure shows the graph of <span class="math-inline">y = ax² + bx + c</span>. Which of the following is true?</p>
+
+            <figure>
+              <img src="images/page-15-fig-2.png" alt="Downward parabola with two x-intercepts and negative y-intercept">
+              <figcaption>Graph of y = ax² + bx + c with a &lt; 0, c &lt; 0 and two x-intercepts.</figcaption>
+            </figure>
+
+            <p>A. <span class="math-inline">a &gt; 0</span>, <span class="math-inline">c &gt; 0</span> and <span class="math-inline">b² &gt; 4ac</span><br />
+               B. <span class="math-inline">a &gt; 0</span>, <span class="math-inline">c &lt; 0</span> and <span class="math-inline">b² &lt; 4ac</span><br />
+               C. <span class="math-inline">a &lt; 0</span>, <span class="math-inline">c &lt; 0</span> and <span class="math-inline">b² &gt; 4ac</span><br />
+               D. <span class="math-inline">a &lt; 0</span>, <span class="math-inline">c &lt; 0</span> and <span class="math-inline">b² &lt; 4ac</span></p>
+            <ol>
+              <li>Open downwards → <span class="math-inline">a &lt; 0</span></li>
+              <li>y-intercept → <span class="math-inline">c &lt; 0</span></li>
+              <li>Two x-intercepts → <span class="math-inline">b² − 4ac &gt; 0</span></li>
+            </ol>
+            <p>P.S. Sign of <em>b</em> can be evaluated in two ways:</p>
+            <ol>
+              <li><span class="math-inline">−b/(2a) &gt; 0 → b &gt; 0</span></li>
+              <li><span class="math-inline">f(x) &lt; 0, b &lt; 0; f(x) &gt; 0, b &gt; 0</span></li>
+            </ol>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 2</h3>
+            <p>The figure shows the graph of <span class="math-inline">y = a(x − b)²</span>. Which of the following is true?</p>
+
+            <figure>
+              <img src="images/page-16-fig-1.png" alt="Upward parabola with axis of symmetry x = b > 0">
+              <figcaption>Graph of y = a(x − b)² with a &gt; 0 and axis of symmetry x = b &gt; 0.</figcaption>
+            </figure>
+
+            <p>A. <span class="math-inline">a &gt; 0</span> and <span class="math-inline">b &gt; 0</span><br />
+               B. <span class="math-inline">a &gt; 0</span> and <span class="math-inline">b &lt; 0</span><br />
+               C. <span class="math-inline">a &lt; 0</span> and <span class="math-inline">b &gt; 0</span><br />
+               D. <span class="math-inline">a &lt; 0</span> and <span class="math-inline">b &lt; 0</span></p>
+            <ol>
+              <li>Open upwards → <span class="math-inline">a &gt; 0</span></li>
+              <li>Axis of symmetry: <span class="math-inline">x = b &gt; 0</span></li>
+            </ol>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 3</h3>
+            <p>Refer to the graph <span class="math-inline">y = ax² − 2bx + c</span>. Which of the following is true?</p>
+
+            <figure>
+              <img src="images/page-16-fig-2.png" alt="Downward parabola with two x-intercepts and positive y-intercept">
+              <figcaption>Graph of y = ax² − 2bx + c with a &lt; 0, c &gt; 0 and two x-intercepts.</figcaption>
+            </figure>
+
+            <p>I. <span class="math-inline">a &lt; 0</span><br />
+               II. <span class="math-inline">c &lt; 0</span><br />
+               III. <span class="math-inline">b &lt; 0</span><br />
+               IV. <span class="math-inline">ac &lt; b²</span></p>
+            <p>A. I and III only</p>
+            <div class="math-block">
+              <span class="math-line">2. y-intercept → c &gt; 0</span>
+              <span class="math-line">3. Axis of symmetry:</span>
+              <span class="math-line indent">x = −(−2b)/(2a) = b/a &gt; 0</span>
+              <span class="math-line">Given that a &lt; 0, which means b &lt; 0</span>
+              <span class="math-line">4. Two x-intercepts:</span>
+              <span class="math-line indent">(−2b)² − 4ac &gt; 0</span>
+              <span class="math-line indent">4b² &gt; 4ac</span>
+              <span class="math-line indent">b² &gt; ac</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 4</h3>
+            <p>Refer to the graph of <span class="math-inline">y = a(x − h)² + k</span>. Which of the following is true?</p>
+
+            <figure>
+              <img src="images/page-17-fig-1.png" alt="Upward parabola with vertex (h, k) where h > 0 and k < 0">
+              <figcaption>Graph of y = a(x − h)² + k with a &gt; 0, h &gt; 0 and k &lt; 0.</figcaption>
+            </figure>
+
+            <p>I. <span class="math-inline">a &gt; 0</span><br />
+               II. <span class="math-inline">h &gt; 0</span><br />
+               III. <span class="math-inline">k &lt; 0</span></p>
+            <p>A. I and II only<br />B. I and III only<br />C. II and III only<br />D. I, II and III</p>
+            <ol>
+              <li>Open upwards → <span class="math-inline">a &gt; 0</span></li>
+              <li>Vertex <span class="math-inline">(h, k)</span>, where <em>h</em> is positive and <em>k</em> is negative</li>
+            </ol>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="fg-functions">
+        <h2>Functions &amp; Applications</h2>
+        <p class="section-subtitle">MC questions on functions and real-life applications.</p>
+
+        <nav class="part-nav">
+          <a href="#fg-functions-mc" class="part-btn">MC Questions</a>
+          <a href="#fg-functions-app1" class="part-btn">Application Type 1</a>
+          <a href="#fg-functions-app2" class="part-btn">Application Type 2</a>
+        </nav>
+
+        <h3 class="part-heading" id="fg-functions-mc">MC Questions Related to Functions</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Type 1 — Finding values of a certain function</h3>
+            <h4>Question 1</h4>
+            <p><em>[2017-DSE-II-Q6]</em></p>
+            <p>Let <span class="math-inline">f(x) = 2x² − 5x + k</span>, then <span class="math-inline">f(2) − f(−2) =</span></p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Question 2</h3>
+            <p>If <span class="math-inline">f(2x + 1) = 4x² + 2x + 3</span>, then <span class="math-inline">f(2x) =</span></p>
+            <p>A. <span class="math-inline">4x² − 2x − 3</span><br />
+               B. <span class="math-inline">4x² − 2x + 3</span><br />
+               C. <span class="math-inline">4x² + 2x − 3</span><br />
+               D. <span class="math-inline">4x² + 2x + 3</span></p>
+
+            <h4>Method 1</h4>
+            <div class="math-block">
+              <span class="math-line">Let u = 2x + 1, x = (u − 1)/2</span>
+              <span class="math-line">f(u)</span>
+              <span class="math-line indent">= 4((u − 1)/2)² + 2((u − 1)/2) + 3</span>
+              <span class="math-line indent">= u² − u + 3</span>
+              <span class="math-line">f(2x)</span>
+              <span class="math-line indent">= (2x)² − (2x) + 3</span>
+              <span class="math-line indent">= 4x² − 2x + 3</span>
+            </div>
+
+            <h4>Method 2</h4>
+            <p>Observe that <span class="math-inline">f(2x + 1) = (2x)² + (2x) + 3</span> and <span class="math-inline">2x = (2x + 1) − 1</span>.</p>
+            <div class="math-block">
+              <span class="math-line">f(2x)</span>
+              <span class="math-line indent">= (2x − 1)² + (2x − 1) + 3</span>
+              <span class="math-line indent">= 4x² − 2x + 3</span>
+            </div>
+
+            <h4>Method 3</h4>
+            <p>Sub <span class="math-inline">x = 1</span>, <span class="math-inline">f(2x) = f(2)</span>, at the same time for <span class="math-inline">f(2x + 1)</span>, sub <span class="math-inline">x = 0.5</span>, so <span class="math-inline">f(2 × 0.5 + 1) = 5</span>. Option A: −1, Option B: 5, Option C: 3, Option D: 9.</p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Question 3</h3>
+            <p><em>[DSE-2021-P2-Q7]</em></p>
+            <p>Let <span class="math-inline">f(x) = (x + h)(x − 3) + k</span>, where <em>h</em> and <em>k</em> are constants. If <span class="math-inline">f(0) = f(8) = 1</span>, find <em>k</em>.</p>
+            <p>A. −14<br />B. −5<br />C. 20<br />D. 31</p>
+
+            <p>★ Axis of symmetry of <span class="math-inline">f(x) = (x − α)(x − β) + k</span> is <span class="math-inline">(α + β)/2</span>, axis of symmetry of <span class="math-inline">f(x) = ax² + bx + c</span> is <span class="math-inline">−b/(2a)</span>.</p>
+
+            <p>Since it is a quadratic function, when <span class="math-inline">f(0) = f(8)</span>, <span class="math-inline">x = 4</span> is the axis of symmetry.</p>
+            <div class="math-block">
+              <span class="math-line">Axis of symmetry:</span>
+              <span class="math-line">(−h + 3)/2 = 4</span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-functions-app1">Application Type 1 — Area</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example — ABCDE figure</h3>
+            <p>In figure 2, ABCDE is formed by a right-angled triangle ABE and a rectangle BCDE, where AB = 3x cm and AE = 4x cm.</p>
+
+            <figure>
+              <img src="images/page-19-fig-1.png" alt="Figure 2: Right triangle ABE on top of rectangle BCDE with AB = 3x cm, AE = 4x cm">
+              <figcaption>Figure 2: ABCDE formed by right-angled triangle ABE and rectangle BCDE.</figcaption>
+            </figure>
+
+            <h4>(a) Express the length of CD in terms of x.</h4>
+            <div class="math-block">
+              <span class="math-line">BE = √((3x)² + (4x)²) = 5x cm (pyth theorem)</span>
+              <span class="math-line">∴ CD = BE = 5x cm</span>
+            </div>
+
+            <h4>(b) If the perimeter of the figure is 96 cm, express the area of rectangle BCDE in terms of x.</h4>
+            <div class="math-block">
+              <span class="math-line">BC + ED + 3x + 4x + 5x = 96</span>
+              <span class="math-line">2BC = 96 − 12x</span>
+              <span class="math-line">BC = 48 − 6x</span>
+              <span class="math-line">Area of BCDE = (48 − 6x)(5x) = (−30x² + 240x) cm²</span>
+            </div>
+
+            <h4>(c) Find the maximum area of the figure.</h4>
+            <div class="math-block">
+              <span class="math-line">Area of the figure</span>
+              <span class="math-line">= (1/2)(3x)(4x) + (−30x² + 240x)</span>
+              <span class="math-line">= (−24x² + 240x)</span>
+            </div>
+            <p>★ Whenever the question word hints "maximum"/"minimum", usually it is related to completing square.</p>
+            <div class="math-block">
+              <span class="math-line">= −24(x² − 10x + 5² − 5²)</span>
+              <span class="math-line">= −24[(x − 5)² − 25]</span>
+              <span class="math-line">= [−24(x − 5)² + 600] cm²</span>
+              <span class="math-line">∴ The maximum area of the figure is 600 cm²</span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="fg-functions-app2">Application Type 2 — Coordinate Plane</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example — ΔABD area</h3>
+            <p>The graph of <span class="math-inline">y = −x² − 10x − 16</span> cuts the x-axis at A and B. D is a point on the curve above the x-axis.</p>
+
+            <h4>(a) Find the coordinates of A and B.</h4>
+            <div class="math-block">
+              <span class="math-line">x = −8 or x = −2</span>
+            </div>
+            <p>The coordinates of A and B are <span class="math-inline">(−8, 0)</span> and <span class="math-inline">(−2, 0)</span> respectively.</p>
+
+            <h4>(b) Cathy claims that the area of ΔABD does not exceed 27 sq units. Do you agree? Explain your answer.</h4>
+            <div class="math-block">
+              <span class="math-line">y = −x² − 10x − 16 = −(x² + 10x + 5² − 5²) − 16 = −(x + 5)² + 9</span>
+              <span class="math-line">AB = [−2 − (−8)] = 6 units</span>
+              <span class="math-line">Maximum area of ΔABD</span>
+              <span class="math-line">(1/2) × 6 × 9 sq units = 27 sq units</span>
+            </div>
+            <p>The area of ΔABD does not exceed 27 sq units.<br />Cathy's claim is correct.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>

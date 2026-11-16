@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quadratic Equations — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quadratic_equations.html">Quadratic Equations</a>
+        <a href="functions_and_graphs.html">Functions &amp; Graphs</a>
+        <a href="binomial-theorem.html">Binomial Theorem</a>
+        <a href="mathematical-induction.html">Mathematical Induction</a>
+        <a href="coordinate-geometry.html">Coordinate Geometry</a>
+        <a href="triangle-centers.html">Triangle Centers</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Quadratic Equations</h2>
+
+      <nav class="part-nav">
+        <a href="#qe-solving" class="part-btn">Solving Equations</a>
+        <a href="#qe-completing" class="part-btn">Completing Square</a>
+        <a href="#qe-discriminant" class="part-btn">Discriminant</a>
+        <a href="#qe-roots" class="part-btn">Roots</a>
+        <a href="#qe-complex" class="part-btn">Complex Numbers</a>
+      </nav>
+
+      <section id="qe-solving">
+        <h2>Solving Quadratic Equations</h2>
+        <p class="section-subtitle">Four methods, and how to pick the right one.</p>
+
+        <nav class="part-nav">
+          <a href="#qe-solving-methods" class="part-btn">Four Methods</a>
+          <a href="#qe-solving-examples" class="part-btn">Worked Examples</a>
+        </nav>
+
+        <h3 class="part-heading" id="qe-solving-methods">Four Methods to Solve a Quadratic Equation</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Comparison table</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Methods</th>
+                    <th>Best use when…</th>
+                    <th>Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1. Changing into general form and FMLA 01</td>
+                    <td>Equations that can be converted to general form easily</td>
+                    <td class="center">x² − 3x = −2</td>
+                  </tr>
+                  <tr>
+                    <td>2. Performing factorization</td>
+                    <td>Both sides contain Common Factors / Identity</td>
+                    <td class="center">x² − 3x = 2(x − 3)</td>
+                  </tr>
+                  <tr>
+                    <td>3. Taking square roots on both sides</td>
+                    <td>Both sides are Perfect Squares.<br /><em>Note: A² = B² → A = ±B</em></td>
+                    <td class="center">(x − 3)² = 4x²</td>
+                  </tr>
+                  <tr>
+                    <td>4. Using quadratic formula</td>
+                    <td>Cannot be factorized. Last resort.</td>
+                    <td class="center">x² − 3x − 3 = 0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>It is important to determine which method to use when solving a complicated equation, particularly in MC questions which always consists of extra variables.</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-solving-examples">Worked Examples</h3>
+        <div class="skill-grid">
+
+          <article class="skill-card example-card">
+            <h3>Example 1</h3>
+            <p>If β is a root of the equation <span class="math-inline">3x² + 2x − 3 = 0</span>, then <span class="math-inline">6β² + 4β − 7 =</span></p>
+            <p>A. 0&nbsp;&nbsp;&nbsp;B. −1&nbsp;&nbsp;&nbsp;C. 4&nbsp;&nbsp;&nbsp;D. −4</p>
+
+            <p>When seeing <em>"… is a root"</em>, immediately substitute into the equation. Rewrite the expressions into multiples of the unknowns in the equation.</p>
+
+            <h4>Method 1 (LQ)</h4>
+            <div class="math-block">
+              <span class="math-line">3β² + 2β − 3 = 0</span>
+              <span class="math-line">3β² + 2β = 3</span>
+              <span class="math-line">6β² + 4β = 6</span>
+              <span class="math-line">∴ 6β² + 4β − 7 = 6 − 7 = −1</span>
+            </div>
+
+            <h4>Method 2 (MC)</h4>
+            <p>Press FMLA 01 to get the value of β. Substitute either value into <span class="math-inline">6β² + 4β − 7</span> would get −1.</p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 2</h3>
+            <p>If <span class="math-inline">(a − 1)² − 3(a − 1) + 2 = 0</span> and <span class="math-inline">(b − 1)² − 3(b − 1) + 2 = 0</span>, where <span class="math-inline">a &lt; b</span>, find the value of <span class="math-inline">b − a</span>.</p>
+            <p>A. −1&nbsp;&nbsp;&nbsp;B. 0&nbsp;&nbsp;&nbsp;C. 1&nbsp;&nbsp;&nbsp;D. 2</p>
+
+            <p>Consider the expression as a quadratic equation: <span class="math-inline">x² − 3x + 2 = 0</span>, where <span class="math-inline">a − 1</span> and <span class="math-inline">b − 1</span> are roots of the equation.</p>
+            <p>★ Observe that the two equations given has exactly the same format of positioning of unknown.</p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 3</h3>
+            <p>Solve the equation <span class="math-inline">2ax(2 − ax) + ax = 2</span>, where <span class="math-inline">a ≠ 0</span>.</p>
+            <p>A. <span class="math-inline">x = 0</span><br />
+               B. <span class="math-inline">x = 1 / (2a)</span><br />
+               C. <span class="math-inline">x = 1 / (2a)</span> or <span class="math-inline">2 / a</span><br />
+               D. <span class="math-inline">x = 2a</span> or <span class="math-inline">a</span></p>
+
+            <h4>Method 1 (LQ)</h4>
+            <div class="math-block">
+              <span class="math-line">2ax(2 − ax) + ax = 2</span>
+              <span class="math-line">2ax(2 − ax) − (2 − ax) = 0</span>
+              <span class="math-line">(2 − ax)(2ax − 1) = 0</span>
+              <span class="math-line">x = 2/a or x = 1/(2a)</span>
+            </div>
+
+            <h4>Method 2 (MC)</h4>
+            <p>Substitute a random number into the extra variable <em>a</em>, note that the number you choose needs to be unique for each of the options.</p>
+            <p>For example, when <span class="math-inline">a = 2</span>, the equation becomes <span class="math-inline">8x² − 10x + 2 = 0</span>, solution becomes <span class="math-inline">x = 1/4</span> or <span class="math-inline">x = 1</span>. By checking the options, option C matches the substitution.</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="qe-completing">
+        <h2>Completing Square</h2>
+        <p class="section-subtitle">Rewrite ax² + bx + c as a(x − h)² + k.</p>
+
+        <nav class="part-nav">
+          <a href="#qe-completing-intro" class="part-btn">Introduction</a>
+          <a href="#qe-completing-type1" class="part-btn">Type 1</a>
+          <a href="#qe-completing-type2" class="part-btn">Type 2</a>
+          <a href="#qe-completing-examples" class="part-btn">Examples</a>
+        </nav>
+
+        <h3 class="part-heading" id="qe-completing-intro">Introduction</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>What is Completing Square?</h3>
+            <p>A quadratic expression with form <span class="math-inline">ax² + bx + c</span> can be rewritten in the form of <span class="math-inline">a(x − h)² + k</span>, which we name this process as "Completing Square".</p>
+            <p>For example, <span class="math-inline">x² + 4x + 5 = (x + 2)² + 1</span>.</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-completing-type1">Type 1 — Leading Coefficient as 1</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Quadratic expressions in the form x² + bx + c</h3>
+            <ol>
+              <li>
+                <p>Divide the coefficient of x (i.e. b) by 2 to obtain the value of h in the form of (x + h)² + k.</p>
+                <div class="math-block">
+                  <span class="math-line">e.g. For x² + 4x + 5, h = 4/2 = 2, i.e. (x + 2)² + k</span>
+                  <span class="math-line">e.g. For x² − 6x − 3, h = −6/2 = −3, i.e. (x + (−3))² + k</span>
+                </div>
+              </li>
+              <li>
+                <p>Add the term (b/2)² (you may neglect the negative sign), and subtract back (b/2)² such that x² + bx + (b/2)² form a perfect square.</p>
+                <div class="math-block">
+                  <span class="math-line">e.g. x² + 4x + 5 = x² + 4x + (2)² − (2)² + 5</span>
+                  <span class="math-line">e.g. x² − 6x − 3 = x² − 6x + (3)² − (3)² − 3</span>
+                </div>
+              </li>
+              <li>
+                <p>Simplify the residue expression (−(b/2)² + c).</p>
+                <div class="math-block">
+                  <span class="math-line">e.g. x² + 4x + 5 = (x + 2)² − 4 + 5 = (x + 2)² + 1</span>
+                  <span class="math-line">e.g. x² − 6x − 3 = (x − 3)² − 9 − 3 = (x − 3)² − 12</span>
+                </div>
+              </li>
+            </ol>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-completing-type2">Type 2 — Leading Coefficient in Forms of Non-1</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Quadratic expressions in the form ax² + bx + c</h3>
+            <ol>
+              <li>
+                <p>Take out the factor <em>a</em> for the terms ax² and bx; ignore the constant term c.</p>
+                <div class="math-block">
+                  <span class="math-line">e.g. −x² + 4x + 8 = −(x² − 4x) + 8</span>
+                  <span class="math-line">e.g. 3x² + 6x − 1 = 3(x² + 2x) − 1</span>
+                </div>
+              </li>
+              <li>
+                <p>Add and subtract the term (b/2)² such that x² + bx + (b/2)² inside the bracket form a perfect square.</p>
+                <div class="math-block">
+                  <span class="math-line">e.g. −x² + 4x + 8 = −(x² − 4x + (2)² − (2)²) + 8</span>
+                  <span class="math-line">e.g. 3x² + 6x − 1 = 3(x² + 2x + (1)² − (1)²) − 1</span>
+                </div>
+              </li>
+              <li>
+                <p>Simplify the residue expression by −a(b/2)² + c; be careful on dealing with brackets.</p>
+                <div class="math-block">
+                  <span class="math-line">e.g. −x² + 4x + 8 = −(x² − 4x + 4) + 4 + 8 = −(x − 2)² + 12</span>
+                  <span class="math-line">e.g. 3x² + 6x − 1 = 3(x² + 2x + 1) − 3 − 1 = 3(x + 1)² − 4</span>
+                </div>
+              </li>
+            </ol>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-completing-examples">Examples</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Type 1 — Example 1</h3>
+            <div class="math-block">
+              <span class="math-line">y = x² − 3x + 2</span>
+              <span class="math-line">y = x² − 3x + 1.5² − 1.5² + 2</span>
+              <span class="math-line">y = (x − 1.5)² − 0.25</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Type 1 — Example 2</h3>
+            <div class="math-block">
+              <span class="math-line">y = x² + (1/3)x + 1</span>
+              <span class="math-line">y = x² + (1/3)x + (1/6)² − (1/6)² + 1</span>
+              <span class="math-line">y = (x + 1/6)² + 35/36</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Type 2 — Example 1</h3>
+            <div class="math-block">
+              <span class="math-line">y = −2x² + 2x − 1</span>
+              <span class="math-line">y = −2(x² − x) − 1</span>
+              <span class="math-line">y = −2[x² − x + (1/2)² − (1/2)²] − 1</span>
+              <span class="math-line">y = −2(x − 1/2)² + 1/2 − 1</span>
+              <span class="math-line">y = −2(x − 1/2)² − 1/2</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Type 2 — Example 2</h3>
+            <div class="math-block">
+              <span class="math-line">y = (1/3)x² − x + 2</span>
+              <span class="math-line">y = (1/3)(x² − 3x) + 2</span>
+              <span class="math-line">y = (1/3)[x² − 3x + (3/2)² − (3/2)²] + 2</span>
+              <span class="math-line">y = (1/3)(x − 3/2)² − 3/4 + 2</span>
+              <span class="math-line">y = (1/3)(x − 3/2)² + 5/4</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Type 2 — Example 3</h3>
+            <div class="math-block">
+              <span class="math-line">y = 2x² + 4kx + 3k² − 1</span>
+              <span class="math-line">y = 2(x² + 2kx) + 3k² − 1</span>
+              <span class="math-line">y = 2[x² + 2kx + k² − k²] + 3k² − 1</span>
+              <span class="math-line">y = 2(x + k)² − 2k² + 3k² − 1</span>
+              <span class="math-line">y = 2(x + k)² + k² − 1</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="qe-discriminant">
+        <h2>Discriminant — Proof of Statements</h2>
+        <p class="section-subtitle">Using Δ = b² − 4ac with completing square.</p>
+
+        <nav class="part-nav">
+          <a href="#qe-discriminant-intro" class="part-btn">Introduction</a>
+          <a href="#qe-discriminant-proof" class="part-btn">Proof Type 1</a>
+          <a href="#qe-discriminant-example" class="part-btn">Graph Example</a>
+        </nav>
+
+        <h3 class="part-heading" id="qe-discriminant-intro">Introduction</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>What the discriminant can do</h3>
+            <p>The discriminant of a quadratic equation <span class="math-inline">Δ = b² − 4ac</span> is not only useful for finding unknown values; with the aid of completing the square, it can also <strong>prove that a statement or equation always holds true for all real values</strong>.</p>
+            <ol>
+              <li><strong>Express and simplify</strong> the discriminant.</li>
+              <li><strong>Completing the square</strong> for the discriminant to find max/min values.</li>
+              <li><strong>Comparing values</strong> to complete the proof.</li>
+            </ol>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-discriminant-proof">Type 1 — Proof of Statements Always Hold True</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example 1</h3>
+            <p>For the equation <span class="math-inline">x² + ax + (a − 2) = 0</span>, prove that it has 2 distinct real roots for any real values of <span class="math-inline">a</span>.</p>
+            <div class="math-block">
+              <span class="math-line">Δ = a² − 4(1)(a − 2)</span>
+              <span class="math-line indent">= a² − 4a + 8</span>
+              <span class="math-line indent">= a² − 4a + 2² − 2² + 8</span>
+              <span class="math-line indent">= (a − 2)² + 4</span>
+              <span class="math-line indent">≥ 4</span>
+              <span class="math-line indent">&gt; 0</span>
+            </div>
+            <p>∴ For any real number <span class="math-inline">a</span>, the equation has 2 distinct real roots.</p>
+            <p>★ Complete the square if the expression of Δ is not a perfect square. Then, you will notice that the minimum value of the expression is 4.</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-discriminant-example">Graph Example</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example 2</h3>
+            <p>The figure shows the graph of <span class="math-inline">y = x² + mx + n</span>, where <span class="math-inline">m &lt; 0</span>. The graph touches the x-axis at the point P, and it cuts the y-axis at the point Q. QR is a horizontal line.</p>
+
+            <figure>
+              <img src="images/page-05-fig-1.png" alt="Graph of y = x² + mx + n touching the x-axis at P, cutting the y-axis at Q, with horizontal QR forming triangle PQR">
+              <figcaption>Graph of y = x² + mx + n, touching the x-axis at P and cutting the y-axis at Q. QR is horizontal.</figcaption>
+            </figure>
+
+            <p>Make use of the information given: "touch the x-axis" to deduce the relationship between unknowns.</p>
+
+            <h4>(a) Express n in terms of m.</h4>
+            <div class="math-block">
+              <span class="math-line">Δ = 0</span>
+              <span class="math-line">m² − 4(1)(n) = 0</span>
+              <span class="math-line">n = m²/4</span>
+            </div>
+
+            <h4>(b) Find, in terms of m, the coordinates of P, Q and R.</h4>
+            <p>By substituting <span class="math-inline">n = m²/4</span> into <span class="math-inline">y = x² + mx + n</span>, we have <span class="math-inline">y = x² + mx + m²/4</span>.</p>
+            <div class="math-block">
+              <span class="math-line">When y = 0, x² + mx + m²/4 = 0</span>
+              <span class="math-line">(x + m/2)² = 0</span>
+              <span class="math-line">x = −m/2</span>
+            </div>
+            <p>The coordinates of P are <span class="math-inline">(−m/2, 0)</span>.</p>
+            <div class="math-block">
+              <span class="math-line">When x = 0, y = (0)² + m(0) + m²/4 = m²/4</span>
+            </div>
+            <p>The coordinates of Q are <span class="math-inline">(0, m²/4)</span>.</p>
+            <div class="math-block">
+              <span class="math-line">When y = m²/4, m²/4 = x² + mx + m²/4</span>
+              <span class="math-line">x² + mx = 0</span>
+              <span class="math-line">x = −m or x = 0</span>
+            </div>
+            <p>The coordinates of R are <span class="math-inline">(−m, m²/4)</span>.</p>
+
+            <h4>(c) Find the values of m and n if the area of ΔPQR is 27 sq units.</h4>
+            <p>Let H be a point on QR such that PH ⊥ QR.</p>
+            <div class="math-block">
+              <span class="math-line">QR = −m − 0 = −m, PH = m²/4</span>
+            </div>
+            <div class="math-block">
+              <span class="math-line">(1/2)(−m)(m²/4) = 27</span>
+              <span class="math-line">m³ = −216</span>
+              <span class="math-line">m = −6</span>
+            </div>
+            <p>By substituting <span class="math-inline">m = −6</span> into <span class="math-inline">n = m²/4</span>, we have <span class="math-inline">n = (−6)²/4 = 9</span>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="qe-roots">
+        <h2>Sum and Product of Roots</h2>
+        <p class="section-subtitle">α + β = −b/a and αβ = c/a.</p>
+
+        <nav class="part-nav">
+          <a href="#qe-roots-basics" class="part-btn">Basics</a>
+          <a href="#qe-roots-type1" class="part-btn">Type 1</a>
+          <a href="#qe-roots-type2" class="part-btn">Type 2</a>
+          <a href="#qe-roots-type3" class="part-btn">Type 3</a>
+        </nav>
+
+        <h3 class="part-heading" id="qe-roots-basics">Basics</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Formulas and identities</h3>
+            <p>For a quadratic equation that is in form of <span class="math-inline">ax² + bx + c = 0</span>:</p>
+            <div class="math-block">
+              <span class="math-line">(x − α)(x − β) = 0</span>
+              <span class="math-line">x² − (α + β)x + αβ = 0 … (1)</span>
+              <span class="math-line">ax² + bx + c = 0</span>
+              <span class="math-line">x² + (b/a)x + (c/a) = 0 … (2)</span>
+              <span class="math-line">∴ α + β = −b/a, αβ = c/a</span>
+            </div>
+
+            <h4>Three useful identities</h4>
+            <div class="math-block">
+              <span class="math-line">1. α² + β² = (α + β)² − 2αβ</span>
+              <span class="math-line">2. (α − β)² = (α + β)² − 4αβ</span>
+              <span class="math-line">3. α − β</span>
+              <span class="math-line indent">= √[(α + β)² − 4αβ]&nbsp;&nbsp;(for α &gt; β)</span>
+              <span class="math-line indent">= −√[(α + β)² − 4αβ]&nbsp;&nbsp;(for α &lt; β)</span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-roots-type1">Type 1 — Forming Quadratic Equations with Roots</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example 1</h3>
+            <p>If the roots of the equation <span class="math-inline">x² + √3 x − 4 = 0</span> are α and β, form a quadratic equation in <em>t</em> whose roots are α − β and β − α.</p>
+
+            <h4>Step 1: write down the sum and product of roots of the original equation.</h4>
+            <div class="math-block">
+              <span class="math-line">α + β = −√3 / 1 = −√3</span>
+              <span class="math-line">αβ = −4 / 1 = −4</span>
+            </div>
+
+            <h4>Step 2: find the new sum and product of roots in terms of the original one.</h4>
+            <div class="math-block">
+              <span class="math-line">New sum of roots = (α − β) + (β − α) = 0</span>
+              <span class="math-line">New product of roots = (α − β)(β − α)</span>
+              <span class="math-line indent">= −(α − β)²</span>
+              <span class="math-line indent">= −[(α + β)² − 4αβ]</span>
+              <span class="math-line indent">= −[(−√3)² − 4(−4)]</span>
+              <span class="math-line indent">= −19</span>
+            </div>
+
+            <h4>Step 3: express the answer in terms of the format t² − (sum of roots)t + (product of roots) = 0.</h4>
+            <p>The required quadratic equation: <span class="math-inline">t² − 19 = 0</span>.</p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-roots-type2">Type 2 — Making Use of the Unknown with Given Roots</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example 2</h3>
+            <p>It is given that α and β are the roots of the quadratic equation <span class="math-inline">x² + mx + n = 0</span>; <span class="math-inline">α + 2</span> and <span class="math-inline">β + 2</span> are the roots of the equation <span class="math-inline">x² + nx + m = 0</span>. Find the values of <em>m</em> and <em>n</em>.</p>
+
+            <p>★ Step 1: list the original and new sum/product of roots.</p>
+            <div class="math-block">
+              <span class="math-line">α + β = −m, αβ = n</span>
+              <span class="math-line">∴ (α + 2) + (β + 2) = −n</span>
+              <span class="math-line">α + β + 4 = −n</span>
+              <span class="math-line">−m + 4 = −n</span>
+              <span class="math-line">m − n = 4 … (1)</span>
+            </div>
+
+            <p>★ Step 2: Substitute the values from original sum/product of roots to the new one.</p>
+            <div class="math-block">
+              <span class="math-line">(α + 2)(β + 2) = m</span>
+              <span class="math-line">αβ + 2(α + β) + 4 = m</span>
+              <span class="math-line">n + 2(−m) + 4 = m</span>
+              <span class="math-line">3m − n = 4 … (2)</span>
+              <span class="math-line">(2) − (1): 2m = 0</span>
+              <span class="math-line">m = 0</span>
+            </div>
+            <p>By substituting <span class="math-inline">m = 0</span> into (1), we have:</p>
+            <div class="math-block">
+              <span class="math-line">0 − n = 4</span>
+              <span class="math-line">n = −4</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 3</h3>
+            <p>If α and β are the roots of the quadratic equation <span class="math-inline">x² − 5x + p = 0</span>, then <span class="math-inline">α² + 5β =</span></p>
+            <p>A. 10 − p<br />B. 15 − p<br />C. 20 − p<br />D. 25 − p</p>
+
+            <p>★ … are the roots →</p>
+            <ol>
+              <li>Sub to the equation</li>
+              <li>Apply sum/product of roots</li>
+            </ol>
+            <p>For those with different powers, try to reduce them into same powers (1 or 2).</p>
+
+            <div class="math-block">
+              <span class="math-line">α² − 5α + p = 0</span>
+              <span class="math-line">α² = 5α − p</span>
+              <span class="math-line">α² + 5β = 5α + 5β − p</span>
+              <span class="math-line indent">= 5(5) − p</span>
+              <span class="math-line indent">= 25 − p</span>
+            </div>
+
+            <p>MC: Sub a value to <em>p</em> and then press calculator.</p>
+            <p>e.g. When <span class="math-inline">p = 4</span>, <span class="math-inline">x² − 5x + 4 = 0 ⇒ x = 1 or x = 4</span>.</p>
+            <div class="math-block">
+              <span class="math-line">α² + 5β = 1² + 5(4) = 21 (D)</span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-roots-type3">Type 3 — Applications of Sum and Product of Roots in Graphs</h3>
+        <div class="skill-grid">
+          <article class="skill-card example-card">
+            <h3>Example 4</h3>
+            <p>The figure shows the graph of <span class="math-inline">y = −4x² + 12x − (k + 3)</span>. It cuts the x-axis at two points A and B, and OA : OB = 1 : 5. Find the value of <span class="math-inline">k</span>.</p>
+
+            <figure>
+              <img src="images/page-08-fig-1.png" alt="Graph of y = −4x² + 12x − (k+3) cutting the x-axis at A and B, with OA:OB = 1:5">
+              <figcaption>Graph of y = −4x² + 12x − (k + 3) cutting the x-axis at two points A and B.</figcaption>
+            </figure>
+
+            <p>Set up unknowns to represent the roots.</p>
+            <p>Let <span class="math-inline">(α, 0)</span> and <span class="math-inline">(β, 0)</span> be the coordinates of A and B respectively.</p>
+            <p>∵ OA : OB = 1 : 5</p>
+            <p>Note that OA and OB are distances which are equal to the roots.</p>
+            <p>∴ <span class="math-inline">α</span> and <span class="math-inline">5α</span> are roots of <span class="math-inline">−4x² + 12x − (k + 3) = 0</span>.</p>
+            <div class="math-block">
+              <span class="math-line">∴ α + 5α = −12 / −4 and α · 5α = −(k + 3) / −4</span>
+              <span class="math-line">6α = 3 and 20α² = k + 3</span>
+              <span class="math-line">α = 1/2 and 20(1/2)² = k + 3</span>
+              <span class="math-line">k = 2</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="qe-complex">
+        <h2>Complex Numbers</h2>
+        <p class="section-subtitle">i, a + bi, conjugates, powers and series.</p>
+
+        <nav class="part-nav">
+          <a href="#qe-complex-basics" class="part-btn">Basics</a>
+          <a href="#qe-complex-examples" class="part-btn">Examples</a>
+        </nav>
+
+        <h3 class="part-heading" id="qe-complex-basics">Basics</h3>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Definition of i</h3>
+            <p>Definition of <span class="math-inline">i</span>: <span class="math-inline">√(−1)</span></p>
+            <p><span class="math-inline">i<sup>4n + r</sup> = i<sup>r</sup></span> for non-negative integers <em>n</em> and <em>r</em>.</p>
+            <p>Example: <span class="math-inline">i<sup>2026</sup> = i<sup>4 × 506 + 2</sup> = i² = −1</span></p>
+          </article>
+
+          <article class="skill-card">
+            <h3>General form a + bi</h3>
+            <p>For any complex number, we consider the general form of <span class="math-inline">a + bi</span> (a and b are real numbers):</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <tbody>
+                  <tr><td>Real part</td><td>a</td></tr>
+                  <tr><td>Imaginary part</td><td>b</td></tr>
+                  <tr><td>Conjugate / another root</td><td>a − bi</td></tr>
+                  <tr><td>Reciprocal</td><td>1/(a + bi) = 1/(a + bi) × (a − bi)/(a − bi)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><em>Note: classifications of rational numbers is not applicable in numbers with non-zero imaginary part.</em></p>
+          </article>
+        </div>
+
+        <h3 class="part-heading" id="qe-complex-examples">Examples</h3>
+        <div class="skill-grid">
+
+          <article class="skill-card example-card">
+            <h3>Example 1</h3>
+            <h4>(a) Express 1/(1 + 2i) in the form a + bi, where a and b are real numbers. (2 marks)</h4>
+            <div class="math-block">
+              <span class="math-line">1/(1 + 2i) = 1/(1 + 2i) × (1 − 2i)/(1 − 2i) = 1/5 − (2/5)i</span>
+            </div>
+
+            <h4>(b) One of the roots of the quadratic equation x² + px + q = 0 is 10/(1 + 2i).</h4>
+            <p><strong>(i) Find p and q. (3 marks)</strong></p>
+            <div class="math-block">
+              <span class="math-line">10/(1 + 2i) = 10(1/5 − (2/5)i) = 2 − 4i</span>
+              <span class="math-line">Another root = 2 + 4i</span>
+              <span class="math-line">Sum of roots = −p/1 = (2 + 4i) + (2 − 4i)</span>
+              <span class="math-line">p = −4</span>
+              <span class="math-line">Product of roots = q = (2 + 4i)(2 − 4i)</span>
+              <span class="math-line">q = 20</span>
+            </div>
+            <p>Alternative:</p>
+            <div class="math-block">
+              <span class="math-line">Another root = 10/(1 − 2i) = 10/(1 − 2i) × (1 + 2i)/(1 + 2i) = 2 + 4i</span>
+            </div>
+
+            <p><strong>(ii) Find the range of values of r such that the quadratic equation x² + px + q = r has real roots. (2 marks)</strong></p>
+            <p>Has real roots include the situation of 1 and 2 roots.</p>
+            <div class="math-block">
+              <span class="math-line">x² − 4x + 20 − r = 0</span>
+              <span class="math-line">Δ = (−4)² − 4(1)(20 − r) ≥ 0</span>
+              <span class="math-line">4r − 64 ≥ 0</span>
+              <span class="math-line">r ≥ 16</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 2</h3>
+            <p>Let <span class="math-inline">u = 7/(a + i)</span> and <span class="math-inline">v = 7/(a − i)</span>, where <em>a</em> is a real number. Which of the following must be true?</p>
+            <p>I. <span class="math-inline">uv</span> is a rational number.<br />
+               II. The real part of <span class="math-inline">u</span> is equal to the real part of <span class="math-inline">v</span>.<br />
+               III. The imaginary part of <span class="math-inline">1/u</span> is equal to the imaginary part of <span class="math-inline">1/v</span>.</p>
+            <p>A. I only&nbsp;&nbsp;B. II only&nbsp;&nbsp;C. I and III only&nbsp;&nbsp;D. II and III only</p>
+
+            <p>I: <span class="math-inline">uv = 49/(a² + 1)</span>, however <em>a</em> may not be rational.</p>
+            <p>★ Use different forms of u to evaluate quicker.</p>
+            <div class="math-block">
+              <span class="math-line">1/u = a/7 + (1/7)i, 1/v = a/7 − (1/7)i</span>
+            </div>
+            <p>∴ Only II is true (B).</p>
+            <p>Alternative: since <em>a</em> is not a constant, substitute a value into <em>a</em> and try by calculator.</p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 3</h3>
+            <p>If <span class="math-inline">(a + 3i)(2 − 3i) = b</span>, where <em>a</em> and <em>b</em> are real numbers, find the values of <em>a</em> and <em>b</em>.</p>
+            <div class="math-block">
+              <span class="math-line">(a + 3i)(2 − 3i)</span>
+              <span class="math-line">= 2a + 6i − 3ai − 9i²</span>
+              <span class="math-line">= (2a + 9) + (6 − 3a)i</span>
+            </div>
+            <p>★ b is a real number, which means there is no imaginary part.</p>
+            <div class="math-block">
+              <span class="math-line">2a + 9 = b … (1)</span>
+              <span class="math-line">6 − 3a = 0 … (2)</span>
+              <span class="math-line">∴ a = 2, b = 13</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 4</h3>
+            <p>Find the complex number <em>z</em> such that <span class="math-inline">(1 − 4i)z</span> is a real number and <span class="math-inline">z + 6 − i</span> is a purely imaginary number.</p>
+            <p>★ Since z is complex, set unknowns on both real and imaginary parts.</p>
+            <p>Let <span class="math-inline">z = a + bi</span>.</p>
+            <div class="math-block">
+              <span class="math-line">z + 6 − i</span>
+              <span class="math-line">= a + bi + 6 − i</span>
+              <span class="math-line">= (a + 6) + (b − 1)i</span>
+            </div>
+            <p>Since it is a purely imaginary number, <span class="math-inline">a = −6</span>.</p>
+            <div class="math-block">
+              <span class="math-line">(1 − 4i)z</span>
+              <span class="math-line">= (1 − 4i)(a + bi)</span>
+              <span class="math-line">= a + bi − 4ai + 4b</span>
+              <span class="math-line">= (a + 4b) + (b − 4a)i</span>
+              <span class="math-line">= (−6 + 4b) + (b + 24)i</span>
+            </div>
+            <p>Since it is a real number, <span class="math-inline">b = −24</span>.</p>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 5</h3>
+            <p><strong>(a) Simplify (i) (1 + i)² (ii) (1 − i)²</strong></p>
+            <div class="math-block">
+              <span class="math-line">(1 + i)² = 1 + 2i + i² = 2i</span>
+              <span class="math-line">(1 − i)² = 1 − 2i + i² = −2i</span>
+            </div>
+
+            <p><strong>(b) Using the results in (a), simplify √i, (1 + i)²⁰ and ((−9 − i)/(4 + 5i))²⁰</strong></p>
+            <div class="math-block">
+              <span class="math-line">(1 + i)² = 2i</span>
+            </div>
+            <p>★ The large powers of a + bi in the questions are usually some neat numbers; try to split to multiples of smaller powers to convert them into a purely real/imaginary number.</p>
+            <div class="math-block">
+              <span class="math-line">(1 + i) = √(2i)</span>
+              <span class="math-line">√i = (1 + i)/√2</span>
+              <span class="math-line">√i = (√2)/2 + (√2)/2 i</span>
+              <span class="math-line">(1 + i)²⁰ = [(1 + i)²]¹⁰</span>
+              <span class="math-line indent">= (2i)¹⁰</span>
+              <span class="math-line indent">= −1024</span>
+            </div>
+            <p>★ Always simplify the denominator of complex number fractions by multiplying a conjugate at the first step.</p>
+            <div class="math-block">
+              <span class="math-line">((−9 − i)/(4 + 5i))²⁰</span>
+              <span class="math-line">= [((−9 − i)/(4 + 5i)) × ((4 − 5i)/(4 − 5i))]²⁰</span>
+              <span class="math-line">= ((−36 + 45i − 4i − 5)/(16 + 25))²⁰</span>
+              <span class="math-line">= ((−41 + 41i)/41)²⁰</span>
+              <span class="math-line">= [(1 − i)²]¹⁰</span>
+              <span class="math-line">= (−2i)¹⁰</span>
+              <span class="math-line">= −1024</span>
+            </div>
+          </article>
+
+          <article class="skill-card example-card">
+            <h3>Example 6</h3>
+            <p>By considering <span class="math-inline">i + i² + i³ + i⁴</span>, find the value of <span class="math-inline">i + i² + i³ + i⁴ + … + i²⁰²³</span>.</p>
+            <div class="math-block">
+              <span class="math-line">i + i² + i³ + i⁴ = i + (−1) + (−i) + 1</span>
+              <span class="math-line">= 0</span>
+            </div>
+            <p>Usually the series involving <em>i</em> has a pattern for every 4 numbers.</p>
+            <div class="math-block">
+              <span class="math-line">i + i² + i³ + i⁴ + … + i²⁰²³</span>
+              <span class="math-line">= 0 + 0 + … + 0 + (i − 1 − i)</span>
+              <span class="math-line">= −1</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
