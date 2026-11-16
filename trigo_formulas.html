@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trigo Functions — MathLearn</title>
+  <title>Trigo Formulas — MathLearn</title>
   <link rel="stylesheet" href="styles.css" />
   <script>
     window.MathJax = {
@@ -40,8 +40,7 @@
         <a href="mathematical-induction.html">Mathematical Induction</a>
         <a href="coordinate-geometry.html">Coordinate Geometry</a>
         <a href="triangle-centers.html">Triangle Centers</a>
-        <a href="trigo_formulas.html">Trigo Formulas</a>
-        <a href="trigo_functions.html" class="active">Trigo Functions</a>
+        <a href="trigo_formulas.html" class="active">Trigo Formulas</a>
         <a href="glossary.html">Glossary</a>
         <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a>
         <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
@@ -51,362 +50,399 @@
 
   <section class="skill-page">
     <div class="container">
-      <h2>Chapter 10 More about Trigonometry — Solution</h2>
-      <p class="section-subtitle">Maximum and Minimum values, and Trigonometric Equations.</p>
+      <h2>Chapter 3 &amp; 10 More about Trigonometric Functions</h2>
+      <p class="section-subtitle">Trigonometric Formulae, Compound Angles, Double Angles, Equations, Sequences &amp; Max/Min Values.</p>
 
       <nav class="part-nav">
-        <a href="#part-max-min" class="part-btn">Max &amp; Min Values</a>
-        <a href="#part-equations" class="part-btn">Trigonometric Equations</a>
+        <a href="#summary" class="part-btn">Summary Formulae</a>
+        <a href="#type1" class="part-btn">Type 1: Reciprocals</a>
+        <a href="#type2" class="part-btn">Type 2: Compound Angle</a>
+        <a href="#type3" class="part-btn">Type 3: Double Angle</a>
+        <a href="#mixed" class="part-btn">Mixed Examples</a>
+        <a href="#sequences" class="part-btn">Sequences</a>
+        <a href="#trig-eq-type1" class="part-btn">Eq: Range Adj.</a>
+        <a href="#trig-eq-type2" class="part-btn">Eq: Unifying Ratio</a>
+        <a href="#trig-eq-type3" class="part-btn">Eq: Cross-topic</a>
+        <a href="#max-min" class="part-btn">Max &amp; Min (Part 1)</a>
+        <a href="#max-min-2" class="part-btn">Max &amp; Min (Part 2)</a>
       </nav>
 
-      <!-- ===== A) Maximum and Minimum values of Trigonometric Functions ===== -->
-      <h3 class="part-heading" id="part-max-min">A) Maximum and Minimum values of Trigonometric Functions</h3>
+      <!-- Summary Section -->
+      <h3 class="part-heading" id="summary">A) Trigonometric Formulae Summary</h3>
       <div class="skill-grid">
+        
+        <!-- Left column -->
         <article class="skill-card">
-          <p>By using the inequalities \(-1 \le \sin\theta \le 1\) and \(-1 \le \cos\theta \le 1\), we can further investigate the maximum and minimum values of <strong>sine and cosine functions</strong> in different forms.</p>
-          
-          <p>The following assumptions are held in this chapter:</p>
-          <ul>
-            <li>Unless otherwise stated, the domain of all functions in this note refer to \(0^\circ \le \theta \le 360^\circ\).</li>
-            <li>There is <strong>only one trigonometric function</strong> involved; in case there are more than one, convert them into the same function by <strong>using trigonometric identities</strong>.</li>
-          </ul>
-
-          <h3>Type 1: Linear Functions (\(y = a\sin\theta + b\) / \(y = a\cos\theta + b\))</h3>
-          <p><strong>Method: By substitution</strong></p>
-          <div class="math-block">
-            <span class="math-line"><strong>Step 1:</strong> Let \(t = \sin\theta\) or \(t = \cos\theta\), note that \(-1 \le t \le 1\)</span>
-            <span class="math-line"><strong>Step 2:</strong> It is transformed to a strictly increasing/decreasing linear function \(y = at + b\).</span>
-            <span class="math-line"><strong>Step 3:</strong> Substitute \(t = 1\) and \(t = -1\) into the function and obtain the max/min values.</span>
-          </div>
-        </article>
-
-        <article class="skill-card example-card">
-          <h3>Example 1</h3>
-          <p>Find the maximum/minimum value of \(y = 2\sin\theta + 3\) where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <h3>Square of Trigonometric Ratios</h3>
           <div class="math-block">
             \[
             \begin{aligned}
-            \text{Consider the linear function } y &= 2t + 3, \\
-            \text{Maximum value: } y &= 2(1) + 3 = 5 \\
-            \text{Minimum value: } y &= 2(-1) + 3 = 1
+            \sin^2 A + \cos^2 A &= 1 \\
+            1 + \tan^2 A &= \sec^2 A \\
+            1 + \cot^2 A &= \csc^2 A
+            \end{aligned}
+            \]
+          </div>
+
+          <h3>Compound Angle Formulae</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin(A \pm B) &= \sin A \cos B \pm \cos A \sin B \\
+            \cos(A \pm B) &= \cos A \cos B \mp \sin A \sin B \\
+            \tan(A \pm B) &= \frac{\tan A \pm \tan B}{1 \mp \tan A \tan B}
+            \end{aligned}
+            \]
+          </div>
+
+          <h3>Double Angle Formulae</h3>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \sin 2A &= 2 \sin A \cos A \\
+            \cos 2A &= \cos^2 A - \sin^2 A \\
+                    &= 1 - 2\sin^2 A \\
+                    &= 2\cos^2 A - 1 \\
+            \tan 2A &= \frac{2\tan A}{1 - \tan^2 A} \\
+            \sin^2 A &= \frac{1 - \cos 2A}{2} \\
+            \cos^2 A &= \frac{1 + \cos 2A}{2}
             \end{aligned}
             \]
           </div>
         </article>
 
-        <article class="skill-card example-card">
-          <h3>Example 2 [Level 3]</h3>
-          <p>Find the values of the unknown, which are non-zero integers, of the following functions:</p>
-          <p>(a) \(y = a\sin\theta + b\), with maximum value 6 and minimum value -2.</p>
-          <p>(b) \(y = p\cos\theta - q\), with maximum value 7 and minimum value -3.</p>
-          <p>(c) \(y = (u\sin\theta + v)^2\), with maximum value 9 and minimum value 1.</p>
-
-          <h4>(a)</h4>
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Case 1</th>
-                <th>Case 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>Maximum value \(= a(1) + b = 6\)</p>
-                  <p>Minimum value \(= a(-1) + b = -2\)</p>
-                  <p>Solving, \(a = 4\), \(b = 2\)</p>
-                </td>
-                <td>
-                  <p>Maximum value \(= a(-1) + b = 6\)</p>
-                  <p>Minimum value \(= a(1) + b = -2\)</p>
-                  <p>Solving, \(a = -4\), \(b = 2\)</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h4>(b)</h4>
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Case 1</th>
-                <th>Case 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>Maximum value \(= p(1) - q = 7\)</p>
-                  <p>Minimum value \(= p(-1) - q = -3\)</p>
-                  <p>Solving, \(p = 5\), \(q = -2\)</p>
-                </td>
-                <td>
-                  <p>Maximum value \(= p(-1) - q = 7\)</p>
-                  <p>Minimum value \(= p(1) - q = -3\)</p>
-                  <p>Solving, \(p = -5\), \(q = -2\)</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h4>(c)</h4>
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Case 1</th>
-                <th>Case 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>\(u\sin\theta + v\) with maximum 3 and minimum 1</p>
-                  <p>Maximum value \(= u(1) + v = 3\)</p>
-                  <p>Minimum value \(= u(-1) + v = 1\)</p>
-                  <p>Solving, \(u = 1\), \(v = 2\)</p>
-                </td>
-                <td>
-                  <p>\(u\sin\theta + v\) with maximum 3 and minimum 1</p>
-                  <p>Maximum value \(= u(-1) + v = 3\)</p>
-                  <p>Minimum value \(= u(1) + v = 1\)</p>
-                  <p>Solving, \(u = -1\), \(v = 2\)</p>
-                </td>
-              </tr>
-              <tr>
-                <th>Case 3</th>
-                <th>Case 4</th>
-              </tr>
-              <tr>
-                <td>
-                  <p>\(u\sin\theta + v\) with maximum -1 and minimum -3</p>
-                  <p>Maximum value \(= u(1) + v = -1\)</p>
-                  <p>Minimum value \(= u(-1) + v = -3\)</p>
-                  <p>Solving, \(u = 1\), \(v = -2\)</p>
-                </td>
-                <td>
-                  <p>\(u\sin\theta + v\) with maximum -1 and minimum -3</p>
-                  <p>Maximum value \(= u(-1) + v = -1\)</p>
-                  <p>Minimum value \(= u(1) + v = -3\)</p>
-                  <p>Solving, \(u = -1\), \(v = -2\)</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
-
+        <!-- Right column -->
         <article class="skill-card">
-          <h3>Type 4: Restricted specific range</h3>
-          <p>On few occasions, the question restricts the range of the trigonometric function such that it is not a must to substitute 1 and -1 all the time, particularly for CE Exam Questions.</p>
-        </article>
-
-        <article class="skill-card example-card">
-          <h3>Example 6 [Modified-2012PP-DSE-MATH-II-Q23]</h3>
-          <p>Find the largest and least value of \(\frac{30}{3\sin^2\theta + 2\sin^2(90^\circ - \theta)}\) for \(135^\circ \le \theta \le 180^\circ\).</p>
+          <h3>Product-to-sum Formulae</h3>
           <div class="math-block">
             \[
             \begin{aligned}
-            \text{Note that } \frac{30}{3\sin^2\theta + 2\sin^2(90^\circ - \theta)} &= \frac{30}{3\sin^2\theta + 2\cos^2\theta} \\
-            &= \frac{30}{\sin^2\theta + 2}
-            \end{aligned}
-            \]
-          </div>
-          <p>For \(135^\circ \le \theta \le 180^\circ\), Minimum value of \(\sin\theta = 0\) (When \(\theta = 180^\circ\))</p>
-          <p>Maximum value of \(\sin\theta = \frac{1}{\sqrt{2}}\) (When \(\theta = 135^\circ\))</p>
-          <div class="math-block">
-            \[
-            \text{Maximum value} = \frac{30}{0^2 + 2} = 15, \text{ minimum value} = \frac{30}{\left(\frac{1}{\sqrt{2}}\right)^2 + 2} = 12
-            \]
-          </div>
-        </article>
-
-        <article class="skill-card example-card">
-          <h3>Exercises: 6. [Level 2]</h3>
-          <p>Find the maximum/minimum value of these functions.</p>
-          <p>(a) \(y = 3 - 4\cos\theta\) where \(90^\circ \le \theta \le 180^\circ\) (From Exercise 1)</p>
-          <p>(b) \(y = (1 - 4\sin\theta)^2\) where \(90^\circ \le \theta \le 150^\circ\) (From Exercise 3)</p>
-          <p>(c) \(y = 2\sin^2\theta - 2\sin\theta - 4\) where \(90^\circ \le \theta \le 150^\circ\) (From Exercise 5)</p>
-
-          <h4>(a)</h4>
-          <p>For \(90^\circ \le \theta \le 180^\circ\), \(-1 \le \cos\theta \le 0\).</p>
-          <p>Maximum value \(= 3 - 4(-1) = 7\), minimum value \(= 3 - 4(0) = 3\).</p>
-
-          <h4>(b)</h4>
-          <p>For \(90^\circ \le \theta \le 150^\circ\), \(\frac{1}{2} \le \sin\theta \le 1\).</p>
-          <p>Maximum value \(= (1 - 4 \times 1)^2 = 9\), minimum value \(= \left(1 - 4 \times \frac{1}{2}\right)^2 = 1\).</p>
-
-          <h4>(c)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= 2\left(\sin\theta - \frac{1}{2}\right)^2 - \frac{9}{2}, \quad \frac{1}{2} \le \sin\theta \le 1. \\
-            &\text{By substituting } \sin\theta = 1 \text{ and } \frac{1}{2}, \text{ the values are } -4, -\frac{9}{2} \text{ respectively.} \\
-            \text{Maximum value} &= 2\left(1 - \frac{1}{2}\right)^2 - \frac{9}{2} = -4, \text{ Minimum value} = -\frac{9}{2}
-            \end{aligned}
-            \]
-          </div>
-        </article>
-
-        <article class="skill-card example-card">
-          <h3>Example 8 [Level 2]</h3>
-          <p>Find the maximum/minimum value of these functions.</p>
-          <p>(a) \(y = \frac{5 - \sin\theta}{4 + \sin\theta}\) where \(0^\circ \le \theta \le 90^\circ\) (2005-CE-MATH-II-Q20)</p>
-          <p>(b) \(y = \frac{1}{(3 - 2\sin\theta)^3}\) where \(180^\circ \le \theta \le 360^\circ\)</p>
-          <p>(c) \(y = 2\tan^2\theta - 4\sqrt{3}\tan\theta + 1\) where \(180^\circ \le \theta \le 270^\circ\)</p>
-
-          <h4>(a)</h4>
-          <p>For \(0^\circ \le \theta \le 90^\circ\), \(0 \le \sin\theta \le 1\).</p>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            y &= \frac{5 - \sin\theta}{4 + \sin\theta} \\
-            &= \frac{-(4 + \sin\theta) + 9}{4 + \sin\theta} \\
-            &= -1 + \frac{9}{4 + \sin\theta}
-            \end{aligned}
-            \]
-          </div>
-          <p>Maximum value \(-1 + \frac{9}{4 + 0} = \frac{5}{4}\), minimum value \(-1 + \frac{9}{4 + 1} = \frac{4}{5}\).</p>
-
-          <h4>(b)</h4>
-          <p>For \(180^\circ \le \theta \le 360^\circ\), \(-1 \le \sin\theta \le 0\).</p>
-          <p>Maximum value \(= \frac{1}{[3 - 2(0)]^3} = \frac{1}{27}\), minimum value \(= \frac{1}{[3 - 2(-1)]^3} = \frac{1}{125}\).</p>
-
-          <h4>(c)</h4>
-          <p>For \(180^\circ \le \theta \le 270^\circ\), \(0 \le \tan\theta\).</p>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            y &= 2\tan^2\theta - 4\sqrt{3}\tan\theta + 1 \\
-            &= 2(\tan^2\theta - 2\sqrt{3}\tan\theta + 3) - 6 + 1 \\
-            &= 2(\tan\theta - \sqrt{3})^2 - 5
-            \end{aligned}
-            \]
-          </div>
-          <p>There is no maximum value. Minimum value: \(2(0)^2 - 5 = -5\).</p>
-        </article>
-
-        <article class="skill-card example-card">
-          <h3>More Examples (f, g, h)</h3>
-          <h4>(f)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= \frac{2(\sin\theta - 2)^2}{\sin^2\theta - 4\sin\theta + 3} \\
-            &= \frac{2(\sin\theta - 2)^2}{(\sin\theta - 2)^2 - 1} \\
-            &= \frac{2[(\sin\theta - 2)^2 - 1] + 2}{(\sin\theta - 2)^2 - 1} \\
-            &= 2 + \frac{2}{(\sin\theta - 2)^2 - 1}
-            \end{aligned}
-            \]
-          </div>
-          <p>Since when \(\sin\theta = 1\), \((\sin\theta - 2)^2 - 1 = 0\), there is no maximum value.</p>
-          <div class="math-block">
-            \[
-            \text{Minimum value} = 2 + \frac{2}{(-1 - 2)^2 - 1} = \frac{9}{4}
-            \]
-          </div>
-
-          <h4>(g)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= \frac{4\sin^2\theta - 4\sin\theta - 7}{(2\sin\theta - 1)^2} \\
-            &= \frac{(2\sin\theta - 1)^2 - 8}{(2\sin\theta - 1)^2} \\
-            &= 1 - \frac{8}{(2\sin\theta - 1)^2}
-            \end{aligned}
-            \]
-          </div>
-          <p>Since when \(\sin\theta = \frac{1}{2}\), \((2\sin\theta - 1)^2 = 0\), there is no minimum value.</p>
-          <div class="math-block">
-            \[
-            \text{Maximum value: } 1 - \frac{8}{[2(-1) - 1]^2} = \frac{1}{9}.
-            \]
-          </div>
-
-          <h4>(h)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= -\tan^2\theta - 2\tan\theta \\
-            &= -(\tan^2\theta + 2\tan\theta + 1) + 1 \\
-            &= -(\tan\theta + 1)^2 + 1
-            \end{aligned}
-            \]
-          </div>
-          <p>Maximum value: \(-(0)^2 + 1 = 1\).</p>
-          <p>No minimum value.</p>
-        </article>
-
-        <article class="skill-card example-card">
-          <h3>Summarizing Exercises: 7. [Level 2]</h3>
-          <p>Find the maximum/minimum value of these functions for \(0^\circ \le \theta \le 360^\circ\).</p>
-          <p>(a) \(y = 5 - 3\cos\theta\)</p>
-          <p>(b) \(y = \frac{48}{3\cos^2\theta + 4\sin^2\theta}\) (2526-WYK-S4-Final-II-Q42)</p>
-          <p>(c) \(y = \cos^2\theta - 2\cos\theta + 2\)</p>
-          <p>(d) \(y = \frac{6 + 6\sin\theta}{3 + 2\sin\theta}\)</p>
-          <p>(e) \(y = (\sin\theta + 1)^2(\sin\theta - 1)^2\)</p>
-
-          <h4>(a)</h4>
-          <p>Maximum value: \(5 - 3(-1) = 8\), Minimum value: \(5 - 3(1) = 2\)</p>
-
-          <h4>(b)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= \frac{48}{3\cos^2\theta + 4\sin^2\theta} \\
-            &= \frac{48}{3\cos^2\theta + 3\sin^2\theta + \sin^2\theta} \\
-            &= \frac{48}{3 + \sin^2\theta}
-            \end{aligned}
-            \]
-          </div>
-          <p>Maximum value: \(\frac{48}{3 + (0)} = 16\), Minimum value: \(\frac{48}{3 + (1)} = 12\)</p>
-
-          <h4>(c)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= (\cos\theta - 1)^2 + 1, \\
-            \text{Maximum value: } &(-2)^2 + 1 = 5, \text{ Minimum value: } 0^2 + 1 = 1
+            \sin A \cos B &= \sin\left(\frac{A+B}{2}\right) + \sin\left(\frac{A-B}{2}\right) \\
+            \cos A \cos B &= \cos\left(\frac{A+B}{2}\right) + \cos\left(\frac{A-B}{2}\right) \\
+            \sin A \sin B &= -\cos\left(\frac{A+B}{2}\right) + \cos\left(\frac{A-B}{2}\right)
             \end{aligned}
             \]
           </div>
 
-          <h4>(d)</h4>
+          <h3>Sum-to-product Formulae</h3>
           <div class="math-block">
             \[
             \begin{aligned}
-            \text{Note that } y &= \frac{6 + 6\sin\theta}{3 + 2\sin\theta} = \frac{3(3 + 2\sin\theta) - 3}{3 + 2\sin\theta} = 3 - \frac{3}{3 + 2\sin\theta}, \\
-            \text{Maximum value: } &3 - \frac{3}{3 + 2(1)} = \frac{12}{5}, \text{ Minimum value: } 3 - \frac{3}{3 + 2(-1)} = 0
-            \end{aligned}
-            \]
-          </div>
-
-          <h4>(e)</h4>
-          <div class="math-block">
-            \[
-            \begin{aligned}
-            \text{Note that } y &= (\sin^2\theta - 1)^2 = \cos^4\theta, \\
-            \text{Maximum value: } &1^4 = 1, \text{ Minimum value: } 0^4 = 0
+            \sin A + \sin B &= 2 \sin\left(\frac{A+B}{2}\right) \cos\left(\frac{A-B}{2}\right) \\
+            \sin A - \sin B &= 2 \cos\left(\frac{A+B}{2}\right) \sin\left(\frac{A-B}{2}\right) \\
+            \cos A + \cos B &= 2 \cos\left(\frac{A+B}{2}\right) \cos\left(\frac{A-B}{2}\right) \\
+            \cos A - \cos B &= -2 \sin\left(\frac{A+B}{2}\right) \sin\left(\frac{A-B}{2}\right)
             \end{aligned}
             \]
           </div>
         </article>
       </div>
 
-      <!-- ===== C) Trigonometric Equations ===== -->
-      <h3 class="part-heading" id="part-equations">C) Trigonometric Equations</h3>
+      <!-- Type 1 Section -->
+      <h3 class="part-heading" id="type1">Type 1: Reciprocals and Squares of Trigonometric Ratios</h3>
       <div class="skill-grid">
-        <article class="skill-card">
-          <p>This note covers some additional types of trigonometric equations that you may come across.</p>
-          <h3>Type 1: Range Adjustment</h3>
-          <p>This skill is applied when the unknown involves other manipulations (\(+ - \times \div\) other constants).</p>
-        </article>
-
         <article class="skill-card example-card">
           <h3>Example 1</h3>
-          <p>Solve \(\sin 2x = \frac{1}{2}\) for \(0^\circ \le x \le 360^\circ\).</p>
-          <p>\(0 \le x \le 360^\circ \implies 0 \le 2x \le 720^\circ\)</p>
+          <p>Prove the following identities.</p>
+          <p>(a) \(\frac{\tan^4 x - 1}{1 - 2\cos^2 x} = \sec^4 x\)</p>
+          <p>(b) \(\frac{\csc A + \csc B}{\cot A + \cot B} = \frac{\cot A - \cot B}{\csc A - \csc B}\)</p>
+
+          <h4>(a)</h4>
           <div class="math-block">
             \[
             \begin{aligned}
+            \frac{\tan^4 x - 1}{1 - 2\cos^2 x} &= \frac{(\tan^2 x + 1)(\tan^2 x - 1)}{1 - 2\cos^2 x} \\
+            &= \frac{\sec^2 x \left( \frac{\sin^2 x}{\cos^2 x} - 1 \right)}{1 - 2\cos^2 x} \\
+            &= \frac{\frac{1}{\cos^2 x} \left( \frac{\sin^2 x - \cos^2 x}{\cos^2 x} \right)}{\sin^2 x + \cos^2 x - 2\cos^2 x} \\
+            &= \frac{\sec^4 x (\sin^2 x - \cos^2 x)}{\sin^2 x - \cos^2 x} \\
+            &= \sec^4 x
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Where there are a lot of squares in the question, you can make use of either the <strong>square identities</strong> or <strong>sum of trigonometric square identities</strong>.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\csc A + \csc B}{\cot A + \cot B} \times \frac{\cot A - \cot B}{\cot A - \cot B} &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{\cot^2 A - \cot^2 B} \\
+            &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{(\csc^2 A - 1) - (\csc^2 B - 1)} \\
+            &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{\csc^2 A - \csc^2 B} \\
+            &= \frac{(\csc A + \csc B)(\cot A - \cot B)}{(\csc A + \csc B)(\csc A - \csc B)} \\
+            &= \frac{\cot A - \cot B}{\csc A - \csc B}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Method 1:</strong> Multiply conjugate
+          </div>
+
+          <h4>Alternative</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\csc A + \csc B}{\cot A + \cot B} \times \frac{\csc A - \csc B}{\csc A - \csc B} &= \frac{\csc^2 A - \csc^2 B}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{(1 + \cot^2 A) - (1 + \cot^2 B)}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{\cot^2 A - \cot^2 B}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{(\cot A + \cot B)(\cot A - \cot B)}{(\cot A + \cot B)(\csc A - \csc B)} \\
+            &= \frac{\cot A - \cot B}{\csc A - \csc B}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Method 2:</strong> Multiply opposite denominator
+          </div>
+        </article>
+      </div>
+
+      <!-- Type 2 Section -->
+      <h3 class="part-heading" id="type2">Type 2: Compound Angle Formulae</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 3</h3>
+          <p>Solve the following equations for \(0 \le x \le \pi\).</p>
+          <p>(a) \(\tan 6x - \tan 2x - \tan 6x \tan 2x = 1\)</p>
+          <p>(b) \(\frac{1 + \tan x}{1 - \tan x} = \cot(x + \frac{\pi}{2})\)</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \tan 6x - \tan 2x - \tan 6x \tan 2x &= 1 \\
+            \tan 6x - \tan 2x &= 1 + \tan 6x \tan 2x \\
+            \frac{\tan 6x - \tan 2x}{1 + \tan 6x \tan 2x} &= 1 \\
+            \tan(6x - 2x) &= 1 \\
+            \tan 4x &= 1 \\
+            4x &= \frac{\pi}{4} \text{ or } \frac{5\pi}{4} \text{ or } \frac{9\pi}{4} \text{ or } \frac{13\pi}{4} \\
+            x &= \frac{\pi}{16} \text{ or } \frac{5\pi}{16} \text{ or } \frac{9\pi}{16} \text{ or } \frac{13\pi}{16}
+            \end{aligned}
+            \]
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{1 + \tan x}{1 - \tan x} &= \cot(x + \frac{\pi}{2}) \\
+            \frac{\tan \frac{\pi}{4} + \tan x}{1 - \tan \frac{\pi}{4} \tan x} &= \cot(x + \frac{\pi}{2}) \\
+            \tan(x + \frac{\pi}{4}) &= \tan\left[ \frac{\pi}{2} - (x + \frac{\pi}{2}) \right] \text{ or } \tan(x + \frac{\pi}{4}) = \tan\left[ \frac{3\pi}{2} - (x + \frac{\pi}{2}) \right] \\
+            x + \frac{\pi}{4} &= x \text{ (rej.) or } x + \frac{\pi}{4} = \pi - x \\
+            x &= \frac{3\pi}{8}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> \(\cot x = \tan(90^\circ - x)\)
+          </div>
+        </article>
+      </div>
+
+      <!-- Type 3 Section -->
+      <h3 class="part-heading" id="type3">Type 3: Double Angle Formulae</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 4 [2013-DSE-M2-Q7]</h3>
+          <p>(a) Prove the identity \(\tan x = \frac{\sin 2x}{1 + \cos 2x}\).</p>
+          <p>(b) Using (a), prove the identity \(\tan y = \frac{\sin 8y \cos 4y \cos 2y}{(1 + \cos 8y)(1 + \cos 4y)(1 + \cos 2y)}\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\sin 2x}{1 + \cos 2x} &= \frac{2\sin x \cos x}{1 + (2\cos^2 x - 1)} \\
+            &= \frac{2\sin x \cos x}{2\cos^2 x} \\
+            &= \tan x
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Try to eliminate the 1 when considering which form to use.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            &\frac{\sin 8y \cos 4y \cos 2y}{(1 + \cos 8y)(1 + \cos 4y)(1 + \cos 2y)} \\
+            &= \tan 4y \frac{\cos 4y \cos 2y}{(1 + \cos 4y)(1 + \cos 2y)} \\
+            &= \frac{\sin 4y}{1 + \cos 4y} \times \frac{\cos 2y}{1 + \cos 2y} \\
+            &= \tan 2y \times \frac{\cos 2y}{1 + \cos 2y} \\
+            &= \frac{\sin 2y}{1 + \cos 2y} \\
+            &= \tan y
+            \end{aligned}
+            \]
+          </div>
+        </article>
+      </div>
+
+      <!-- Mixed Examples Section -->
+      <h3 class="part-heading" id="mixed">More Examples</h3>
+      <div class="skill-grid">
+        
+        <article class="skill-card example-card">
+          <h3>Example 2</h3>
+          <p>It is given that \(\csc A + \cot A = k\).</p>
+          <p>(a) Express \(\csc A - \cot A\) in terms of \(k\).</p>
+          <p>(b) If \(\csc A\) and \(\cot A\) are the distinct roots of the quadratic equation \(9x^2 - 27x + p = 0\), where \(p\) is a constant, find the values of \(k\) and \(p\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \csc^2 A - \cot^2 A &= 1 \\
+            (\csc A + \cot A)(\csc A - \cot A) &= 1 \\
+            \csc A - \cot A &= \frac{1}{k}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Instead of squaring both sides, the conjugates have a <strong>difference of reciprocals</strong>.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \csc A + \cot A &= k = \frac{27}{9} \\
+            k &= 3 \\
+            \begin{cases} \csc A + \cot A = 3 \\ \csc A - \cot A = \frac{1}{3} \end{cases} \\
+            \text{Solving, } \csc A &= \frac{5}{3}, \cot A = \frac{4}{3} \\
+            \frac{p}{9} &= \csc A \cot A = \frac{20}{9} \\
+            p &= 20
+            \end{aligned}
+            \]
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 5 [2022-DSE-M2-Q2]</h3>
+          <p>(a) Let \(\frac{\pi}{4} < \theta < \frac{\pi}{2}\). Prove the identity \(\frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} = 1 + \sec \theta \csc \theta\).</p>
+          <p>(b) Solve the equation \(\frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} = 5\).</p>
+
+          <h4>(a)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            &\frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} \\
+            &= \frac{\tan^2 \theta}{\tan \theta - 1} + \frac{1}{\tan \theta - \tan^2 \theta} \\
+            &= \frac{\tan^2 \theta}{\tan \theta - 1} - \frac{1}{\tan \theta(\tan \theta - 1)} \\
+            &= \frac{\tan^3 \theta - 1}{\tan \theta(\tan \theta - 1)} \\
+            &= \frac{(\tan \theta - 1)(\tan^2 \theta + \tan \theta + 1)}{\tan \theta(\tan \theta - 1)} \\
+            &= \frac{\sec^2 \theta + \tan \theta}{\tan \theta} \\
+            &= 1 + \frac{\sec^2 \theta}{\tan \theta} \\
+            &= 1 + \frac{\sec^2 \theta \cos \theta}{\sin \theta} \\
+            &= 1 + \sec \theta \csc \theta
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> When simplifying reciprocals, we can multiply on both numerator and denominator.
+          </div>
+
+          <h4>(b)</h4>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \frac{\tan \theta}{1 - \cot \theta} + \frac{\cot \theta}{1 - \tan \theta} &= 5 \\
+            1 + \sec \theta \csc \theta &= 5 \\
+            \frac{1}{\cos \theta \sin \theta} &= 4 \\
+            \frac{2}{2 \cos \theta \sin \theta} &= 4 \\
+            \frac{2}{\sin 2\theta} &= 4 \\
+            \sin 2\theta &= \frac{1}{2} \\
+            2\theta &= \pi - \frac{\pi}{6} \\
+            \theta &= \frac{5\pi}{12}
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> When there is \(\cos x \sin x\) usually it is double angle formula.
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Exercise 1 [Level 1]</h3>
+          <p>It is given that \(\tan \theta + \sec \theta = \frac{2}{5}\). By considering \(\tan \theta - \sec \theta\), find \(\tan \theta\) and \(\csc \theta\).</p>
+
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            1 + \tan^2 \theta &= \sec^2 \theta \\
+            (\sec \theta + \tan \theta)(\sec \theta - \tan \theta) &= 1 \\
+            \frac{2}{5}(\sec \theta - \tan \theta) &= 1 \\
+            \sec \theta - \tan \theta &= \frac{5}{2}
+            \end{aligned}
+            \]
+          </div>
+          <div class="math-block">
+            \[
+            \begin{cases} \tan \theta + \sec \theta = \frac{2}{5} \\ \tan \theta - \sec \theta = -\frac{5}{2} \end{cases}
+            \]
+          </div>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            \text{Solving, } \tan \theta &= -\frac{21}{20}, \sec \theta = \frac{29}{20} \\
+            \tan \theta < 0 \text{ and } \sec \theta > 0 &\text{ implies } \csc \theta < 0. \\
+            \csc \theta &= -\frac{29}{21}
+            \end{aligned}
+            \]
+          </div>
+        </article>
+      </div>
+
+      <!-- Sequences Section -->
+      <h3 class="part-heading" id="sequences">B) Sequences related to Trigonometric Ratios</h3>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 1 [Textbook P.10.75 – Revision Exercise 10 – Q44]</h3>
+          <p>Find the value of \(\tan 190^\circ \tan 280^\circ + \tan 200^\circ \tan 290^\circ + \tan 210^\circ \tan 300^\circ + \ldots + \tan 260^\circ \tan 350^\circ\).</p>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            &\tan 190^\circ \tan 280^\circ + \tan 200^\circ \tan 290^\circ + \tan 210^\circ \tan 300^\circ + \ldots + \tan 260^\circ \tan 350^\circ \\
+            &= \tan 10^\circ \left(-\frac{1}{\tan 10^\circ}\right) + \tan 20^\circ \left(-\frac{1}{\tan 20^\circ}\right) + \ldots + \tan 80^\circ \left(-\frac{1}{\tan 80^\circ}\right) \\
+            &= (-1) \times 8 \\
+            &= -8
+            \end{aligned}
+            \]
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
+            🔑 <strong>Key:</strong> Convert the angles to \(0^\circ\) to \(90^\circ\) for ease of calculation.
+          </div>
+        </article>
+
+        <article class="skill-card example-card">
+          <h3>Example 2 [Textbook P.10.75 – Revision Exercise 10 – Q45]</h3>
+          <p>Find the value of \(\sin^2 91^\circ + \sin^2 93^\circ + \sin^2 95^\circ + \ldots + \sin^2 179^\circ\).</p>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            &\sin^2 91^\circ + \sin^2 93^\circ + \sin^2 95^\circ + \ldots + \sin^2 135^\circ + \ldots + \sin^2 177^\circ + \sin^2 179^\circ \\
+            &= \sin^2 89^\circ + \sin^2 87^\circ + \sin^2 85^\circ + \ldots + \sin^2 45^\circ + \ldots + \sin^2 3^\circ + \sin^2 1^\circ \\
+            &= (\sin^2 1^\circ + \sin^2 89^\circ) + (\sin^2 3^\circ + \sin^2 87^\circ) + \ldots + (\sin^2 43^\circ + \sin^2 47^\circ) + \sin^2 45^\circ \\
+            &= (\cos^2 1^\circ + \sin^2 1^\circ) + (\cos^2 3^\circ + \sin^2 3^\circ) + \ldots + (\cos^2 43^\circ + \sin^2 43^\circ) + \left(\frac{1}{\sqrt{2}}\right)^2 \\
+            &= 1 \times 22 + \frac{1}{2} \\
+            &= 22.5
+            \end{aligned}
+            \]
+          </div>
+          <p>Remarks: Sum = Numbers of terms \(45 \times \frac{1}{2} = 22.5\)</p>
+        </article>
+      </div>
+
+      <!-- Trigonometric Equations - Type 1 -->
+      <h3 class="part-heading" id="trig-eq-type1">C) Trigonometric Equations - Type 1: Range Adjustment</h3>
+      <p>This skill is applied when the unknown involves other manipulations (\(+ - \times \div\) other constants).</p>
+      <div class="skill-grid">
+        <article class="skill-card example-card">
+          <h3>Example 1</h3>
+          <p>Solve \(\sin 2x = \frac{1}{2}\) for \(0^\circ \leq x \leq 360^\circ\)</p>
+          <div class="math-block">
+            \[
+            \begin{aligned}
+            0 \leq x \leq 360^\circ &\implies 0 \leq 2x \leq 720^\circ \\
             \sin 2x &= \frac{1}{2} \\
             2x &= 30^\circ \text{ or } 150^\circ \text{ or } 390^\circ \text{ or } 510^\circ \\
             x &= 15^\circ \text{ or } 75^\circ \text{ or } 195^\circ \text{ or } 255^\circ
@@ -414,37 +450,34 @@
             \]
           </div>
           <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
-            🔑 <strong>Key:</strong> Change the range base on the size of the angle. (Rough work)
-          </div>
-          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px; font-style: italic;">
-            🔑 <strong>Key:</strong> Start a new cycle by adding \(360^\circ\) to the original angle, which is equivalent to adding \(180^\circ\) to the final angle.
+            🔑 <strong>Key 1:</strong> Change the range base on the size of the angle. (Rough work)<br><br>
+            🔑 <strong>Key 2:</strong> Start a new cycle by adding \(360^\circ\) to the original angle, which is equivalent to adding \(180^\circ\) to the final angle.
           </div>
         </article>
 
         <article class="skill-card example-card">
           <h3>Example 2 [2025-DSE-Math-II-Q39]</h3>
-          <p>For \(90^\circ < \theta < 270^\circ\), how many roots does the equation \(\tan^3\theta = 2\tan\theta\) have?</p>
-          <p>A. 2<br />B. 3<br />C. 4<br />D. 5</p>
+          <p>For \(90^\circ < \theta < 270^\circ\), how many roots does the equation \(\tan^3 \theta = 2 \tan \theta\) have?</p>
+          <p>A. 2<br>B. 3<br>C. 4<br>D. 5</p>
           <div class="math-block">
             \[
             \begin{aligned}
-            \tan^3\theta &= 2\tan\theta \\
-            \tan\theta(\tan^2\theta - 2) &= 0 \\
-            \tan\theta = 0 \text{ or } \tan\theta = \sqrt{2} \text{ or } \tan\theta &= -\sqrt{2}
+            \tan^3 \theta &= 2 \tan \theta \\
+            \tan \theta (\tan^2 \theta - 2) &= 0 \\
+            \tan \theta = 0 \text{ or } \tan \theta = \sqrt{2} &\text{ or } \tan \theta = -\sqrt{2}
             \end{aligned}
             \]
           </div>
-          <p>For \(90^\circ < \theta < 270^\circ\), Quadrant II is negative and Quadrant III is positive.</p>
-          <p>Therefore, there are 3 roots in total.</p>
+          <p>For \(90^\circ < \theta < 270^\circ\), Quadrant II is negative and Quadrant III is positive.<br>Therefore, there are 3 roots in total.</p>
         </article>
+      </div>
 
-        <article class="skill-card">
-          <h3>Type 2: Unifying same trigonometric ratio</h3>
-        </article>
-
+      <!-- Trigonometric Equations - Type 2 -->
+      <h3 class="part-heading" id="trig-eq-type2">Type 2: Unifying same trigonometric ratio</h3>
+      <div class="skill-grid">
         <article class="skill-card example-card">
           <h3>Example 3</h3>
-          <p>Solve \(3\sin^2 x - \cos x \sin x - 1 = 0\) for \(0 \le x \le 360^\circ\).</p>
+          <p>Solve \(3\sin^2 x - \cos x \sin x - 1 = 0\) for \(0^\circ \leq x \leq 360^\circ\)</p>
           <div class="math-block">
             \[
             \begin{aligned}
@@ -453,22 +486,20 @@
             2\sin^2 x - \cos x \sin x - \cos^2 x &= 0 \\
             2\tan^2 x - \tan x - 1 &= 0 \\
             (2\tan x + 1)(\tan x - 1) &= 0 \\
-            \tan x = -\frac{1}{2} \text{ or } \tan x &= 1 \\
-            x = 45^\circ \text{ or } 225^\circ \text{ or } 153^\circ \text{ or } 333^\circ
+            \tan x = -\frac{1}{2} &\text{ or } \tan x = 1 \\
+            x = 45^\circ \text{ or } 225^\circ &\text{ or } 153^\circ \text{ or } 333^\circ
             \end{aligned}
             \]
           </div>
           <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
-            🔑 <strong>Key:</strong> The constant term can be changed to multiple of \(\sin^2 x + \cos^2 x\).
-          </div>
-          <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px; font-style: italic;">
-            🔑 <strong>Key:</strong> Divide the whole expression by \(\cos^2 x\).
+            🔑 <strong>Key 1:</strong> The constant term can be changed to multiple of \(\sin^2 x + \cos^2 x\).<br><br>
+            🔑 <strong>Key 2:</strong> Divide the whole expression by \(\cos^2 x\).
           </div>
         </article>
 
         <article class="skill-card example-card">
           <h3>Example 4</h3>
-          <p>Solve \(\cos x = -\sin 40^\circ\) for \(0 \le x \le 360^\circ\).</p>
+          <p>Solve \(\cos x = -\sin 40^\circ\) for \(0^\circ \leq x \leq 360^\circ\).</p>
           <div class="math-block">
             \[
             \begin{aligned}
@@ -479,13 +510,13 @@
             \]
           </div>
           <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 15px; font-style: italic;">
-            🔑 <strong>Key:</strong> Let \(\theta = 40^\circ\), \(\cos(90^\circ + \theta) = \cos(270^\circ - \theta) = -\sin\theta\).
+            🔑 <strong>Key:</strong> Let \(\theta = 40^\circ\), \(\cos(90^\circ + \theta) = \cos(270^\circ - \theta) = -\sin \theta\).
           </div>
         </article>
 
         <article class="skill-card example-card">
           <h3>Example 5</h3>
-          <p>Solve \(\sin x + \sqrt{3}\cos x - 2 = 0\) for \(0 \le x \le 360^\circ\).</p>
+          <p>Solve \(\sin x + \sqrt{3}\cos x - 2 = 0\) for \(0^\circ \leq x \leq 360^\circ\).</p>
           <div class="math-block">
             \[
             \begin{aligned}
@@ -496,7 +527,7 @@
             4\sin^2 x - 4\sin x + 1 &= 0 \\
             (2\sin x - 1)^2 &= 0 \\
             \sin x &= \frac{1}{2} \text{ (repeated)} \\
-            x = 30^\circ \text{ or } x &= 150^\circ \text{ (rej.)}
+            x &= 30^\circ \text{ or } x = 150^\circ \text{ (rej.)}
             \end{aligned}
             \]
           </div>
@@ -506,9 +537,8 @@
         </article>
 
         <article class="skill-card example-card">
-          <h3>Exercises: 5. [Level 1]</h3>
-          <p>Solve \(2\sin^2 x - \sin x \cos x - 5\cos^2 x = 0\) for \(0 \le x \le 360^\circ\).</p>
-          <p>(Hint: You need to use the quadratic formula first)</p>
+          <h3>Exercise 5 [Level 1]</h3>
+          <p>Solve \(2\sin^2 x - \sin x \cos x - 5\cos^2 x = 0\) for \(0^\circ \leq x \leq 360^\circ\).<br>(Hint: You need to use the quadratic formula first)</p>
           <div class="math-block">
             \[
             \begin{aligned}
@@ -516,50 +546,47 @@
             2\tan^2 x - \tan x - 5 &= 0 \\
             \tan x &= \frac{1 \pm \sqrt{1^2 - 4(2)(-5)}}{2(2)} \\
             \tan x &= \frac{1 + \sqrt{41}}{4} \text{ or } \tan x = \frac{1 - \sqrt{41}}{4} \\
-            x = 61.6^\circ \text{ or } 127^\circ \text{ or } 242^\circ \text{ or } 307^\circ
+            x &= 61.6^\circ \text{ or } 127^\circ \text{ or } 242^\circ \text{ or } 307^\circ
             \end{aligned}
             \]
           </div>
         </article>
+      </div>
 
-        <article class="skill-card">
-          <h3>Type 3: Cross-topic Applications</h3>
-        </article>
-
+      <!-- Trigonometric Equations - Type 3 -->
+      <h3 class="part-heading" id="trig-eq-type3">Type 3: Cross-topic Applications</h3>
+      <div class="skill-grid">
         <article class="skill-card example-card">
           <h3>Example 6</h3>
-          <p>\(\cos\theta\) and \(\frac{1}{\sin\theta}\) are the roots of the quadratic equation \(8x^2 + kx + 15 = 0\), where \(k\) is a constant and \(180^\circ < \theta < 270^\circ\).</p>
-          <p>(a) Find the value of \(\tan\theta\).</p>
-          <p>(b) Find the values of \(\sin\theta\) and \(\cos\theta\).</p>
-          <p>(c) Find the value of \(k\).</p>
-
+          <p>\(\cos \theta\) and \(\frac{1}{\sin \theta}\) are the roots of the quadratic equation \(8x^2 + kx + 15 = 0\), where \(k\) is a constant and \(180^\circ < \theta < 270^\circ\).</p>
+          <p>(a) Find the value of \(\tan \theta\).<br>
+             (b) Find the values of \(\sin \theta\) and \(\cos \theta\).<br>
+             (c) Find the value of \(k\).</p>
           <h4>(a)</h4>
           <div class="math-block">
             \[
             \begin{aligned}
-            \cos\theta \frac{1}{\sin\theta} &= \frac{15}{8} \\
-            \tan\theta &= \frac{8}{15}
+            \cos \theta \left(\frac{1}{\sin \theta}\right) &= \frac{15}{8} \\
+            \tan \theta &= \frac{8}{15}
             \end{aligned}
             \]
           </div>
-
           <h4>(b)</h4>
           <div class="math-block">
             \[
             \begin{aligned}
-            \sin\theta &= -\frac{8}{\sqrt{8^2 + 15^2}} = -\frac{8}{17} \\
-            \cos\theta &= -\frac{15}{\sqrt{8^2 + 15^2}} = -\frac{15}{17}
+            \sin \theta &= -\frac{8}{\sqrt{8^2 + 15^2}} = -\frac{8}{17} \\
+            \cos \theta &= -\frac{15}{\sqrt{8^2 + 15^2}} = -\frac{15}{17}
             \end{aligned}
             \]
           </div>
-
           <h4>(c)</h4>
           <div class="math-block">
             \[
             \begin{aligned}
-            \cos\theta + \frac{1}{\sin\theta} &= -\frac{k}{8} \\
-            k &= -8\left(\cos\theta + \frac{1}{\sin\theta}\right) \\
-            &= -8\left[-\frac{15}{17} + \left(-\frac{17}{8}\right)\right] \\
+            \cos \theta + \frac{1}{\sin \theta} &= -\frac{k}{8} \\
+            k &= -8 \left( \cos \theta + \frac{1}{\sin \theta} \right) \\
+            &= -8 \left[ -\frac{15}{17} + \left(-\frac{17}{8}\right) \right] \\
             &= \frac{409}{17}
             \end{aligned}
             \]
@@ -567,22 +594,465 @@
         </article>
 
         <article class="skill-card example-card">
-          <h3>Exercises: 13. [Level 2]</h3>
-          <p>If \(\sin\theta\) and \(\cos\theta\) are the roots of the quadratic equation \(3x^2 + x - m = 0\), find the value of \(m\).</p>
+          <h3>Exercise 13 [Level 2]</h3>
+          <p>If \(\sin \theta\) and \(\cos \theta\) are the roots of the quadratic equation \(3x^2 + x - m = 0\), find the value of \(m\).</p>
           <div class="math-block">
             \[
             \begin{aligned}
-            \sin\theta + \cos\theta &= -\frac{1}{3} \\
-            \sin^2\theta + 2\sin\theta\cos\theta + \cos^2\theta &= \frac{1}{9} \\
-            1 + 2\sin\theta\cos\theta &= \frac{1}{9} \\
+            \sin \theta + \cos \theta &= -\frac{1}{3} \\
+            \sin^2 \theta + 2 \sin \theta \cos \theta + \cos^2 \theta &= \frac{1}{9} \\
+            1 + 2 \sin \theta \cos \theta &= \frac{1}{9} \\
             2\left(-\frac{m}{3}\right) &= -\frac{8}{9} \\
             m &= \frac{4}{3}
             \end{aligned}
             \]
           </div>
         </article>
-
       </div>
+
+      <!-- Maximum and Minimum values Part 1 -->
+      <h3 class="part-heading" id="max-min">A) Maximum and Minimum values of Trigonometric Functions (Part 1)</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <p>By using the inequalities \(-1 \le \sin \theta \le 1\) and \(-1 \le \cos \theta \le 1\), we can further investigate the maximum and minimum values of sine and cosine functions in different forms.</p>
+          <p>The following assumptions are held in this chapter:</p>
+          <ul>
+            <li>Unless otherwise stated, the domain of all functions in this note refers to \(0^\circ \le \theta \le 360^\circ\).</li>
+            <li>There is only one trigonometric function involved; in case there are more than one, convert them into the same function by using trigonometric identities.</li>
+          </ul>
+
+          <h3>Type 1: Linear Functions (\(y = a \sin \theta + b\) / \(y = a \cos \theta + b\))</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th colspan="2">Method: By substitution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Step 1</td>
+                  <td>Let \(t = \sin \theta\) or \(t = \cos \theta\), note that \(-1 \le t \le 1\).</td>
+                </tr>
+                <tr>
+                  <td>Step 2</td>
+                  <td>It is transformed to a strictly increasing / decreasing linear function \(y = at + b\).</td>
+                </tr>
+                <tr>
+                  <td>Step 3</td>
+                  <td>Substitute \(t = 1\) and \(t = -1\) into the function and obtain the max/min values.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Examples:</h4>
+          <p>1. Find the maximum/minimum value of \(y = 2 \sin \theta + 3\) where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>Consider the linear function \(y = 2t + 3\),</p>
+          <p>Maximum value: \(y = 2(1) + 3 = 5\)</p>
+          <p>Minimum value: \(y = 2(-1) + 3 = 1\)</p>
+
+          <h4>Exercises:</h4>
+          <p>1. [Level 1] Find the maximum/minimum value of these functions, where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>(a) \(y = 3 \sin \theta - 5\)</p>
+          <p>Consider the linear function \(y = 3t - 5\),</p>
+          <p>Maximum value: \(y = 2(1) - 5 = -3\)</p>
+          <p>Minimum value: \(y = 2(-1) - 5 = -7\)</p>
+          <p>(b) \(y = 3 - 4 \cos \theta\)</p>
+          <p>Consider the linear function \(y = 4t - 3\),</p>
+          <p>Maximum value: \(y = 3 - 4(-1) = 7\)</p>
+          <p>Minimum value: \(y = 3 - 4(1) = -1\)</p>
+
+          <h3>Type 2: Quadratic Functions</h3>
+          <h4>(a) Basic form: \(y = a \sin^2 \theta + b\) / \(y = a \cos^2 \theta + b\)</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th colspan="2">Method: By substitution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Step 1</td>
+                  <td>Let \(t = \sin \theta\) or \(t = \cos \theta\), note that \(-1 \le t \le 1\), which implies \(0 \le t^2 \le 1\).</td>
+                </tr>
+                <tr>
+                  <td>Step 2</td>
+                  <td>It is transformed to a quadratic function \(y = at^2 + b\).</td>
+                </tr>
+                <tr>
+                  <td>Step 3</td>
+                  <td>Substitute \(t^2 = 0\) and \(t^2 = 1\) into the function and obtain the max/min values.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Examples:</h4>
+          <p>2. Find the maximum/minimum value of \(y = 2 \sin^2 \theta - 3\) where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>Consider the quadratic function \(y = 2t^2 - 3\),</p>
+          <p>Maximum value: \(y = 2(1) - 3 = -1\)</p>
+          <p>Minimum value: \(y = 2(0) - 3 = -3\)</p>
+
+          <h4>Exercises:</h4>
+          <p>2. [Level 1] Find the maximum/minimum value of these functions, where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>(a) \(y = 2 \cos^2 \theta - 5\)</p>
+          <p>Consider the quadratic function \(y = 3t^2 - 5\),</p>
+          <p>Maximum value: \(y = 2(0) - 5 = -3\)</p>
+          <p>Minimum value: \(y = 2(1) - 5 = -5\)</p>
+          <p>(b) \(y = 3 - 4 \sin^2 \theta\)</p>
+          <p>Consider the quadratic function \(y = 4t^2 - 3\),</p>
+          <p>Maximum value: \(y = 3 - 4(0) = 3\)</p>
+          <p>Minimum value: \(y = 3 - 4(1) = -1\)</p>
+          <p>(c) \(y = 1 - 2 \sin^2 \theta + 3 \cos^2 \theta\) (Hint: use trigonometric identities)</p>
+          <p>Note that \(y = 1 - 2 \sin^2 \theta + 3 \cos^2 \theta = 1 - 2 \sin^2 \theta + 3(1 - \sin^2 \theta) = 4 - 5 \sin^2 \theta\)</p>
+          <p>Consider the quadratic function \(y = 5t^2 - 4\),</p>
+          <p>Maximum value: \(y = 5 - 4(0) = 4\)</p>
+          <p>Minimum value: \(y = 5 - 4(1) = -1\)</p>
+          
+          <figure>
+            <figcaption>Figure 1: Graph of \(y = 1 - 2\sin^2\theta + 3\cos^2\theta\): it keeps the shape of sine graphs with wider ranges.</figcaption>
+          </figure>
+
+          <h4>(b) Perfect Square form: \(y = (a \sin \theta + b)^2\) / \(y = (a \cos \theta + b)^2\)</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th colspan="2">Method: By substitution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Step 1</td>
+                  <td>Let \(t = \sin \theta\) or \(t = \cos \theta\), note that \(-1 \le t \le 1\).</td>
+                </tr>
+                <tr>
+                  <td>Step 2</td>
+                  <td>It is transformed to a quadratic function \(y = (at + b)^2\).</td>
+                </tr>
+                <tr>
+                  <td>Step 3</td>
+                  <td>Check: Substitute \(t = 1\) and \(-1\). If 0 is inside the range of \(at + b\) after substitution, the minimum value is 0. The maximum value is obtained when \(t = 1\) or \(-1\), whichever has a larger square.</td>
+                </tr>
+                <tr>
+                  <td>Step 4</td>
+                  <td>Check: Substitute \(t = 1\) and \(-1\). If 0 is NOT inside the range of \(at + b\) after substitution, the minimum value and maximum value are obtained when \(t = 1\) and \(-1\).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Explanation to Step 3 and 4:</h4>
+          <p>Assume after substituting \(t = 1\) or \(t = -1\), \(at + b\) takes values between -3 and 2, the values of its square are as follows:</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tbody>
+                <tr><td>\(at + b\)</td><td>-3</td><td>-2</td><td>-1</td><td>0</td><td>1</td><td>2</td></tr>
+                <tr><td>\((at + b)^2\)</td><td>9</td><td>4</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+                <tr><td>Note</td><td>Maximum value appears at the end-point.</td><td></td><td></td><td>Minimum value is 0 if it is inside the range.</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Assume after substituting \(t = 0\) or \(t = -1\), \(at + b\) takes values between -6 and -1, the values of its square are as follows:</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tbody>
+                <tr><td>\(at + b\)</td><td>-6</td><td>-5</td><td>-4</td><td>-3</td><td>-2</td><td>-1</td></tr>
+                <tr><td>\((at + b)^2\)</td><td>36</td><td>25</td><td>16</td><td>9</td><td>4</td><td>1</td></tr>
+                <tr><td>Note</td><td>Maximum value appears at the end-point.</td><td></td><td></td><td></td><td></td><td>Minimum value appears at the end-point.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Examples:</h4>
+          <p>3. Find the maximum/minimum value of these functions, where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>(a) \(y = (2 \sin \theta - 5)^2\)</p>
+          <p>Consider the quadratic function \(y = (2t - 5)^2\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) into \(2t - 5\), the values are \(-3\) and \(-7\) respectively, where \(0\) is NOT inside the range.</p>
+          <p>Maximum value: \(y = (2(-1) - 5)^2 = (-7)^2 = 49\)</p>
+          <p>Minimum value: \(y = 3^2 = 9\)</p>
+          <p>(b) \(y = (1 - 2 \cos \theta)^2\)</p>
+          <p>Consider the quadratic function \(y = (1 - 2t)^2\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) into \(1 - 2t\), the values are \(-1\) and \(3\) respectively, where \(0\) is inside the range.</p>
+          <p>Maximum value: \(y = (1 - 2 \times (-1))^2 = 3^2 = 9\)</p>
+          <p>Minimum value: \(y = 0^2 = 0\)</p>
+
+          <h4>Exercises:</h4>
+          <p>3. [Level 2] Find the maximum/minimum value of these functions, where \(0^\circ \le \theta < 360^\circ\).</p>
+          <p>(a) \(y = (1 - 4 \sin \theta)^2\)</p>
+          <p>Consider the quadratic function \(y = (4t - 1)^2\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) into \(4t - 1\), the values are \(-3\) and \(5\) respectively, where \(0\) is inside the range.</p>
+          <p>Maximum value: \(y = (4 - 4 \times (-1))^2 = 5^2 = 25\)</p>
+          <p>Minimum value: \(y = 0^2 = 0\)</p>
+          <p>(b) \(y = -(4 \cos \theta - 3)^2\)</p>
+          <p>Consider the quadratic function \(y = -(4t - 3)^2\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) into \(4t - 3\), the values are \(1\) and \(-7\) respectively, where \(0\) is inside the range.</p>
+          <p>Maximum value (as printed in key): \(y = (4 \times (-1) - 3)^2 = (-7)^2 = 49\) (Note: accounting for the negative sign in \(-(4t - 3)^2\), max = 0 and min = -49)</p>
+          <p>Minimum value (as printed in key): \(y = (4 \times 1 - 3)^2 = 1^2 = 1\)</p>
+          <p>(c) \(y = 4 \sin^2 \theta + 4 \sin \theta + 1\) (Hint: Is it a perfect square?)</p>
+          <p>Note that \(y = 4 \sin^2 \theta + 4 \sin \theta + 2 = (2 \sin \theta + 1)^2\)</p>
+          <p>Consider the quadratic function \(y = (2t + 1)^2\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) into \(2t + 1\), the values are \(3\) and \(-1\) respectively (key writes \(3\) and \(1\), noting \(0\) is inside the range).</p>
+          <p>Maximum value: \(y = 3^2 = 9\)</p>
+          <p>Minimum value: \(y = 1^2 = 1\) (or \(0\) at \(t = -\frac{1}{2}\))</p>
+
+          <h4>(c) Quadratic form: \(y = a \sin^2 \theta + b \sin \theta + c\) / \(a \cos^2 \theta + b \cos \theta + c\)</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th colspan="2">Method: By completing square</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Step 1</td>
+                  <td>Let \(t = \sin \theta\) or \(t = \cos \theta\), note that \(-1 \le t \le 1\).</td>
+                </tr>
+                <tr>
+                  <td>Step 2</td>
+                  <td>It is transformed to a quadratic function \(y = at^2 + bt + c\).</td>
+                </tr>
+                <tr>
+                  <td>Step 3</td>
+                  <td>Complete the square for the expression to the form \(y = a(t - h)^2 + k\).</td>
+                </tr>
+                <tr>
+                  <td>Step 4</td>
+                  <td>Check: If vertex's x-coordinate \(h\) is in the range of -1 to 1, substitute \(t = 1\), \(-1\) and \(h\) to the expression, then assign the maximum and minimum values. If vertex's x-coordinate \(h\) is NOT in the range of -1 to 1, substitute \(t = 1\) and \(-1\) ONLY to the expression, then assign the maximum and minimum values.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Explanation to Step 4:</h4>
+          <p>Assume the quadratic function is \(y = (t - 3)^2 + k\), note that 3 is not in the range of \(-1 \le t \le 1\):</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tbody>
+                <tr><td>\(t\)</td><td>-1</td><td>0</td><td>1</td></tr>
+                <tr><td>\((t - 3)^2\)</td><td>16</td><td>9</td><td>4</td></tr>
+                <tr><td>Note</td><td>Maximum value appears at the end-point.</td><td></td><td>Minimum value appears at the end-point.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Assume the quadratic function is \(y = \left(t - \frac{1}{3}\right)^2 + k\), note that \(\frac{1}{3}\) is in the range of \(-1 \le t \le 1\):</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tbody>
+                <tr><td>\(t\)</td><td>-1</td><td>0</td><td>1/3</td><td>1</td></tr>
+                <tr><td>\((t - 1/3)^2\)</td><td>16/9</td><td>1/9</td><td>0</td><td>4/9</td></tr>
+                <tr><td>Note</td><td>Maximum value appears at the end-point.</td><td></td><td>Minimum value appears at the vertex.</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Examples:</h4>
+          <p>4. Find the maximum/minimum value of these functions, where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>(a) \(y = \sin^2 \theta + 6 \sin \theta + 8\)</p>
+          <p>Note that \(y = (\sin \theta + 3)^2 - 1\)</p>
+          <p>Consider the quadratic function \(y = (t + 3)^2 - 1\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) to \((t + 3)^2 - 1\), the values are 15 and 3 respectively.</p>
+          <p>Maximum value = \((1 + 3)^2 - 1 = 15\). Minimum value = \((-1 + 3)^2 - 1 = 3\)</p>
+          <p>(b) \(y = 2\sin^2\theta - 2\cos \theta\)</p>
+          <p>Note that \(y = 2(1 - \cos^2\theta) - 2\cos \theta = -2\cos^2\theta - 2\cos \theta + 2 = -2\left(\cos \theta + \frac{1}{2}\right)^2 + \frac{5}{2}\)</p>
+          <p>Consider the quadratic function \(y = -2\left(t + \frac{1}{2}\right)^2 + \frac{5}{2}\),</p>
+          <p>By substituting \(t = 1\), \(-\frac{1}{2}\) and \(-1\) to \(-2\left(t + \frac{1}{2}\right)^2 + \frac{5}{2}\), the values are \(-2\), \(\frac{5}{2}\) and \(2\) respectively.</p>
+          <p>Maximum value = \(\frac{5}{2}\), Minimum value = \(-2\left(1 + \frac{1}{2}\right)^2 + \frac{5}{2} = -2\)</p>
+
+          <h4>Exercises:</h4>
+          <p>4. [Level 2] Find the maximum/minimum value of these functions, where \(0^\circ \leq \theta \leq 360^\circ\).</p>
+          <p>(a) \(y = 2\sin^2\theta - 2\sin \theta - 4\)</p>
+          <p>Note that \(y = 2\left(\sin \theta -\frac{1}{2}\right)^2 -\frac{9}{2}\)</p>
+          <p>Consider the quadratic function \(y = 2\left(t - \frac{1}{2}\right)^2 - \frac{9}{2}\),</p>
+          <p>By substituting \(t = 1\), \(\frac{1}{2}\) and \(-1\) to \(2\left(t - \frac{1}{2}\right)^2 - \frac{9}{2}\), the values are \(-4\), \(-\frac{9}{2}\) and 0 respectively.</p>
+          <p>Maximum value = \(2\left(-1 - \frac{1}{2}\right)^2 -\frac{9}{2} = 0\), Minimum value = \(-\frac{9}{2}\)</p>
+          <p>(b) \(y = \lfloor 2\cos \theta - 1 \rfloor \lfloor \cos \theta - 2 \rfloor\)</p>
+          <p>Note that \(y = 2\cos^2\theta - 5\cos \theta + 2 = 2\left(\cos \theta - \frac{5}{4}\right)^2 - \frac{9}{8}\)</p>
+          <p>Consider the quadratic function \(y = 2\left(t - \frac{5}{4}\right)^2 - \frac{9}{8}\),</p>
+          <p>By substituting \(t = 1\) and \(-1\) to \(2\left(t - \frac{5}{4}\right)^2 - \frac{9}{8}\), the values are \(-1\) and 9 respectively.</p>
+          <p>Maximum value = 9, Minimum value = -1</p>
+        </article>
+      </div>
+
+      <!-- Maximum and Minimum values Part 2 -->
+      <h3 class="part-heading" id="max-min-2">A) Maximum and Minimum values of Trigonometric Functions (Part 2)</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Type 3: Rational Functions (\(y = \frac{a \sin \theta + b}{c \sin \theta + d}\) / \(y = \frac{a \cos \theta + b}{c \cos \theta + d}\))</h3>
+          <h4>Method: By long division</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tbody>
+                <tr>
+                  <td>Step 1</td>
+                  <td>Let \(t = \sin \theta\) or \(t = \cos \theta\), note that \(-1 \le t \le 1\).</td>
+                </tr>
+                <tr>
+                  <td>Step 2</td>
+                  <td>Perform long division of numerator by the denominator to separate the function into forms of \(m + \frac{n}{c t + d}\).</td>
+                </tr>
+                <tr>
+                  <td>Step 3</td>
+                  <td>Find the value of \(t\) which sets the denominator \(c t + d = 0\) (i.e. \(t = -\frac{d}{c}\)).</td>
+                </tr>
+                <tr>
+                  <td>Step 4</td>
+                  <td>Check: If \(-\frac{d}{c}\) is in the range of -1 to 1, the denominator can be 0, so there is no maximum and minimum. If \(-\frac{d}{c}\) is NOT in the range of -1 to 1, substitute \(t = 1\) and \(-1\) ONLY to the expression, then assign the maximum and minimum values.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Examples:</h4>
+          <p>5. Find the maximum/minimum value of these functions, where \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>(a) \(y = \frac{2 - \sin \theta}{2 + \sin \theta}\)</p>
+          <p>By long division \(|2 - \sin \theta| \div |2 + \sin \theta|\) gives quotient -1 and remainder 4, or by observing coefficients:</p>
+          <p>\(2 - \sin \theta = -|2 + \sin \theta| + 4\).</p>
+          <p>Hence, we have \(y = \frac{-1|2 + \sin \theta| + 4}{2 + \sin \theta} = -1 + \frac{4}{2 + \sin \theta}\).</p>
+          <p>Consider the function \(y = -1 + \frac{4}{2+t}\), whose denominator cannot be 0 for the range of \(-1 \le t \le 1\).</p>
+          <p>By substituting \(t = 1\) and \(-1\) to \(-1 + \frac{4}{2+t}\), the values are \(\frac{1}{3}\) and 3 respectively.</p>
+          <p>Maximum value = \(-1 + \frac{4}{2+|-1|} = 3\), Minimum value = \(-1 + \frac{4}{2+1} = \frac{1}{3}\)</p>
+
+          <p>(b) \(y = \frac{4\cos\theta}{1 - 2\cos\theta}\)</p>
+          <p>By long division \(|4\cos \theta| \div |1 - 2\cos \theta|\) gives quotient -2 and remainder 2, or by observing coefficients:</p>
+          <p>\[
+          4 \cos \theta = - 2 (1 - 2 \cos \theta) + 2.
+          \]</p>
+          <p>Hence, we have \(y = -2 + \frac{2}{1 - 2\cos\theta}\).</p>
+          <p>Consider the function \(y = -2 + \frac{2}{1 - 2t}\). When \(t = \frac{1}{2}\), denominator can be 0.</p>
+          <p>Hence, there is no maximum nor minimum.</p>
+
+          <p>(c) \(y = \frac{7 - 3\sin^2\theta}{2 - \sin^2\theta}\)</p>
+          <p>By long division \(|7 - 3\sin^2\theta| \div |2 - \sin^2\theta|\) gives quotient 3 and remainder 1, or by observing coefficients:</p>
+          <p>\[
+          7 - 3 \sin^{2} \theta = 3 (2 - \sin^{2} \theta) + 1.
+          \]</p>
+          <p>Hence, we have \(y = 3 + \frac{1}{2 - \sin^2\theta}\).</p>
+          <p>Consider the function \(y = 3 + \frac{1}{2 - t^2}\), where the denominator cannot be 0 for the range of \(0 \leq t^2 \leq 1\).</p>
+          <p>Maximum value \(= 3 + \frac{1}{2 - 1} = 4\), Minimum value \(= 3 + \frac{1}{2 - 0} = \frac{7}{2}\)</p>
+
+          <h4>Exercises:</h4>
+          <p>5. [Level 2] Find the maximum/minimum value of these functions, where \(0^\circ \leq \theta \leq 360^\circ\).</p>
+          <p>(a) \(y = -\frac{6\sin\theta}{3\sin\theta - 1}\)</p>
+          <p>By long division \(|-6\sin \theta |\div |3\sin \theta -1|\) gives quotient -2 and remainder -2, or by observing coefficients:</p>
+          <p>\[
+          y = \frac{- 2 ( 3 \sin \theta - 1 ) - 2}{3 \sin \theta - 1} = - 2 - \frac{2}{3 \sin \theta - 1}.
+          \]</p>
+          <p>Consider the function \(y = -2 - \frac{2}{3t - 1}\). \(t = \frac{1}{3}\) is in the range of \(-1 \leq t \leq 1\), which means there is no maximum nor minimum.</p>
+
+          <p>(b) \(y = \frac{4\cos\theta}{2 - \cos\theta}\)</p>
+          <p>By long division \(|4\cos \theta| \div |2 - \cos \theta|\) gives quotient -4 and remainder 8, or by observing coefficients:</p>
+          <p>\[
+          4 \cos \theta = - 4 (2 - \cos \theta) + 8.
+          \]</p>
+          <p>Hence, we have \(y = -4 + \frac{8}{2 - \cos\theta}\).</p>
+          <p>Consider the function \(y = -4 + \frac{8}{2 - t}\), whose denominator cannot be 0 for the range of \(-1 \leq t \leq 1\).</p>
+          <p>Maximum value \(= -4 + \frac{8}{2 - 1} = 4\), Minimum value \(= -4 + \frac{8}{2 - (-1)} = -\frac{4}{3}\)</p>
+
+          <p>(c) \(y = \frac{2 \cos^2 \theta}{2 + \sin^2 \theta}\)</p>
+          <p>Note that \(y = \frac{2 \cos^2 \theta}{2 + \sin^2\theta} = \frac{2 - 2 \sin^2 \theta}{2 + \sin^2 \theta}\).</p>
+          <p>By long division \((-2 \sin^2 \theta + 2) \div (\sin^2 \theta + 2)\) gives quotient \(-2\) and remainder \(6\), or by observing coefficients:</p>
+          <p>\[
+          2 - 2 \sin^2 \theta = -2 (\sin^2 \theta + 2) + 6.
+          \]</p>
+          <p>Hence, we have \(y = -2 + \frac{6}{2 + \sin^2 \theta}\).</p>
+          <p>Consider the function \(y = -2 + \frac{6}{2 + t^2}\), whose denominator cannot be 0 for the range of \(0 \le t^2 \le 1\).</p>
+          <p>Maximum value \(= -2 + \frac{6}{2+0} = 1\), Minimum value \(= -2 + \frac{6}{2+1} = 0\)</p>
+
+          <h3>Type 4: Restricted Specific Range</h3>
+          <p>On few occasions, the question restricts the range of the trigonometric function such that it is not a must to substitute 1 and -1 all the time, particularly for CE Exam Questions.</p>
+
+          <h4>Examples:</h4>
+          <p>6. [Modified-2012PP-DSE-MATH-II-Q23] Find the largest and least value of \(\frac{30}{3 \sin^2 \theta + 2 \sin^2 (90^\circ - \theta)}\) for \(135^\circ \le \theta \le 180^\circ\).</p>
+          <p>Note that \(\frac{30}{3 \sin^2 \theta + 2 \sin^3 (90^\circ - \theta)} = \frac{30}{3 \sin^2 \theta + 2 \cos^2 \theta} = \frac{30}{\sin^2 \theta + 2}\)</p>
+          <p>For \(135^\circ \le \theta \le 180^\circ\), Minimum value of \(\sin \theta = 0\) (When \(\theta = 180^\circ\)), Maximum value of \(\sin \theta = \frac{1}{\sqrt{2}}\) (When \(\theta = 135^\circ\))</p>
+          <p>Maximum value \(= \frac{30}{0^2 + 2} = 15\), Minimum value \(= \frac{30}{\left(\frac{1}{\sqrt{2}}\right)^2 + 2} = 12\)</p>
+
+          <h4>Exercises:</h4>
+          <p>6. [Level 2] Find the maximum/minimum value of these functions.</p>
+          <p>(a) \(y = 3 - 4 \cos \theta\) where \(90^\circ \le \theta \le 180^\circ\) (From Exercise 1)</p>
+          <p>For \(90^\circ \le \theta \le 180^\circ, -1 \le \cos \theta \le 0\).</p>
+          <p>Maximum value = \(3 - 4(-1) = 7\), Minimum value = \(3 - 4(0) = 3\).</p>
+
+          <p>(b) \(y = (1 - 4 \sin \theta)^2\) where \(90^\circ \le \theta \le 150^\circ\) (From Exercise 3)</p>
+          <p>For \(90^\circ \le \theta \le 150^\circ, \frac{1}{2} \le \sin \theta \le 1\).</p>
+          <p>Maximum value = \((1 - 4 \times 1)^2 = 9\), Minimum value = \(\left(1 - 4 \times \frac{1}{2}\right)^2 = 1\)</p>
+
+          <p>(c) \(y = 2 \sin^2 \theta - 2 \sin \theta - 4\) where \(90^\circ \le \theta \le 150^\circ\) (From Exercise 4)</p>
+          <p>Note that \(y = 2 \left( \sin \theta - \frac{1}{2} \right)^2 - \frac{9}{2}\), \(\frac{1}{2} \le \sin \theta \le 1\).</p>
+          <p>By substituting \(\sin \theta = 1\) and \(\frac{1}{2}\), the values are \(-4, -\frac{9}{2}\) respectively.</p>
+          <p>Maximum value \(= 2 \left( 1 - \frac{1}{2} \right)^2 - \frac{9}{2} = -4\), Minimum value \(= -\frac{9}{2}\)</p>
+
+          <h3>Summarizing Exercises:</h3>
+          <p>7. [Level 2] Find the maximum/minimum value of these functions for \(0^\circ \le \theta \le 360^\circ\).</p>
+          <p>(a) \(y = 5 - 3 \cos \theta\)</p>
+          <p>Maximum value: \(5 - 3(-1) = 8\), Minimum value: \(5 - 3(1) = 2\)</p>
+
+          <p>(b) \(y = \frac{48}{3 \cos^2 \theta + 4 \sin^2 \theta}\)</p>
+          <p>Note that \(y = \frac{48}{3 \cos^2 \theta + 4\sin^2 \theta} = \frac{48}{3 \cos^2 \theta + 3\sin^2 \theta + \sin^2 \theta} = \frac{48}{3 + \sin^2 \theta}\)</p>
+          <p>Maximum value: \(\frac{48}{3 + |\theta|} = 16\), Minimum value: \(\frac{48}{3 + |1|} = 12\)</p>
+
+          <p>(c) \(y = \cos^2 \theta - 2 \cos \theta + 2\)</p>
+          <p>Note that \(y = |\cos \theta - 1|^2 + 1\),</p>
+          <p>Maximum value: \((-2)^2 + 1 = 5\), Minimum value: \(0^2 + 1 = 1\)</p>
+
+          <p>(d) \(y = \frac{6+6 \sin \theta}{3+2 \sin \theta}\) (2526-WYK-S4-Final-II-Q42)</p>
+          <p>Note that \(y = \frac{6+6 \sin \theta}{3+2 \sin \theta} = \frac{3|3+2 \sin \theta| - 3}{3+2 \sin \theta} = 3 - \frac{3}{3+2 \sin \theta}\)</p>
+          <p>Maximum value: \(3 - \frac{3}{3+2|1|} = \frac{12}{5}\), Minimum value: \(3 - \frac{3}{3+2|-1|} = 0\)</p>
+
+          <p>(e) \(y = |\sin \theta + 1|^2 |\sin \theta - 1|^2\)</p>
+          <p>Note that \(y = |\sin^2 \theta - 1|^2 = \cos^4 \theta\),</p>
+          <p>Maximum value: \(1^4 = 1\), Minimum value: \(0^4 = 0\)</p>
+
+          <p>(f) \(y = \frac{2|\sin \theta - 2|^2}{\sin^2 \theta - 4 \sin \theta + 3}\) (Challenging)</p>
+          <p>Note that \(y = \frac{2|\sin \theta - 2|^2}{\sin^3 \theta - 4 \sin \theta + 3} = \frac{2|\sin \theta - 2|^2}{|\sin \theta - 2|^2 - 1} = \frac{2[|\sin \theta - 2|^2 - 1] + 2}{|\sin \theta - 2|^2 - 1} = 2 + \frac{2}{|\sin \theta - 2|^2 - 1}\)</p>
+          <p>Since when \(\sin \theta = 1\), \(|\sin \theta - 2|^2 - 1 = 0\), there is no maximum value.</p>
+          <p>Minimum value: \(2 + \frac{2}{|-1 - 2|^2 - 1} = \frac{9}{4}\)</p>
+
+          <p>(g) \(y = \frac{4\sin^2\theta - 4\sin\theta - 7}{|2\sin\theta - 1|^2}\) (Challenging) (2425-WYK-S4-Final-II-Q44)</p>
+          <p>Note that \(y = \frac{4\sin^2\theta - 4\sin\theta - 7}{|2\sin\theta - 1|^2} = \frac{[2\sin\theta - 1]^2 - 8}{[2\sin\theta - 1]^2} = 1 - \frac{8}{[2\sin\theta - 1]^2}\)</p>
+          <p>Since when \(\sin \theta = \frac{1}{2}\), \(|2\sin \theta - 1|^2 = 0\), there is no minimum value.</p>
+          <p>Maximum value: \(1 - \frac{8}{\left[2(-1) - 1\right]^2} = \frac{1}{9}\)</p>
+
+          <p>(h) \(y = -\tan^2\theta - 2\tan \theta\)</p>
+          <p>Note that \(y = -\tan^2\theta - 2\tan \theta = -\left|\tan^2\theta + 2\tan \theta + 1\right| + 1 = -\left|\tan \theta + 1\right|^2 + 1\)</p>
+          <p>Maximum value: \(-\left|0\right|^2 + 1 = 1\). No minimum value.</p>
+
+          <p>8. [Level 2] Find the maximum/minimum value of these functions.</p>
+          <p>(a) \(y = \frac{5 - \sin\theta}{4 + \sin\theta}\) where \(0^\circ \leq \theta \leq 90^\circ\) (2005-CE-MATH-II-Q20)</p>
+          <p>For \(0^\circ \leq \theta \leq 90^\circ, 0 \leq \sin \theta \leq 1\)</p>
+          <p>\[
+          y = \frac{5 - \sin \theta}{4 + \sin \theta} = \frac{- \{4 + \sin \theta \} + 9}{4 + \sin \theta} = - 1 + \frac{9}{4 + \sin \theta}
+          \]</p>
+          <p>Maximum value \(= -1 + \frac{9}{4 + 0} = \frac{5}{4}\), Minimum value \(= -1 + \frac{9}{4 + 1} = \frac{4}{5}\)</p>
+
+          <p>(b) \(y = \frac{1}{(3 - 2\sin\theta)^3}\) where \(180^\circ \leq \theta \leq 360^\circ\)</p>
+          <p>For \(180^\circ \leq \theta \leq 360^\circ, - 1 \leq \sin \theta \leq 0.\)</p>
+          <p>Maximum value \(= \frac{1}{\left[3 - 2(0)\right]^3} = \frac{1}{27}\), Minimum value \(= \frac{1}{\left[3 - 2(-1)\right]^3} = \frac{1}{125}\)</p>
+
+          <p>(c) \(y = 2\tan^2\theta - 4\sqrt{3}\tan \theta + 1\) where \(180^\circ \leq \theta \leq 270^\circ\)</p>
+          <p>For \(180^\circ \leq \theta \leq 270^\circ, \tan \theta \geq 0\)</p>
+          <p>\(y = 2\tan^2\theta - 4\sqrt{3}\tan \theta + 1 = 2\left(\tan^2\theta - 2\sqrt{3}\tan \theta + 3\right) - 6 + 1 = 2\left(\tan \theta - \sqrt{3}\right)^2 - 5\)</p>
+          <p>There is no maximum value. Minimum value: \(2(0)^2 - 5 = -5\)</p>
+
+          <p>9. [Level 3] Find the values of the unknown, which are non-zero integers, of the following functions:</p>
+          <p>(a) \(y = a\sin \theta + b\), with maximum value 6 and minimum value -2.</p>
+          <p>Case 1: Maximum value \(= a(1) + b = 6\), Minimum value \(= a(-1) + b = -2 \Rightarrow\) Solving, \(a = 4\), \(b = 2\)</p>
+          <p>Case 2: Maximum value \(= a(-1) + b = 6\), Minimum value \(= a(1) + b = -2 \Rightarrow\) Solving, \(a = -4\), \(b = 2\)</p>
+          <p>(b) \(y = p\cos \theta - q\), with maximum value 7 and minimum value -3.</p>
+          <p>Case 1: Maximum value \(= p(1) - q = 7\), Minimum value \(= p(-1) - q = -3 \Rightarrow\) Solving, \(p = 5\), \(q = -2\)</p>
+          <p>Case 2: Maximum value \(= p(-1) - q = 7\), Minimum value \(= p(1) - q = -3 \Rightarrow\) Solving, \(p = -5\), \(q = -2\)</p>
+          <p>(c) \(y = |u \sin \theta + v|^2\), with maximum value 9 and minimum value 1.</p>
+          <p>Case 1: \(u \sin \theta + v\) with maximum 3 and minimum 1: Maximum value \(= u(1) + v = 3\), Minimum value \(= u(-1) + v = 1 \Rightarrow\) Solving, \(u = 1, v = 2\)</p>
+          <p>Case 2: \(u \sin \theta + v\) with maximum 3 and minimum 1: Maximum value \(= u(-1) + v = 3\), Minimum value \(= u(1) + v = 1 \Rightarrow\) Solving, \(u = -1, v = 2\)</p>
+          <p>Case 3: \(u \sin \theta + v\) with maximum \(-1\) and minimum \(-3\): Maximum value \(= u(1) + v = -1\), Minimum value \(= u(-1) + v = -3 \Rightarrow\) Solving, \(u = 1, v = -2\)</p>
+          <p>Case 4: \(u \sin \theta + v\) with maximum \(-1\) and minimum \(-3\): Maximum value \(= u(-1) + v = -1\), Minimum value \(= u(1) + v = -3 \Rightarrow\) Solving, \(u = -1, v = -2\)</p>
+        </article>
+      </div>
+
     </div>
   </section>
 
