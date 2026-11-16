@@ -11,6 +11,7 @@ const PAGES = [
   { file: "mathematical-induction.html",   label: "Mathematical Induction" },
   { file: "coordinate-geometry.html",      label: "Coordinate Geometry" },
   { file: "triangle-centers.html",  label: "Triangle Centers" },
+  { file: "trigo_formulas.html",  label: "Trigo Formulas" },
   { file: "glossary.html",      label: "Glossary" },
 ];
 
