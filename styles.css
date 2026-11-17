@@ -893,7 +893,36 @@ img, svg, video, canvas, iframe {
   text-underline-offset: 6px; /* Pushes the line down so it doesn't touch the text */
 }
 
-.btn-active {
+/* styles.css */
+.btn {
+  display: inline-block;
   background: #ed8936;
   color: #44337a;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px; /* Slightly more rounded */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn:hover {
+  background: #dd6b20;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn:focus-visible {
+  outline: 3px solid #6b46c1;
+  outline-offset: 2px;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
 }
