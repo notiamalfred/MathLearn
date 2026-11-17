@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice · MathLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="dashboard.html" class="logo">← Dashboard</a>
+      <button id="logout-btn" class="btn" style="margin-left:auto;">Log out</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding:64px 20px; max-width:720px;">
+    <h1 id="page-title" style="color:#44337a;">Loading…</h1>
+    <p id="progress" style="color:#718096;"></p>
+
+    <div id="question-card" class="skill-card" style="margin-top:24px; display:none;">
+      <p id="question-text" style="font-size:1.1rem; margin-bottom:20px;"></p>
+      <label style="display:block; margin-bottom:12px;">
+        Your answer:
+        <input type="text" id="answer-input"
+               style="width:100%; padding:10px; border:1px solid #cbd5e0; border-radius:6px;">
+      </label>
+      <button id="check-btn" class="btn">Check</button>
+      <button id="next-btn" class="btn" style="display:none; margin-left:8px;">Next</button>
+      <p id="feedback" style="margin-top:16px; font-weight:600;"></p>
+    </div>
+
+    <div id="finished" style="display:none; margin-top:24px;">
+      <h2 style="color:#6b46c1;">All done! 🎉</h2>
+      <a href="dashboard.html" class="btn">Back to dashboard</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
+  <script src="questions-data.js"></script>
+  <script>
+    (async () => {
+      const user = await window.ML.requireUser();
+      if (!user) return;
+
+      document.getElementById("logout-btn").addEventListener("click", () => window.ML.signOut());
+
+      const params = new URLSearchParams(location.search);
+      const curriculum = params.get("curriculum");
+      const topic = params.get("topic");
+      const questions = (QUESTIONS_DATA[curriculum] && QUESTIONS_DATA[curriculum][topic]) || [];
+
+      if (!questions.length) {
+        document.getElementById("page-title").textContent = "No questions found.";
+        return;
+      }
+
+      document.getElementById("page-title").textContent =
+        `${curriculum.toUpperCase()} · ${topic.replace(/-/g, " ")}`;
+
+      let index = 0;
+      const total = questions.length;
+
+      function render() {
+        if (index >= total) {
+          document.getElementById("question-card").style.display = "none";
+          document.getElementById("finished").style.display = "block";
+          return;
+        }
+        const q = questions[index];
+        document.getElementById("progress").textContent =
+          `Question ${index + 1} of ${total}  ·  Level ${q.level}`;
+        document.getElementById("question-text").innerHTML = q.question;
+        document.getElementById("answer-input").value = "";
+        document.getElementById("feedback").textContent = "";
+        document.getElementById("check-btn").style.display = "inline-block";
+        document.getElementById("next-btn").style.display = "none";
+        if (window.MathJax) MathJax.typesetPromise();
+      }
+
+      document.getElementById("check-btn").addEventListener("click", () => {
+        const userAns = document.getElementById("answer-input").value.trim();
+        const correct = questions[index].answer;
+        const feedback = document.getElementById("feedback");
+        if (userAns === correct) {
+          feedback.textContent = "Correct! ✅";
+          feedback.style.color = "#38a169";
+        } else {
+          feedback.textContent = `Not quite. Correct answer: ${correct}`;
+          feedback.style.color = "#e53e3e";
+        }
+        document.getElementById("check-btn").style.display = "none";
+        document.getElementById("next-btn").style.display = "inline-block";
+      });
+
+      document.getElementById("next-btn").addEventListener("click", () => {
+        index++;
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
