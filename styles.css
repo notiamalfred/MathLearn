@@ -892,3 +892,8 @@ img, svg, video, canvas, iframe {
   text-decoration-thickness: 2px;
   text-underline-offset: 6px; /* Pushes the line down so it doesn't touch the text */
 }
+
+.btn-active {
+  background: #ed8936;
+  color: #44337a;
+}
