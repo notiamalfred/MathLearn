@@ -1,0 +1,4 @@
+window.MATHLEARN_CONFIG = {
+  SUPABASE_URL: "https://vkfruulnkeravnfcdryf.supabase.co/",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrZnJ1dWxua2VyYXZuZmNkcnlmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ5MTI0OTEsImV4cCI6MjExMDQ4ODQ5MX0.6UCLQTV-M-bkW4BkvICoqVTmYZduCOGwdhhp3XRVl58"
+};
