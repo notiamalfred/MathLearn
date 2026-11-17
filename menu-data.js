@@ -8,6 +8,8 @@ const MENU_ITEMS = [
   { label: "Triangle Centers",       href: "triangle-centers.html" },
   { label: "Trigo Formulas",       href: "trigo_formulas.html" },
   { label: "Glossary",       href: "glossary.html" },
+  { label: "Dashboard",       href: "dashboard.html" },
+  { label: "Login",       href: "login.html" },
   { label: "LinguaLearn",
     href: "https://notiamalfred.github.io/LinguaLearn/",
     external: true },
