@@ -1,0 +1,17 @@
+const MENU_ITEMS = [
+  { label: "Home",       href: "index.html" },
+  { label: "Quadratic Equations",       href: "quadratic_equations.html" },
+  { label: "Functions & Graphs",       href: "functions_and_graphs.html" },
+  { label: "Binomial Theorem",       href: "binomial-theorem.html" },
+  { label: "Mathematical Induction",       href: "mathematical-induction.html" },
+  { label: "Coordinate Geometry",       href: "coordinate-geometry.html" },
+  { label: "Triangle Centers",       href: "triangle-centers.html" },
+  { label: "Trigo Formulas",       href: "trigo_formulas.html" },
+  { label: "Glossary",       href: "glossary.html" },
+  { label: "LinguaLearn",
+    href: "https://notiamalfred.github.io/LinguaLearn/",
+    external: true },
+  { label: "EconLearn",
+    href: "https://notiamalfred.github.io/EconLearn/",
+    external: true },
+];
