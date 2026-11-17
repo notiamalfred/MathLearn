@@ -867,3 +867,50 @@ img, svg, video, canvas, iframe {
   color: #4a5568;
   font-size: 0.95rem;
 }
+
+.nav-links {
+  list-style: none;      
+  padding: 0;            
+  margin: 0;             
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;          /* Changed from 1.25rem to 0.75rem for a tighter fit */
+  margin-top: 2rem;      
+}
+
+.nav-links a {
+  color: #e2e8f0;        /* Light gray text */
+  text-decoration: none; /* Removes default underline */
+  font-size: 1.1rem;     
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;        /* Turns white on hover */
+}
+
+/* Style specifically for external links */
+.nav-links a.external {
+  color: #fbd38d;        /* Yellow color */
+  font-weight: 600;
+}
+
+.nav-links a.external:hover {
+  background: #2c5282;   /* Deep, muted blue on hover */
+  color: #fff;
+}
+
+/* Adds the little arrow (↗) automatically via CSS */
+.nav-links a.external::after {
+  content: " \2197"; 
+  font-size: 0.85em;
+}
+
+.nav-links a.active {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px; /* Pushes the line down so it doesn't touch the text */
+}
