@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up · MathLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+    </div>
+  </header>
+
+  <main class="container" style="max-width:420px; padding:64px 20px;">
+    <h1 style="color:#44337a; margin-bottom:24px;">Sign up</h1>
+    <form id="login-form">
+      <label style="display:block; margin-bottom:12px;">
+        Email
+        <input type="email" id="email" required
+               style="width:100%; padding:10px; border:1px solid #cbd5e0; border-radius:6px;">
+      </label>
+      <label style="display:block; margin-bottom:20px;">
+        Password
+        <input type="password" id="password" required
+               style="width:100%; padding:10px; border:1px solid #cbd5e0; border-radius:6px;">
+      </label>
+      <button type="submit" class="btn" style="width:100%;">Sign up</button>
+      <p id="error" style="color:#e53e3e; margin-top:12px;"></p>
+    </form>
+    <p style="margin-top:16px; color:#4a5568;">
+      Don’t have an account? <a href="signup.html" style="color:#6b46c1;">Sign up</a>
+    </p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const { error } = await window.ML.db.auth.signUp({ email, password });
+      if (error) {
+        document.getElementById("error").textContent = error.message;
+      } else {
+        alert("Check your email to confirm your account.");
+        location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>
