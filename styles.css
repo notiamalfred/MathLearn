@@ -66,31 +66,6 @@ body {
   display: flex;
 }
 
-.nav a {
-  color: #e2e8f0;
-  text-decoration: none;
-  margin: 0;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  background: #6b46c1;
-  color: #fff;
-}
-
-.nav .cross-link {
-  color: #fbd38d;
-  font-weight: 600;
-}
-
-.nav .cross-link:hover {
-  background: #553c9a;
-  color: #fefcbf;
-}
-
 .hero {
   background: linear-gradient(135deg, #44337a, #6b46c1);
   color: #fff;
@@ -879,15 +854,18 @@ img, svg, video, canvas, iframe {
 }
 
 .nav-links a {
-  color: #e2e8f0;        /* Light gray text */
-  text-decoration: none; /* Removes default underline */
-  font-size: 1.1rem;     
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.1rem;
   display: inline-block;
-  transition: color 0.2s ease;
+  padding: 10px 12px;      /* ← was on .nav a, now lost */
+  border-radius: 6px;      /* ← was on .nav a, now lost */
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #ffffff;        /* Turns white on hover */
+  background: #6b46c1;     /* ← preserved from old .nav a:hover */
+  color: #ffffff;
 }
 
 /* Style specifically for external links */
