@@ -14,20 +14,21 @@
     </div>
   </header>
 
-  <main class="container" style="padding:64px 20px;">
-    <h1 style="color:#44337a;">Choose your practice</h1>
-
-    <section style="margin-top:32px;">
-      <h2 style="color:#6b46c1;">Curriculum</h2>
-      <div style="display:flex; gap:16px; margin-top:12px;">
+  <!-- Updated dashboard.html structure -->
+  <main class="container dashboard-main">
+    <h1 class="dashboard-title">Choose your practice</h1>
+  
+    <section class="dashboard-section">
+      <h2 class="section-heading">Curriculum</h2>
+      <div class="button-group">
         <button class="btn curriculum-btn" data-curriculum="core">Core</button>
         <button class="btn curriculum-btn" data-curriculum="m2">M2</button>
       </div>
     </section>
-
-    <section id="topics-section" style="margin-top:32px; display:none;">
-      <h2 style="color:#6b46c1;">Topics</h2>
-      <div id="topics-list" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:12px;"></div>
+  
+    <section id="topics-section" class="dashboard-section is-hidden">
+      <h2 class="section-heading">Topics</h2>
+      <div id="topics-list" class="topic-grid"></div>
     </section>
   </main>
 
