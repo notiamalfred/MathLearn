@@ -908,3 +908,27 @@ img, svg, video, canvas, iframe {
 .btn:hover { background: #dd6b20; }
 .btn:active { transform: scale(0.98); }
 .btn-active { background: #c05a0f; }
+
+.dashboard-main { padding: 64px 20px; }
+.dashboard-title { color: #44337a; margin-bottom: 32px; }
+.dashboard-section { margin-bottom: 32px; }
+.section-heading { color: #6b46c1; margin-bottom: 12px; }
+.is-hidden { display: none; }
+.button-group { display: flex; gap: 16px; }
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.topic-card {
+  background: #fff;
+  border-left: 4px solid #ed8936;
+  padding: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #2d3748;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s;
+}
+.topic-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
