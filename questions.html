@@ -58,9 +58,16 @@
               <p class="ml-progress" id="progress"></p>
               <div class="ml-bar" aria-hidden="true"><div class="ml-bar-fill" id="bar"></div></div>
 
+              <label class="ml-check ml-savebox">
+                <input type="checkbox" id="save-progress" />
+                Save my progress in this topic
+              </label>
+              <p class="ml-hint ml-savehint" id="save-status" role="status" aria-live="polite"></p>
+
               <article class="ml-qcard">
                 <span class="ml-level" id="level"></span>
                 <p class="ml-question" id="question"></p>
+                <img class="ml-qimage" id="qimage" alt="" hidden />
                 <div class="ml-answer" id="answer" hidden>
                   <span class="ml-answer-label">Answer</span>
                   <span class="ml-answer-text" id="answer-text"></span>
@@ -114,3 +121,4 @@
   <script src="questions.js"></script>
 </body>
 </html>
+
