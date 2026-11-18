@@ -135,7 +135,7 @@
   background: #e9d8fd;
   border-radius: 999px;
 }
-.ml-question { font-size: 1.15rem; line-height: 1.9; overflow-wrap: anywhere; }
+.ml-question { font-size: 1.15rem; line-height: 1.9; overflow-wrap: anywhere; white-space: pre-line; } /* pre-line: "\n" in question-data.js becomes a line break */
 .ml-question mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 
 .ml-answer {
@@ -175,3 +175,8 @@
   .ml-choice, .ml-bar-fill { transition: none; }
   .ml-choice:hover { transform: none; }
 }
+
+/* Save-progress tick box and optional question figure */
+.ml-savebox { margin-bottom: 4px; }
+.ml-savehint { margin-bottom: 14px; }
+.ml-qimage { display: block; max-width: 100%; height: auto; margin: 14px auto 0; }
