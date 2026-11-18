@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://js.hcaptcha.com; style-src 'self' 'unsafe-inline' https://newassets.hcaptcha.com; img-src 'self' data: https://newassets.hcaptcha.com; connect-src 'self' https://*.supabase.co https://hcaptcha.com https://*.hcaptcha.com; frame-src https://newassets.hcaptcha.com; base-uri 'self'; form-action 'self'" />
+  <title>Sign in — MathLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="account.css" />
+</head>
+<body class="ml-scope">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Math<span>Learn</span></a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav-links" id="main-menu"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <div class="ml-auth">
+        <h2 id="auth-title">Sign in</h2>
+        <p class="section-subtitle" id="auth-subtitle">Sign in to practise Core and M2 questions.</p>
+        <p class="ml-hint" id="auth-note">If you forgot your password, please contact admin directly.</p>
+
+        <form id="auth-form" novalidate>
+          <div class="ml-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
+          </div>
+
+          <div class="ml-field" id="password-field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" maxlength="72" required />
+            <p class="ml-hint" id="password-hint" hidden>At least 12 characters. Three or four random words strung together works well.</p>
+            <label class="ml-check"><input type="checkbox" id="show-password" /> Show password</label>
+          </div>
+
+          <div class="h-captcha" data-sitekey="3688a0ee-92d2-4c02-b312-1b84f89e0776"></div>
+
+          <button type="submit" class="ml-btn ml-btn--primary ml-btn--block" id="auth-submit">Sign in</button>
+        </form>
+
+        <p id="auth-message" class="ml-message" role="alert"></p>
+
+        <p class="ml-switch">
+          <button type="button" class="ml-linkbtn" id="to-signup">Create an account</button>
+          <button type="button" class="ml-linkbtn" id="to-signin" hidden>Back to sign in</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu-data.js"></script>
+  <script src="menu-builder.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"
+    crossorigin="anonymous"></script>
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
+  <script src="menu.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
