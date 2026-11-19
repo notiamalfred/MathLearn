@@ -187,3 +187,26 @@
 
 /* Back links side by side (Change question type / Change topic) */
 .ml-back .ml-linkbtn + .ml-linkbtn { margin-left: 18px; }
+
+.ml-gen-toggle {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ml-border, #ddd);
+  border-radius: 8px;
+  background: var(--ml-surface, #fafafa);
+}
+.ml-gen-toggle__row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.ml-gen-count {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ml-gen-count input[type="number"] {
+  width: 6rem;
+}
