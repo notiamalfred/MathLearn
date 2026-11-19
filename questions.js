@@ -104,12 +104,12 @@
   // question-generator.js is loaded via a <script type="module"> in questions.html
   // that sets window.__ML_GENERATOR__. If it's absent we simply fall back to the
   // static bank.
-  function generateQuestionsForTopic(topicKey, count, type) {
-    if (typeof window.__ML_GENERATOR__ === "function") {
-      return window.__ML_GENERATOR__(topicKey, count, type);
-    }
-    return [];
-  }
+   function generateQuestionsForTopic(groupKey, topicKey, count, type) {
+     if (typeof window.__ML_GENERATOR__ === "function") {
+       return window.__ML_GENERATOR__(groupKey, topicKey, count, type);
+     }
+     return [];
+   }
 
   // Load the question bank only now that sign-in is confirmed.
   function loadQuestionData() {
@@ -189,7 +189,7 @@
   // the static bank so the UI never ends up empty.
   function buildQuestionList(groupKey, topicKey, type) {
     if (state.generateMode) {
-      const generated = generateQuestionsForTopic(topicKey, state.generateCount, type);
+      const generated = generateQuestionsForTopic(groupKey, topicKey, state.generateCount, type);
       if (generated.length) return generated;
     }
     return questionsFor(groupKey, topicKey, type);
