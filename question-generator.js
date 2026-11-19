@@ -1,5 +1,5 @@
 // question-generator.js
-// Generates random practice questions that follow the same object shape
+// Generates randomized practice questions that follow the same object shape
 // as the static questions in question-data.js:
 //   { id, type, level, question, answer, steps }
 //
