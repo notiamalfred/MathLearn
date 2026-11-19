@@ -15,6 +15,7 @@
     trigonometry: "Trigonometry",
     quadratic_equation: "Quadratic Equation",
     functions_and_graphs: "Functions and Graphs",
+    more_about_trigonometric_functions: "More about Trigonometric Functions",
   };
 
   // Saved progress lives in this Supabase table (see supabase-practice-progress.sql).

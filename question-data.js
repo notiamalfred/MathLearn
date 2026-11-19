@@ -8,14 +8,16 @@ const QUESTIONS_DATA = {
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 1,
         question: "Find the maximum and minimum value of \\( y = 2\\sin\\theta - 5 \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = -3, Minimum = -7"
+        answer: "Maximum = -3, Minimum = -7",
+        steps: "Consider the linear function \\(y = 2t - 5\\), Maximum value: \\(y = 2(1) - 5 = - 3\\), Minimum value: \\(y = 2( - 1) - 5 = - 7\\)"
       },
       {
         id: "trig-1b",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 1,
         question: "Find the maximum and minimum value of \\( y = 3 - 4\\cos\\theta \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 7, Minimum = -1"
+        answer: "Maximum = 7, Minimum = -1",
+        steps: "Consider the linear function \\(y = 3 - 4t\\), Maximum value: \\(y = 3 - 4( - 1) = 7\\), Minimum value: \\(y = 3 - 4(1) = - 1\\)"
       },
       // Exercise 2 – Level 1
       {
@@ -23,21 +25,25 @@ const QUESTIONS_DATA = {
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 1,
         question: "Find the maximum and minimum value of \\( y = 2\\cos^2\\theta - 5 \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = -3, Minimum = -5"
+        answer: "Maximum = -3, Minimum = -5",
+        steps: "Consider the quadratic function \\(y = 2t^{2} - 5\\), Maximum value: \\(y = 2(1) - 5 = - 3\\), Minimum value: \\(y = 2(0) - 5 = - 5\\)"
       },
       {
         id: "trig-2b",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 1,
         question: "Find the maximum and minimum value of \\( y = 3 - 4\\sin^2\\theta \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 3, Minimum = -1"
+        answer: "Maximum = 3, Minimum = -1",
+        steps: "Consider the quadratic function \\(y = 3 - 4t^{2}\\), Maximum value: \\(y = 3 - 4(0) = 3\\), Minimum value: \\(y = 3 - 4(1) = - 1\\)"
       },
       {
         id: "trig-2c",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 1,
         question: "Find the maximum and minimum value of \\( y = 1 - 2\\sin^2\\theta + 3\\cos^2\\theta \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 4, Minimum = -1"
+        answer: "Maximum = 4, Minimum = -1",
+        steps: "Note that \\(y = 1 - 2\\sin^{2}\\theta + 3\\cos^{2}\\theta = 1 - 2\\sin^{2}\\theta + 3(1 - \\sin^{2}\\theta) = 4 - 5\\sin^{2}\\theta\\). Consider \\(y = 4 - 5t^{2}\\), Maximum value: \\(y = 4 - 5(0) = 4\\), Minimum value: \\(y = 4 - 5(1) = - 1\\)\nFigure 1: Graph of \\(y = 1 - 2\\sin^{2}\\theta + 3\\cos^{2}\\theta\\): it keeps the shape of sine graphs with wider ranges.",
+        stepsImages: [{ src: "images/trig-2c-sol.png", width: 518 }]
       },
       // Exercise 3 – Level 2
       {
@@ -45,21 +51,24 @@ const QUESTIONS_DATA = {
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = (1 - 4\\sin\\theta)^2 \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 25, Minimum = 0"
+        answer: "Maximum = 25, Minimum = 0",
+        steps: "Consider \\(y = (1 - 4t)^{2}\\). By substituting \\(t = 1\\) and \\(- 1\\) to \\(1 - 4t\\), values are \\(- 3\\) and \\(5\\) (\\(0\\) is inside range). Maximum value: \\(y = (5)^{2} = 25\\), Minimum value: \\(y = (0)^{2} = 0\\)."
       },
       {
         id: "trig-3b",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = -(4\\cos\\theta - 3)^2 \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 0, Minimum = -49"
+        answer: "Maximum = 0, Minimum = -49",
+        steps: "Consider \\(y = - (4t - 3)^{2}\\). For \\(4t - 3\\), the values at \\(t = 1, - 1\\) are \\(1\\) and \\(- 7\\) (\\(0\\) is inside the range). Hence \\((4t - 3)^{2}\\) has maximum value \\(49\\) and minimum value \\(0\\), so \\(y = - (4t - 3)^{2}\\) has maximum value \\(0\\) and minimum value \\(- 49\\)."
       },
       {
         id: "trig-3c",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = 4\\sin^2\\theta + 4\\sin\\theta + 1 \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 9, Minimum = 1"
+        answer: "Maximum = 9, Minimum = 0",
+        steps: "\\(y = 4\\sin^{2}\\theta + 4\\sin\\theta + 1 = (2\\sin\\theta + 1)^{2}\\). Consider \\(y = (2t + 1)^{2}\\). The values of \\(2t + 1\\) at \\(t = 1, - 1\\) are \\(3\\) and \\(- 1\\) (\\(0\\) is inside the range). Maximum value: \\(y = 3^{2} = 9\\), Minimum value: \\(y = 0^{2} = 0\\)."
       },
       // Exercise 4 – Level 2 (from image 3)
       {
@@ -67,14 +76,16 @@ const QUESTIONS_DATA = {
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = 2\\sin^2\\theta - 2\\sin\\theta - 4 \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 0, Minimum = -4.5"
+        answer: "Maximum = 0, Minimum = -4.5",
+        steps: "\\(y = 2\\left( \\sin\\theta - \\frac{1}{2} \\right)^{2} - \\frac{9}{2}\\). Substituting \\(t = 1,\\frac{1}{2}, - 1\\) into \\(2\\left( t - \\frac{1}{2} \\right)^{2} - \\frac{9}{2}\\) gives \\(- 4, - \\frac{9}{2},0\\). Maximum value \\(= 0\\), Minimum value \\(= - \\frac{9}{2}\\)."
       },
       {
         id: "trig-4b",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = (2\\cos\\theta - 1)(\\cos\\theta - 2) \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 9, Minimum = -1"
+        answer: "Maximum = 9, Minimum = -1",
+        steps: "\\(y = 2\\cos^{2}\\theta - 5\\cos\\theta + 2 = 2\\left( \\cos\\theta - \\frac{5}{4} \\right)^{2} - \\frac{9}{8}\\). Substituting \\(t = 1\\) and \\(- 1\\) gives \\(- 1\\) and \\(9\\). Maximum value \\(= 9\\), Minimum value \\(= - 1\\)."
       },
       // Exercise 5 – Level 2 (from image 2 – rational forms, no max/min in some cases)
       {
@@ -82,21 +93,24 @@ const QUESTIONS_DATA = {
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum/minimum value (if any) of \\( y = \\dfrac{-6\\sin\\theta}{3\\sin\\theta - 1} \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "No maximum or minimum"
+        answer: "No maximum or minimum",
+        steps: "\\(y = - 2 - \\frac{2}{3\\sin\\theta - 1}\\). Since \\(t = \\frac{1}{3}\\) is in \\(\\lbrack - 1,1\\rbrack\\), denominator can be \\(0\\Rightarrow \\) there is no maximum nor minimum."
       },
       {
         id: "trig-5b",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum/minimum value of \\( y = \\dfrac{4\\cos\\theta}{2 - \\cos\\theta} \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 4, Minimum = -4/3"
+        answer: "Maximum = 4, Minimum = -4/3",
+        steps: "\\(y = - 4 + \\frac{8}{2 - \\cos\\theta}\\). For \\(- 1 \\leq t \\leq 1\\), Maximum value \\(= - 4 + \\frac{8}{2 - 1} = 4\\), Minimum value \\(= - 4 + \\frac{8}{2 - ( - 1)} = - \\frac{4}{3}\\)."
       },
       {
         id: "trig-5c",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum/minimum value of \\( y = \\dfrac{2\\cos^2\\theta}{2 + \\sin^2\\theta} \\) for \\( 0^\\circ \\le \\theta \\le 360^\\circ \\).",
-        answer: "Maximum = 1, Minimum = 0"
+        answer: "Maximum = 1, Minimum = 0",
+        steps: "\\(y = \\frac{2 - 2\\sin^{2}\\theta}{2 + \\sin^{2}\\theta} = - 2 + \\frac{6}{2 + \\sin^{2}\\theta}\\). For \\(0 \\leq t^{2} \\leq 1\\), Maximum value \\(= - 2 + \\frac{6}{2 + 0} = 1\\), Minimum value \\(= - 2 + \\frac{6}{2 + 1} = 0\\)."
       },
       // Exercise 6 – Level 2 (from image 1 – restricted domains)
       {
@@ -104,21 +118,217 @@ const QUESTIONS_DATA = {
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = 3 - 4\\cos\\theta \\) where \\( 90^\\circ \\le \\theta \\le 180^\\circ \\).",
-        answer: "Maximum = 7, Minimum = 3"
+        answer: "Maximum = 7, Minimum = 3",
+        steps: "For \\(90^{\\circ} \\leq \\theta \\leq 180^{\\circ}\\), \\(- 1 \\leq \\cos\\theta \\leq 0\\). Maximum value \\(= 3 - 4( - 1) = 7\\), minimum value \\(= 3 - 4(0) = 3\\)."
       },
       {
         id: "trig-6b",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = (1 - 4\\sin\\theta)^2 \\) where \\( 90^\\circ \\le \\theta \\le 150^\\circ \\).",
-        answer: "Maximum = 9, Minimum = 1"
+        answer: "Maximum = 9, Minimum = 1",
+        steps: "For \\(90^{\\circ} \\leq \\theta \\leq 150^{\\circ}\\), \\(\\frac{1}{2} \\leq \\sin\\theta \\leq 1\\). Maximum value \\(= (1 - 4 \\times 1)^{2} = 9\\), minimum value \\(= \\left( 1 - 4 \\times \\frac{1}{2} \\right)^{2} = 1\\)."
       },
       {
         id: "trig-6c",
         type: "Maximum and Minimum Values of Trigonometric Functions",
         level: 2,
         question: "Find the maximum and minimum value of \\( y = 2\\sin^2\\theta - 2\\sin\\theta - 4 \\) where \\( 90^\\circ \\le \\theta \\le 150^\\circ \\).",
-        answer: "Maximum = -4, Minimum = -9/2"
+        answer: "Maximum = -4, Minimum = -9/2",
+        steps: "\\(y = 2\\left( \\sin\\theta - \\frac{1}{2} \\right)^{2} - \\frac{9}{2}\\) for \\(\\frac{1}{2} \\leq \\sin\\theta \\leq 1\\). Maximum value \\(= 2\\left( 1 - \\frac{1}{2} \\right)^{2} - \\frac{9}{2} = - 4\\), Minimum value \\(= - \\frac{9}{2}\\)."
+      },
+
+      // ---- Chapter 10 A) Maximum and Minimum Values of Trigonometric Functions: Summarizing Exercises 7-9 ----
+      {
+        id: "trig-7",
+        type: "Maximum and Minimum Values of Trigonometric Functions",
+        question: "[Level 2]\nFind the maximum/minimum value of these functions for \\(0^{\\circ} \\leq \\theta \\leq 360^{\\circ}\\).\n(a) \\(y = 5 - 3\\cos\\theta\\)\n(b) \\(y = \\frac{48}{3\\cos^{2}\\theta + 4\\sin^{2}\\theta}\\) (2526-WYK-S4-Final-II-Q42)\n(c) \\(y = \\cos^{2}\\theta - 2\\cos\\theta + 2\\)\n(d) \\(y = \\frac{6 + 6\\sin\\theta}{3 + 2\\sin\\theta}\\)\n(e) \\(y = (\\sin\\theta + 1)^{2}(\\sin\\theta - 1)^{2}\\)\n(f) \\(y = \\frac{2(\\sin\\theta - 2)^{2}}{\\sin^{2}\\theta - 4\\sin\\theta + 3}\\) (Challenging)\n(g) \\(y = \\frac{4\\sin^{2}\\theta - 4\\sin\\theta - 7}{(2\\sin\\theta - 1)^{2}}\\) (Challenging) (2425-WYK-S4-Final-II-Q44)\n(h) \\(y = - \\tan^{2}\\theta - 2\\tan\\theta\\)",
+        answer: "(a) Maximum = \\(8\\), Minimum = \\(2\\)\n(b) Maximum = \\(16\\), Minimum = \\(12\\)\n(c) Maximum = \\(5\\), Minimum = \\(1\\)\n(d) Maximum = \\(\\frac{12}{5}\\), Minimum = \\(0\\)\n(e) Maximum = \\(1\\), Minimum = \\(0\\)\n(f) No maximum value; Minimum = \\(\\frac{9}{4}\\)\n(g) Maximum = \\(\\frac{1}{9}\\); no minimum value\n(h) Maximum = \\(1\\); no minimum value",
+        steps: "(a) Maximum value: \\(5 - 3( - 1) = 8\\), Minimum value: \\(5 - 3(1) = 2\\)\n(b) \\(y = \\frac{48}{3 + \\sin^{2}\\theta}\\Rightarrow \\) Maximum value: \\(\\frac{48}{3 + 0} = 16\\), Minimum value: \\(\\frac{48}{3 + 1} = 12\\)\n(c) \\(y = (\\cos\\theta - 1)^{2} + 1\\Rightarrow \\) Maximum value: \\(( - 2)^{2} + 1 = 5\\), Minimum value: \\(0^{2} + 1 = 1\\)\n(d) \\(y = 3 - \\frac{3}{3 + 2\\sin\\theta}\\Rightarrow \\) Maximum value: \\(3 - \\frac{3}{3 + 2(1)} = \\frac{12}{5}\\), Minimum value: \\(3 - \\frac{3}{3 + 2( - 1)} = 0\\)\n(e) \\(y = (\\sin^{2}\\theta - 1)^{2} = \\cos^{4}\\theta \\Rightarrow \\) Maximum value: \\(1^{4} = 1\\), Minimum value: \\(0^{4} = 0\\)\n(f) \\(y = 2 + \\frac{2}{(\\sin\\theta - 2)^{2} - 1}\\). When \\(\\sin\\theta = 1\\), denominator \\(= 0\\Rightarrow \\) no maximum value. Minimum value \\(= 2 + \\frac{2}{( - 1 - 2)^{2} - 1} = \\frac{9}{4}\\).\n(g) \\(y = 1 - \\frac{8}{(2\\sin\\theta - 1)^{2}}\\). When \\(\\sin\\theta = \\frac{1}{2}\\), denominator \\(= 0\\Rightarrow \\) no minimum value. Maximum value: \\(1 - \\frac{8}{\\lbrack 2( - 1) - 1\\rbrack^{2}} = \\frac{1}{9}\\).\n(h) \\(y = - (\\tan\\theta + 1)^{2} + 1\\Rightarrow \\) Maximum value: \\(- (0)^{2} + 1 = 1\\). No minimum value."
+      },
+      {
+        id: "trig-8",
+        type: "Maximum and Minimum Values of Trigonometric Functions",
+        question: "[Level 2]\nFind the maximum/minimum value of these functions.\n(a) \\(y = \\frac{5 - \\sin\\theta}{4 + \\sin\\theta}\\) where \\(0^{\\circ} \\leq \\theta \\leq 90^{\\circ}\\) (2005-CE-MATH-II-Q20)\n(b) \\(y = \\frac{1}{(3 - 2\\sin\\theta)^{3}}\\) where \\(180^{\\circ} \\leq \\theta \\leq 360^{\\circ}\\)\n(c) \\(y = 2\\tan^{2}\\theta - 4\\sqrt{3}\\tan\\theta + 1\\) where \\(180^{\\circ} \\leq \\theta \\leq 270^{\\circ}\\)",
+        answer: "(a) Maximum = \\(\\frac{5}{4}\\), Minimum = \\(\\frac{4}{5}\\)\n(b) Maximum = \\(\\frac{1}{27}\\), Minimum = \\(\\frac{1}{125}\\)\n(c) No maximum value; Minimum = \\(- 5\\)",
+        steps: "(a) For \\(0^{\\circ} \\leq \\theta \\leq 90^{\\circ},0 \\leq \\sin\\theta \\leq 1\\). \\(y = - 1 + \\frac{9}{4 + \\sin\\theta}\\Rightarrow \\) Maximum value \\(= - 1 + \\frac{9}{4 + 0} = \\frac{5}{4}\\), minimum value \\(= - 1 + \\frac{9}{4 + 1} = \\frac{4}{5}\\).\n(b) For \\(180^{\\circ} \\leq \\theta \\leq 360^{\\circ}, - 1 \\leq \\sin\\theta \\leq 0\\). Maximum value \\(= \\frac{1}{\\lbrack 3 - 2(0)\\rbrack^{3}} = \\frac{1}{27}\\), minimum value \\(= \\frac{1}{\\lbrack 3 - 2( - 1)\\rbrack^{3}} = \\frac{1}{125}\\).\n(c) For \\(180^{\\circ} \\leq \\theta \\leq 270^{\\circ},\\tan\\theta \\geq 0\\). \\(y = 2(\\tan\\theta - \\sqrt{3})^{2} - 5\\Rightarrow \\) There is no maximum value. Minimum value: \\(2(0)^{2} - 5 = - 5\\)."
+      },
+      {
+        id: "trig-9",
+        type: "Maximum and Minimum Values of Trigonometric Functions",
+        question: "[Level 3]\nFind the values of the unknown, which are non-zero integers, of the following functions:\n(a) \\(y = a\\sin\\theta + b\\), with maximum value \\(6\\) and minimum value \\(- 2\\).\n(b) \\(y = p\\cos\\theta - q\\), with maximum value \\(7\\) and minimum value \\(- 3\\).\n(c) \\(y = (u\\sin\\theta + v)^{2}\\), with maximum value \\(9\\) and minimum value \\(1\\).",
+        answer: "(a) \\(a = 4,b = 2\\) or \\(a = - 4,b = 2\\)\n(b) \\(p = 5,q = - 2\\) or \\(p = - 5,q = - 2\\)\n(c) \\(u = 1,v = 2\\); \\(u = - 1,v = 2\\); \\(u = 1,v = - 2\\); or \\(u = - 1,v = - 2\\)",
+        steps: "(a) Case 1 (\\(a > 0\\)): \\(a + b = 6, - a + b = - 2\\Rightarrow a = 4,b = 2\\). Case 2 (\\(a < 0\\)): \\(- a + b = 6,a + b = - 2\\Rightarrow a = - 4,b = 2\\).\n(b) Case 1 (\\(p > 0\\)): \\(p - q = 7, - p - q = - 3\\Rightarrow p = 5,q = - 2\\). Case 2 (\\(p < 0\\)): \\(- p - q = 7,p - q = - 3\\Rightarrow p = - 5,q = - 2\\).\n(c) Case 1 (\\(u\\sin\\theta + v \\in \\lbrack 1,3\\rbrack,u > 0\\)): \\(u = 1,v = 2\\). Case 2 (\\(u < 0\\)): \\(u = - 1,v = 2\\). Case 3 (\\(u\\sin\\theta + v \\in \\lbrack - 3, - 1\\rbrack,u > 0\\)): \\(u = 1,v = - 2\\). Case 4 (\\(u < 0\\)): \\(u = - 1,v = - 2\\)."
+      },
+      // ---- Chapter 10 B) Sequences related to Trigonometric Ratios ----
+      {
+        id: "trig-b1",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 1] \\(\\sin^{2}185^{\\circ} + \\sin^{2}189^{\\circ} + \\sin^{2}193^{\\circ} + \\ldots + \\sin^{2}265^{\\circ}\\)",
+        answer: "\\(10.5\\)",
+        steps: "\\(= \\sin^{2}5^{\\circ} + \\sin^{2}9^{\\circ} + \\sin^{2}13^{\\circ} + \\ldots + \\sin^{2}85^{\\circ} = (\\sin^{2}5^{\\circ} + \\cos^{2}5^{\\circ}) + \\ldots + (\\sin^{2}41^{\\circ} + \\cos^{2}41^{\\circ}) + \\sin^{2}45^{\\circ} = 1 \\times 10 + 0.5 = 10.5\\)\nRemarks: Sum \\(=\\) Number of terms \\(\\times \\frac{1}{2} = 21 \\times \\frac{1}{2} = 10.5\\)."
+      },
+      {
+        id: "trig-b2",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 1] \\(\\sin^{2}1^{\\circ} + \\sin^{2}2^{\\circ} + \\sin^{2}3^{\\circ} + \\ldots + \\sin^{2}359^{\\circ} + \\sin^{2}360^{\\circ}\\)",
+        answer: "\\(180\\)",
+        steps: "\\(= 4(\\sin^{2}1^{\\circ} + \\sin^{2}2^{\\circ} + \\ldots + \\sin^{2}89^{\\circ}) + 1 + 0 + 1 + 0 = 4(44 + 0.5) + 2 = 180\\)"
+      },
+      {
+        id: "trig-b3",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 1] [2425-WYK-S4-Final-II-Q43] \\(\\sin^{2}1^{\\circ} + \\sin^{2}3^{\\circ} + \\sin^{2}5^{\\circ} + \\ldots + \\sin^{2}179^{\\circ}\\)",
+        answer: "\\(45\\)",
+        steps: "\\(= 2\\lbrack(\\sin^{2}1^{\\circ} + \\sin^{2}89^{\\circ}) + \\ldots + (\\sin^{2}43^{\\circ} + \\sin^{2}47^{\\circ}) + \\sin^{2}45^{\\circ}\\rbrack = 2(1 \\times 22 + 0.5) = 45\\)"
+      },
+      {
+        id: "trig-b4",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 1] \\(\\tan 91^{\\circ}\\tan 93^{\\circ}\\tan 95^{\\circ}\\ldots\\tan 177^{\\circ}\\tan 179^{\\circ}\\)",
+        answer: "\\(- 1\\)",
+        steps: "\\(= ( - \\tan 1^{\\circ})( - \\tan 3^{\\circ})\\ldots( - \\tan 45^{\\circ})\\left( - \\frac{1}{\\tan 43^{\\circ}} \\right)\\ldots\\left( - \\frac{1}{\\tan 1^{\\circ}} \\right) = - \\tan 45^{\\circ} = - 1\\)"
+      },
+      {
+        id: "trig-b5",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 1] \\(\\cos 1^{\\circ} - \\cos 2^{\\circ} + \\cos 3^{\\circ} - \\cos 4^{\\circ} + \\ldots + \\cos 179^{\\circ}\\)",
+        answer: "\\(0\\)",
+        steps: "\\(= (\\cos 1^{\\circ} + \\cos 179^{\\circ}) - (\\cos 2^{\\circ} + \\cos 178^{\\circ}) + \\ldots + (\\cos 89^{\\circ} + \\cos 91^{\\circ}) - \\cos 90^{\\circ} = - \\cos 90^{\\circ} = 0\\)"
+      },
+      {
+        id: "trig-b6",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 2] [1991-CE-Math-II-Q47] \\(\\cos 90^{\\circ} + \\cos 180^{\\circ} + \\cos 270^{\\circ} + \\cos 360^{\\circ} + \\ldots + \\cos 1800^{\\circ}\\)",
+        answer: "\\(0\\)",
+        steps: "\\(= (\\cos 90^{\\circ} + \\cos 180^{\\circ} + \\cos 270^{\\circ} + \\cos 360^{\\circ}) \\times \\frac{1800}{360} = (0 - 1 + 0 + 1) \\times 5 = 0\\)"
+      },
+      {
+        id: "trig-b7",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 2] \\(\\cos^{2}275^{\\circ} - \\cos^{2}280^{\\circ} + \\cos^{2}285^{\\circ} - \\cos^{2}290^{\\circ} + \\ldots - \\cos^{2}450^{\\circ}\\)",
+        answer: "\\(0\\)",
+        steps: "\\(= 2\\lbrack(\\cos^{2}85^{\\circ} + \\cos^{2}5^{\\circ}) + \\ldots + (\\cos^{2}55^{\\circ} + \\cos^{2}35^{\\circ}) + \\cos^{2}45^{\\circ}\\rbrack - 2\\lbrack(\\cos^{2}80^{\\circ} + \\cos^{2}10^{\\circ}) + \\ldots + (\\cos^{2}50^{\\circ} + \\cos^{2}40^{\\circ})\\rbrack - \\cos^{2}0^{\\circ} = 2(4 + 0.5) - 2(4) - 1 = 0\\)"
+      },
+      {
+        id: "trig-b8",
+        type: "Sequences related to Trigonometric Ratios",
+        question: "Find the values of the following sequences.\n[Level 2] [2526-WYK-S5-Midyear-II-Q32] \\(\\log_{10}(\\tan 1^{\\circ}) + \\log_{10}(\\tan 2^{\\circ}) + \\log_{10}(\\tan 3^{\\circ}) + \\ldots + \\log_{10}(\\tan 89^{\\circ})\\)",
+        answer: "\\(0\\)",
+        steps: "\\(= \\log_{10}\\lbrack(\\tan 1^{\\circ})(\\tan 2^{\\circ})(\\tan 3^{\\circ})\\ldots(\\tan 89^{\\circ})\\rbrack = \\log_{10}\\lbrack 1\\rbrack = 0\\)"
+      },
+      // ---- Chapter 10 C) Trigonometric Equations ----
+      {
+        id: "trig-c1",
+        type: "Trigonometric Equations",
+        question: "[Level 1] Solve \\(\\sin(x + 45^{\\circ}) = \\frac{1}{2}\\) for \\(0^{\\circ} \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 105^{\\circ}\\) or \\(345^{\\circ}\\)",
+        steps: "\\(45^{\\circ} \\leq x + 45^{\\circ} \\leq 405^{\\circ}\\Rightarrow x + 45^{\\circ} = 150^{\\circ}\\ or\\ 390^{\\circ}\\Rightarrow x = 105^{\\circ}\\ or\\ 345^{\\circ}\\)"
+      },
+      {
+        id: "trig-c2",
+        type: "Trigonometric Equations",
+        question: "[Level 1] Solve \\(\\cos(2x + 30^{\\circ}) = \\frac{1}{2}\\) for \\(0^{\\circ} \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 15^{\\circ},135^{\\circ},195^{\\circ}\\) or \\(315^{\\circ}\\)",
+        steps: "\\(30^{\\circ} \\leq 2x + 30^{\\circ} \\leq 750^{\\circ}\\Rightarrow 2x + 30^{\\circ} = 60^{\\circ},300^{\\circ},420^{\\circ}\\ or\\ 660^{\\circ}\\Rightarrow x = 15^{\\circ},135^{\\circ},195^{\\circ}\\ or\\ 315^{\\circ}\\)"
+      },
+      {
+        id: "trig-c3",
+        type: "Trigonometric Equations",
+        question: "[Level 1] [2223-WYK-S4-MATH-II-Q28] For \\(0 \\leq x < 360^{\\circ}\\), how many roots does the equation \\(4\\cos^{2}x - 3\\cos^{4}x = 1\\) have?",
+        answer: "\\(6\\) roots",
+        steps: "\\((3\\cos^{2}x - 1)(\\cos^{2}x - 1) = 0\\Rightarrow \\cos x = \\pm \\frac{1}{\\sqrt{3}}\\ or\\ \\pm 1\\). \\(4\\) roots for \\(\\pm \\frac{1}{\\sqrt{3}}\\) plus \\(0^{\\circ}\\) and \\(180^{\\circ}\\) (\\(360^{\\circ}\\) excluded) \\(\\Rightarrow 6\\) roots in total."
+      },
+      {
+        id: "trig-c4",
+        type: "Trigonometric Equations",
+        question: "[Level 1] [2026-DSE-Math-II-Q41] For \\(90^{\\circ} \\leq \\theta \\leq 360^{\\circ}\\), how many roots does the equation \\(6\\sin^{4}\\theta - 5\\sin^{2}\\theta + 1 = 0\\) have?",
+        answer: "\\(6\\) roots",
+        steps: "\\((3\\sin^{2}\\theta - 1)(2\\sin^{2}\\theta - 1) = 0\\Rightarrow \\sin\\theta = \\pm \\frac{1}{\\sqrt{3}}\\) or \\(\\pm \\frac{1}{\\sqrt{2}}\\). On \\(\\lbrack 90^{\\circ},360^{\\circ}\\rbrack\\), \\(2\\) roots in QII and \\(4\\) roots in QIII/QIV \\(\\Rightarrow 6\\) roots in total."
+      },
+      {
+        id: "trig-c5",
+        type: "Trigonometric Equations",
+        question: "[Level 1] Solve \\(2\\sin^{2}x - \\sin x\\cos x - 5\\cos^{2}x = 0\\) for \\(0 \\leq x \\leq 360^{\\circ}\\). (Hint: You need to use the quadratic formula first)",
+        answer: "\\(x = 61.6^{\\circ},127^{\\circ},242^{\\circ}\\) or \\(307^{\\circ}\\)",
+        steps: "\\(2\\tan^{2}x - \\tan x - 5 = 0\\Rightarrow \\tan x = \\frac{1 \\pm \\sqrt{41}}{4}\\Rightarrow x = 61.6^{\\circ},127^{\\circ},242^{\\circ}\\ or\\ 307^{\\circ}\\)"
+      },
+      {
+        id: "trig-c6",
+        type: "Trigonometric Equations",
+        question: "[Level 1] Solve \\(2 - 5\\cos x\\sin x = 0\\) for \\(90^{\\circ} \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 207^{\\circ}\\) or \\(243^{\\circ}\\)",
+        steps: "\\(2\\tan^{2}x - 5\\tan x + 2 = 0\\Rightarrow (2\\tan x - 1)(\\tan x - 2) = 0\\Rightarrow \\tan x = \\frac{1}{2}\\ or\\ 2\\Rightarrow x = 207^{\\circ}\\ or\\ 243^{\\circ}\\)"
+      },
+      {
+        id: "trig-c7",
+        type: "Trigonometric Equations",
+        question: "[Level 2] Solve \\(2\\cos^{2}x - \\cos x = 3\\sin x - 6\\sin x\\cos x\\) for \\(0 \\leq x \\leq 360^{\\circ}\\). (Hint: You need to factorize the expression first)",
+        answer: "\\(x = 60^{\\circ},162^{\\circ},300^{\\circ}\\) or \\(342^{\\circ}\\)",
+        steps: "\\((2\\cos x - 1)(\\cos x + 3\\sin x) = 0\\Rightarrow \\cos x = \\frac{1}{2}\\ or\\ \\tan x = - \\frac{1}{3}\\Rightarrow x = 60^{\\circ},162^{\\circ},300^{\\circ}\\ or\\ 342^{\\circ}\\)"
+      },
+      {
+        id: "trig-c8",
+        type: "Trigonometric Equations",
+        question: "[Level 2] Solve \\(5\\tan^{2}x - 3\\cos x - 3\\tan x + 5\\tan x\\cos x = 0\\) for \\(90^{\\circ} \\leq x \\leq 270^{\\circ}\\).",
+        answer: "\\(x = 211^{\\circ}\\) or \\(218^{\\circ}\\)",
+        steps: "\\((\\tan x + \\cos x)(5\\tan x - 3) = 0\\Rightarrow \\sin^{2}x - \\sin x - 1 = 0\\ or\\ \\tan x = \\frac{3}{5}\\Rightarrow \\sin x = \\frac{1 - \\sqrt{5}}{2}\\ or\\ \\tan x = \\frac{3}{5}\\Rightarrow x = 211^{\\circ}\\ or\\ 218^{\\circ}\\)"
+      },
+      {
+        id: "trig-c9",
+        type: "Trigonometric Equations",
+        question: "[Level 2] Solve \\(\\sin x = \\cos 166^{\\circ}\\) for \\(0 \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 256^{\\circ}\\) or \\(284^{\\circ}\\)",
+        steps: "\\(\\sin x = - \\cos 14^{\\circ}\\Rightarrow \\sin x = \\sin(270^{\\circ} \\pm 14^{\\circ})\\Rightarrow x = 256^{\\circ}\\ or\\ 284^{\\circ}\\)"
+      },
+      {
+        id: "trig-c10",
+        type: "Trigonometric Equations",
+        question: "[Level 2] Solve \\(\\sin x = - \\sin 205^{\\circ}\\) for \\(0 \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 25^{\\circ}\\) or \\(155^{\\circ}\\)",
+        steps: "\\(- \\sin 205^{\\circ} = \\sin 25^{\\circ}\\Rightarrow x = 25^{\\circ}\\ or\\ 155^{\\circ}\\)"
+      },
+      {
+        id: "trig-c11",
+        type: "Trigonometric Equations",
+        question: "[Level 2] Solve \\(4\\sin x - 3\\cos x - 3 = 0\\) for \\(0 \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 73.7^{\\circ}\\) or \\(180^{\\circ}\\)",
+        steps: "\\(16 - 16\\cos^{2}x = 9 + 18\\cos x + 9\\cos^{2}x\\Rightarrow (25\\cos x - 7)(\\cos x + 1) = 0\\Rightarrow x = 73.7^{\\circ}\\ or\\ 180^{\\circ}\\) (\\(286^{\\circ}\\) rej.)"
+      },
+      {
+        id: "trig-c12",
+        type: "Trigonometric Equations",
+        question: "[Level 2] Solve \\(25\\sin x - 15\\cos x - 3 = 0\\) for \\(0 \\leq x \\leq 360^{\\circ}\\).",
+        answer: "\\(x = 36.9^{\\circ}\\) or \\(205^{\\circ}\\)",
+        steps: "\\(850\\cos^{2}x + 90\\cos x - 616 = 0\\Rightarrow (5\\cos x - 4)(85\\cos x + 77) = 0\\Rightarrow x = 36.9^{\\circ}\\ or\\ 205^{\\circ}\\) (\\(155^{\\circ},323^{\\circ}\\) rej.)"
+      },
+      {
+        id: "trig-c13",
+        type: "Trigonometric Equations",
+        question: "[Level 2] If \\(\\sin\\theta\\) and \\(\\cos\\theta\\) are the roots of the quadratic equation \\(3x^{2} + x - m = 0\\), find the value of \\(m\\).",
+        answer: "\\(m = \\frac{4}{3}\\)",
+        steps: "\\(\\sin\\theta + \\cos\\theta = - \\frac{1}{3}\\Rightarrow 1 + 2\\sin\\theta\\cos\\theta = \\frac{1}{9}\\Rightarrow 2\\left( - \\frac{m}{3} \\right) = - \\frac{8}{9}\\Rightarrow m = \\frac{4}{3}\\)"
+      },
+      {
+        id: "trig-c14",
+        type: "Trigonometric Equations",
+        question: "[Level 2]\n(a) Prove that \\(2x + 1\\) is a factor of \\(2x^{3} + 5x^{2} - 4x - 3\\).\n(b) Hence, solve \\(2\\sin^{3}x + 5\\sin^{2}x - 4\\sin x - 3 = 0\\) for \\(0 \\leq x \\leq 360^{\\circ}\\).",
+        answer: "(a) \\(2x + 1\\) is a factor.\n(b) \\(x = 90^{\\circ},210^{\\circ}\\) or \\(330^{\\circ}\\)",
+        steps: "(a) \\(2\\left( - \\frac{1}{2} \\right)^{3} + 5\\left( - \\frac{1}{2} \\right)^{2} - 4\\left( - \\frac{1}{2} \\right) - 3 = 0\\therefore 2x + 1\\) is a factor.\n(b) \\((2\\sin x + 1)(\\sin x - 1)(\\sin x + 3) = 0\\Rightarrow \\sin x = - \\frac{1}{2}\\ or\\ 1\\Rightarrow x = 90^{\\circ},210^{\\circ}\\ or\\ 330^{\\circ}\\)."
+      },
+      {
+        id: "trig-c15",
+        type: "Trigonometric Equations",
+        question: "[Level 2]\n(a) Prove that \\(x + 1\\) is a factor of \\(2x^{3} + 2x^{2} - x - 1\\).\n(b) Hence, solve \\(2\\sin^{3}\\theta + 1 = 2\\cos^{2}\\theta + \\sin\\theta\\) for \\(0^{\\circ} < \\theta < 270^{\\circ}\\).",
+        answer: "(a) \\(x + 1\\) is a factor.\n(b) \\(\\theta = 45^{\\circ},135^{\\circ}\\) or \\(225^{\\circ}\\)",
+        steps: "(a) \\(2( - 1)^{3} + 2( - 1)^{2} - ( - 1) - 1 = 0\\therefore x + 1\\) is a factor.\n(b) \\((\\sin\\theta + 1)(2\\sin^{2}\\theta - 1) = 0\\Rightarrow \\sin\\theta = - 1\\ or\\ \\pm \\frac{1}{\\sqrt{2}}\\Rightarrow \\theta = 45^{\\circ},135^{\\circ}\\ or\\ 225^{\\circ}\\)."
+      },
+      {
+        id: "trig-c16",
+        type: "Trigonometric Equations",
+        question: "[Level 3] Let \\(g(x) = 4x^{3} + 4x^{2} - 3x - 3\\).\n(a) Solve the equation \\(g(x) = 0\\).\n(b) Jason claims that the equation \\(g(\\sin 2\\theta) = 0\\) has \\(6\\) roots, where \\(0^{\\circ} \\leq \\theta \\leq 180^{\\circ}\\). Do you agree? Explain your answer.",
+        answer: "(a) \\(x = - 1\\) or \\(- \\frac{\\sqrt{3}}{2}\\) or \\(\\frac{\\sqrt{3}}{2}\\)\n(b) Disagree. \\(\\theta = 30^{\\circ},60^{\\circ},120^{\\circ},135^{\\circ},150^{\\circ}\\), so there are \\(5\\) roots.",
+        steps: "(a) \\((x + 1)(2x + \\sqrt{3})(2x - \\sqrt{3}) = 0\\Rightarrow x =\\) \\(- 1\\) or \\(- \\frac{\\sqrt{3}}{2}\\) or \\(\\frac{\\sqrt{3}}{2}\\).\n(b) \\(0^{\\circ} \\leq 2\\theta \\leq 360^{\\circ}\\). \\(\\sin 2\\theta = - 1\\Rightarrow \\theta = 135^{\\circ}\\); \\(\\sin 2\\theta = - \\frac{\\sqrt{3}}{2}\\Rightarrow \\theta = 120^{\\circ},150^{\\circ}\\); \\(\\sin 2\\theta = \\frac{\\sqrt{3}}{2}\\Rightarrow \\theta = 30^{\\circ},60^{\\circ}\\). Thus \\(\\theta = 30^{\\circ},60^{\\circ},120^{\\circ},135^{\\circ},150^{\\circ}\\) (\\(5\\) roots). Disagree."
       }
     ],
 
@@ -1058,6 +1268,660 @@ const QUESTIONS_DATA = {
     ]
   },
   m2: {
-    // Placeholder – add M2 topics and questions here later.
+    // S.4 Extended Part Module 2 (S4_Math_4_M2_Editable.docx). Chapters 1-3 have no sub-sections, so they have no "type" lines.
+    // ---- M2 Chapter 0: Basic Knowledge (Summation Notation & Odd/Even Functions) ----
+    basic_knowledge: [
+      {
+        id: "m2-0a-sum1",
+        type: "Summation and Product Notation",
+        question: "Expand and evaluate the following sums.\n\\(\\sum_{r = 1}^{4}r^{2}\\)",
+        answer: "\\(30\\)",
+        steps: "\\(\\sum_{r = 1}^{4}r^{2} = 1^{2} + 2^{2} + 3^{2} + 4^{2} = 30\\)"
+      },
+      {
+        id: "m2-0a-sum2",
+        type: "Summation and Product Notation",
+        question: "Expand and evaluate the following sums.\n\\(\\sum_{r = 1}^{4}{( - 1)^{r}(2r + 1)}\\)",
+        answer: "\\(4\\)",
+        steps: "\\(\\sum_{r = 1}^{4}{( - 1)^{r}(2r + 1)} = - (3) + (5) - (7) + (9) = 4\\)"
+      },
+      {
+        id: "m2-0a-sum3",
+        type: "Summation and Product Notation",
+        question: "Expand and evaluate the following sums.\n\\(\\prod_{i = 0}^{4}2^{i}\\)",
+        answer: "\\(1024\\)",
+        steps: "\\(\\prod_{i = 0}^{4}2^{i} = 2^{0 + 1 + 2 + 3 + 4} = 2^{10} = 1024\\)"
+      },
+      {
+        id: "m2-0a-sum4",
+        type: "Summation and Product Notation",
+        question: "Expand and evaluate the following sums.\n\\(\\prod_{r = 1}^{10}\\frac{r + 1}{r}\\)",
+        answer: "\\(11\\)",
+        steps: "\\(\\prod_{r = 1}^{10}\\frac{r + 1}{r} = \\frac{2 \\times 3 \\times 4 \\times \\ldots \\times 11}{1 \\times 2 \\times 3 \\times \\ldots \\times 10} = 11\\)"
+      },
+      {
+        id: "m2-0a-sum5",
+        type: "Summation and Product Notation",
+        question: "Express \\(2^{3} + 3^{3} + 4^{3} + \\ldots + 8^{3}\\) using \\(\\sum_{}^{}\\ \\) notation.",
+        answer: "\\(\\sum_{r = 2}^{8}r^{3}\\)",
+        steps: "\\(2^{3} + 3^{3} + 4^{3} + \\ldots + 8^{3} = \\sum_{r = 2}^{8}r^{3}\\)"
+      },
+      {
+        id: "m2-0a-sum6",
+        type: "Summation and Product Notation",
+        question: "Express \\(- 2 + 4 - 8 + 16\\) using \\(\\sum_{}^{}\\ \\) notation.",
+        answer: "\\(\\sum_{r = 1}^{4}{( - 2)^{r}}\\)",
+        steps: "\\(- 2 + 4 - 8 + 16 = \\sum_{r = 1}^{4}{( - 2)^{r}}\\)"
+      },
+      {
+        id: "m2-0a-sum7",
+        type: "Summation and Product Notation",
+        question: "Express \\(1 \\times 3 \\times 5 \\times \\cdots \\times 99\\) using \\(\\prod_{}^{}\\ \\) notation.",
+        answer: "\\(\\prod_{r = 1}^{50}{(2r - 1)}\\)",
+        steps: "\\(1 \\times 3 \\times 5 \\times \\ldots \\times 99 = \\prod_{r = 1}^{50}{(2r - 1)}\\)"
+      },
+      {
+        id: "m2-0a-sum8",
+        type: "Summation and Product Notation",
+        question: "Expand and evaluate the following sums.\n\\(\\prod_{r = 2}^{10}\\left( 1 - \\frac{1}{r} \\right)\\)",
+        answer: "\\(\\frac{1}{10}\\)",
+        steps: "\\(\\prod_{r = 2}^{10}\\left( 1 - \\frac{1}{r} \\right) = \\left( \\frac{1}{2} \\right)\\left( \\frac{2}{3} \\right)\\ldots\\left( \\frac{9}{10} \\right) = \\frac{1}{10}\\)"
+      },
+      {
+        id: "m2-0a-sum9",
+        type: "Summation and Product Notation",
+        question: "Expand and evaluate the following sums.\n\\(\\sum_{k = 1}^{10}\\left( k + \\prod_{i = 1}^{5}i^{2} \\right)\\)",
+        answer: "\\(144055\\)",
+        steps: "\\(\\prod_{i = 1}^{5}i^{2} = (120)^{2} = 14400\\Rightarrow \\sum_{k = 1}^{10}{(k + 14400)} = \\frac{10(11)}{2} + 144000 = 144055\\)"
+      },
+      {
+        id: "m2-0a-sum10",
+        type: "Summation and Product Notation",
+        question: "Express the sum to \\(n\\) terms of \\(- \\frac{4}{3} + \\frac{8}{9} - \\frac{16}{27} + \\ldots\\) using the \\(\\sum_{}^{}\\ \\) notation.",
+        answer: "\\(2\\sum_{r = 1}^{n}{\\left( - \\frac{2}{3} \\right)^{r}}\\)",
+        steps: "\\(- \\frac{4}{3} + \\frac{8}{9} - \\frac{16}{27} + \\ldots = 2\\sum_{r = 1}^{n}{\\left( - \\frac{2}{3} \\right)^{r}}\\)"
+      },
+      {
+        id: "m2-0a-sum11",
+        type: "Summation and Product Notation",
+        question: "Given that \\(\\sum_{i = 1}^{10}X_{i} = 8\\) and \\(\\sum_{i = 1}^{10}Y_{i} = 12\\), find the value of \\(\\sum_{i = 1}^{10}{(2X_{i} - Y_{i})}\\).",
+        answer: "\\(4\\)",
+        steps: "\\(\\sum_{i = 1}^{10}{(2X_{i} - Y_{i})} = 2(8) - 12 = 4\\)"
+      },
+      {
+        id: "m2-0a-sum12",
+        type: "Summation and Product Notation",
+        question: "[2324-WYK-S4-M2-UT1-Q1] (a) Prove that \\(\\sum_{k = 5}^{85}{\\sin^{2}k^{\\circ}} = \\sum_{k = 5}^{85}{\\cos^{2}k^{\\circ}}\\). (b) Hence, find the value of \\(\\sum_{k = 5}^{85}{\\sin^{2}k^{\\circ}}\\).",
+        answer: "(a) Proved.\n(b) \\(\\frac{81}{2}\\)",
+        steps: "(a) \\(\\sum_{k = 5}^{85}{\\sin^{2}k^{\\circ}} = \\cos^{2}85^{\\circ} + \\cos^{2}84^{\\circ} + \\ldots + \\cos^{2}5^{\\circ} = \\sum_{k = 5}^{85}{\\cos^{2}k^{\\circ}}\\). (b) \\(2\\sum_{k = 5}^{85}{\\sin^{2}k^{\\circ}} = \\sum_{k = 5}^{85}1 = 81\\Rightarrow \\sum_{k = 5}^{85}{\\sin^{2}k^{\\circ}} =\\) \\(\\frac{81}{2}\\)"
+      },
+      {
+        id: "m2-0a-sum13",
+        type: "Summation and Product Notation",
+        question: "[2425-WYK-S4-M2-UT1-Q4] Given that \\(\\sum_{k = 1}^{n}k^{2} = \\frac{n(n + 1)(2n + 1)}{6}\\) for all \\(n \\in \\mathbf{N}\\). Evaluate (a) \\(\\sum_{k = 1000}^{2000}{(2k)^{2}}\\) and (b) \\(\\sum_{k = 1}^{2024}{(k + 1)^{2}}\\).",
+        answer: "(a) \\(9343334000\\)\n(b) \\(2769972524\\)",
+        steps: "(a) \\(4\\left\\lbrack \\frac{2000(2001)(4001)}{6} - \\frac{999(1000)(1999)}{6} \\right\\rbrack = 9343334000\\). (b) \\(\\frac{2024(2025)(4049)}{6} + 2\\frac{2024(2025)}{2} + 2024 = 2769972524\\) (Alternative: \\(\\sum_{j = 1}^{2025}{j^{2} - 1} = 2769972524\\))."
+      },
+      {
+        id: "m2-0a-oe1",
+        type: "Odd and Even Functions",
+        question: "Determine whether \\(f(x)\\) is an odd function, an even function or neither of them.\n\\(f(x) = - \\frac{x^{3} + 1}{x^{4} + 8}\\)",
+        answer: "Neither an odd function nor an even function.",
+        steps: "\\(f( - x) = \\frac{x^{3} - 1}{x^{4} + 8}\\Rightarrow \\) Neither odd nor even function."
+      },
+      {
+        id: "m2-0a-oe2",
+        type: "Odd and Even Functions",
+        question: "Determine whether \\(f(x)\\) is an odd function, an even function or neither of them.\n\\(f(x) = x^{5}\\sin^{4}x\\)",
+        answer: "Odd function.",
+        steps: "\\(f( - x) = - x^{5}\\sin^{4}x = - f(x)\\Rightarrow \\) Odd function."
+      },
+      {
+        id: "m2-0a-oe3",
+        type: "Odd and Even Functions",
+        question: "Determine whether \\(f(x)\\) is an odd function, an even function or neither of them.\n\\(f(x) = x^{2}\\cos 2x\\)",
+        answer: "Even function.",
+        steps: "\\(f( - x) = x^{2}\\cos 2x = f(x)\\Rightarrow \\) Even function."
+      },
+      {
+        id: "m2-0a-oe4",
+        type: "Odd and Even Functions",
+        question: "Determine whether \\(f(x)\\) is an odd function, an even function or neither of them.\n\\(f(x) = \\frac{\\cos x}{|x| + 1}\\)",
+        answer: "Even function.",
+        steps: "\\(f( - x) = f(x)\\Rightarrow \\) Even function."
+      },
+      {
+        id: "m2-0a-oe5",
+        type: "Odd and Even Functions",
+        question: "Determine whether \\(f(x)\\) is an odd function, an even function or neither of them.\n\\(f(x) = 3\\)",
+        answer: "Even function.",
+        steps: "\\(f( - x) = 3 = f(x)\\Rightarrow \\) Even function."
+      },
+      {
+        id: "m2-0a-oe6",
+        type: "Odd and Even Functions",
+        question: "[2324-WYK-S4-M2-UT1-Q2] Let \\(g(x) = \\sum_{k = 1}^{n}\\frac{x^{2k + 1}}{k}\\). (a) Determine if \\(g(x)\\) is odd, even or neither. (b) If \\(h(x) = \\cos(3x)\\), John claims that \\(h(g(x))\\) is an even function. Do you agree? Explain your answer.",
+        answer: "(a) \\(g(x)\\) is an odd function.\n(b) Yes, I agree: \\(h(g(x))\\) is an even function.",
+        steps: "(a) \\(g( - x) = \\sum_{k = 1}^{n}\\frac{( - x)^{2k + 1}}{k} = - g(x)\\Rightarrow g(x)\\) is an odd function. (b) \\(h(g( - x)) = h( - g(x)) = \\cos( - 3g(x)) = h(g(x))\\Rightarrow \\) Yes, I agree."
+      },
+      {
+        id: "m2-0a-oe7",
+        type: "Odd and Even Functions",
+        question: "[2026-DSE-M2-Q5a] Let \\(a > 1\\). Define \\(g(x) = \\frac{x^{2}(a^{x} - a^{2x})}{1 + a^{3x}}\\) for all \\(x \\in \\mathbf{R}\\). Is \\(g(x)\\) an odd function? Explain your answer.",
+        answer: "Yes, \\(g(x)\\) is an odd function.",
+        steps: "\\(g( - x) = \\frac{x^{2}(a^{- x} - a^{- 2x})}{1 + a^{- 3x}} = \\frac{x^{2}(a^{2x} - a^{x})}{a^{3x} + 1} = - g(x)\\Rightarrow \\) Yes, it is an odd function."
+      },
+      {
+        id: "m2-0a-oe8",
+        type: "Odd and Even Functions",
+        question: "Given that \\(f(x) = \\frac{x}{2^{x} - 1} + \\frac{x}{2}\\) for \\(x \\neq 0\\) and \\(g(x) = (x + \\sqrt{\\lambda^{2} + x^{2}}) - \\frac{1}{x + \\sqrt{\\lambda^{2} + x^{2}}}\\). (a) Show that \\(f(x)\\) is an even function. (b) If \\(g(x)\\) is an odd function, find the value(s) of \\(\\lambda\\).",
+        answer: "(a) \\(f(x)\\) is an even function.\n(b) \\(\\lambda = \\pm 1\\)",
+        steps: "(a) \\(f( - x) = \\frac{- x}{2^{- x} - 1} - \\frac{x}{2} = \\frac{- 2x \\cdot 2^{x} - x + x \\cdot 2^{x}}{2(1 - 2^{x})} = \\frac{x + x \\cdot 2^{x}}{2(2^{x} - 1)} = f(x)\\Rightarrow \\) Even function. (b) \\(g( - x) = - g(x)\\Rightarrow 2\\sqrt{\\lambda^{2} + x^{2}} = \\frac{2\\sqrt{\\lambda^{2} + x^{2}}}{\\lambda^{2}}\\Rightarrow \\lambda = \\pm 1\\)."
+      }
+    ],
+
+    // ---- M2 Chapter 1: Mathematical Induction ----
+    mathematical_induction: [
+      {
+        id: "m2-1a-ex1",
+        question: "[Level 1] Prove, by mathematical induction, that for all positive integers \\(n\\), \\(\\frac{1}{\\pi(\\pi + 1)} + \\frac{1}{(\\pi + 1)(\\pi + 2)} + \\ldots + \\frac{1}{(\\pi + n - 1)(\\pi + n)} = \\frac{n}{\\pi(\\pi + n)}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "For \\(n = 1\\): L.H.S. \\(= \\frac{1}{\\pi(\\pi + 1)} =\\) R.H.S. Assume true for \\(n = m\\). For \\(n = m + 1\\): \\(\\frac{m}{\\pi(\\pi + m)} + \\frac{1}{(\\pi + m)(\\pi + m + 1)} = \\frac{(m + 1)(\\pi + m)}{\\pi(\\pi + m)(\\pi + m + 1)} = \\frac{m + 1}{\\pi(\\pi + (m + 1))}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex2",
+        question: "[Level 1] Prove, by mathematical induction, that for all positive integers \\(n\\), \\(\\sum_{r = 1}^{n}{( - 1)^{r + 1}2^{r}} = \\frac{2 + ( - 2)^{n + 1}}{3}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "For \\(n = 1\\): L.H.S. \\(= 2 =\\) R.H.S. Assume true for \\(n = m\\). For \\(n = m + 1\\): \\(\\frac{2 + ( - 2)^{m + 1}}{3} + ( - 1)^{m + 2}2^{m + 1} = \\frac{2 - 2( - 2)^{m + 1}}{3} = \\frac{2 + ( - 2)^{(m + 1) + 1}}{3}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex3",
+        question: "[Level 1] Prove, by mathematical induction, that for all positive integers \\(n\\), \\(\\sum_{r = 1}^{n}\\left( 3^{r - 1} + \\frac{1}{3^{r - 1}} \\right) = \\frac{3^{n}}{2} - \\frac{1}{2 \\times 3^{n - 1}} + 1\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "For \\(n = 1\\): L.H.S. \\(= 2 =\\) R.H.S. Assume true for \\(n = m\\). For \\(n = m + 1\\): \\(\\frac{3^{m}}{2} - \\frac{1}{2 \\times 3^{m - 1}} + 1 + 3^{m} + \\frac{1}{3^{m}} = \\frac{3^{m + 1}}{2} - \\frac{1}{2 \\times 3^{(m + 1) - 1}} + 1\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex4",
+        question: "[Level 2] Prove, by mathematical induction, that for all positive integers \\(n\\), \\(x^{2} + 2x^{4} + 3x^{6} + \\ldots + nx^{2n} = \\frac{x^{2} - (n + 1)x^{2n + 2} + nx^{2n + 4}}{(1 - x)^{2}(1 + x)^{2}}\\), where \\(x \\neq - 1\\) and \\(x \\neq 1\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "For \\(n = 1\\): L.H.S. \\(= x^{2} =\\) R.H.S. Assume true for \\(n = m\\). For \\(n = m + 1\\): \\(\\frac{x^{2} - (m + 1)x^{2m + 2} + mx^{2m + 4}}{(1 - x^{2})^{2}} + (m + 1)x^{2m + 2} = \\frac{x^{2} - ((m + 1) + 1)x^{2(m + 1) + 2} + (m + 1)x^{2(m + 1) + 4}}{(1 - x)^{2}(1 + x)^{2}}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex5",
+        question: "[Level 2 \u2013 Taking out common factor] (a) Prove by M.I. that \\(\\frac{7}{1 \\times 2 \\times 3} + \\frac{10}{2 \\times 3 \\times 4} + \\ldots + \\frac{3n + 4}{n(n + 1)(n + 2)} = \\frac{5}{2} - \\frac{3n + 5}{(n + 1)(n + 2)}\\). (b) Hence, find \\(\\frac{7}{2} + \\frac{10}{8} + \\frac{13}{20} + \\ldots + \\frac{52}{1632}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{356}{51}\\)",
+        steps: "(a) For \\(n = 1\\): L.H.S. \\(= \\frac{7}{6} =\\) R.H.S. Inductive step: \\(\\frac{5}{2} - \\frac{3m + 5}{(m + 1)(m + 2)} + \\frac{3m + 7}{(m + 1)(m + 2)(m + 3)} = \\frac{5}{2} - \\frac{3(m + 1) + 5}{(m + 2)(m + 3)}\\). (b) \\(= 3\\left\\lbrack \\frac{5}{2} - \\frac{3(16) + 5}{17 \\times 18} \\right\\rbrack = \\frac{356}{51}\\)."
+      },
+      {
+        id: "m2-1a-ex6",
+        question: "[Level 2 \u2013 Taking out common factor] (a) Prove by M.I. that \\(\\sum_{r = 1}^{n}\\frac{1}{r(r + 1)(r + 2)(r + 3)} = \\frac{1}{3}\\left\\lbrack \\frac{1}{6} - \\frac{1}{(n + 1)(n + 2)(n + 3)} \\right\\rbrack\\). (b) Hence, find (i) \\(\\frac{1}{6 \\times 10 \\times 11 \\times 13} + \\ldots + \\frac{1}{12 \\times 22 \\times 23 \\times 25}\\) and (ii) \\(\\frac{1}{17 \\times 25 \\times 26 \\times 53} + \\ldots + \\frac{1}{11 \\times 34 \\times 65 \\times 67}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b)(i) \\(\\frac{26}{56925}\\)\n(b)(ii) \\(\\frac{206}{12215775}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{1}{24}\\). Inductive step adds \\(\\frac{1}{(m + 1)(m + 2)(m + 3)(m + 4)}\\) to get \\(\\frac{1}{3}\\left\\lbrack \\frac{1}{6} - \\frac{1}{(m + 2)(m + 3)(m + 4)} \\right\\rbrack\\). (b) (i) \\(= 2\\sum_{k = 10}^{22}\\frac{1}{k(k + 1)(k + 2)(k + 3)} = \\frac{26}{56925}\\). (ii) \\(= 12\\sum_{k = 50}^{65}\\frac{1}{k(k + 1)(k + 2)(k + 3)} = \\frac{206}{12215775}\\)."
+      },
+      {
+        id: "m2-1a-ex7",
+        question: "[Level 2 \u2013 Taking out common factor] (a) Let \\(q \\neq 1\\). Prove by M.I. that \\(1 + 2q + 3q^{2} + \\ldots + nq^{n - 1} = \\frac{1 - (n + 1)q^{n} + nq^{n + 1}}{(1 - q)^{2}}\\). (b) Hence, find (i) \\(1 + 4 + 12 + 32 + \\ldots + 10(2)^{9}\\), (ii) \\(8 + 24 + 64 + \\ldots + 10(2)^{10}\\), (iii) \\(\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6} + \\ldots + \\frac{9}{2 \\times 3^{8}}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b)(i) \\(9217\\)\n(b)(ii) \\(18432\\)\n(b)(iii) \\(\\frac{4919}{4374}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(1\\). Inductive step simplifies to \\(\\frac{1 - (m + 2)q^{m + 1} + (m + 1)q^{m + 2}}{(1 - q)^{2}}\\). (b) (i) \\(q = 2,n = 10\\Rightarrow 9217\\). (ii) \\(2(9217 - 1) = 18432\\). (iii) \\(\\frac{1}{2}\\left\\lbrack \\frac{1 - 10(1/3)^{9} + 9(1/3)^{10}}{(2/3)^{2}} \\right\\rbrack = \\frac{4919}{4374}\\)."
+      },
+      {
+        id: "m2-1a-ex8",
+        question: "[Level 3] (a) Prove by M.I. that \\(\\prod_{r = 1}^{n}\\left( 1 + \\frac{1}{r + 1} \\right) = \\frac{n}{2} + 1\\). (b) Hence find \\(\\left( 1 + \\frac{1}{11} \\right)\\left( 1 + \\frac{1}{12} \\right)\\ldots\\left( 1 + \\frac{1}{40} \\right)\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{41}{11}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{3}{2}\\). Inductive step: \\(\\left( \\frac{m}{2} + 1 \\right)\\left( 1 + \\frac{1}{m + 2} \\right) = \\frac{m + 3}{2} = \\frac{m + 1}{2} + 1\\). (b) \\(= \\frac{\\frac{39}{2} + 1}{\\frac{9}{2} + 1} = \\frac{41}{11}\\)."
+      },
+      {
+        id: "m2-1a-ex9",
+        question: "[Level 3 \u2013 Sum of odd/even sequences] (a) Prove by M.I. that \\(1^{3} + 2^{3} + \\ldots + n^{3} = \\frac{n^{2}(n + 1)^{2}}{4}\\). (b) Hence, find (i) \\(2^{3} + 4^{3} + \\ldots + 26^{3}\\), (ii) \\(1^{3} + 3^{3} + \\ldots + 27^{3}\\), (iii) \\(11^{3} + 13^{3} + \\ldots + 31^{3}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b)(i) \\(66248\\)\n(b)(ii) \\(76636\\)\n(b)(iii) \\(129591\\)",
+        steps: "(a) Standard sum of cubes induction. (b) (i) \\(8\\left\\lbrack \\frac{13^{2}(14)^{2}}{4} \\right\\rbrack = 66248\\). (ii) \\(\\frac{27^{2}(28)^{2}}{4} - 66248 = 76636\\). (iii) \\(129591\\)."
+      },
+      {
+        id: "m2-1a-ex10",
+        question: "[Level 3 \u2013 Summation Property] [2024-DSE-M2-Q8] (a) Prove by M.I. that \\(\\sum_{r = 1}^{n}{r(2^{- r})} = 2 - (n + 2)(2^{- n})\\). (b) Evaluate (i) \\(\\sum_{r = 1000}^{1999}{r(2^{- r})}\\) and (ii) \\(\\sum_{r = 1}^{1000}{(2000 - r)2^{r}}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b)(i) \\(1001(2^{- 999}) - 2001(2^{- 1999})\\)\n(b)(ii) \\(1001(2^{1001}) - 4002\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{1}{2}\\). Inductive step: \\(2 - (m + 2)2^{- m} + (m + 1)2^{- (m + 1)} = 2 - (m + 3)2^{- (m + 1)}\\). (b) (i) \\(1001(2^{- 999}) - 2001(2^{- 1999})\\). (ii) Let \\(j = 2000 - r\\): \\(2^{2000}\\sum_{j = 1000}^{1999}{j(2^{- j})} = 1001(2^{1001}) - 4002\\)."
+      },
+      {
+        id: "m2-1a-ex11",
+        question: "[Level 1] Prove by M.I. that for \\(n = 2,3,4\\ldots\\), \\(\\frac{1}{2 \\times 1} + \\frac{1}{3 \\times 2} + \\ldots + \\frac{1}{n(n - 1)} = \\frac{n - 1}{n}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "Base case \\(n = 2\\): \\(\\frac{1}{2}\\). Inductive step: \\(\\frac{m - 1}{m} + \\frac{1}{(m + 1)m} = \\frac{m^{2}}{m(m + 1)} = \\frac{(m + 1) - 1}{m + 1}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex12",
+        question: "[Level 2] Prove by M.I. that for \\(n = 2,3,4\\ldots\\), \\(\\left( 1 - \\frac{1}{2^{2}} \\right)\\left( 1 - \\frac{1}{3^{2}} \\right)\\ldots\\left( 1 - \\frac{1}{n^{2}} \\right) = \\frac{n + 1}{2n}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "Base case \\(n = 2\\): \\(\\frac{3}{4}\\). Inductive step: \\(\\frac{m + 1}{2m}\\left( 1 - \\frac{1}{(m + 1)^{2}} \\right) = \\frac{m + 2}{2(m + 1)}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex13",
+        question: "[Level 2 \u2013 Taking out common factor] [2425-WYK-S4-UT1-M2-Q5] (a) Prove by M.I. that \\(\\frac{1}{1 \\times 3} + \\frac{1}{2 \\times 3^{2}} + \\ldots + \\frac{1}{2^{n - 1} \\times 3^{n}} = \\frac{2}{5}\\left( 1 - \\frac{1}{6^{n}} \\right)\\). (b) Hence, find \\(\\frac{1}{6} + \\frac{1}{6^{2}} + \\ldots + \\frac{1}{6^{12}}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{435356467}{2176782336}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{1}{3}\\). Inductive step: \\(\\frac{2}{5}\\left( 1 - \\frac{1}{6^{k}} \\right) + \\frac{1}{2^{k} \\times 3^{k + 1}} = \\frac{2}{5}\\left( 1 - \\frac{1}{6^{k + 1}} \\right)\\). (b) \\(= \\frac{1}{2}\\left\\lbrack \\frac{2}{5}\\left( 1 - \\frac{1}{6^{12}} \\right) \\right\\rbrack = \\frac{435356467}{2176782336}\\)."
+      },
+      {
+        id: "m2-1a-ex14",
+        question: "[Level 2 \u2013 Double Negation] (a) Prove by M.I. that \\(1 - 4 + 4^{2} - \\ldots + ( - 4)^{n} = \\frac{1 - ( - 4)^{n + 1}}{5}\\). (b) Hence, find (i) \\(4^{3} - 4^{4} + 4^{5} - \\ldots + 4^{11}\\) and (ii) \\(4^{13} - 4^{14} + 4^{15} - \\ldots + 4^{25}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b)(i) \\(3355456\\)\n(b)(ii) \\(\\frac{4^{26} + 4^{13}}{5}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(- 3\\). Inductive step: \\(\\frac{1 - ( - 4)^{m + 1}}{5} + ( - 4)^{m + 1} = \\frac{1 - ( - 4)^{m + 2}}{5}\\). (b) (i) \\(3355456\\). (ii) \\(\\frac{4^{26} + 4^{13}}{5}\\)."
+      },
+      {
+        id: "m2-1a-ex15",
+        question: "[Level 2 \u2013 Double Negation] [2425-WYK-S5-Midyear-M2-Q4] (a) Prove by M.I. that \\(1 - \\frac{1}{5 \\times 8} - \\frac{1}{8 \\times 11} - \\ldots - \\frac{1}{(3n + 2)(3n + 5)} = \\frac{14n + 25}{5(3n + 5)}\\). (b) Hence, find \\(\\frac{1}{95 \\times 98} + \\frac{1}{98 \\times 101} + \\ldots + \\frac{1}{152 \\times 155}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{4}{2945}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{39}{40}\\). Inductive step simplifies to \\(\\frac{14(m + 1) + 25}{5(3(m + 1) + 5)}\\). (b) \\(= - \\left\\lbrack \\frac{14(50) + 25}{5(155)} - \\frac{14(30) + 25}{5(95)} \\right\\rbrack = \\frac{4}{2945}\\)."
+      },
+      {
+        id: "m2-1a-ex16",
+        question: "[Level 2] (a) Using M.I., prove that \\(\\sum_{r = n}^{2n}{r(r + 1)} = \\frac{1}{3}n(n + 1)(7n + 5)\\). (b) Using (a), evaluate \\(\\sum_{r = 10}^{40}{r(r + 1)}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(22630\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(8\\). Inductive step: \\(\\frac{1}{3}m(m + 1)(7m + 5) - m(m + 1) + (2m + 1)(2m + 2) + (2m + 2)(2m + 3) = \\frac{1}{3}(m + 1)(m + 2)(7m + 12)\\). (b) \\(= \\sum_{r = 10}^{20}{r(r + 1) + \\sum_{r = 20}^{40}{r(r + 1) - 20(21)}} = 22630\\)."
+      },
+      {
+        id: "m2-1a-ex17",
+        question: "[Level 2] (a) Using M.I., prove that \\(\\sum_{r = n}^{2n}\\frac{1}{(r + 1)(r + 2)} = \\frac{1}{2n + 2}\\). (b) Using (a), evaluate \\(\\sum_{r = 3}^{12}\\frac{1}{(r + 1)(r + 2)}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{5}{28}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{1}{4}\\). Inductive step telescopes to \\(\\frac{1}{2m + 4} = \\frac{1}{2(m + 1) + 2}\\). (b) \\(= \\frac{1}{8} + \\frac{1}{14} - \\frac{1}{56} = \\frac{5}{28}\\)."
+      },
+      {
+        id: "m2-1a-ex18",
+        question: "[Level 2] [2425-WYK-S4-UT1-M2-Q6] (a) Prove by M.I. that \\(\\sum_{k = 1}^{n}\\left( \\frac{1}{2k - 1} - \\frac{1}{2k} \\right) = \\sum_{r = n + 1}^{2n}\\frac{1}{r}\\). (b) Patrick claims that \\(\\frac{1}{2024} + \\frac{1}{2025} + \\ldots + \\frac{1}{4046} > \\frac{1}{2}\\). Do you agree?",
+        answer: "(a) Proved by mathematical induction.\n(b) Agree: the sum is greater than \\(\\frac{1}{2}\\).",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{1}{2}\\). Inductive step simplifies to \\(\\sum_{r = m + 2}^{2m + 2}\\frac{1}{r}\\). (b) \\(= \\sum_{k = 1}^{2023}\\left( \\frac{1}{2k - 1} - \\frac{1}{2k} \\right) = \\frac{1}{1 \\times 2} + \\frac{1}{3 \\times 4} + \\ldots + \\frac{1}{4045 \\times 4046} > \\frac{1}{2}\\). Agreed."
+      },
+      {
+        id: "m2-1a-ex19",
+        question: "[Level 3 \u2013 Partial Fraction] [2526-WYK-S6-FTA-M2-Q7] (a) Prove by M.I. that \\(\\sum_{k = 2n}^{3n}\\frac{1}{(k + 2)(k + 3)} = \\frac{1}{6(n + 1)}\\). (b) Using (a), evaluate \\(\\sum_{k = 40}^{90}\\frac{k(k + 5)}{(k + 2)(k + 3)}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{11050}{217}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(\\frac{1}{12}\\). Inductive step simplifies via partial fractions to \\(\\frac{1}{6(m + 2)}\\). (b) \\(= 51 - 6\\left\\lbrack \\frac{1}{6(21)} + \\frac{1}{6(31)} - \\frac{1}{62 \\times 63} \\right\\rbrack = \\frac{11050}{217}\\)."
+      },
+      {
+        id: "m2-1a-ex20",
+        question: "[Level 2] (a) Prove by M.I. that \\(1 \\times 3 + 2 \\times 4 + \\ldots + n(n + 2) = \\frac{n(n + 1)(2n + 7)}{6}\\). (b) Using (a) and \\(\\sum_{r = 1}^{n}r = \\frac{n(n + 1)}{2}\\), prove \\(1 \\times 4 + 2 \\times 5 + \\ldots + (n - 1)(n + 2) = \\frac{n(n - 1)(n + 4)}{3}\\) for \\(n \\geq 2\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) Proved.",
+        steps: "(a) Base case \\(n = 1\\): \\(3\\). Inductive step factors to \\(\\frac{(m + 1)(m + 2)(2m + 9)}{6}\\). (b) \\(\\sum_{m = 1}^{n}{(m - 1)(m + 2)} = \\frac{n(n + 1)(2n + 7)}{6} - \\frac{n(n + 5)}{2} = \\frac{n(n - 1)(n + 4)}{3}\\)."
+      },
+      {
+        id: "m2-1a-ex21",
+        question: "[Level 2] [2324-WYK-S4-UT1-M2-Q3] (a) Prove by M.I. that \\(1 \\times 2 + 3 \\times 4 + \\ldots + (2n - 1)(2n) = \\frac{1}{3}n(n + 1)(4n - 1)\\). (b) Find an expression for \\(\\sum_{k = 1}^{n}k^{2}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\sum_{k = 1}^{n}k^{2} = \\frac{1}{6}n(n + 1)(2n + 1)\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(2\\). Inductive step factors to \\(\\frac{1}{3}(k + 1)(k + 2)(4k + 3)\\). (b) \\(4\\sum_{k = 1}^{n}{k^{2} - 2\\sum_{k = 1}^{n}k} = \\frac{1}{3}n(n + 1)(4n - 1)\\Rightarrow \\sum_{k = 1}^{n}k^{2} = \\frac{1}{6}n(n + 1)(2n + 1)\\)."
+      },
+      {
+        id: "m2-1a-ex22",
+        question: "[Level 2] (a) Prove by M.I. that \\(7 + 2 \\times 7^{2} + 3 \\times 7^{3} + \\ldots + n \\times 7^{n} = \\frac{(6n - 1)(7^{n + 1}) + 7}{36}\\). (b) Find an expression for \\(2 \\times 7 + 3 \\times 7^{2} + \\ldots + (n + 1) \\times 7^{n}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(\\frac{(6n + 5)(7^{n + 1}) - 35}{36}\\)",
+        steps: "(a) Base case \\(n = 1\\): \\(7\\). Inductive step simplifies to \\(\\frac{(6m + 5)(7^{m + 2}) + 7}{36}\\). (b) \\(\\sum_{k = 1}^{n}{(k + 1)7^{k}} = \\frac{(6n - 1)(7^{n + 1}) + 7}{36} + \\frac{7(1 - 7^{n})}{1 - 7} = \\frac{(6n + 5)(7^{n + 1}) - 35}{36}\\)."
+      },
+      {
+        id: "m2-1a-ex23",
+        question: "[Level 3 \u2013 MI not starting with first term + Odd/even Sequences] (a) Prove by M.I. that \\(1 \\times 3 + 2 \\times 4 + \\ldots + (n - 1)(n + 1) = \\frac{n(n - 1)(2n + 5)}{6}\\) for \\(n \\geq 2\\). (b) Show \\(1^{2} + 2^{2} + \\ldots + n^{2} = \\frac{n(n + 1)(2n + 1)}{6}\\). (c) Evaluate (i) \\(101 \\times 103 + \\ldots + 199 \\times 201\\), (ii) \\(102^{2} + 104^{2} + \\ldots + 200^{2}\\), (iii) \\(101 \\times 103 + 103 \\times 105 + \\ldots + 199 \\times 201\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) Shown.\n(c)(i) \\(2338050\\)\n(c)(ii) \\(1181700\\)\n(c)(iii) \\(1181650\\)",
+        steps: "(a) Base case \\(n = 2\\): \\(3\\). Inductive step factors to \\(\\frac{(m + 1)m(2m + 7)}{6}\\). (b) \\(\\sum_{r = 2}^{n}{(r^{2} - 1)} = \\frac{n(n - 1)(2n + 5)}{6}\\Rightarrow \\sum_{r = 1}^{n}r^{2} = \\frac{n(n + 1)(2n + 1)}{6}\\). (c) (i) \\(2338050\\). (ii) \\(1181700\\). (iii) \\(1181700 - 50 = 1181650\\)."
+      },
+      {
+        id: "m2-1a-ex24",
+        question: "[Level 1] \\(c_{1} = 2\\) and \\(c_{k + 1} = 3c_{k} + 2k - 1\\). Prove by M.I. that \\(c_{n} = 3^{n} - n\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "Base case \\(n = 1\\): \\(c_{1} = 2 = 3^{1} - 1\\). Inductive step: \\(c_{m + 1} = 3(3^{m} - m) + 2m - 1 = 3^{m + 1} - (m + 1)\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex25",
+        question: "[Level 1] \\(a_{1} = \\frac{5}{2}\\) and \\(a_{r + 1} = \\frac{3}{2}(a_{r} - 1) + 1\\). Prove by M.I. that \\(a_{n} = \\frac{3^{n} + 2^{n}}{2^{n}}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "Base case \\(n = 1\\): \\(\\frac{5}{2}\\). Inductive step: \\(a_{m + 1} = \\frac{3}{2}\\left( \\frac{3^{m}}{2^{m}} \\right) + 1 = \\frac{3^{m + 1} + 2^{m + 1}}{2^{m + 1}}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex26",
+        question: "[Level 1] \\(a_{1} = p\\) and \\(a_{k + 1} = 2a_{k} - a_{k}^{2}\\) (\\(p \\neq 0\\)). Prove by M.I. that \\(a_{n} = 1 - (1 - p)^{2^{n - 1}}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "Base case \\(n = 1\\): \\(p\\). Inductive step: \\(a_{m + 1} = 2\\lbrack 1 - (1 - p)^{2^{m - 1}}\\rbrack - \\lbrack 1 - (1 - p)^{2^{m - 1}}\\rbrack^{2} = 1 - (1 - p)^{2^{m}}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex27",
+        question: "[Level 2] \\(a_{1} = 1,a_{2} = 2\\) and \\(a_{r + 2} = a_{r + 1} + a_{r}\\). Prove by M.I. that \\((a_{n + 1})^{2} - a_{n + 2}a_{n} = ( - 1)^{n + 1}\\).",
+        answer: "Proved by mathematical induction.",
+        steps: "Base case \\(n = 1\\): \\(2^{2} - 3(1) = 1 = ( - 1)^{2}\\). Inductive step: \\((a_{m + 2})^{2} - (a_{m + 2} + a_{m + 1})a_{m + 1} = a_{m + 2}a_{m} - (a_{m + 1})^{2} = - ( - 1)^{m + 1} = ( - 1)^{m + 2}\\). True by M.I."
+      },
+      {
+        id: "m2-1a-ex28",
+        question: "[Level 2] \\(a_{1} = 6\\) and \\(a_{n + 1} = \\frac{a_{n}}{a_{n} - 2}\\). (a) Evaluate \\(a_{2}\\) and \\(a_{3}\\). (b) Prove by M.I. that \\(a_{n} = \\frac{3}{1 + ( - 2)^{n - 2}}\\). (c) Prove by M.I. that \\(\\sum_{i = 1}^{n}\\frac{1}{a_{i}} = \\frac{6n - 1 + ( - 2)^{n}}{18}\\).",
+        answer: "(a) \\(a_{2} = \\frac{3}{2},a_{3} = - 3\\)\n(b) Proved by mathematical induction.\n(c) Proved by mathematical induction.",
+        steps: "(a) \\(a_{2} = \\frac{3}{2},a_{3} = - 3\\). (b) Base case \\(n = 1\\): \\(6\\). Inductive step simplifies to \\(\\frac{3}{1 + ( - 2)^{m - 1}}\\). (c) Base case \\(n = 1\\): \\(\\frac{1}{6}\\). Inductive step: \\(\\frac{6m - 1 + ( - 2)^{m}}{18} + \\frac{1 + ( - 2)^{m - 1}}{3} = \\frac{6(m + 1) - 1 + ( - 2)^{m + 1}}{18}\\). True by M.I."
+      }
+    ],
+
+    // ---- M2 Chapter 2: Binomial Theorem ----
+    binomial_theorem: [
+      {
+        id: "m2-2a-ex1",
+        question: "[Level 1] Find the value of \\(n\\) in the equation \\(C_{2}^{n + 4} + C_{2}^{n + 1} = 9C_{2}^{n}\\).",
+        answer: "\\(n = 3\\)",
+        steps: "\\((n + 4)(n + 3) + n(n + 1) = 9n(n - 1)\\Rightarrow 7n^{2} - 17n - 12 = 0\\Rightarrow n = 3\\) or \\(- \\frac{4}{7}\\) (rej.)"
+      },
+      {
+        id: "m2-2a-ex2",
+        question: "[Level 2] Simplify (a) \\(\\frac{C_{r - 1}^{n}}{C_{n - r}^{n}}\\), (b) \\(\\frac{C_{r}^{n + 1}}{C_{r - 1}^{n}} \\times \\frac{C_{n - r}^{n - 1}}{C_{n - r + 1}^{n + 1}}\\), (c) \\(\\frac{1}{C_{r}^{10}} + \\frac{1}{C_{r + 1}^{10}}\\).",
+        answer: "(a) \\(\\frac{r}{n - r + 1}\\)\n(b) \\(\\frac{n - r + 1}{n}\\)\n(c) \\(\\frac{11}{10C_{r}^{9}}\\)",
+        steps: "(a) \\(= \\frac{r}{n - r + 1}\\). (b) \\(= \\frac{n + 1}{r} \\times \\frac{r(n - r + 1)}{n(n + 1)} = \\frac{n - r + 1}{n}\\). (c) \\(= \\frac{r!(9 - r)!}{10!}\\lbrack(10 - r) + (r + 1)\\rbrack = \\frac{11}{10C_{r}^{9}}\\)."
+      },
+      {
+        id: "m2-2a-ex3",
+        question: "[Level 1] Expand (a) \\(\\left( x + \\frac{2}{x} \\right)^{3}\\left( x - \\frac{2}{x} \\right)^{3}\\) and (b) \\(\\left( x^{2} - 6 + \\frac{9}{x^{2}} \\right)^{3}\\).",
+        answer: "(a) \\(x^{6} - 12x^{2} + \\frac{48}{x^{2}} - \\frac{64}{x^{6}}\\)\n(b) \\(x^{6} - 18x^{4} + 135x^{2} - 540 + \\frac{1215}{x^{2}} - \\frac{1458}{x^{4}} + \\frac{729}{x^{6}}\\)",
+        steps: "(a) \\(= \\left( x^{2} - \\frac{4}{x^{2}} \\right)^{3} = x^{6} - 12x^{2} + \\frac{48}{x^{2}} - \\frac{64}{x^{6}}\\). (b) \\(= \\left( x - \\frac{3}{x} \\right)^{6} = x^{6} - 18x^{4} + 135x^{2} - 540 + \\frac{1215}{x^{2}} - \\frac{1458}{x^{4}} + \\frac{729}{x^{6}}\\)."
+      },
+      {
+        id: "m2-2a-ex4",
+        question: "[Level 2] Evaluate (a) \\(\\left( 3^{\\frac{3}{2}} + \\frac{1}{\\sqrt{3}} \\right)^{6} + \\left( 3^{\\frac{3}{2}} - \\frac{1}{\\sqrt{3}} \\right)^{6}\\) and (b) \\(\\left( \\frac{1}{3 + \\sqrt{5}} \\right)^{6} - \\left( \\frac{1}{3 - \\sqrt{5}} \\right)^{6}\\).",
+        answer: "(a) \\(\\frac{1262144}{27}\\)\n(b) \\(- \\frac{9\\sqrt{5}}{4}\\)",
+        steps: "(a) Odd terms cancel \\(\\Rightarrow 2\\left\\lbrack 3^{9} + 15(3^{6})\\left( \\frac{1}{3} \\right) + 15(3^{3})\\left( \\frac{1}{9} \\right) + \\frac{1}{27} \\right\\rbrack\\) \\(= \\frac{1262144}{27}\\). (b) \\(= \\frac{(3 - \\sqrt{5})^{6} - (3 + \\sqrt{5})^{6}}{4096} = - \\frac{9\\sqrt{5}}{4}\\)."
+      },
+      {
+        id: "m2-2a-ex5",
+        question: "[Level 1] In the expansion of \\(\\left( x + \\frac{2}{x^{3}} \\right)^{8}\\), find (a) the constant term, (b) the \\(x^{3}\\) term.",
+        answer: "(a) \\(112\\)\n(b) The \\(x^{3}\\) term does not exist.",
+        steps: "General term \\(= C_{r}^{8}2^{r}x^{8 - 4r}\\). (a) \\(r = 2\\Rightarrow C_{2}^{8}(2)^{2} = 112\\). (b) \\(8 - 4r = 3\\Rightarrow r = \\frac{5}{4}\\) (not integer), so the \\(x^{3}\\) term does not exist."
+      },
+      {
+        id: "m2-2a-ex6",
+        question: "[Level 1] In the expansion of \\(\\left( x - \\frac{2}{x^{2}} \\right)^{9}\\) in ascending powers of \\(x\\), find (a) the \\(5^{th}\\) term, (b) the coefficient of the \\(x^{4}\\) term.",
+        answer: "(a) \\(- 4032x^{- 6}\\)\n(b) \\(0\\) (there is no \\(x^{4}\\) term)",
+        steps: "General term \\(= C_{r}^{9}( - 2)^{9 - r}x^{3r - 18}\\). (a) \\(r = 4\\Rightarrow C_{4}^{9}( - 2)^{5}x^{- 6} = - 4032x^{- 6}\\). (b) \\(3r - 18 = 4\\Rightarrow r = \\frac{22}{3}\\) (not integer), so coefficient \\(= 0\\)."
+      },
+      {
+        id: "m2-2a-ex7",
+        question: "[Level 1] \\((1 - px)^{n} = 1 - 36x + 36p^{2}x^{2} + \\ldots\\) (a) Find \\(n\\) and \\(p\\). (b) Find the coefficient of \\(x^{3}\\).",
+        answer: "(a) \\(n = 9,p = 4\\)\n(b) \\(- 5376\\)",
+        steps: "(a) \\(np = 36,\\frac{n(n - 1)}{2} = 36\\Rightarrow n = 9,p = 4\\). (b) Coefficient of \\(x^{3} = C_{3}^{9}( - 4)^{3} = - 5376\\)."
+      },
+      {
+        id: "m2-2a-ex8",
+        question: "[Level 1] \\((1 + bx)^{n} = 1 + 63x + 1701x^{2} + \\ldots\\) Find \\(b\\) and \\(n\\).",
+        answer: "\\(n = 7,b = 9\\)",
+        steps: "\\(nb = 63,\\frac{n(n - 1)}{2}b^{2} = 1701\\Rightarrow n =\\) \\(7\\)\\(,b =\\) \\(9\\)."
+      },
+      {
+        id: "m2-2a-ex9",
+        question: "[Level 1] In \\(\\left( 1 + \\frac{3}{x} \\right)^{n}(1 + x^{2})^{4}\\), the coefficient of \\(x^{6}\\) is \\(256\\). (a) Find \\(n\\). (b) Find the coefficient of \\(x^{- 5}\\).",
+        answer: "(a) \\(n = 8\\)\n(b) \\(83592\\)",
+        steps: "(a) \\(\\frac{9n(n - 1)}{2} + 4 = 256\\Rightarrow n = 8\\). (b) \\((C_{5}^{8})(3^{5}) + (C_{7}^{8})(3^{7})(4) = 83592\\)."
+      },
+      {
+        id: "m2-2a-ex10",
+        question: "[Level 1] [2324-WYK-S4-Midyear-M2-Q2] \\((1 - x)^{m}(1 + 2x)^{n} = 1 - 9x^{2} + \\ldots\\) Find \\(m\\) and \\(n\\).",
+        answer: "\\(n = 3,m = 6\\)",
+        steps: "\\(- m + 2n = 0\\) and \\(\\frac{m(m - 1)}{2} - 2mn + 2n(n - 1) = - 9\\Rightarrow n =\\) \\(3\\)\\(,m = 6\\)."
+      },
+      {
+        id: "m2-2a-ex11",
+        question: "[Level 1] \\((1 + ax)^{6} = \\sum_{r = 0}^{6}{\\alpha_{r}x^{r}}\\) and \\((x + 2b)^{9} = \\sum_{r = 0}^{9}{\\beta_{r}x^{r}}\\). If \\(\\alpha_{1} + \\beta_{8} = 0\\) and \\(\\alpha_{2} - \\beta_{7} + 36 = 0\\), find \\(b\\).",
+        answer: "\\(b = \\pm 2\\)",
+        steps: "\\(6a + 18b = 0\\Rightarrow a = - 3b\\); \\(15a^{2} - 144b^{2} + 36 = 0\\Rightarrow - 9b^{2} + 36 = 0\\Rightarrow b = \\pm 2\\)."
+      },
+      {
+        id: "m2-2a-ex12",
+        question: "[Level 1] (a) Expand \\((1 - 2x)^{m} + (1 - 7x)^{n}\\) up to \\(x^{2}\\). (b) If coefficients of \\(x\\) and \\(x^{2}\\) are \\(- 22\\) and \\(73\\), find \\(m\\) and \\(n\\).",
+        answer: "(a) \\(2 - (2m + 7n)x + \\left\\lbrack 2m(m - 1) + \\frac{49n(n - 1)}{2} \\right\\rbrack x^{2} + \\ldots\\)\n(b) \\(n = 2,m = 4\\)",
+        steps: "(a) \\(2 - (2m + 7n)x + \\left\\lbrack 2m(m - 1) + \\frac{49n(n - 1)}{2} \\right\\rbrack x^{2} + \\ldots\\) (b) \\(n = 2,m = 4\\)."
+      },
+      {
+        id: "m2-2a-ex13",
+        question: "[Level 1] \\((a + 5x)(1 + 4x)^{n} = 11 + 313x + bx^{2} + \\ldots\\) Find \\(a,b\\) and \\(n\\).",
+        answer: "\\(a = 11\\), \\(n = 7\\), \\(b = 3836\\)",
+        steps: "\\(a = 11\\), \\(4(11)n + 5 = 313\\Rightarrow n = 7\\), \\(b = 8(11)(7)(6) + 20(7) = 3836\\)."
+      },
+      {
+        id: "m2-2a-ex14",
+        question: "[Level 2] [2025-DSE-M2-Q1] \\((1 + mx)(1 + 5x)^{n} = \\sum_{k = 0}^{n + 1}{a_{k}x^{k}}\\). If \\(a_{1} = 27\\) and \\(a_{2} = 285\\), find \\(m\\) and \\(n\\).",
+        answer: "\\(n = 6,m = - 3\\)",
+        steps: "\\(5n + m = 27\\) and \\(\\frac{25n(n - 1)}{2} + 5mn = 285\\Rightarrow n = 6,m = - 3\\)."
+      },
+      {
+        id: "m2-2a-ex15",
+        question: "[Level 2] [2526-WYK-S4-Midyear-M2-Q7] \\(m,n > 1\\), coefficient of \\(x\\) in \\((1 + 2x)^{m} + (1 + 3x)^{n}\\) is \\(13\\). Find coefficient of \\(x^{2}\\).",
+        answer: "\\(31\\)",
+        steps: "\\(2m + 3n = 13\\Rightarrow m = 2,n = 3\\Rightarrow \\) Coefficient of \\(x^{2} = 2(2)(1) + \\frac{9(3)(2)}{2} = 31\\)."
+      },
+      {
+        id: "m2-2a-ex16",
+        question: "[Level 2] [2425-WYK-S5-Final-M2-Q1] In \\((2 - 3x)^{n}\\), coefficient of \\(x^{2}\\) is \\(81\\) times the constant term. Find (a) \\(n\\), (b) coefficient of \\(x^{- 1}\\) in \\((2 - 3x)^{n}\\left( 1 + \\frac{2}{x} \\right)^{3}\\).",
+        answer: "(a) \\(n = 9\\)\n(b) \\(251904\\)",
+        steps: "(a) \\(9(2^{n - 3})n(n - 1) = 81(2^{n})\\Rightarrow n = 9\\). (b) \\(512(6) + ( - 6912)(12) + (41472)(8) = 251904\\)."
+      },
+      {
+        id: "m2-2a-ex17",
+        question: "[Level 2] \\(\\left( x^{3} + \\frac{b}{x} \\right)^{12} = \\sum_{k = 0}^{12}{\\mu_{k}x^{4k - 12}}\\). (a) If \\(\\mu_{10} + \\mu_{11} = 240\\), find \\(b\\). (b) Find \\(\\mu_{4}\\).",
+        answer: "(a) \\(b = 2\\)\n(b) \\(\\mu_{4} = 126720\\)",
+        steps: "(a) \\(66b^{2} + 12b - 240 = 0\\Rightarrow b = 2\\). (b) \\(\\mu_{4} = C_{4}^{12}(2)^{8} = 126720\\)."
+      },
+      {
+        id: "m2-2a-ex18",
+        question: "[Level 2] [2526-WYK-S6-FTA-M2-Q1] \\(4(2 + px)(1 + 3x)^{n} = \\sum_{r = 0}^{n + 1}{a_{r}x^{r}}\\). If \\(a_{0} + a_{1} = 132\\) and \\(2a_{1} + a_{2} = 968\\), find \\(p\\) and \\(n\\).",
+        answer: "\\(n = 6,p = - 5\\)",
+        steps: "\\(a_{0} = 8,a_{1} = 24n + 4p,a_{2} = 36n^{2} - 36n + 12np\\Rightarrow p = 31 - 6n\\Rightarrow 36n^{2} - 336n + 720 = 0\\Rightarrow n = 6,p = - 5\\)."
+      },
+      {
+        id: "m2-2a-ex19",
+        question: "[Level 2] [1990-CE-AMath-Q1] \\((1 + 2x - 3x^{2})^{n} = 1 + ax + bx^{2} + \\ldots\\) (a) Express \\(a,b\\) in terms of \\(n\\). (b) If \\(b = 63\\), find \\(n\\).",
+        answer: "(a) \\(a = 2n,b = 2n^{2} - 5n\\)\n(b) \\(n = 7\\)",
+        steps: "(a) \\((1 + 3x)^{n}(1 - x)^{n}\\Rightarrow a = 2n,b = 2n^{2} - 5n\\). (b) \\(2n^{2} - 5n = 63\\Rightarrow n = 7\\)."
+      },
+      {
+        id: "m2-2a-ex20",
+        question: "[Level 2] \\(T_{r}\\) is the coefficient of \\((r + 1)\\)th-term in \\(\\left( ax + \\frac{5}{x^{2}} \\right)^{15}\\) (\\(a < 0\\)). (a) Express \\(T_{r}\\). (b) \\(T_{4}:T_{6} = 25:33\\). Find \\(a\\) and coefficient of \\(x^{12}\\).",
+        answer: "(a) \\(T_{r} = C_{r}^{15}a^{r}5^{15 - r}\\)\n(b) \\(a = - 3\\); coefficient of \\(x^{12}\\) \\(= 358722675\\)",
+        steps: "(a) \\(T_{r} = C_{r}^{15}a^{r}5^{15 - r}\\). (b) \\(a^{2} = 9\\Rightarrow a = - 3\\). \\(3r - 30 = 12\\Rightarrow r = 14\\Rightarrow C_{14}^{15}( - 3)^{14}(5) = 358722675\\)."
+      },
+      {
+        id: "m2-2a-ex21",
+        question: "[Level 2] \\(T_{r}\\) is coefficient of \\(r\\)th-term of \\((x + 1)^{n}\\). If \\(T_{k}:T_{k + 1}:T_{k + 2} = 6:3:1\\), find \\(n\\) and \\(k\\).",
+        answer: "\\(n = 11,k = 8\\)",
+        steps: "\\(\\frac{C_{k - 1}^{n}}{C_{k}^{n}} = 2\\Rightarrow 2n - 3k = - 2\\) and \\(\\frac{C_{k}^{n}}{C_{k + 1}^{n}} = 3\\Rightarrow 3n - 4k = 1\\Rightarrow n = 11,k = 8\\)."
+      },
+      {
+        id: "m2-2a-ex22",
+        question: "[Level 3] (a) Prove coefficient of \\(x^{k}\\) in \\((3 + 2x - x^{2})(1 + x)^{34}\\) is \\(3C_{k}^{35} - C_{k - 1}^{35}\\). (b) If this coefficient is \\(0\\), find \\(k\\).",
+        answer: "(a) Proved.\n(b) \\(k = 27\\)",
+        steps: "(a) \\((3 - x)(1 + x)^{35}\\Rightarrow 3C_{k}^{35} - C_{k - 1}^{35}\\). (b) \\(3 = \\frac{k}{35 - k + 1}\\Rightarrow k = 27\\)."
+      },
+      {
+        id: "m2-2a-ex23",
+        question: "[Level 3] Find the coefficient of \\(x^{20}\\) in the expansion of \\((1 + 2x - x^{2})^{12}\\).",
+        answer: "\\(5346\\)",
+        steps: "\\(\\sum_{r = 0}^{12}{C_{r}^{12}(1 + 2x)^{r}( - x^{2})^{12 - r}}\\) (\\(r \\leq 4\\)): \\(495(2^{4}) - 220(3)(2^{2}) + 66 = 5346\\)."
+      },
+      {
+        id: "m2-2a-ex24",
+        question: "[Level 3] [2324-WYK-S4-Midyear-M2-Q5] (a) Prove by M.I. that \\(1 - r^{3} + r^{6} - \\ldots + ( - 1)^{n - 1}r^{3n - 3} = \\frac{1 - ( - 1)^{n}r^{3n}}{1 + r^{3}}\\). (b) Find coefficient of \\(x^{3}\\) in \\(1 - (3x - 1) + (3x - 1)^{2} - \\ldots + (3x - 1)^{6}\\).",
+        answer: "(a) Proved by mathematical induction.\n(b) \\(- 945\\)",
+        steps: "(a) Standard geometric M.I. proof. (b) Let \\(r = (3x - 1)^{1/3}\\) (\\(n = 7\\)): \\(\\frac{1 + (3x - 1)^{7}}{3x}\\Rightarrow \\) coefficient of \\(x^{3}\\) is \\(C_{3}^{7}( - 1)^{7}3^{3} =\\) \\(- 945\\)."
+      },
+      {
+        id: "m2-2a-ex25",
+        question: "[Level 3] [WYK-2324-S4-Midyear-M2-Q6] \\(T_{r}\\) is coefficient of \\(r\\)th term of \\(\\left( \\frac{1}{3x^{2}} + 6x \\right)^{n}\\) in descending powers. Given \\(T_{5} = 9T_{6} + 243T_{7}\\). (a) Find \\(n\\). (b) Find coefficient of \\(x^{12}\\) in \\(\\left( \\frac{1}{3x^{2}} + 6x \\right)^{n}(9x^{2} - 6x + 1)^{3}\\).",
+        answer: "(a) \\(n = 9\\)\n(b) \\(- 1768635648\\)",
+        steps: "(a) \\(243n^{2} - 1215n - 8748 = 0\\Rightarrow n = 9\\). (b) \\((6x + \\frac{1}{3x^{2}})^{9}(3x - 1)^{6}\\Rightarrow 6^{9}( - 540) + 9(6)^{8}(\\frac{1}{3})(729) = - 1768635648\\)."
+      },
+      {
+        id: "m2-2a-ex26",
+        question: "[Level 3] In \\(\\left( \\frac{x^{2}}{2} + \\frac{2}{x} \\right)^{n}\\), sum of coefficients of \\(5^{th}\\) and \\(6^{th}\\) terms is \\(48\\) times coefficient of \\(7^{th}\\) term. (a) Find \\(n\\). (b) Find coefficient of \\(x^{- 5}\\) in \\(\\left( \\frac{x^{2}}{2} + \\frac{2}{x} \\right)^{n}(12x - 4x^{2} - 9)^{4}\\).",
+        answer: "(a) \\(n = 8\\)\n(b) \\(- 24509952\\)",
+        steps: "(a) \\(2n^{2} - 19n + 24 = 0\\Rightarrow n = 8\\). (b) \\(\\frac{(x^{3} + 4)^{8}(2x - 3)^{8}}{256x^{8}}\\Rightarrow \\frac{1}{256}(C_{1}^{8}4^{7}( - 3)^{8} + 4^{8}C_{3}^{8}2^{3}( - 3)^{5}) = - 24509952\\)."
+      },
+      {
+        id: "m2-2a-ex27",
+        question: "[Level 3] \\((1 + px)^{n} = \\sum_{r = 0}^{n}{a_{r}x^{r}}\\). (a) Show \\(\\frac{a_{r}}{a_{r - 1}} \\geq 1\\) if \\(1 \\leq r \\leq \\frac{(n + 1)p}{p + 1}\\). (b) If \\(a_{k}\\) is the greatest coefficient in \\((3 + 5x)^{18}\\), find \\(k\\).",
+        answer: "(a) Shown.\n(b) \\(k = 11\\)",
+        steps: "(a) \\(\\frac{C_{r}^{n}p^{r}}{C_{r - 1}^{n}p^{r - 1}} = \\frac{p(n - r + 1)}{r} \\geq 1\\). (b) \\(p = \\frac{5}{3},n = 18\\Rightarrow \\frac{19(5/3)}{8/3} = 11.875\\Rightarrow k = 11\\)."
+      },
+      {
+        id: "m2-2a-ex28",
+        question: "[Level 3] (a) Prove \\(C_{r}^{n} + C_{r + 1}^{n} = C_{r + 1}^{n + 1}\\). (b) Prove by M.I. that \\(\\sum_{k = 0}^{n}C_{k}^{n} = 2^{n}\\).",
+        answer: "(a) Proved.\n(b) Proved by mathematical induction.",
+        steps: "(a) Pascal's identity proof via factorials. (b) Base case \\(n = 1\\): \\(2\\). Inductive step splits and pairs using (a) to get \\(2\\sum_{k = 0}^{m}C_{k}^{m} = 2^{m + 1}\\)."
+      },
+      {
+        id: "m2-2a-ex29",
+        question: "[Level 3] (a) By considering \\(2^{n} = (1 + 1)^{n}\\), show \\(\\sum_{k = 0}^{n}C_{k}^{n} = 2^{n}\\). (b) By \\((1 + ( - 1))^{n} = 0\\), show \\(\\sum_{k = 0}^{n}{( - 1)^{k}C_{k}^{n}} = 0\\). (c) By \\((1 + x)^{n}(1 + x)^{n} = (1 + x)^{2n}\\), show \\(\\sum_{k = 0}^{n}{(C_{k}^{n})^{2}} = C_{n}^{2n}\\).",
+        answer: "(a) Shown.\n(b) Shown.\n(c) Shown.",
+        steps: "Compare expansions and equate coefficients of \\(x^{n}\\) in (c) using \\(C_{r}^{n} = C_{n - r}^{n}\\)."
+      },
+      {
+        id: "m2-2a-ex30",
+        question: "[Level 3] (a) Show \\(\\sum_{r = 0}^{n}{(C_{r}^{n})^{2}} = C_{n}^{2n}\\). (b) By \\((1 - x^{2})^{2n}\\), show \\(\\sum_{r = 0}^{2n}{( - 1)^{r}(C_{r}^{2n})^{2}} = ( - 1)^{n}C_{n}^{2n}\\). (c) Prove \\((C_{1}^{2n})^{2} + (C_{3}^{2n})^{2} + \\ldots + (C_{2n - 1}^{2n})^{2} = \\frac{1}{2}(C_{2n}^{4n} + ( - 1)^{n - 1}C_{n}^{2n})\\).",
+        answer: "(a) Shown.\n(b) Shown.\n(c) Proved.",
+        steps: "Subtract equation (2) from equation (1) and divide by \\(2\\)."
+      },
+      {
+        id: "m2-2a-ex31",
+        question: "[Level 2] [2526-WYK-S6-Mock-M2-Q2] \\(\\left( x + \\frac{p}{x} \\right)^{n}(1 + 2x^{2})\\) has constant term \\(0\\). (a) Lincoln claims \\(n\\) must be odd. Do you agree? (b) If \\(a_{1} = 73\\) and \\(a_{2} = - 8p^{2} + 44p + 1140\\), find \\(p\\) and \\(n\\).",
+        answer: "(a) Agree: \\(n\\) must be odd.\n(b) \\(p = 4,n = 9\\)",
+        steps: "(a) \\(n - 2r + 2 \\neq 0\\Rightarrow n\\) must be odd (agree). (b) \\(np = 36\\) and \\(n(n - 1)p^{2} + np = - 8p^{2} + 44p + 1140\\Rightarrow p = 4,n = 9\\)."
+      },
+      {
+        id: "m2-2a-ex32",
+        question: "[Level 2] [2526-WYK-S5-Final-M2-Q2] (a) Show that if \\(\\frac{1}{x^{n}}(x^{3} - 1)^{n}\\) has a constant term, \\(n\\) is a multiple of \\(3\\). (b) Find the constant term in \\(\\frac{1}{x^{9}}(x^{5} - 1)^{7}(x^{3} - 1)^{9}\\).",
+        answer: "(a) Shown.\n(b) \\(- 84\\)",
+        steps: "(a) \\(2n - 3r = 0\\Rightarrow 3 \\mid n\\). (b) \\(r = 6\\Rightarrow C_{6}^{9}( - 1)^{6}( - 1) = - 84\\)."
+      },
+      {
+        id: "m2-2a-ex33",
+        question: "[Level 2] [2026-DSE-M2-Q6] (a) Prove \\(\\left( x + \\frac{1}{x^{2}} \\right)^{n} + 2\\left( x^{2} - \\frac{1}{x} \\right)^{n} = \\frac{(x^{3} + 1)^{2}(x^{6} - 1)^{n}}{x^{3n + 4}}\\). (b) Find least positive integer \\(r\\) such that coefficient of \\(x^{r}\\) in \\(\\left( x + \\frac{1}{x^{2}} \\right)^{10}\\left( x^{2} - \\frac{1}{x} \\right)^{8}\\) is non-zero, and find it. (c) Can there be a non-zero constant term for some \\(n\\)?",
+        answer: "(a) Proved.\n(b) \\(r = 2\\), and the coefficient is \\(14\\)\n(c) No: there is no non-zero constant term for any \\(n\\).",
+        steps: "(a) Combine over \\(x^{3n + 4}\\). (b) Numerator powers are multiples of \\(3\\), denominator is \\(x^{28}\\Rightarrow r = 2\\), coeff \\(= C_{5}^{8}( - 1)^{3} + C_{4}^{8}( - 1)^{4} = 14\\). (c) \\(3m - (3n + 4) = 0\\) has no integer solution; disagreed."
+      },
+      {
+        id: "m2-2a-ex34",
+        question: "[Level 3] \\(\\left( x + \\frac{a}{x} \\right)^{n}\\) has no constant term. (a) Explain why \\(n\\) is odd. (b) Coefficient of \\(x\\) is twice coefficient of \\(\\frac{1}{x}\\) and coefficient of \\(x^{3}\\) is \\(\\frac{6}{5}\\) times coefficient of \\(x\\). Find \\(a\\) and \\(n\\).",
+        answer: "(a) \\(n\\) is odd.\n(b) \\(a = \\frac{1}{2},n = 7\\)",
+        steps: "(a) \\(n - 2k \\neq 0\\Rightarrow n\\) is odd. (b) \\(a = \\frac{1}{2}\\), \\(\\frac{n - 1}{n + 3} = \\frac{3}{5}\\Rightarrow n = 7\\)."
+      }
+    ],
+
+    // ---- M2 Chapter 3: More about Trigonometric Functions ----
+    more_about_trigonometric_functions: [
+      {
+        id: "m2-3a-ex1",
+        question: "[Level 1] Given \\(\\tan\\theta + \\sec\\theta = \\frac{2}{5}\\). By considering \\(\\tan\\theta - \\sec\\theta\\), find \\(\\tan\\theta\\) and \\(\\csc\\theta\\).",
+        answer: "\\(\\tan\\theta = - \\frac{21}{20}\\), \\(\\csc\\theta = - \\frac{29}{21}\\)",
+        steps: "\\(\\tan\\theta - \\sec\\theta = - \\frac{5}{2}\\Rightarrow \\tan\\theta = - \\frac{21}{20},\\sec\\theta = \\frac{29}{20}\\Rightarrow \\csc\\theta = - \\frac{29}{21}\\)."
+      },
+      {
+        id: "m2-3a-ex2",
+        question: "[Level 2] Given \\(\\sin x\\cos x = \\frac{1}{8}\\), where \\(\\sin x > \\cos x > 0\\). Find (a) \\(\\sin x + \\cos x\\), (b) \\(\\sin x - \\cos x\\), (c) \\(\\sec x + \\tan x\\).",
+        answer: "(a) \\(\\frac{\\sqrt{5}}{2}\\)\n(b) \\(\\frac{\\sqrt{3}}{2}\\)\n(c) \\((2 + \\sqrt{3})(2 + \\sqrt{5})\\)",
+        steps: "(a) \\(\\frac{\\sqrt{5}}{2}\\). (b) \\(\\frac{\\sqrt{3}}{2}\\). (c) \\(\\frac{1 + \\sin x}{\\cos x} = \\frac{4 + \\sqrt{5} + \\sqrt{3}}{\\sqrt{5} - \\sqrt{3}} = (2 + \\sqrt{3})(2 + \\sqrt{5})\\)."
+      },
+      {
+        id: "m2-3a-ex3",
+        question: "[Level 2] Prove (a) \\((2\\sin x + \\sec x)(2\\cos x + \\csc x) = \\frac{(2\\sin x\\cos x + 1)^{2}}{\\sin x\\cos x}\\), (b) \\(\\frac{1 + \\sin x + \\cos x}{1 + \\sin x - \\cos x} = \\frac{1 + \\cos x + \\cot x + \\csc x}{1 + \\sin x}\\), (c) \\(\\frac{\\sec x + \\tan x}{\\sec x - \\tan x} = 2\\tan^{2}x + 2\\sec x\\tan x + 1\\).",
+        answer: "(a) Proved.\n(b) Proved.\n(c) Proved.",
+        steps: "Standard trigonometric identity proofs using \\(\\sin^{2}x + \\cos^{2}x = 1\\) and \\(\\sec^{2}x - \\tan^{2}x = 1\\)."
+      },
+      {
+        id: "m2-3a-ex4",
+        question: "[Level 2] Solve for \\(0 \\leq \\theta \\leq 2\\pi\\): (a) \\(4\\csc 2\\theta - 2\\sin 2\\theta = 3\\sqrt{2}\\), (b) \\(\\sec^{2}\\theta\\csc\\theta - \\frac{\\sin\\theta}{\\cos^{2}\\theta} - 2\\sin\\theta + \\csc\\theta = - 3\\).",
+        answer: "(a) \\(\\theta = \\frac{\\pi}{8},\\frac{3\\pi}{8},\\frac{9\\pi}{8},\\frac{11\\pi}{8}\\)\n(b) \\(\\theta = \\frac{7\\pi}{6},\\frac{11\\pi}{6}\\)",
+        steps: "(a) \\(2\\sin^{2}2\\theta + 3\\sqrt{2}\\sin 2\\theta - 4 = 0\\Rightarrow \\sin 2\\theta = \\frac{\\sqrt{2}}{2}\\Rightarrow \\theta = \\frac{\\pi}{8},\\frac{3\\pi}{8},\\frac{9\\pi}{8},\\frac{11\\pi}{8}\\). (b) \\(2\\sin^{2}\\theta - 3\\sin\\theta - 2 = 0\\Rightarrow \\sin\\theta = - \\frac{1}{2}\\Rightarrow \\theta = \\frac{7\\pi}{6},\\frac{11\\pi}{6}\\)."
+      },
+      {
+        id: "m2-3a-ex5",
+        question: "[Level 1] (a) Prove \\(\\sin x + \\cos x = \\sqrt{2}\\sin\\left( x + \\frac{\\pi}{4} \\right)\\). (b) Solve \\(\\sqrt{2}\\csc x + \\cot x = - 1\\) for \\(0 \\leq x \\leq 2\\pi\\).",
+        answer: "(a) Proved.\n(b) \\(x = \\frac{5\\pi}{4}\\)",
+        steps: "(a) Expand R.H.S. (b) \\(\\sin\\left( x + \\frac{\\pi}{4} \\right) = - 1\\Rightarrow x = \\frac{5\\pi}{4}\\)."
+      },
+      {
+        id: "m2-3a-ex6",
+        question: "[Level 2] (a) If \\(\\tan A - 3\\cot B = 0\\), prove \\(\\cos(A - B) + 2\\cos(A + B) = 0\\). (b) Solve \\(\\tan\\left( x + \\frac{\\pi}{5} \\right) = 3\\cot\\left( \\frac{2\\pi}{15} - x \\right)\\) for \\(0 \\leq x \\leq 2\\pi\\).",
+        answer: "(a) Proved.\n(b) \\(x = \\frac{7\\pi}{15}\\) or \\(\\frac{22\\pi}{15}\\)",
+        steps: "(a) \\(\\sin A\\sin B = 3\\cos A\\cos B\\). (b) \\(\\cos\\left( 2x + \\frac{\\pi}{15} \\right) = - 1\\Rightarrow x = \\frac{7\\pi}{15}\\) or \\(\\frac{22\\pi}{15}\\)."
+      },
+      {
+        id: "m2-3a-ex7",
+        question: "[Level 2] Solve for \\(0 \\leq \\theta \\leq \\pi\\): (a) \\(\\frac{\\cos 3\\theta}{\\sec\\theta} + \\frac{\\sin 3\\theta}{\\csc\\theta} = \\frac{\\sqrt{3}}{2}\\), (b) \\(\\sqrt{3}(\\tan\\theta + \\tan 3\\theta) + \\tan\\theta\\tan 3\\theta = 1\\), (c) \\(\\sec\\left( \\frac{\\pi}{4} + \\theta \\right) + \\csc\\left( \\frac{3\\pi}{4} - \\theta \\right) = 4\\sqrt{2}\\cos\\theta\\), (d) \\(\\sin\\left( \\frac{\\pi}{5} + \\theta \\right)\\cos\\left( \\frac{\\pi}{4} - 2\\theta \\right) + \\cos\\left( \\frac{\\pi}{5} + \\theta \\right)\\sin\\left( \\frac{\\pi}{4} - 2\\theta \\right) = \\cos\\left( \\frac{\\pi}{10} - 2\\theta \\right)\\).",
+        answer: "(a) \\(\\theta = \\frac{\\pi}{12},\\frac{11\\pi}{12}\\)\n(b) \\(\\theta = \\frac{\\pi}{24},\\frac{7\\pi}{24},\\frac{13\\pi}{24},\\frac{19\\pi}{24}\\)\n(c) \\(\\theta = \\frac{\\pi}{2},\\frac{\\pi}{6},\\frac{5\\pi}{6}\\)\n(d) \\(\\theta = \\frac{\\pi}{60},\\frac{3\\pi}{20},\\frac{41\\pi}{60}\\)",
+        steps: "(a) \\(\\cos 2\\theta = \\frac{\\sqrt{3}}{2}\\Rightarrow \\theta = \\frac{\\pi}{12},\\frac{11\\pi}{12}\\). (b) \\(\\tan 4\\theta = \\frac{1}{\\sqrt{3}}\\Rightarrow \\theta =\\) \\(\\frac{\\pi}{24},\\frac{7\\pi}{24},\\frac{13\\pi}{24},\\frac{19\\pi}{24}\\). (c) \\(\\theta = \\frac{\\pi}{2},\\frac{\\pi}{6},\\frac{5\\pi}{6}\\). (d) \\(\\sin\\left( \\frac{9\\pi}{20} - \\theta \\right) = \\sin\\left( \\frac{2\\pi}{5} + 2\\theta \\right)\\Rightarrow \\theta = \\frac{\\pi}{60},\\frac{3\\pi}{20},\\frac{41\\pi}{60}\\)."
+      },
+      {
+        id: "m2-3a-ex8",
+        question: "[Level 2] Prove (a) \\(\\cos^{2}B + \\cos^{2}(A + B) - 2\\cos A\\cos B\\cos(A + B) = \\sin^{2}A\\), (b) \\(\\frac{\\cos A - \\cos B\\cos(A - B)}{\\sin A - \\cos B\\sin(A - B)} = \\tan(B - A)\\), (c) \\(\\sin 4A\\sin 2A(1 - \\cos 2A) + \\cos 4A\\cos 2A(1 + \\cos 2A) = \\cos 2A(1 + \\cos 6A)\\).",
+        answer: "(a) Proved.\n(b) Proved.\n(c) Proved.",
+        steps: "Compound-angle expansions and factoring."
+      },
+      {
+        id: "m2-3a-ex9",
+        question: "[Level 3] Let \\(\\frac{\\pi}{2} < \\theta < \\frac{3\\pi}{2}\\). (a) Prove \\(\\frac{\\tan\\theta + \\sec\\theta - 1}{\\tan\\theta - \\sec\\theta + 1} = \\tan\\theta + \\sec\\theta\\). (b) Find \\(h,k\\) (\\(0 < k < \\frac{\\pi}{2}\\)) such that \\(h\\sin(\\theta + k) \\equiv \\sin\\theta + \\sqrt{3}\\cos\\theta\\). (c) Solve \\(\\frac{\\tan\\theta + \\sec\\theta - 1}{\\tan\\theta - \\sec\\theta + 1} + \\sqrt{3} = 0\\).",
+        answer: "(a) Proved.\n(b) \\(h = 2,k = \\frac{\\pi}{3}\\)\n(c) \\(\\theta = \\frac{5\\pi}{6}\\)",
+        steps: "(a) Replace \\(1\\) with \\(\\sec^{2}\\theta - \\tan^{2}\\theta\\). (b) \\(h = 2,k = \\frac{\\pi}{3}\\). (c) \\(2\\sin\\left( \\theta + \\frac{\\pi}{3} \\right) = - 1\\Rightarrow \\theta = \\frac{5\\pi}{6}\\)."
+      },
+      {
+        id: "m2-3a-ex10",
+        question: "[Level 1] [2526-WYK-S4-Midyear-M2-Q4] Let \\(0 < \\theta < \\pi\\). (a) Prove \\(\\frac{\\tan\\theta}{1 - \\tan\\theta} + \\frac{\\cot\\theta}{1 + \\cot\\theta} = \\sec 2\\theta\\). (b) Solve \\(\\frac{\\tan\\theta}{1 - \\tan\\theta} + \\frac{\\cot\\theta}{1 + \\cot\\theta} = 2\\).",
+        answer: "(a) Proved.\n(b) \\(\\theta = \\frac{\\pi}{3}\\) or \\(\\frac{5\\pi}{6}\\)",
+        steps: "(a) \\(\\frac{\\tan^{2}\\theta + 1}{1 - \\tan^{2}\\theta} = \\frac{1}{\\cos 2\\theta} = \\sec 2\\theta\\). (b) \\(\\cos 2\\theta = \\frac{1}{2}\\Rightarrow \\theta = \\frac{\\pi}{3}\\) or \\(\\frac{5\\pi}{6}\\)."
+      },
+      {
+        id: "m2-3a-ex11",
+        question: "[Level 1] Prove (a) \\(\\tan 2x - 2\\tan 2x\\sin^{2}x = \\sin 2x\\), (b) \\(\\frac{(\\sin x + \\cos x)^{2}}{\\sec 2x + \\tan 2x} = \\cos 2x\\), (c) \\(\\frac{\\cos^{2}\\theta - \\cot\\theta}{\\cos^{2}\\theta + \\cot\\theta} = 1 - \\frac{4}{\\sin 2\\theta + 2}\\).",
+        answer: "(a) Proved.\n(b) Proved.\n(c) Proved.",
+        steps: "Double-angle identities."
+      },
+      {
+        id: "m2-3a-ex12",
+        question: "[Level 2] Solve for \\(0 \\leq \\theta \\leq 2\\pi\\): (a) \\(\\cos 3\\theta\\cos\\theta = - \\sin\\theta(\\sin 3\\theta + \\sin\\theta)\\), (b) \\(3\\tan 2\\theta - 6\\tan 2\\theta\\sin^{2}\\theta = 4\\sin\\theta\\cos\\theta\\), (c) \\(\\sec\\theta = 2\\sin\\theta(1 + \\tan\\theta)\\).",
+        answer: "(a) \\(\\theta = \\frac{\\pi}{2},\\frac{3\\pi}{2}\\)\n(b) \\(\\theta = 0,\\frac{\\pi}{2},\\pi,\\frac{3\\pi}{2},2\\pi\\)\n(c) \\(\\theta = \\frac{\\pi}{8},\\frac{5\\pi}{8},\\frac{9\\pi}{8},\\frac{13\\pi}{8}\\)",
+        steps: "(a) \\(\\sin\\theta = \\pm 1\\Rightarrow \\theta = \\frac{\\pi}{2},\\frac{3\\pi}{2}\\). (b) \\(\\sin 2\\theta = 0\\Rightarrow \\theta =\\) \\(0,\\frac{\\pi}{2},\\pi,\\frac{3\\pi}{2},2\\pi\\). (c) \\(\\tan 2\\theta = 1\\Rightarrow \\theta =\\) \\(\\frac{\\pi}{8},\\frac{5\\pi}{8},\\frac{9\\pi}{8},\\frac{13\\pi}{8}\\)."
+      },
+      {
+        id: "m2-3a-ex13",
+        question: "[Level 2] [2015-DSE-M2-Q7] (a) Prove \\(\\sin^{2}x\\cos^{2}x = \\frac{1 - \\cos 4x}{8}\\). (b) Let \\(f(x) = \\sin^{4}x + \\cos^{4}x\\). (i) Express \\(f(x)\\) as \\(A\\cos Bx + C\\). (ii) Solve \\(8f(x) = 7\\) for \\(0 \\leq x \\leq \\frac{\\pi}{2}\\).",
+        answer: "(a) Proved.\n(b)(i) \\(f(x) = \\frac{1}{4}\\cos 4x + \\frac{3}{4}\\)\n(b)(ii) \\(x = \\frac{\\pi}{12}\\) or \\(\\frac{5\\pi}{12}\\)",
+        steps: "(a) \\(\\frac{\\sin^{2}2x}{4} = \\frac{1 - \\cos 4x}{8}\\). (b) (i) \\(\\frac{1}{4}\\cos 4x + \\frac{3}{4}\\). (ii) \\(\\cos 4x = \\frac{1}{2}\\Rightarrow x = \\frac{\\pi}{12}\\) or \\(\\frac{5\\pi}{12}\\)."
+      },
+      {
+        id: "m2-3a-ex14",
+        question: "[Level 2] [2024-DSE-M2-Q4] (a) Prove \\(\\csc 2x - \\cot 2x = \\tan x\\). (b) Solve \\((\\csc 3\\theta - \\cot 3\\theta)(\\csc\\theta - \\cot\\theta) = 1\\) for \\(\\frac{\\pi}{6} < \\theta < \\frac{\\pi}{3}\\).",
+        answer: "(a) Proved.\n(b) \\(\\theta = \\frac{\\pi}{4}\\)",
+        steps: "(a) \\(\\frac{1 - \\cos 2x}{\\sin 2x} = \\tan x\\). (b) \\(\\tan\\left( \\frac{3\\theta}{2} \\right)\\tan\\left( \\frac{\\theta}{2} \\right) = 1\\Rightarrow \\theta = \\frac{\\pi}{4}\\)."
+      },
+      {
+        id: "m2-3a-ex15",
+        question: "[Level 2] [WYK-2324-S4-Final-I-Q4] (a) Prove \\(\\sec 2x - \\tan 2x = \\tan\\left( \\frac{\\pi}{4} - x \\right)\\). (b) Solve \\(\\sec 2x + \\tan 2x = \\sqrt{3}\\) for \\(0 < x < \\frac{\\pi}{2}\\).",
+        answer: "(a) Proved.\n(b) \\(x = \\frac{\\pi}{12}\\)",
+        steps: "(a) \\(\\frac{1 - \\sin 2x}{\\cos 2x} = \\frac{\\cos x - \\sin x}{\\cos x + \\sin x} = \\tan\\left( \\frac{\\pi}{4} - x \\right)\\). (b) \\(\\tan\\left( x + \\frac{\\pi}{4} \\right) = \\sqrt{3}\\Rightarrow x = \\frac{\\pi}{12}\\)."
+      },
+      {
+        id: "m2-3a-ex16",
+        question: "[Level 2] [2425-WYK-S5-Final-M2-Q3] (a) Prove \\(\\csc 2x + \\cot 2x = \\cot x\\). (b) Solve \\(\\tan 4x(\\csc 2x - \\cot 2x) = 1\\) for \\(0 < x < \\frac{\\pi}{2}\\).",
+        answer: "(a) Proved.\n(b) \\(x = \\frac{\\pi}{10}\\) or \\(\\frac{3\\pi}{10}\\)",
+        steps: "(a) \\(\\frac{1 + \\cos 2x}{\\sin 2x} = \\cot x\\). (b) \\(\\tan 4x = \\cot x\\Rightarrow x = \\frac{\\pi}{10}\\) or \\(\\frac{3\\pi}{10}\\)."
+      },
+      {
+        id: "m2-3a-ex17",
+        question: "[Level 2] [2526-WYK-S6-Mock-M2-Q4] (a) Prove \\(\\frac{\\tan^{2}x + \\cot^{2}x}{\\sec^{2}x + \\csc^{2}x} = \\frac{3}{4} + \\frac{1}{4}\\cos 4x\\). (b) Solve \\(\\frac{2}{\\sec^{2}x + \\csc^{2}x} - \\frac{5}{4}\\cos 4x = 1\\) for \\(0 < x < \\frac{\\pi}{2}\\).",
+        answer: "(a) Proved.\n(b) \\(x = \\frac{\\pi}{6}\\) or \\(\\frac{\\pi}{3}\\)",
+        steps: "(a) \\(\\sin^{4}x + \\cos^{4}x = 1 - \\frac{1}{2}\\sin^{2}2x = \\frac{3}{4} + \\frac{1}{4}\\cos 4x\\). (b) \\(\\cos 4x = - \\frac{1}{2}\\Rightarrow x = \\frac{\\pi}{6}\\) or \\(\\frac{\\pi}{3}\\)."
+      },
+      {
+        id: "m2-3a-ex18",
+        question: "[Level 2] Let \\(\\frac{\\pi}{8} < x < \\frac{\\pi}{4}\\). (a) Find \\(\\alpha,\\beta\\) such that \\(\\cot x - \\tan x = \\alpha\\cot\\beta x\\). (b) Solve \\(\\cot x + 8 = \\tan x + 2\\tan 2x + 4\\tan 4x\\).",
+        answer: "(a) \\(\\alpha = 2,\\beta = 2\\)\n(b) \\(x = \\frac{7\\pi}{32}\\)",
+        steps: "(a) \\(\\alpha = 2,\\beta = 2\\). (b) Telescopes to \\(8\\cot 8x = - 8\\Rightarrow \\tan 8x = - 1\\Rightarrow x = \\frac{7\\pi}{32}\\)."
+      },
+      {
+        id: "m2-3a-ex19",
+        question: "[Level 3] Let \\(- \\frac{\\pi}{4} < \\theta < \\frac{\\pi}{4}\\). (a) Prove \\(\\frac{\\sin\\theta}{1 + \\tan\\theta} - \\frac{\\cos\\theta}{1 - \\tan\\theta} = \\frac{\\cos\\theta}{1 - 2\\cos^{2}\\theta}\\). (b) Solve \\(\\frac{\\sin(\\pi + \\theta)}{1 + \\tan\\theta} - \\frac{\\cos(\\pi + \\theta)}{1 - \\tan\\theta} = 2\\cos\\theta\\).",
+        answer: "(a) Proved.\n(b) \\(\\theta = \\frac{\\pi}{6}\\) or \\(- \\frac{\\pi}{6}\\)",
+        steps: "(a) \\(\\frac{- \\cos\\theta}{\\cos^{2}\\theta - \\sin^{2}\\theta} = \\frac{\\cos\\theta}{1 - 2\\cos^{2}\\theta}\\). (b) \\(\\cos\\theta(3 - 4\\cos^{2}\\theta) = 0\\Rightarrow \\theta = \\frac{\\pi}{6}\\) or \\(- \\frac{\\pi}{6}\\)."
+      },
+      {
+        id: "m2-3a-ex20",
+        question: "[Level 3] (a) Prove \\(\\frac{1 + \\cos 2x - \\sin 2x}{1 - \\cos 2x - \\sin 2x} = - \\cot x\\). (b) Solve \\(\\frac{1 + \\cos 2x - \\sin 2x}{1 - \\cos 2x - \\sin 2x} + \\frac{1 - \\cos 2x - \\sin 2x}{1 + \\cos 2x - \\sin 2x} - \\frac{1 + \\cos 2x + \\sin 2x}{1 - \\cos 2x + \\sin 2x} = - \\frac{7\\sqrt{3}}{3}\\) for \\(0 \\leq x \\leq \\frac{\\pi}{4}\\).",
+        answer: "(a) Proved.\n(b) \\(x = \\frac{\\pi}{6}\\)",
+        steps: "(a) \\(\\frac{2\\cos x(\\cos x - \\sin x)}{2\\sin x(\\sin x - \\cos x)} = - \\cot x\\). (b) \\(- \\cot x - \\tan x - \\cot x = - \\frac{7\\sqrt{3}}{3}\\Rightarrow 6\\cot^{2}x - 7\\sqrt{3}\\cot x + 3 = 0\\Rightarrow \\cot x = \\sqrt{3}\\Rightarrow x = \\frac{\\pi}{6}\\)."
+      }
+    ]
   }
 };
