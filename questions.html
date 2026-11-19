@@ -54,6 +54,17 @@
           <div id="step-type" hidden>
             <h3 class="ml-step-title" id="title-type" tabindex="-1">3. Choose a question type</h3>
             <div class="ml-choices" id="type-choices"></div>
+            <div class="ml-gen-toggle" id="gen-toggle-wrap">
+              <label class="ml-gen-toggle__row">
+                <input type="checkbox" id="gen-toggle">
+                <span>Generate fresh questions instead of using the default set</span>
+              </label>
+            
+              <div class="ml-gen-count" id="gen-count-wrap" hidden>
+                <label for="gen-count">Number of questions to generate:</label>
+                <input type="number" id="gen-count" min="1" max="100" value="10">
+              </div>
+            </div>
             <button type="button" class="ml-linkbtn ml-back" id="back-to-topics-from-types">← Change topic</button>
           </div>
 
