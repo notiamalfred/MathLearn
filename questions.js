@@ -1,4 +1,4 @@
-/* Practice questions: sign in -> choose Core or M2 -> choose a topic -> do the questions.
+/* Practice questions: sign in -> choose Core or M2 -> choose a topic -> (choose a question type) -> do the questions.
    The questions themselves live in question-data.js (QUESTIONS_DATA) and are shown exactly as written. */
 (function () {
   "use strict";
@@ -23,8 +23,10 @@
   const $ = (id) => document.getElementById(id);
   const els = {
     status: $("status"), app: $("app"), crumbs: $("crumbs"),
-    stepSyllabus: $("step-syllabus"), stepTopic: $("step-topic"), stepQuiz: $("step-quiz"),
-    titleSyllabus: $("title-syllabus"), titleTopic: $("title-topic"), titleQuiz: $("title-quiz"),
+    stepSyllabus: $("step-syllabus"), stepTopic: $("step-topic"), stepType: $("step-type"), stepQuiz: $("step-quiz"),
+    titleSyllabus: $("title-syllabus"), titleTopic: $("title-topic"), titleType: $("title-type"), titleQuiz: $("title-quiz"),
+    typeChoices: $("type-choices"), backToTopicsFromTypes: $("back-to-topics-from-types"),
+    backToTypes: $("back-to-types"), doneTypes: $("done-types"), saveLabel: $("save-label"),
     syllabusChoices: $("syllabus-choices"), topicChoices: $("topic-choices"), topicEmpty: $("topic-empty"),
     backToSyllabus: $("back-to-syllabus"), backToTopics: $("back-to-topics"),
     quizBody: $("quiz-body"), progress: $("progress"), bar: $("bar"),
@@ -66,6 +68,27 @@
     return Object.keys(group).filter((k) => Array.isArray(group[k]) && group[k].length > 0);
   }
 
+  // ---- question types ---------------------------------------------------------
+  // A question may carry  type: "Centers of Triangle"  in question-data.js. A topic offers a choice of types
+  // when its questions use two or more different types (shown in the order they first appear).
+  // If only some questions have a type, the rest are grouped under "Other".
+  const OTHER_TYPE = "Other";
+  function typeOfQuestion(q) { return q.type || OTHER_TYPE; }
+  function typesOf(groupKey, topicKey) {
+    const qs = ((window.__ML_QUESTIONS || {})[groupKey] || {})[topicKey] || [];
+    if (!qs.some((q) => q.type)) return [];
+    const out = [];
+    qs.forEach((q) => { const t = typeOfQuestion(q); if (!out.includes(t)) out.push(t); });
+    return out.length >= 2 ? out : [];
+  }
+  function questionsFor(groupKey, topicKey, type) {
+    const qs = window.__ML_QUESTIONS[groupKey][topicKey];
+    return type ? qs.filter((q) => typeOfQuestion(q) === type) : qs;
+  }
+  function slug(text) { return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+  function progressKeyFor(topicKey, type) { return type ? topicKey + "#" + slug(type) : topicKey; }
+  function scopeWord() { return state.type ? "question type" : "topic"; }
+
   // Load the question bank only now that sign-in is confirmed.
   function loadQuestionData() {
     return new Promise((resolve, reject) => {
@@ -101,7 +124,9 @@
   // ---- state & rendering -----------------------------------------------------
   // `list` is the questions of the current topic in the order this person sees them.
   // `saved` is true when they chose to keep their progress for this topic.
-  const state = { group: null, topic: null, index: 0, revealed: false, list: [], saved: false, userId: null, loadToken: 0 };
+  // `type` is the chosen question type (null = all questions of the topic); `hasTypes` says whether this topic offers a choice.
+  // `progressKey` is what saved progress is filed under: the topic key, or "topic#type-name" for one question type.
+  const state = { group: null, topic: null, type: null, hasTypes: false, progressKey: null, index: 0, revealed: false, list: [], saved: false, userId: null, loadToken: 0 };
 
   // ---- order & saved progress -------------------------------------------------
   // Fisher-Yates shuffle (returns a new array).
@@ -151,7 +176,7 @@
   function persistProgress() {
     if (!state.saved) return;
     const row = {
-      user_id: state.userId, syllabus: state.group, topic: state.topic,
+      user_id: state.userId, syllabus: state.group, topic: state.progressKey,
       question_order: state.list.map((q) => q.id),
       position: state.index,
       updated_at: new Date().toISOString(),
@@ -164,7 +189,7 @@
 
   // Forget the saved progress of the current topic (next visit: a fresh random order).
   function clearProgress() {
-    const { userId, group, topic } = { userId: state.userId, group: state.group, topic: state.topic };
+    const { userId, group, topic } = { userId: state.userId, group: state.group, topic: state.progressKey };
     queueWrite(async () => {
       const { error } = await window.ML.db.from(PROGRESS_TABLE).delete()
         .eq("user_id", userId).eq("syllabus", group).eq("topic", topic);
@@ -176,21 +201,26 @@
     els.saveStatus.classList.toggle("ml-message--error", !!problem);
     els.saveStatus.textContent = problem ||
       (state.saved
-        ? "Saved. When you come back to this topic, the questions will be in this same order and you'll continue from where you stopped."
-        : "Not saved. The questions are shuffled each time you open this topic.");
+        ? "Saved. When you come back to this " + scopeWord() + ", the questions will be in this same order and you'll continue from where you stopped."
+        : "Not saved. The questions are shuffled each time you open this " + scopeWord() + ".");
   }
 
-  function renderCrumbs() {
+  function renderCrumbs(step) {
     els.crumbs.textContent = "";
-    const parts = ["Syllabus"];
-    if (state.group) parts[0] = groupLabel(state.group);
-    if (state.group) parts.push(state.topic ? topicLabel(state.topic) : "Topic");
-    if (state.topic) parts.push("Questions");
-    const currentIdx = state.topic ? 2 : state.group ? 1 : 0;
+    let parts, current;
+    if (step === "syllabus") { parts = ["Syllabus"]; current = 0; }
+    else if (step === "topic") { parts = [groupLabel(state.group), "Topic"]; current = 1; }
+    else if (step === "type") { parts = [groupLabel(state.group), topicLabel(state.topic), "Question type"]; current = 2; }
+    else {
+      parts = [groupLabel(state.group), topicLabel(state.topic)];
+      if (state.hasTypes) parts.push(state.type || "All question types");
+      parts.push("Questions");
+      current = parts.length - 1;
+    }
     parts.forEach((text, i) => {
       const span = document.createElement("span");
       span.textContent = text;
-      if (i === currentIdx) { span.className = "is-current"; span.setAttribute("aria-current", "step"); }
+      if (i === current) { span.className = "is-current"; span.setAttribute("aria-current", "step"); }
       els.crumbs.appendChild(span);
     });
   }
@@ -213,16 +243,18 @@
   function show(step, focusTitle) {
     els.stepSyllabus.hidden = step !== "syllabus";
     els.stepTopic.hidden = step !== "topic";
+    els.stepType.hidden = step !== "type";
     els.stepQuiz.hidden = step !== "quiz";
-    renderCrumbs();
+    els.titleQuiz.textContent = (state.hasTypes ? "4" : "3") + ". Questions";
+    renderCrumbs(step);
     if (focusTitle) {
-      const t = { syllabus: els.titleSyllabus, topic: els.titleTopic, quiz: els.titleQuiz }[step];
+      const t = { syllabus: els.titleSyllabus, topic: els.titleTopic, type: els.titleType, quiz: els.titleQuiz }[step];
       t.focus();
     }
   }
 
   function showSyllabus(focus) {
-    state.group = null; state.topic = null; state.index = 0; state.loadToken++;
+    state.group = null; state.topic = null; state.type = null; state.hasTypes = false; state.index = 0; state.loadToken++;
     els.syllabusChoices.textContent = "";
     GROUPS.forEach((g) => {
       const n = topicsOf(g.key).length;
@@ -233,12 +265,12 @@
   }
 
   function showTopics(groupKey, focus) {
-    state.group = groupKey; state.topic = null; state.index = 0; state.loadToken++;
+    state.group = groupKey; state.topic = null; state.type = null; state.hasTypes = false; state.index = 0; state.loadToken++;
     els.topicChoices.textContent = "";
     const keys = topicsOf(groupKey);
     keys.forEach((k) => {
       const count = window.__ML_QUESTIONS[groupKey][k].length;
-      els.topicChoices.appendChild(choiceButton(topicLabel(k), plural(count, "question"), () => startQuiz(k, true)));
+      els.topicChoices.appendChild(choiceButton(topicLabel(k), plural(count, "question"), () => chooseTopic(k, true)));
     });
     els.topicEmpty.hidden = keys.length > 0;
     if (!keys.length) {
@@ -247,22 +279,44 @@
     show("topic", focus);
   }
 
-  async function startQuiz(topicKey, focus) {
+  // After a topic is picked: topics with several question types ask which one; the others go straight to the questions.
+  function chooseTopic(topicKey, focus) {
+    if (typesOf(state.group, topicKey).length) showTypes(topicKey, focus);
+    else { state.hasTypes = false; startQuiz(topicKey, null, focus); }
+  }
+
+  function showTypes(topicKey, focus) {
+    state.topic = topicKey; state.type = null; state.hasTypes = true; state.index = 0; state.loadToken++;
+    els.typeChoices.textContent = "";
+    const all = window.__ML_QUESTIONS[state.group][topicKey];
+    els.typeChoices.appendChild(choiceButton("All question types", plural(all.length, "question"), () => startQuiz(topicKey, null, true)));
+    typesOf(state.group, topicKey).forEach((t) => {
+      const n = questionsFor(state.group, topicKey, t).length;
+      els.typeChoices.appendChild(choiceButton(t, plural(n, "question"), () => startQuiz(topicKey, t, true)));
+    });
+    show("type", focus);
+  }
+
+  async function startQuiz(topicKey, type, focus) {
     const token = ++state.loadToken;
-    state.topic = topicKey; state.index = 0; state.revealed = false; state.saved = false; state.list = [];
+    state.topic = topicKey; state.type = type; state.progressKey = progressKeyFor(topicKey, type);
+    state.index = 0; state.revealed = false; state.saved = false; state.list = [];
     els.done.hidden = true;
     els.quizBody.hidden = true;
+    els.backToTypes.hidden = !state.hasTypes;
+    els.doneTypes.hidden = !state.hasTypes;
+    els.saveLabel.textContent = "Save my progress in this " + scopeWord();
     els.saveStatus.classList.remove("ml-message--error");
     els.saveStatus.textContent = "Loading…";
     show("quiz", focus);
 
-    const questions = window.__ML_QUESTIONS[state.group][topicKey];
+    const questions = questionsFor(state.group, topicKey, type);
     let saved = null, problem = "";
     try {
-      saved = await loadSavedProgress(state.group, topicKey);
+      saved = await loadSavedProgress(state.group, state.progressKey);
     } catch (err) {
       console.error("Couldn't load saved progress:", err);
-      problem = "We couldn't check your saved progress, so this topic is shuffled and won't be saved this time.";
+      problem = "We couldn't check your saved progress, so these questions are shuffled and won't be saved this time.";
     }
     if (token !== state.loadToken) return; // the person has gone somewhere else meanwhile
 
@@ -341,8 +395,8 @@
     const total = state.list.length;
     els.quizBody.hidden = true;
     els.done.hidden = false;
-    els.doneTitle.textContent = "You've finished " + topicLabel(state.topic) + " (" + groupLabel(state.group) + ").";
-    els.doneText.textContent = "That was all " + plural(total, "question") + " in this topic." +
+    els.doneTitle.textContent = "You've finished " + topicLabel(state.topic) + (state.type ? " – " + state.type : "") + " (" + groupLabel(state.group) + ").";
+    els.doneText.textContent = "That was all " + plural(total, "question") + " in this " + scopeWord() + "." +
       (state.saved ? " Your saved order is kept, and \"Start again\" begins from question 1." : " \"Start again\" gives you a new random order.");
     if (state.saved) { state.index = 0; persistProgress(); }
     els.restart.focus();
@@ -370,6 +424,9 @@
     els.titleQuiz.focus();
   });
   els.doneTopics.addEventListener("click", () => showTopics(state.group, true));
+  els.doneTypes.addEventListener("click", () => showTypes(state.topic, true));
+  els.backToTypes.addEventListener("click", () => showTypes(state.topic, true));
+  els.backToTopicsFromTypes.addEventListener("click", () => showTopics(state.group, true));
   els.backToTopics.addEventListener("click", () => showTopics(state.group, true));
   els.backToSyllabus.addEventListener("click", () => showSyllabus(true));
 

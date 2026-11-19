@@ -184,3 +184,6 @@
 .ml-savehint { margin-bottom: 14px; }
 .ml-qimages { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 14px; }
 .ml-qimage { display: block; max-width: 100%; height: auto; background: #fff; }
+
+/* Back links side by side (Change question type / Change topic) */
+.ml-back .ml-linkbtn + .ml-linkbtn { margin-left: 18px; }
