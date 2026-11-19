@@ -1,10 +1,5 @@
 /* Practice questions: sign in -> choose Core or M2 -> choose a topic -> (choose a question type) -> do the questions.
-   The questions themselves live in question-data.js (QUESTIONS_DATA) and are shown exactly as written.
-
-   NEW: on the "Choose a question type" page a toggle lets the user request freshly
-   generated questions instead of the static set, and choose how many. The setting
-   persists in localStorage under "ml-gen-settings" and applies to every topic the
-   user opens during the session. When OFF (default) the static bank is used. */
+   The questions themselves live in question-data.js (QUESTIONS_DATA) and are shown exactly as written. */
 (function () {
   "use strict";
 
@@ -42,11 +37,6 @@
     done: $("done"), doneTitle: $("done-title"), doneText: $("done-text"),
     restart: $("restart"), doneTopics: $("done-topics"),
     signOut: $("signout"), who: $("user"),
-
-    // NEW: generation-mode UI
-    genToggle: $("gen-toggle"),
-    genCountWrap: $("gen-count-wrap"),
-    genCount: $("gen-count"),
   };
 
   function fail(text) {
@@ -100,17 +90,6 @@
   function progressKeyFor(topicKey, type) { return type ? topicKey + "#" + slug(type) : topicKey; }
   function scopeWord() { return state.type ? "question type" : "topic"; }
 
-  // ---- NEW: generator bridge -------------------------------------------------
-  // question-generator.js is loaded via a <script type="module"> in questions.html
-  // that sets window.__ML_GENERATOR__. If it's absent we simply fall back to the
-  // static bank.
-   function generateQuestionsForTopic(groupKey, topicKey, count, type) {
-     if (typeof window.__ML_GENERATOR__ === "function") {
-       return window.__ML_GENERATOR__(groupKey, topicKey, count, type);
-     }
-     return [];
-   }
-
   // Load the question bank only now that sign-in is confirmed.
   function loadQuestionData() {
     return new Promise((resolve, reject) => {
@@ -148,52 +127,7 @@
   // `saved` is true when they chose to keep their progress for this topic.
   // `type` is the chosen question type (null = all questions of the topic); `hasTypes` says whether this topic offers a choice.
   // `progressKey` is what saved progress is filed under: the topic key, or "topic#type-name" for one question type.
-  // NEW: `generateMode` mirrors the toggle; `generateCount` is how many questions to generate.
-  const state = {
-    group: null, topic: null, type: null, hasTypes: false, progressKey: null,
-    index: 0, revealed: false, list: [], saved: false, userId: null, loadToken: 0,
-    generateMode: false, generateCount: 10,
-  };
-
-  // ---- NEW: generation-mode persistence & list builder -----------------------
-  const GEN_STORAGE_KEY = "ml-gen-settings";
-
-  function loadGenSettings() {
-    try {
-      const raw = localStorage.getItem(GEN_STORAGE_KEY);
-      if (!raw) return;
-      const s = JSON.parse(raw);
-      state.generateMode = !!s.enabled;
-      const n = parseInt(s.count, 10);
-      state.generateCount = Math.max(1, Math.min(100, isNaN(n) ? 10 : n));
-    } catch (e) { /* ignore */ }
-  }
-
-  function saveGenSettings() {
-    try {
-      localStorage.setItem(GEN_STORAGE_KEY, JSON.stringify({
-        enabled: state.generateMode,
-        count: state.generateCount,
-      }));
-    } catch (e) { /* ignore */ }
-  }
-
-  function syncGenUI() {
-    if (els.genToggle) els.genToggle.checked = state.generateMode;
-    if (els.genCount) els.genCount.value = state.generateCount;
-    if (els.genCountWrap) els.genCountWrap.hidden = !state.generateMode;
-  }
-
-  // Return the questions to show for the current topic/type. When generation is on,
-  // ask the generator; if it returns nothing (topic has no generator), fall back to
-  // the static bank so the UI never ends up empty.
-  function buildQuestionList(groupKey, topicKey, type) {
-    if (state.generateMode) {
-      const generated = generateQuestionsForTopic(groupKey, topicKey, state.generateCount, type);
-      if (generated.length) return generated;
-    }
-    return questionsFor(groupKey, topicKey, type);
-  }
+  const state = { group: null, topic: null, type: null, hasTypes: false, progressKey: null, index: 0, revealed: false, list: [], saved: false, userId: null, loadToken: 0 };
 
   // ---- order & saved progress -------------------------------------------------
   // Fisher-Yates shuffle (returns a new array).
@@ -354,8 +288,6 @@
 
   function showTypes(topicKey, focus) {
     state.topic = topicKey; state.type = null; state.hasTypes = true; state.index = 0; state.loadToken++;
-    // NEW: reflect the persisted generation toggle on the type page.
-    syncGenUI();
     els.typeChoices.textContent = "";
     const all = window.__ML_QUESTIONS[state.group][topicKey];
     els.typeChoices.appendChild(choiceButton("All question types", plural(all.length, "question"), () => startQuiz(topicKey, null, true)));
@@ -379,9 +311,7 @@
     els.saveStatus.textContent = "Loading…";
     show("quiz", focus);
 
-    // NEW: honour the generation toggle — buildQuestionList returns generated
-    // questions when the toggle is on, otherwise the static set (unchanged).
-    const questions = buildQuestionList(state.group, topicKey, type);
+    const questions = questionsFor(state.group, topicKey, type);
     let saved = null, problem = "";
     try {
       saved = await loadSavedProgress(state.group, state.progressKey);
@@ -500,26 +430,6 @@
   els.backToTopicsFromTypes.addEventListener("click", () => showTopics(state.group, true));
   els.backToTopics.addEventListener("click", () => showTopics(state.group, true));
   els.backToSyllabus.addEventListener("click", () => showSyllabus(true));
-
-  // ---- NEW: generation-mode events ------------------------------------------
-  loadGenSettings();
-  syncGenUI();
-
-  if (els.genToggle) {
-    els.genToggle.addEventListener("change", () => {
-      state.generateMode = els.genToggle.checked;
-      if (els.genCountWrap) els.genCountWrap.hidden = !state.generateMode;
-      saveGenSettings();
-    });
-  }
-
-  if (els.genCount) {
-    els.genCount.addEventListener("input", () => {
-      const v = parseInt(els.genCount.value, 10);
-      state.generateCount = Math.max(1, Math.min(100, isNaN(v) ? 10 : v));
-      saveGenSettings();
-    });
-  }
 
   // ---- start-up ------------------------------------------------------------------
   async function main() {
