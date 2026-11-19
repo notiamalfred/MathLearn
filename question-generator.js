@@ -149,4 +149,4 @@ function generateQuestions(topicKey, count = 3, type = null) {
   return out;
 }
 
-export { generateQuestions };
+window.__ML_GENERATOR__ = generateQuestions;
