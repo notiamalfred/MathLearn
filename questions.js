@@ -1,5 +1,7 @@
 /* Practice questions: sign in -> choose Core or M2 -> choose a topic -> (choose a question type) -> do the questions.
-   The questions themselves live in question-data.js (QUESTIONS_DATA) and are shown exactly as written. */
+   The questions themselves live in question-data.js (QUESTIONS_DATA) and are shown exactly as written.
+   On the question-type step the person can instead tick "Generate fresh questions": question-generator.js
+   (window.QuestionGenerator) then makes new questions in the same formats. */
 (function () {
   "use strict";
 
@@ -27,6 +29,7 @@
     stepSyllabus: $("step-syllabus"), stepTopic: $("step-topic"), stepType: $("step-type"), stepQuiz: $("step-quiz"),
     titleSyllabus: $("title-syllabus"), titleTopic: $("title-topic"), titleType: $("title-type"), titleQuiz: $("title-quiz"),
     typeChoices: $("type-choices"), backToTopicsFromTypes: $("back-to-topics-from-types"),
+    genWrap: $("gen-toggle-wrap"), genToggle: $("gen-toggle"), genCountWrap: $("gen-count-wrap"), genCount: $("gen-count"),
     backToTypes: $("back-to-types"), doneTypes: $("done-types"), saveLabel: $("save-label"),
     syllabusChoices: $("syllabus-choices"), topicChoices: $("topic-choices"), topicEmpty: $("topic-empty"),
     backToSyllabus: $("back-to-syllabus"), backToTopics: $("back-to-topics"),
@@ -90,6 +93,19 @@
   function progressKeyFor(topicKey, type) { return type ? topicKey + "#" + slug(type) : topicKey; }
   function scopeWord() { return state.type ? "question type" : "topic"; }
 
+  // ---- generated questions ------------------------------------------------------
+  // question-generator.js makes new questions in the same formats as the bank (see its header comment).
+  const GEN_MAX = 100, GEN_DEFAULT = 10;
+  function canGenerate(groupKey, topicKey, type) {
+    const g = window.QuestionGenerator;
+    return !!(g && typeof g.has === "function" && g.has(groupKey, topicKey, type || null));
+  }
+  function wantsGenerated() { return !els.genWrap.hidden && els.genToggle.checked; }
+  function genCount() {
+    const n = parseInt(els.genCount.value, 10);
+    return Math.min(Math.max(Number.isFinite(n) ? n : GEN_DEFAULT, 1), GEN_MAX);
+  }
+
   // Load the question bank only now that sign-in is confirmed.
   function loadQuestionData() {
     return new Promise((resolve, reject) => {
@@ -127,7 +143,7 @@
   // `saved` is true when they chose to keep their progress for this topic.
   // `type` is the chosen question type (null = all questions of the topic); `hasTypes` says whether this topic offers a choice.
   // `progressKey` is what saved progress is filed under: the topic key, or "topic#type-name" for one question type.
-  const state = { group: null, topic: null, type: null, hasTypes: false, progressKey: null, index: 0, revealed: false, list: [], saved: false, userId: null, loadToken: 0 };
+  const state = { group: null, topic: null, type: null, hasTypes: false, realTypes: false, generated: false, progressKey: null, index: 0, revealed: false, list: [], saved: false, userId: null, loadToken: 0 };
 
   // ---- order & saved progress -------------------------------------------------
   // Fisher-Yates shuffle (returns a new array).
@@ -214,7 +230,7 @@
     else if (step === "type") { parts = [groupLabel(state.group), topicLabel(state.topic), "Question type"]; current = 2; }
     else {
       parts = [groupLabel(state.group), topicLabel(state.topic)];
-      if (state.hasTypes) parts.push(state.type || "All question types");
+      if (state.hasTypes) parts.push(state.type || (state.realTypes ? "All question types" : "All questions"));
       parts.push("Questions");
       current = parts.length - 1;
     }
@@ -280,36 +296,58 @@
     show("topic", focus);
   }
 
-  // After a topic is picked: topics with several question types ask which one; the others go straight to the questions.
+  // After a topic is picked: topics with several question types ask which one. A topic without types also gets this
+  // step when questions can be generated for it (so the "Generate fresh questions" box is reachable); the rest go straight on.
   function chooseTopic(topicKey, focus) {
-    if (typesOf(state.group, topicKey).length) showTypes(topicKey, focus);
-    else { state.hasTypes = false; startQuiz(topicKey, null, focus); }
+    if (typesOf(state.group, topicKey).length || canGenerate(state.group, topicKey)) showTypes(topicKey, focus);
+    else { state.hasTypes = false; state.realTypes = false; startQuiz(topicKey, null, focus); }
   }
 
   function showTypes(topicKey, focus) {
     state.topic = topicKey; state.type = null; state.hasTypes = true; state.index = 0; state.loadToken++;
+    state.realTypes = typesOf(state.group, topicKey).length > 0;
+    els.titleType.textContent = state.realTypes ? "3. Choose a question type" : "3. Choose your questions";
+    els.genWrap.hidden = !canGenerate(state.group, topicKey);
+    if (els.genWrap.hidden) els.genToggle.checked = false;
+    els.genCountWrap.hidden = !(els.genToggle.checked && !els.genWrap.hidden);
+    els.backToTypes.textContent = state.realTypes ? "← Change question type" : "← Change how to practise";
+    els.doneTypes.textContent = state.realTypes ? "Choose another question type" : "Change how to practise";
+    renderTypeChoices();
+    show("type", focus);
+  }
+
+  // The buttons on the type step. Their small print follows the "Generate fresh questions" box.
+  function renderTypeChoices() {
+    const topicKey = state.topic, gen = wantsGenerated(), n = genCount();
     els.typeChoices.textContent = "";
     const all = window.__ML_QUESTIONS[state.group][topicKey];
-    els.typeChoices.appendChild(choiceButton("All question types", plural(all.length, "question"), () => startQuiz(topicKey, null, true)));
+    const allLabel = state.realTypes ? "All question types" : "All questions";
+    els.typeChoices.appendChild(choiceButton(allLabel, gen ? plural(n, "fresh question") : plural(all.length, "question"), () => startQuiz(topicKey, null, true)));
     typesOf(state.group, topicKey).forEach((t) => {
-      const n = questionsFor(state.group, topicKey, t).length;
-      els.typeChoices.appendChild(choiceButton(t, plural(n, "question"), () => startQuiz(topicKey, t, true)));
+      const count = questionsFor(state.group, topicKey, t).length;
+      const unavailable = gen && !canGenerate(state.group, topicKey, t);
+      const b = choiceButton(t, unavailable ? "No generator for this one yet" : gen ? plural(n, "fresh question") : plural(count, "question"), () => startQuiz(topicKey, t, true));
+      if (unavailable) b.disabled = true;
+      els.typeChoices.appendChild(b);
     });
-    show("type", focus);
   }
 
   async function startQuiz(topicKey, type, focus) {
     const token = ++state.loadToken;
+    const generate = state.hasTypes && wantsGenerated();
     state.topic = topicKey; state.type = type; state.progressKey = progressKeyFor(topicKey, type);
-    state.index = 0; state.revealed = false; state.saved = false; state.list = [];
+    state.index = 0; state.revealed = false; state.saved = false; state.list = []; state.generated = generate;
     els.done.hidden = true;
     els.quizBody.hidden = true;
     els.backToTypes.hidden = !state.hasTypes;
     els.doneTypes.hidden = !state.hasTypes;
     els.saveLabel.textContent = "Save my progress in this " + scopeWord();
     els.saveStatus.classList.remove("ml-message--error");
+    els.saveBox.closest("label").hidden = generate; // generated questions are new every time, so there is nothing to save
     els.saveStatus.textContent = "Loading…";
     show("quiz", focus);
+
+    if (generate) { startGenerated(); return; }
 
     const questions = questionsFor(state.group, topicKey, type);
     let saved = null, problem = "";
@@ -339,12 +377,34 @@
     }
   }
 
+  // Make a fresh set with question-generator.js and show it (nothing is saved for these).
+  function startGenerated() {
+    let list = [];
+    try { list = window.QuestionGenerator.generate(state.group, state.topic, state.type, genCount()) || []; }
+    catch (err) { console.error("Question generator failed:", err); }
+    state.saved = false; state.index = 0; state.revealed = false; state.list = list;
+    els.saveBox.checked = false;
+    els.saveStatus.classList.remove("ml-message--error");
+    if (!list.length) {
+      els.quizBody.hidden = true;
+      els.done.hidden = false;
+      els.doneTitle.textContent = "We couldn't make questions for this one.";
+      els.doneText.textContent = "Please go back and untick \"Generate fresh questions\" to use the ready-made set.";
+      return;
+    }
+    els.quizBody.hidden = false;
+    renderQuestion();
+    els.saveStatus.textContent = list.length < genCount()
+      ? "These questions were just generated for you (" + plural(list.length, "different question") + " could be made). Progress isn't saved for generated questions."
+      : "These questions were just generated for you. Progress isn't saved for generated questions.";
+  }
+
   function renderQuestion() {
     const list = state.list;
     const q = list[state.index];
     const total = list.length;
 
-    els.progress.textContent = "Question " + (state.index + 1) + " of " + total;
+    els.progress.textContent = "Question " + (state.index + 1) + " of " + total + (state.generated ? " · freshly generated" : "");
     els.bar.style.width = ((state.index + 1) / total * 100) + "%";
 
     els.level.hidden = q.level == null;
@@ -397,8 +457,10 @@
     els.quizBody.hidden = true;
     els.done.hidden = false;
     els.doneTitle.textContent = "You've finished " + topicLabel(state.topic) + (state.type ? " – " + state.type : "") + " (" + groupLabel(state.group) + ").";
-    els.doneText.textContent = "That was all " + plural(total, "question") + " in this " + scopeWord() + "." +
-      (state.saved ? " Your saved order is kept, and \"Start again\" begins from question 1." : " \"Start again\" gives you a new random order.");
+    els.doneText.textContent = state.generated
+      ? "You worked through " + plural(total, "freshly generated question") + ". \"Start again\" gives you a brand-new set."
+      : "That was all " + plural(total, "question") + " in this " + scopeWord() + "." +
+        (state.saved ? " Your saved order is kept, and \"Start again\" begins from question 1." : " \"Start again\" gives you a new random order.");
     if (state.saved) { state.index = 0; persistProgress(); }
     els.restart.focus();
   }
@@ -417,6 +479,7 @@
     if (state.saved) persistProgress(); else clearProgress();
   });
   els.restart.addEventListener("click", () => {
+    if (state.generated) { els.done.hidden = true; startGenerated(); els.titleQuiz.focus(); return; } // a brand-new set
     // Saved topic: same order, back to question 1. Not saved: a new random order.
     if (!state.saved) state.list = shuffle(state.list);
     state.index = 0; state.revealed = false;
@@ -424,6 +487,9 @@
     renderQuestion(); persistProgress();
     els.titleQuiz.focus();
   });
+  els.genToggle.addEventListener("change", () => { els.genCountWrap.hidden = !els.genToggle.checked; renderTypeChoices(); });
+  els.genCount.addEventListener("input", () => { if (els.genToggle.checked) renderTypeChoices(); });
+  els.genCount.addEventListener("change", () => { els.genCount.value = String(genCount()); renderTypeChoices(); });
   els.doneTopics.addEventListener("click", () => showTopics(state.group, true));
   els.doneTypes.addEventListener("click", () => showTypes(state.topic, true));
   els.backToTypes.addEventListener("click", () => showTypes(state.topic, true));
