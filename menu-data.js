@@ -10,10 +10,7 @@ const MENU_ITEMS = [
   { label: "Glossary",       href: "glossary.html" },
   { label: "Questions",       href: "questions.html" },
   { label: "Login",       href: "login.html" },
-  { label: "LinguaLearn",
-    href: "https://notiamalfred.github.io/LinguaLearn/",
-    external: true },
-  { label: "EconLearn",
-    href: "https://notiamalfred.github.io/EconLearn/",
-    external: true },
+  { label: "PhysicsLearn", href: "https://notiamalfred.github.io/PhysicsLearn/", external: true },
+  { label: "LinguaLearn", href: "https://notiamalfred.github.io/LinguaLearn/", external: true },
+  { label: "ICTLearn", href: "https://notiamalfred.github.io/ICTLearn/", external: true },
 ];
