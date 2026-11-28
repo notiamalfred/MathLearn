@@ -1266,8 +1266,8 @@ const QUESTIONS_DATA = {
         steps: "Intersection of \\(L_{1}\\) and \\(L_{2}\\) is \\(A(6,1)\\) with \\(L_{1}\\bot L_{2}\\). Let circumcenter be \\(B(b,b)\\) on \\(L_{3}\\): \\(3b - 7b + k = 0\\Rightarrow b = \\frac{k}{4}\\).\nSince isosceles right triangle, altitude from \\(A\\) to \\(L_{3}\\) passes through \\(B\\): \\(\\frac{\\frac{k}{4} - 1}{\\frac{k}{4} - 6} = - \\frac{7}{3}\\Rightarrow k = 18\\) (B)"
       }
     ],
-    // Section A1 – original multiple-choice practice questions, one question type per topic
-    section_a1: [
+    // Public Exam MC – original multiple-choice practice questions, one question type per topic
+    public_exam_mc: [
       // Subject of Formulas
       {
         id: "a1-sf-1",
@@ -1723,6 +1723,2279 @@ const QUESTIONS_DATA = {
         question: "In \\(\\triangle ABC\\), \\(D\\) and \\(E\\) are points on \\(AB\\) and \\(AC\\) respectively such that \\(DE \\parallel BC\\) and \\(AD : DB = 3 : 2\\). Find (area of \\(\\triangle ADE\\)) : (area of trapezium \\(DBCE\\)).\nA. \\(9 : 25\\)\nB. \\(9 : 4\\)\nC. \\(3 : 2\\)\nD. \\(9 : 16\\)",
         answer: "D",
         steps: "\\(AD : AB = 3 : 5\\), and \\(\\triangle ADE \\sim \\triangle ABC\\) (since \\(DE \\parallel BC\\)).\nArea of \\(\\triangle ADE\\) : area of \\(\\triangle ABC = 3^{2} : 5^{2} = 9 : 25\\)\nArea of trapezium \\(DBCE\\) \\(= 25 - 9 = 16\\) (in the same units)\nRequired ratio \\(= 9 : 16\\) (D)"
+      },
+      // Functions (continued)
+      {
+        id: "a1-fn-9",
+        type: "Functions",
+        question: "Let \\(f(x) = 3^{x}\\). Then \\(f(x + 1) - f(x) =\\)\nA. \\(2\\)\nB. \\(3\\)\nC. \\(3 \\cdot 3^{x}\\)\nD. \\(3^{x + 1}\\)\nE. \\(2 \\cdot 3^{x}\\)",
+        answer: "E",
+        steps: "\\(f(x + 1) - f(x) = 3^{x + 1} - 3^{x}\\)\n\\(= 3 \\cdot 3^{x} - 3^{x} = 2 \\cdot 3^{x}\\) (E)"
+      },
+      {
+        id: "a1-fn-10",
+        type: "Functions",
+        question: "A function \\(f(x)\\) is called an even function if \\(f(x) = f(-x)\\). Which of the following functions is/are even functions?\nI. \\(f_{1}(x) = \\frac{1}{x^{3}}\\)\nII. \\(f_{2}(x) = x^{6}\\)\nIII. \\(f_{3}(x) = x^{2} + 1\\)\nA. I only\nB. II only\nC. III only\nD. I and II only\nE. II and III only",
+        answer: "E",
+        steps: "\\(f_{1}(-x) = \\frac{1}{(-x)^{3}} = -\\frac{1}{x^{3}} = -f_{1}(x)\\), so \\(f_{1}\\) is odd, not even.\n\\(f_{2}(-x) = (-x)^{6} = x^{6} = f_{2}(x)\\), so \\(f_{2}\\) is even.\n\\(f_{3}(-x) = (-x)^{2} + 1 = x^{2} + 1 = f_{3}(x)\\), so \\(f_{3}\\) is even.\nOnly II and III are even functions. (E)"
+      },
+      {
+        id: "a1-fn-11",
+        type: "Functions",
+        question: "Let \\(f(x) = \\log_{10} 3x - 2x\\). Then \\(f(x + 1) - f(x) =\\)\nA. \\(\\log_{10} 3 - 2\\)\nB. \\(\\log_{10}\\frac{x + 1}{100x}\\)\nC. \\(\\log_{10}\\frac{x + 1}{x} - 4x\\)\nD. \\(\\log_{10}\\frac{x + 1}{x}\\)\nE. \\(\\log_{10}\\frac{100(x + 1)}{x}\\)",
+        answer: "B",
+        steps: "\\(f(x + 1) - f(x) = \\log_{10} 3(x + 1) - 2(x + 1) - \\log_{10} 3x + 2x\\)\n\\(= \\log_{10}\\frac{3(x + 1)}{3x} - 2 = \\log_{10}\\frac{x + 1}{x} - \\log_{10} 100\\)\n\\(= \\log_{10}\\frac{x + 1}{100x}\\) (B)"
+      },
+      {
+        id: "a1-fn-12",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} + 3\\). Then \\(f(x - 1) =\\)\nA. \\(x^{2} - 2x + 4\\)\nB. \\(x^{2} + 4\\)\nC. \\(x^{2} + 2\\)\nD. \\(x^{2} - 2x + 3\\)\nE. \\(x^{2} - 2x\\)",
+        answer: "A",
+        steps: "\\(f(x - 1) = (x - 1)^{2} + 3\\)\n\\(= x^{2} - 2x + 1 + 3 = x^{2} - 2x + 4\\) (A)"
+      },
+      {
+        id: "a1-fn-13",
+        type: "Functions",
+        question: "Let \\(f(x) = 5 + 3^{x}\\). Then \\(f(2x) - f(x) =\\)\nA. \\(3^{2x}\\)\nB. \\(3^{x}(3^{x} + 1)\\)\nC. \\(5 + 3^{x}\\)\nD. \\(3^{x}\\)\nE. \\(3^{x}(3^{x} - 1)\\)",
+        answer: "E",
+        steps: "\\(f(2x) - f(x) = (5 + 3^{2x}) - (5 + 3^{x})\\)\n\\(= 3^{2x} - 3^{x} = 3^{x}(3^{x} - 1)\\) (E)"
+      },
+      {
+        id: "a1-fn-14",
+        type: "Functions",
+        question: "Let \\(f(n) = \\frac{1}{2}n(n + 3)\\). Then \\(f(n + 1) - f(n) =\\)\nA. \\(f(n)\\)\nB. \\(\\frac{n + 2}{2}\\)\nC. \\(f(1)\\)\nD. \\(2\\)\nE. \\(n + 2\\)",
+        answer: "E",
+        steps: "\\(f(n + 1) = \\frac{1}{2}(n + 1)(n + 4) = \\frac{1}{2}(n^{2} + 5n + 4)\\)\n\\(f(n + 1) - f(n) = \\frac{1}{2}(n^{2} + 5n + 4) - \\frac{1}{2}(n^{2} + 3n) = \\frac{1}{2}(2n + 4) = n + 2\\) (E)"
+      },
+      {
+        id: "a1-fn-15",
+        type: "Functions",
+        question: "Let \\(f(x) = 2x - \\frac{1}{x}\\). Then \\(f(x) - f\\left(\\frac{1}{x}\\right) =\\)\nA. \\(3 - x\\)\nB. \\(3\\left(x - \\frac{1}{x}\\right)\\)\nC. \\(3x\\)\nD. \\(0\\)\nE. \\(-\\frac{3}{x}\\)",
+        answer: "B",
+        steps: "\\(f\\left(\\frac{1}{x}\\right) = \\frac{2}{x} - x\\)\n\\(f(x) - f\\left(\\frac{1}{x}\\right) = 2x - \\frac{1}{x} - \\frac{2}{x} + x = 3x - \\frac{3}{x} = 3\\left(x - \\frac{1}{x}\\right)\\) (B)"
+      },
+      {
+        id: "a1-fn-16",
+        type: "Functions",
+        question: "Let \\(f(x) = 10^{3x}\\). Then \\(f(5y) =\\)\nA. \\(15y\\)\nB. \\(10^{5y}\\)\nC. \\(10^{3 + 5y}\\)\nD. \\(30^{5y}\\)\nE. \\(10^{15y}\\)",
+        answer: "E",
+        steps: "\\(f(5y) = 10^{3(5y)} = 10^{15y}\\) (E)"
+      },
+      {
+        id: "a1-fn-17",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} + 4x\\). Then \\(f(x - 1) =\\)\nA. \\(x^{2} + 2x - 3\\)\nB. \\(x^{2} - 3\\)\nC. \\(x^{2} + 4x - 1\\)\nD. \\(x^{2} + 4x\\)\nE. \\(x^{2} + 6x - 3\\)",
+        answer: "A",
+        steps: "\\(f(x - 1) = (x - 1)^{2} + 4(x - 1)\\)\n\\(= x^{2} - 2x + 1 + 4x - 4 = x^{2} + 2x - 3\\) (A)"
+      },
+      {
+        id: "a1-fn-18",
+        type: "Functions",
+        question: "Let \\(f(x) = \\frac{x}{1 + x}\\). Then \\(f\\left(\\frac{1}{x}\\right)f(-x) =\\)\nA. \\(\\frac{1 + x}{1 - x}\\)\nB. \\(\\frac{x}{1 - x^{2}}\\)\nC. \\(-\\frac{1}{2}\\)\nD. \\(\\frac{x}{x^{2} - 1}\\)\nE. \\(-1\\)",
+        answer: "D",
+        steps: "\\(f\\left(\\frac{1}{x}\\right) = \\frac{\\frac{1}{x}}{1 + \\frac{1}{x}} = \\frac{1}{x + 1}\\) and \\(f(-x) = \\frac{-x}{1 - x}\\)\n\\(f\\left(\\frac{1}{x}\\right)f(-x) = \\frac{1}{x + 1} \\cdot \\frac{-x}{1 - x} = \\frac{-x}{1 - x^{2}} = \\frac{x}{x^{2} - 1}\\) (D)"
+      },
+      {
+        id: "a1-fn-19",
+        type: "Functions",
+        question: "Let \\(f(x) = 2x^{2} + bx + 5\\). If \\(f(x) = f(-x)\\), then \\(f(-4) =\\)\nA. \\(0\\)\nB. \\(5\\)\nC. \\(-27\\)\nD. \\(32\\)\nE. \\(37\\)",
+        answer: "E",
+        steps: "\\(f(x) = f(-x)\\Rightarrow 2x^{2} + bx + 5 = 2x^{2} - bx + 5\\Rightarrow 2bx = 0\\), so \\(b = 0\\)\n\\(f(-4) = 2(-4)^{2} + 5 = 37\\) (E)"
+      },
+      {
+        id: "a1-fn-20",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} + 5x - 4\\). Then \\(f(a) + f(-a) =\\)\nA. \\(2a^{2} - 8\\)\nB. \\(2a^{2}\\)\nC. \\(-8\\)\nD. \\(-10a\\)\nE. \\(10a\\)",
+        answer: "A",
+        steps: "\\(f(a) + f(-a) = (a^{2} + 5a - 4) + (a^{2} - 5a - 4)\\)\n\\(= 2a^{2} - 8\\) (A)"
+      },
+      {
+        id: "a1-fn-21",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} - 4\\). Then \\(f(a + 1) =\\)\nA. \\(a^{2} - 4\\)\nB. \\(a^{2} + 2a - 3\\)\nC. \\(a^{2} - 3\\)\nD. \\(a^{2} + 2a - 5\\)\nE. \\(a^{2} + 2a + 1\\)",
+        answer: "B",
+        steps: "\\(f(a + 1) = (a + 1)^{2} - 4\\)\n\\(= a^{2} + 2a + 1 - 4 = a^{2} + 2a - 3\\) (B)"
+      },
+      {
+        id: "a1-fn-22",
+        type: "Functions",
+        question: "Let \\(f(x) = 2x^{2} + ax - 9\\). If \\(f(-1) = 0\\), find \\(f(-3)\\).\nA. \\(30\\)\nB. \\(4\\)\nC. \\(48\\)\nD. \\(-12\\)\nE. \\(18\\)",
+        answer: "A",
+        steps: "\\(f(-1) = 2 - a - 9 = 0\\), so \\(a = -7\\)\n\\(f(x) = 2x^{2} - 7x - 9\\), hence \\(f(-3) = 2(9) + 21 - 9 = 30\\) (A)"
+      },
+      {
+        id: "a1-fn-23",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} - x - 8\\). If \\(f(k) = k\\), then \\(k =\\)\nA. \\(2\\)\nB. \\(-4 \\text{ or } 2\\)\nC. \\(\\pm 2\\sqrt{2}\\)\nD. \\(-2 \\text{ or } 4\\)",
+        answer: "D",
+        steps: "\\(f(k) = k\\Rightarrow k^{2} - k - 8 = k\\), i.e. \\(k^{2} - 2k - 8 = 0\\)\n\\((k + 2)(k - 4) = 0\\), so \\(k = -2\\) or \\(4\\) (D)"
+      },
+      {
+        id: "a1-fn-24",
+        type: "Functions",
+        question: "Let \\(f(x) = 3x^{2} + kx - 2\\) and \\(f(-2) = f\\left(\\frac{1}{3}\\right)\\). Then \\(k =\\)\nA. \\(-5\\)\nB. \\(\\frac{35}{3}\\)\nC. \\(\\frac{7}{5}\\)\nD. \\(5\\)",
+        answer: "D",
+        steps: "\\(f(-2) = 12 - 2k - 2 = 10 - 2k\\) and \\(f\\left(\\frac{1}{3}\\right) = \\frac{1}{3} + \\frac{k}{3} - 2 = \\frac{k}{3} - \\frac{5}{3}\\)\n\\(10 - 2k = \\frac{k}{3} - \\frac{5}{3}\\Rightarrow 30 - 6k = k - 5\\Rightarrow 7k = 35\\), so \\(k = 5\\) (D)"
+      },
+      {
+        id: "a1-fn-25",
+        type: "Functions",
+        question: "Let \\(f(x) = 3x^{2} - 5x + 2\\). Then \\(f(1) - f(-1) =\\)\nA. \\(4\\)\nB. \\(-10\\)\nC. \\(-4\\)\nD. \\(10\\)",
+        answer: "B",
+        steps: "\\(f(1) = 3 - 5 + 2 = 0\\) and \\(f(-1) = 3 + 5 + 2 = 10\\)\n\\(f(1) - f(-1) = 0 - 10 = -10\\) (B)"
+      },
+      {
+        id: "a1-fn-26",
+        type: "Functions",
+        question: "Let \\(f(x) = \\frac{x}{2 + x}\\). Then \\(f(4)f\\left(\\frac{1}{4}\\right) =\\)\nA. \\(\\frac{2}{3}\\)\nB. \\(1\\)\nC. \\(\\frac{2}{27}\\)\nD. \\(\\frac{1}{6}\\)",
+        answer: "C",
+        steps: "\\(f(4) = \\frac{4}{6} = \\frac{2}{3}\\) and \\(f\\left(\\frac{1}{4}\\right) = \\frac{\\frac{1}{4}}{2 + \\frac{1}{4}} = \\frac{1}{9}\\)\n\\(f(4)f\\left(\\frac{1}{4}\\right) = \\frac{2}{3} \\times \\frac{1}{9} = \\frac{2}{27}\\) (C)"
+      },
+      {
+        id: "a1-fn-27",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} - ax + 3a\\), where \\(a\\) is a constant. If \\(f(-2) = 34\\), then \\(a =\\)\nA. \\(-14\\)\nB. \\(-6\\)\nC. \\(-34\\)\nD. \\(6\\)",
+        answer: "D",
+        steps: "\\(f(-2) = 4 + 2a + 3a = 4 + 5a = 34\\)\n\\(5a = 30\\), so \\(a = 6\\) (D)"
+      },
+      {
+        id: "a1-fn-28",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} + kx + 5\\), where \\(k\\) is a constant. If \\(f(5) - f(2) = 39\\), then \\(k =\\)\nA. \\(6\\)\nB. \\(13\\)\nC. \\(18\\)\nD. \\(0\\)",
+        answer: "A",
+        steps: "\\(f(5) = 25 + 5k + 5 = 30 + 5k\\) and \\(f(2) = 4 + 2k + 5 = 9 + 2k\\)\n\\(f(5) - f(2) = 21 + 3k = 39\\), so \\(k = 6\\) (A)"
+      },
+      {
+        id: "a1-fn-29",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} - 7x + c\\), where \\(c\\) is a constant. If \\(f(-2) = 15\\), then \\(c =\\)\nA. \\(0\\)\nB. \\(8\\)\nC. \\(29\\)\nD. \\(-3\\)",
+        answer: "D",
+        steps: "\\(f(-2) = 4 + 14 + c = 18 + c = 15\\)\n\\(c = -3\\) (D)"
+      },
+      {
+        id: "a1-fn-30",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} - 5x + 13\\). Then \\(4f(3) - 5 =\\)\nA. \\(28\\)\nB. \\(51\\)\nC. \\(23\\)\nD. \\(7\\)",
+        answer: "C",
+        steps: "\\(f(3) = 9 - 15 + 13 = 7\\)\n\\(4f(3) - 5 = 28 - 5 = 23\\) (C)"
+      },
+      {
+        id: "a1-fn-31",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} + 3x + k\\), where \\(k\\) is a constant. Find \\(f(6) - f(2)\\).\nA. \\(k + 54\\)\nB. \\(2k + 10\\)\nC. \\(k + 10\\)\nD. \\(44\\)",
+        answer: "D",
+        steps: "\\(f(6) = 36 + 18 + k = 54 + k\\) and \\(f(2) = 4 + 6 + k = 10 + k\\)\n\\(f(6) - f(2) = 44\\) (D)"
+      },
+      {
+        id: "a1-fn-32",
+        type: "Functions",
+        question: "Let \\(k\\) be a constant. If \\(f(x) = 3x^{2} - 4x + k\\), then \\(f(3) - f(-3) =\\)\nA. \\(-24\\)\nB. \\(0\\)\nC. \\(18\\)\nD. \\(2k\\)",
+        answer: "A",
+        steps: "\\(f(3) = 27 - 12 + k = 15 + k\\) and \\(f(-3) = 27 + 12 + k = 39 + k\\)\n\\(f(3) - f(-3) = -24\\) (A)"
+      },
+      {
+        id: "a1-fn-33",
+        type: "Functions",
+        question: "Let \\(f(x) = 2x^{2} - 3x + 4\\). Then \\(f(3m + 1) =\\)\nA. \\(18m^{2} + 9m + 3\\)\nB. \\(18m^{2} + 3m + 3\\)\nC. \\(6m^{2} + 3m + 3\\)\nD. \\(18m^{2} + 12m + 3\\)",
+        answer: "B",
+        steps: "\\(f(3m + 1) = 2(3m + 1)^{2} - 3(3m + 1) + 4\\)\n\\(= 2(9m^{2} + 6m + 1) - 9m - 3 + 4 = 18m^{2} + 3m + 3\\) (B)"
+      },
+      {
+        id: "a1-fn-34",
+        type: "Functions",
+        question: "Let \\(c\\) be a constant. If \\(f(x) = x^{3} + cx^{2} - c\\), then \\(f(c) + f(-c) =\\)\nA. \\(2c^{3} - 2c\\)\nB. \\(-2c\\)\nC. \\(0\\)\nD. \\(-2c^{3} + 2c\\)",
+        answer: "A",
+        steps: "\\(f(c) = c^{3} + c^{3} - c = 2c^{3} - c\\) and \\(f(-c) = -c^{3} + c^{3} - c = -c\\)\n\\(f(c) + f(-c) = 2c^{3} - 2c\\) (A)"
+      },
+      {
+        id: "a1-fn-35",
+        type: "Functions",
+        question: "Let \\(f(x) = 4x^{2} + x - 3\\). If \\(k\\) is a constant, then \\(f(2 + k) - f(2 - k) =\\)\nA. \\(34k\\)\nB. \\(8k^{2} - 3k\\)\nC. \\(8k^{2} + 2k\\)\nD. \\(17k\\)",
+        answer: "A",
+        steps: "\\(f(2 + k) = 4(4 + 4k + k^{2}) + 2 + k - 3 = 4k^{2} + 17k + 15\\)\n\\(f(2 - k) = 4(4 - 4k + k^{2}) + 2 - k - 3 = 4k^{2} - 17k + 15\\)\n\\(f(2 + k) - f(2 - k) = 34k\\) (A)"
+      },
+      {
+        id: "a1-fn-36",
+        type: "Functions",
+        question: "Let \\(f(x) = (x + h)(x - 4) + k\\), where \\(h\\) and \\(k\\) are constants. If \\(f(0) = f(9) = 2\\), find \\(k\\).\nA. \\(38\\)\nB. \\(-8\\)\nC. \\(20\\)\nD. \\(-18\\)",
+        answer: "D",
+        steps: "\\(f(0) = -4h + k = 2\\) and \\(f(9) = 5(9 + h) + k = 2\\), i.e. \\(45 + 5h + k = 2\\)\nSubtracting: \\(45 + 9h = 0\\), so \\(h = -5\\)\n\\(k = 2 + 4h = -18\\) (D)"
+      },
+      {
+        id: "a1-fn-37",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} - 2x + 3\\). If \\(k\\) is a constant, which of the following must be true?\nA. \\(f(k) = f(-k)\\)\nB. \\(f(k) = f(2 - k)\\)\nC. \\(f(k + 1) = f(k) + f(1)\\)\nD. \\(f(k - 1) = f(k) - f(1)\\)",
+        answer: "B",
+        steps: "The graph of \\(f\\) has axis of symmetry \\(x = 1\\), so \\(f(k) = f(2 - k)\\) for every \\(k\\).\nCheck: \\(f(2 - k) = (2 - k)^{2} - 2(2 - k) + 3 = k^{2} - 2k + 3 = f(k)\\) (B)"
+      },
+      {
+        id: "a1-fn-38",
+        type: "Functions",
+        question: "Let \\(g(x) = 17 - 4x^{2}\\). If \\(m\\) is a constant, find \\(g(1 - 2m)\\).\nA. \\(13 - 16m^{2}\\)\nB. \\(13 + 16m - 16m^{2}\\)\nC. \\(13 - 16m - 16m^{2}\\)\nD. \\(13 + 16m^{2}\\)",
+        answer: "B",
+        steps: "\\(g(1 - 2m) = 17 - 4(1 - 2m)^{2}\\)\n\\(= 17 - 4(1 - 4m + 4m^{2}) = 13 + 16m - 16m^{2}\\) (B)"
+      },
+      {
+        id: "a1-fn-39",
+        type: "Functions",
+        question: "Let \\(g(x) = (x + 2)(x + a)\\), where \\(a\\) is a constant. If \\(g(1) = g(3)\\), then \\(g(a) =\\)\nA. \\(-6\\)\nB. \\(48\\)\nC. \\(24\\)\nD. \\(0\\)",
+        answer: "B",
+        steps: "\\(g(1) = 3(1 + a)\\) and \\(g(3) = 5(3 + a)\\); \\(3 + 3a = 15 + 5a\\), so \\(a = -6\\)\n\\(g(a) = g(-6) = (-4)(-12) = 48\\) (B)"
+      },
+      {
+        id: "a1-fn-40",
+        type: "Functions",
+        question: "Let \\(f(x) = x^{2} + 5x + k\\), where \\(k\\) is a constant. If \\(f(3) + f(-3) = 26\\), find \\(k\\).\nA. \\(-8\\)\nB. \\(4\\)\nC. \\(8\\)\nD. \\(-4\\)",
+        answer: "B",
+        steps: "\\(f(3) + f(-3) = (9 + 15 + k) + (9 - 15 + k) = 18 + 2k\\)\n\\(18 + 2k = 26\\), so \\(k = 4\\) (B)"
+      },
+      {
+        id: "a1-fn-41",
+        type: "Functions",
+        question: "Let \\(f(x) = (x + d)(x - 1) + 8x\\), where \\(d\\) is a constant. If \\(f(2 + d) = 0\\), then \\(d =\\)\nA. \\(-3\\)\nB. \\(2\\)\nC. \\(-2\\)\nD. \\(3\\)",
+        answer: "A",
+        steps: "\\(f(2 + d) = (2 + 2d)(1 + d) + 8(2 + d) = 2d^{2} + 12d + 18 = 0\\)\n\\(d^{2} + 6d + 9 = 0\\), i.e. \\((d + 3)^{2} = 0\\), so \\(d = -3\\) (A)"
+      },
+      // Subject of Formulas (continued)
+      {
+        id: "a1-sf-9",
+        type: "Subject of Formulas",
+        question: "If \\(3p = 8q\\), then \\(\\frac{3p^{2}}{8q^{2}} =\\)\nA. \\(\\frac{8}{3}\\)\nB. \\(\\left(\\frac{8}{3}\\right)^{2}\\)\nC. \\(\\left(\\frac{3}{8}\\right)^{2}\\)\nD. \\(1\\)\nE. \\(\\frac{3}{8}\\)",
+        answer: "A",
+        steps: "\\(3p = 8q\\Rightarrow \\frac{p}{q} = \\frac{8}{3}\\)\n\\(\\frac{3p^{2}}{8q^{2}} = \\frac{3}{8}\\left(\\frac{p}{q}\\right)^{2} = \\frac{3}{8} \\times \\frac{64}{9} = \\frac{8}{3}\\) (A)"
+      },
+      {
+        id: "a1-sf-10",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{1}{x} = 2a + b\\) and \\(\\frac{1}{y} = 2a - b\\), then \\(x + y =\\)\nA. \\(\\frac{4a}{4a^{2} - b^{2}}\\)\nB. \\(-\\frac{4a}{4a^{2} - b^{2}}\\)\nC. \\(\\frac{4a^{2} - b^{2}}{4a}\\)\nD. \\(-\\frac{4a^{2} - b^{2}}{4a}\\)\nE. \\(\\frac{4}{a}\\)",
+        answer: "A",
+        steps: "\\(x = \\frac{1}{2a + b}\\) and \\(y = \\frac{1}{2a - b}\\)\n\\(x + y = \\frac{(2a - b) + (2a + b)}{(2a + b)(2a - b)} = \\frac{4a}{4a^{2} - b^{2}}\\) (A)"
+      },
+      {
+        id: "a1-sf-11",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{2y + (n - 1)z}{n + 3}\\), then \\(n =\\)\nA. \\(\\frac{3x - 2y - z}{x + z}\\)\nB. \\(\\frac{3x - 2y + z}{x - z}\\)\nC. \\(\\frac{- 3 x + 2 y - z}{x - z}\\)\nD. \\(\\frac{2y - 3x + z}{x - z}\\)\nE. \\(\\frac{2y - 3x - z}{x + z}\\)",
+        answer: "C",
+        steps: "\\(x(n + 3) = 2y + (n - 1)z\\)\n\\(xn + 3x = 2y + nz - z\\)\n\\(n(x - z) = 2y - z - 3x\\)\n\\(n = \\frac{2y - 3x - z}{x - z}\\) (C)"
+      },
+      {
+        id: "a1-sf-12",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{bx + ay + c}{a - by}\\), then \\(y =\\)\nA. \\(-\\frac{ax + bx + c}{a - bx}\\)\nB. \\(\\frac{ax + bx + c}{a + bx}\\)\nC. \\(-\\frac{ax - bx - c}{a + bx}\\)\nD. \\(\\frac{ax - bx - c}{a + bx}\\)\nE. \\(\\frac{ax - bx - c}{a - bx}\\)",
+        answer: "D",
+        steps: "\\(x(a - by) = bx + ay + c\\)\n\\(ax - bxy = bx + ay + c\\)\nCollect the terms in \\(y\\): \\(ax - bx - c = ay + bxy = y(a + bx)\\)\n\\(y = \\frac{ax - bx - c}{a + bx}\\) (D)"
+      },
+      {
+        id: "a1-sf-13",
+        type: "Subject of Formulas",
+        question: "If \\(H = K + \\frac{M}{\\pi(r^{2} + s^{2})^{n}}\\) and \\(r > 0\\), then \\(r =\\)\nA. \\(\\left[\\frac{M}{\\pi(H - K)}\\right]^{\\frac{n}{2}} - s\\)\nB. \\(\\left\\{\\left[\\frac{M}{\\pi(H - K)}\\right]^{-n} - s^{2}\\right\\}^{\\frac{1}{2}}\\)\nC. \\(\\left\\{\\left[\\frac{\\pi}{M(H - K)}\\right]^{\\frac{1}{n}} - s^{2}\\right\\}^{\\frac{1}{2}}\\)\nD. \\(\\left[\\frac{M}{\\pi(H - K)}\\right]^{\\frac{1}{2n}} - s\\)\nE. \\(\\left\\{\\left[\\frac{M}{\\pi(H - K)}\\right]^{\\frac{1}{n}} - s^{2}\\right\\}^{\\frac{1}{2}}\\)",
+        answer: "E",
+        steps: "\\(H - K = \\frac{M}{\\pi(r^{2} + s^{2})^{n}}\\Rightarrow (r^{2} + s^{2})^{n} = \\frac{M}{\\pi(H - K)}\\)\n\\(r^{2} + s^{2} = \\left[\\frac{M}{\\pi(H - K)}\\right]^{\\frac{1}{n}}\\)\nSince \\(r > 0\\): \\(r = \\left\\{\\left[\\frac{M}{\\pi(H - K)}\\right]^{\\frac{1}{n}} - s^{2}\\right\\}^{\\frac{1}{2}}\\) (E)"
+      },
+      {
+        id: "a1-sf-14",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{1}{\\frac{3}{y} + \\frac{1}{z}}\\), then \\(y =\\)\nA. \\(\\frac{3xz}{z + x}\\)\nB. \\(\\frac{xz}{3z - x}\\)\nC. \\(\\frac{3xz}{z - x}\\)\nD. \\(\\frac{3x}{z}\\)\nE. \\(\\frac{3z}{xz - z}\\)",
+        answer: "C",
+        steps: "\\(\\frac{1}{x} = \\frac{3}{y} + \\frac{1}{z}\\)\n\\(\\frac{3}{y} = \\frac{1}{x} - \\frac{1}{z} = \\frac{z - x}{xz}\\)\n\\(y = \\frac{3xz}{z - x}\\) (C)"
+      },
+      {
+        id: "a1-sf-15",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{y^{3}}{\\sqrt{a^{2} + bz}}\\), then \\(z =\\)\nA. \\(\\frac{1}{b}\\left(\\frac{y^{6}}{x^{2}} - a^{2}\\right)\\)\nB. \\(\\frac{1}{b}\\left(\\frac{y^{3}}{x} - a^{2}\\right)\\)\nC. \\(\\frac{1}{b}\\left(\\frac{x^{2}}{y^{6}} - a^{2}\\right)\\)\nD. \\(\\frac{1}{b}\\left(a^{2} - \\frac{y^{6}}{x^{2}}\\right)\\)\nE. \\(\\frac{1}{b}\\left(a^{2} - \\frac{x^{2}}{y^{6}}\\right)\\)",
+        answer: "A",
+        steps: "\\(x^{2} = \\frac{y^{6}}{a^{2} + bz}\\Rightarrow a^{2} + bz = \\frac{y^{6}}{x^{2}}\\)\n\\(bz = \\frac{y^{6}}{x^{2}} - a^{2}\\)\n\\(z = \\frac{1}{b}\\left(\\frac{y^{6}}{x^{2}} - a^{2}\\right)\\) (A)"
+      },
+      {
+        id: "a1-sf-16",
+        type: "Subject of Formulas",
+        question: "If \\(a = \\frac{3b(y - 2x)}{x - 4y}\\), then \\(y =\\)\nA. \\(\\frac{- a x + 6 b x}{4 a + 3 b}\\)\nB. \\(\\frac{a x - 6 b x}{4 a + 3 b}\\)\nC. \\(\\frac{x \\left(a + 6 b\\right)}{4 a - 3 b}\\)\nD. \\(- \\frac{x \\left(a + 6 b\\right)}{4 a + 3 b}\\)\nE. \\(\\frac{x \\left(a + 6 b\\right)}{4 a + 3 b}\\)",
+        answer: "E",
+        steps: "\\(a(x - 4y) = 3b(y - 2x)\\)\n\\(ax - 4ay = 3by - 6bx\\)\n\\(ax + 6bx = 3by + 4ay\\), i.e. \\((a + 6b)x = (4a + 3b)y\\)\n\\(y = \\frac{(a + 6b)x}{4a + 3b}\\) (E)"
+      },
+      {
+        id: "a1-sf-17",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{ab}{ka + b} = \\frac{2}{k}\\), then \\(b =\\)\nA. \\(\\frac{2a}{a - k}\\)\nB. \\(\\frac{2ka}{ka + 2}\\)\nC. \\(\\frac{2ka}{2 - ka}\\)\nD. \\(\\frac{2k^{2}a}{a - 2k}\\)\nE. \\(\\frac{2ka}{ka - 2}\\)",
+        answer: "E",
+        steps: "\\(kab = 2(ka + b) = 2ka + 2b\\)\n\\(kab - 2b = 2ka\\), i.e. \\(b(ka - 2) = 2ka\\)\n\\(b = \\frac{2ka}{ka - 2}\\) (E)"
+      },
+      {
+        id: "a1-sf-18",
+        type: "Subject of Formulas",
+        question: "If \\(a - 2\\sqrt{b^{2} - c^{2}} = d\\), then \\(c =\\)\nA. \\(\\frac{a - d}{2} - b\\)\nB. \\(\\pm\\sqrt{b^{2} + \\frac{(a - d)^{2}}{4}}\\)\nC. \\(\\pm\\sqrt{b^{2} - \\frac{(a - d)^{2}}{4}}\\)\nD. \\(\\pm\\sqrt{b^{2} - (a - d)^{2}}\\)\nE. \\(\\pm\\sqrt{\\frac{(a - d)^{2}}{4} - b^{2}}\\)",
+        answer: "C",
+        steps: "\\(2\\sqrt{b^{2} - c^{2}} = a - d\\Rightarrow b^{2} - c^{2} = \\frac{(a - d)^{2}}{4}\\)\n\\(c^{2} = b^{2} - \\frac{(a - d)^{2}}{4}\\)\n\\(c = \\pm\\sqrt{b^{2} - \\frac{(a - d)^{2}}{4}}\\) (C)"
+      },
+      {
+        id: "a1-sf-19",
+        type: "Subject of Formulas",
+        question: "If \\(1 + \\frac{2x - y}{2x + y} = a\\) (\\(a \\neq 0\\)), then \\(y =\\)\nA. \\(2x\\)\nB. \\(\\frac{x}{a}(4 - a)\\)\nC. \\(\\frac{2x}{a}(2 - a)\\)\nD. \\(\\frac{2x}{a}(1 - a)\\)\nE. \\(\\frac{2x}{a}(a - 2)\\)",
+        answer: "C",
+        steps: "\\(1 + \\frac{2x - y}{2x + y} = \\frac{(2x + y) + (2x - y)}{2x + y} = \\frac{4x}{2x + y} = a\\)\n\\(2x + y = \\frac{4x}{a}\\)\n\\(y = \\frac{4x}{a} - 2x = \\frac{2x}{a}(2 - a)\\) (C)"
+      },
+      {
+        id: "a1-sf-20",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{1}{x} - \\frac{1}{y} = \\frac{1}{z}\\), \\(x = \\frac{1}{3}\\) and \\(z = \\frac{1}{5}\\), then \\(y =\\)\nA. \\(8\\)\nB. \\(-\\frac{1}{2}\\)\nC. \\(2\\)\nD. \\(-2\\)\nE. \\(\\frac{1}{2}\\)",
+        answer: "B",
+        steps: "\\(\\frac{1}{x} = 3\\) and \\(\\frac{1}{z} = 5\\)\n\\(3 - \\frac{1}{y} = 5\\Rightarrow \\frac{1}{y} = -2\\)\n\\(y = -\\frac{1}{2}\\) (B)"
+      },
+      {
+        id: "a1-sf-21",
+        type: "Subject of Formulas",
+        question: "If \\(a = \\frac{b + 5cd}{b - 5cd}\\), then \\(c =\\)\nA. \\(\\frac{b(a + 1)}{a - 1}\\)\nB. \\(\\frac{b}{5d}\\)\nC. \\(\\frac{b(a - 1)}{5d(a + 1)}\\)\nD. \\(\\frac{a}{10d}\\)\nE. \\(\\frac{b(a - 1)}{10d}\\)",
+        answer: "C",
+        steps: "\\(a(b - 5cd) = b + 5cd\\)\n\\(ab - b = 5cd + 5acd = 5cd(a + 1)\\)\n\\(c = \\frac{b(a - 1)}{5d(a + 1)}\\) (C)"
+      },
+      {
+        id: "a1-sf-22",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{1 - y}{2 + y}\\), then \\(y =\\)\nA. \\(\\frac{1 - 2x}{x + 1}\\)\nB. \\(\\frac{1 - 2x}{x - 1}\\)\nC. \\(\\frac{2x - 1}{x + 1}\\)\nD. \\(\\frac{1 + 2x}{x - 1}\\)\nE. \\(\\frac{1 - x}{2 + x}\\)",
+        answer: "A",
+        steps: "\\(x(2 + y) = 1 - y\\)\n\\(2x + xy = 1 - y\\)\n\\(xy + y = 1 - 2x\\), i.e. \\(y(x + 1) = 1 - 2x\\)\n\\(y = \\frac{1 - 2x}{x + 1}\\) (A)"
+      },
+      // Subject of Formulas (continued)
+      {
+        id: "a1-sf-23",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{ab - 2}{a + b}\\), then \\(b =\\)\nA. \\(\\frac{ax + 2}{a - x}\\)\nB. \\(\\frac{ax + 2}{a + x}\\)\nC. \\(\\frac{ax - 2}{a - x}\\)\nD. \\(\\frac{2 - ax}{a - x}\\)\nE. \\(\\frac{2 - ax}{a + x}\\)",
+        answer: "A",
+        steps: "\\(x(a + b) = ab - 2\\)\n\\(ax + bx = ab - 2\\)\n\\(ax + 2 = ab - bx = b(a - x)\\)\n\\(b = \\frac{ax + 2}{a - x}\\) (A)"
+      },
+      {
+        id: "a1-sf-24",
+        type: "Subject of Formulas",
+        question: "If \\(y = \\sqrt{\\frac{2 + mx}{2 - mx}}\\), then \\(x =\\)\nA. \\(\\frac{y^{2} - 1}{m(y^{2} + 1)}\\)\nB. \\(\\frac{2(y^{2} + 1)}{m(y^{2} - 1)}\\)\nC. \\(\\frac{2(1 - y^{2})}{m(1 + y^{2})}\\)\nD. \\(\\frac{2(y^{2} - 1)}{m(y^{2} + 1)}\\)\nE. \\(\\frac{2(y - 1)}{m(y + 1)}\\)",
+        answer: "D",
+        steps: "\\(y^{2} = \\frac{2 + mx}{2 - mx}\\Rightarrow y^{2}(2 - mx) = 2 + mx\\)\n\\(2y^{2} - 2 = mx + mxy^{2} = mx(y^{2} + 1)\\)\n\\(x = \\frac{2(y^{2} - 1)}{m(y^{2} + 1)}\\) (D)"
+      },
+      {
+        id: "a1-sf-25",
+        type: "Subject of Formulas",
+        question: "If \\(a = 2 - \\frac{3}{1 + b}\\), then \\(b =\\)\nA. \\(1 + \\frac{3}{2 - a}\\)\nB. \\(1 - \\frac{3}{2 - a}\\)\nC. \\(-1 + \\frac{3}{2 - a}\\)\nD. \\(1 - \\frac{3}{2 + a}\\)\nE. \\(-1 + \\frac{3}{2 + a}\\)",
+        answer: "C",
+        steps: "\\(\\frac{3}{1 + b} = 2 - a\\)\n\\(1 + b = \\frac{3}{2 - a}\\)\n\\(b = -1 + \\frac{3}{2 - a}\\) (C)"
+      },
+      {
+        id: "a1-sf-26",
+        type: "Subject of Formulas",
+        question: "If \\(s = \\frac{n}{2}\\left[a + (n - 2)d\\right]\\), then \\(d =\\)\nA. \\(\\frac{2s - an}{n - 2}\\)\nB. \\(\\frac{2s - an}{n(n + 2)}\\)\nC. \\(\\frac{2(s - an)}{n(n - 2)}\\)\nD. \\(\\frac{as - n}{a(n - 2)}\\)\nE. \\(\\frac{2s - an}{n(n - 2)}\\)",
+        answer: "E",
+        steps: "\\(\\frac{2s}{n} = a + (n - 2)d\\)\n\\((n - 2)d = \\frac{2s}{n} - a = \\frac{2s - an}{n}\\)\n\\(d = \\frac{2s - an}{n(n - 2)}\\) (E)"
+      },
+      {
+        id: "a1-sf-27",
+        type: "Subject of Formulas",
+        question: "If \\(y = \\frac{3x + 1}{x - 2}\\), then \\(x =\\)\nA. \\(\\frac{1 + 2y}{3 - y}\\)\nB. \\(\\frac{1 - 2y}{y - 3}\\)\nC. \\(\\frac{1 + 3y}{y + 2}\\)\nD. \\(\\frac{1 - 2y}{y + 3}\\)\nE. \\(\\frac{1 + 2y}{y - 3}\\)",
+        answer: "E",
+        steps: "\\(y(x - 2) = 3x + 1\\)\n\\(xy - 2y = 3x + 1\\)\n\\(xy - 3x = 1 + 2y\\), i.e. \\(x(y - 3) = 1 + 2y\\)\n\\(x = \\frac{1 + 2y}{y - 3}\\) (E)"
+      },
+      {
+        id: "a1-sf-28",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{x + y}{xy} = 2\\), then \\(y =\\)\nA. \\(\\frac{x}{2x + 1}\\)\nB. \\(\\frac{x}{2x - 1}\\)\nC. \\(\\frac{x}{1 - 2x}\\)\nD. \\(\\frac{2x - 1}{x}\\)\nE. \\(\\frac{1 - 2x}{x}\\)",
+        answer: "B",
+        steps: "\\(x + y = 2xy\\)\n\\(x = 2xy - y = y(2x - 1)\\)\n\\(y = \\frac{x}{2x - 1}\\) (B)"
+      },
+      {
+        id: "a1-sf-29",
+        type: "Subject of Formulas",
+        question: "If \\(S = \\pi r^{2} + 2\\pi rh\\), then \\(h =\\)\nA. \\(\\frac{S - r}{2\\pi}\\)\nB. \\(\\frac{S}{2\\pi r} - \\frac{r}{2}\\)\nC. \\(\\frac{S}{2\\pi r} - r\\)\nD. \\(\\frac{S}{2\\pi r} - \\pi r^{2}\\)\nE. \\(\\frac{S}{\\pi r} - \\frac{r}{2}\\)",
+        answer: "B",
+        steps: "\\(2\\pi rh = S - \\pi r^{2}\\)\n\\(h = \\frac{S - \\pi r^{2}}{2\\pi r} = \\frac{S}{2\\pi r} - \\frac{r}{2}\\) (B)"
+      },
+      {
+        id: "a1-sf-30",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{a + 2x}{b - x} = \\frac{c}{d}\\) (\\(c \\neq -2d\\)), then \\(x =\\)\nA. \\(\\frac{bc - ad}{c - 2d}\\)\nB. \\(\\frac{bc + ad}{c + 2d}\\)\nC. \\(\\frac{ad - bc}{c - 2d}\\)\nD. \\(\\frac{bc - ad}{c + 2d}\\)\nE. \\(\\frac{ad - bc}{c + 2d}\\)",
+        answer: "D",
+        steps: "\\(d(a + 2x) = c(b - x)\\)\n\\(ad + 2dx = bc - cx\\)\n\\(2dx + cx = bc - ad\\), i.e. \\(x(c + 2d) = bc - ad\\)\n\\(x = \\frac{bc - ad}{c + 2d}\\) (D)"
+      },
+      // Subject of Formulas (continued)
+      {
+        id: "a1-sf-31",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{y(z + 2)}{4z}\\), then \\(z =\\)\nA. \\(\\frac{2y}{4x + y}\\)\nB. \\(\\frac{2y}{4x - y}\\)\nC. \\(\\frac{4x - y}{2y}\\)\nD. \\(\\frac{2}{4x - y}\\)\nE. \\(\\frac{-2y}{4x - y}\\)",
+        answer: "B",
+        steps: "\\(4xz = y(z + 2) = yz + 2y\\)\n\\(4xz - yz = 2y\\), i.e. \\(z(4x - y) = 2y\\)\n\\(z = \\frac{2y}{4x - y}\\) (B)"
+      },
+      {
+        id: "a1-sf-32",
+        type: "Subject of Formulas",
+        question: "If \\(a = \\frac{2 - b}{2 + b}\\), then \\(b =\\)\nA. \\(\\frac{a - 1}{2}\\)\nB. \\(\\frac{2(1 - a)}{a + 1}\\)\nC. \\(\\frac{1 - a}{a + 1}\\)\nD. \\(\\frac{2(1 - a)}{a - 1}\\)\nE. \\(\\frac{2(a - 1)}{a + 1}\\)",
+        answer: "B",
+        steps: "\\(a(2 + b) = 2 - b\\)\n\\(2a + ab = 2 - b\\)\n\\(ab + b = 2 - 2a\\), i.e. \\(b(a + 1) = 2(1 - a)\\)\n\\(b = \\frac{2(1 - a)}{a + 1}\\) (B)"
+      },
+      {
+        id: "a1-sf-33",
+        type: "Subject of Formulas",
+        question: "If \\(A = \\frac{h}{2}(a + 2b)\\), then \\(b =\\)\nA. \\(\\frac{A}{h} - a\\)\nB. \\(\\frac{2A - a}{h}\\)\nC. \\(\\frac{2A}{h} - a\\)\nD. \\(\\frac{A}{h} - \\frac{a}{2}\\)\nE. \\(\\frac{A}{h} - 2a\\)",
+        answer: "D",
+        steps: "\\(\\frac{2A}{h} = a + 2b\\)\n\\(2b = \\frac{2A}{h} - a\\)\n\\(b = \\frac{A}{h} - \\frac{a}{2}\\) (D)"
+      },
+      {
+        id: "a1-sf-34",
+        type: "Subject of Formulas",
+        question: "If \\(a = 3 - \\frac{2}{1 + b}\\), then \\(b =\\)\nA. \\(\\frac{1 - a}{3 + a}\\)\nB. \\(\\frac{a - 1}{3 - a}\\)\nC. \\(\\frac{a - 1}{a - 3}\\)\nD. \\(\\frac{3 - a}{a - 1}\\)\nE. \\(\\frac{a + 1}{3 - a}\\)",
+        answer: "B",
+        steps: "\\(\\frac{2}{1 + b} = 3 - a\\), so \\(1 + b = \\frac{2}{3 - a}\\)\n\\(b = \\frac{2}{3 - a} - 1 = \\frac{2 - (3 - a)}{3 - a}\\)\n\\(b = \\frac{a - 1}{3 - a}\\) (B)"
+      },
+      {
+        id: "a1-sf-35",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{x}{1 + x} = \\frac{a}{2 - a}\\), then \\(x =\\)\nA. \\(\\frac{a}{2 + 2a}\\)\nB. \\(a\\)\nC. \\(\\frac{2a}{1 - a}\\)\nD. \\(\\frac{a}{2 - 2a}\\)",
+        answer: "D",
+        steps: "\\(x(2 - a) = a(1 + x)\\)\n\\(2x - ax = a + ax\\)\n\\(2x - 2ax = a\\), i.e. \\(x(2 - 2a) = a\\)\n\\(x = \\frac{a}{2 - 2a}\\) (D)"
+      },
+      {
+        id: "a1-sf-36",
+        type: "Subject of Formulas",
+        question: "If \\(a = \\frac{b + 1}{b - 3}\\), then \\(b =\\)\nA. \\(\\frac{3a - 1}{a + 1}\\)\nB. \\(\\frac{3a + 1}{a + 1}\\)\nC. \\(\\frac{3a - 1}{a - 1}\\)\nD. \\(\\frac{3a + 1}{a - 1}\\)",
+        answer: "D",
+        steps: "\\(a(b - 3) = b + 1\\)\n\\(ab - 3a = b + 1\\)\n\\(ab - b = 3a + 1\\), i.e. \\(b(a - 1) = 3a + 1\\)\n\\(b = \\frac{3a + 1}{a - 1}\\) (D)"
+      },
+      {
+        id: "a1-sf-37",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{2y - x}{4y}\\), then \\(y =\\)\nA. \\(\\frac{x}{2 - 4x}\\)\nB. \\(\\frac{4x - 2}{x}\\)\nC. \\(\\frac{2 - 4x}{x}\\)\nD. \\(\\frac{x}{4x - 2}\\)",
+        answer: "A",
+        steps: "\\(4xy = 2y - x\\)\n\\(x = 2y - 4xy = y(2 - 4x)\\)\n\\(y = \\frac{x}{2 - 4x}\\) (A)"
+      },
+      {
+        id: "a1-sf-38",
+        type: "Subject of Formulas",
+        question: "If \\(a = 3 - 4b\\), then \\(b =\\)\nA. \\(\\frac{a + 3}{4}\\)\nB. \\(\\frac{a - 3}{4}\\)\nC. \\(\\frac{-3 - a}{4}\\)\nD. \\(\\frac{3 - a}{4}\\)",
+        answer: "D",
+        steps: "\\(4b = 3 - a\\)\n\\(b = \\frac{3 - a}{4}\\) (D)"
+      },
+      {
+        id: "a1-sf-39",
+        type: "Subject of Formulas",
+        question: "If \\(3x - 4y = 11\\), then \\(y =\\)\nA. \\(\\frac{4}{3x - 11}\\)\nB. \\(\\frac{3x - 11}{4}\\)\nC. \\(\\frac{4}{3x + 11}\\)\nD. \\(\\frac{3x + 11}{4}\\)",
+        answer: "B",
+        steps: "\\(4y = 3x - 11\\)\n\\(y = \\frac{3x - 11}{4}\\) (B)"
+      },
+      // Subject of Formulas (continued)
+      {
+        id: "a1-sf-40",
+        type: "Subject of Formulas",
+        question: "If \\(m = 9 - 2n\\), then \\(n =\\)\nA. \\(\\frac{2}{9 - m}\\)\nB. \\(\\frac{9 - m}{2}\\)\nC. \\(\\frac{2}{9 + m}\\)\nD. \\(\\frac{9 + m}{2}\\)",
+        answer: "B",
+        steps: "\\(2n = 9 - m\\)\n\\(n = \\frac{9 - m}{2}\\) (B)"
+      },
+      {
+        id: "a1-sf-41",
+        type: "Subject of Formulas",
+        question: "If \\(P = \\frac{VT}{2R} + 3\\), then \\(T =\\)\nA. \\(\\frac{2R(P + 3)}{V}\\)\nB. \\(\\frac{R(P - 3)}{2V}\\)\nC. \\(2R\\left(\\frac{P}{V} - 3\\right)\\)\nD. \\(\\frac{2R(P - 3)}{V}\\)",
+        answer: "D",
+        steps: "\\(P - 3 = \\frac{VT}{2R}\\)\n\\(T = \\frac{2R(P - 3)}{V}\\) (D)"
+      },
+      {
+        id: "a1-sf-42",
+        type: "Subject of Formulas",
+        question: "If \\(x = \\frac{5a}{a + 3b}\\), then \\(a =\\)\nA. \\(\\frac{3bx}{x - 5}\\)\nB. \\(\\frac{3b}{x - 5}\\)\nC. \\(\\frac{3bx}{5 - x}\\)\nD. \\(\\frac{3b}{5 - x}\\)",
+        answer: "C",
+        steps: "\\(x(a + 3b) = 5a\\)\n\\(ax + 3bx = 5a\\)\n\\(3bx = 5a - ax = a(5 - x)\\)\n\\(a = \\frac{3bx}{5 - x}\\) (C)"
+      },
+      {
+        id: "a1-sf-43",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{3 + a}{a} = \\frac{3 - x}{x}\\), then \\(x =\\)\nA. \\(\\frac{3a}{3 - 2a}\\)\nB. \\(\\frac{3a}{3 + 2a}\\)\nC. \\(\\frac{3a}{2 + 3a}\\)\nD. \\(\\frac{a}{3 + 2a}\\)",
+        answer: "B",
+        steps: "\\(x(3 + a) = a(3 - x)\\)\n\\(3x + ax = 3a - ax\\)\n\\(3x + 2ax = 3a\\), i.e. \\(x(3 + 2a) = 3a\\)\n\\(x = \\frac{3a}{3 + 2a}\\) (B)"
+      },
+      {
+        id: "a1-sf-44",
+        type: "Subject of Formulas",
+        question: "If \\(7 - 4m = 3n\\), then \\(m =\\)\nA. \\(\\frac{7 - 3n}{4}\\)\nB. \\(\\frac{3n - 7}{4}\\)\nC. \\(\\frac{28 - 3n}{4}\\)\nD. \\(n\\)",
+        answer: "A",
+        steps: "\\(4m = 7 - 3n\\)\n\\(m = \\frac{7 - 3n}{4}\\) (A)"
+      },
+      {
+        id: "a1-sf-45",
+        type: "Subject of Formulas",
+        question: "If \\(4a + 3 = 2(b - 5)\\), then \\(b =\\)\nA. \\(2a + 3\\)\nB. \\(2a - \\frac{7}{2}\\)\nC. \\(a + \\frac{13}{2}\\)\nD. \\(2a + \\frac{13}{2}\\)",
+        answer: "D",
+        steps: "\\(4a + 3 = 2b - 10\\)\n\\(2b = 4a + 13\\)\n\\(b = 2a + \\frac{13}{2}\\) (D)"
+      },
+      {
+        id: "a1-sf-46",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{y - 2}{c} = \\frac{y + 3}{d}\\), then \\(y =\\)\nA. \\(\\frac{3c + 2d}{d - c}\\)\nB. \\(\\frac{3c - 2d}{c + d}\\)\nC. \\(\\frac{2c + 3d}{d - c}\\)\nD. \\(\\frac{3c + 2d}{c - d}\\)",
+        answer: "A",
+        steps: "\\(d(y - 2) = c(y + 3)\\)\n\\(dy - 2d = cy + 3c\\)\n\\(dy - cy = 3c + 2d\\), i.e. \\(y(d - c) = 3c + 2d\\)\n\\(y = \\frac{3c + 2d}{d - c}\\) (A)"
+      },
+      {
+        id: "a1-sf-47",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{2a}{x} - \\frac{b}{y} = 4\\), then \\(x =\\)\nA. \\(\\frac{2ay}{4y + b}\\)\nB. \\(\\frac{2ay}{4y - b}\\)\nC. \\(\\frac{2by}{4y + a}\\)\nD. \\(\\frac{2ay}{b - 4y}\\)",
+        answer: "A",
+        steps: "\\(\\frac{2a}{x} = 4 + \\frac{b}{y} = \\frac{4y + b}{y}\\)\n\\(x = \\frac{2ay}{4y + b}\\) (A)"
+      },
+      {
+        id: "a1-sf-48",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{a + 6b}{3a} = 1 + \\frac{b}{a}\\), then \\(a =\\)\nA. \\(\\frac{3b}{2}\\)\nB. \\(\\frac{2b}{3}\\)\nC. \\(\\frac{5b}{3}\\)\nD. \\(\\frac{3b}{5}\\)",
+        answer: "A",
+        steps: "\\(a + 6b = 3a + 3b\\) (multiplying both sides by \\(3a\\))\n\\(3b = 2a\\)\n\\(a = \\frac{3b}{2}\\) (A)"
+      },
+      // Subject of Formulas (continued)
+      {
+        id: "a1-sf-49",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{2\\alpha}{1 - x} = \\frac{\\beta}{x}\\), then \\(x =\\)\nA. \\(\\frac{\\beta}{\\alpha + 2\\beta}\\)\nB. \\(\\frac{2\\alpha}{2\\alpha + \\beta}\\)\nC. \\(\\frac{\\beta}{2\\alpha + \\beta}\\)\nD. \\(\\frac{\\beta}{2\\alpha - \\beta}\\)",
+        answer: "C",
+        steps: "\\(2\\alpha x = \\beta(1 - x)\\)\n\\(2\\alpha x + \\beta x = \\beta\\), i.e. \\(x(2\\alpha + \\beta) = \\beta\\)\n\\(x = \\frac{\\beta}{2\\alpha + \\beta}\\) (C)"
+      },
+      {
+        id: "a1-sf-50",
+        type: "Subject of Formulas",
+        question: "If \\(h = 4 - \\frac{6}{k + 2}\\), then \\(k =\\)\nA. \\(\\frac{2h - 2}{4 - h}\\)\nB. \\(\\frac{2h - 14}{4 - h}\\)\nC. \\(\\frac{2h - 2}{4 + h}\\)\nD. \\(\\frac{2h - 14}{4 + h}\\)",
+        answer: "A",
+        steps: "\\(\\frac{6}{k + 2} = 4 - h\\), so \\(k + 2 = \\frac{6}{4 - h}\\)\n\\(k = \\frac{6}{4 - h} - 2 = \\frac{6 - 2(4 - h)}{4 - h}\\)\n\\(k = \\frac{2h - 2}{4 - h}\\) (A)"
+      },
+      {
+        id: "a1-sf-51",
+        type: "Subject of Formulas",
+        question: "If \\(a(a - b) = 3(b + a)\\), then \\(b =\\)\nA. \\(\\frac{a^{2} + 3a}{a + 3}\\)\nB. \\(\\frac{a^{2} + 3a}{3 - a}\\)\nC. \\(\\frac{a^{2} - 3a}{3 - a}\\)\nD. \\(\\frac{a^{2} - 3a}{a + 3}\\)",
+        answer: "D",
+        steps: "\\(a^{2} - ab = 3b + 3a\\)\n\\(a^{2} - 3a = 3b + ab = b(a + 3)\\)\n\\(b = \\frac{a^{2} - 3a}{a + 3}\\) (D)"
+      },
+      {
+        id: "a1-sf-52",
+        type: "Subject of Formulas",
+        question: "If \\(m(m + a) = a(2 + m)\\), then \\(a =\\)\nA. \\(m^{2}\\)\nB. \\(\\frac{m^{2}}{2}\\)\nC. \\(\\frac{m^{2} + m}{2}\\)\nD. \\(\\frac{m}{2}\\)",
+        answer: "B",
+        steps: "\\(m^{2} + ma = 2a + am\\)\n\\(m^{2} = 2a\\)\n\\(a = \\frac{m^{2}}{2}\\) (B)"
+      },
+      {
+        id: "a1-sf-53",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{3}{u} + \\frac{2}{v} = 5\\), then \\(u =\\)\nA. \\(\\frac{2v}{5v - 3}\\)\nB. \\(\\frac{3v}{2 - 5v}\\)\nC. \\(\\frac{2v}{3 - 5v}\\)\nD. \\(\\frac{3v}{5v - 2}\\)",
+        answer: "D",
+        steps: "\\(\\frac{3}{u} = 5 - \\frac{2}{v} = \\frac{5v - 2}{v}\\)\n\\(u = \\frac{3v}{5v - 2}\\) (D)"
+      },
+      {
+        id: "a1-sf-54",
+        type: "Subject of Formulas",
+        question: "If \\(\\frac{a + 3b}{5a + 2b} = \\frac{1}{b + 2}\\), then \\(a =\\)\nA. \\(\\frac{3b^{2} + 4b}{3 - b}\\)\nB. \\(\\frac{3 - b}{3b^{2} + 4b}\\)\nC. \\(\\frac{3b^{2} + 4b}{b - 3}\\)\nD. \\(\\frac{3b^{2} - 4b}{3 - b}\\)",
+        answer: "A",
+        steps: "\\((a + 3b)(b + 2) = 5a + 2b\\)\n\\(ab + 2a + 3b^{2} + 6b = 5a + 2b\\)\n\\(ab - 3a = -3b^{2} - 4b\\), i.e. \\(a(3 - b) = 3b^{2} + 4b\\)\n\\(a = \\frac{3b^{2} + 4b}{3 - b}\\) (A)"
+      },
+      {
+        id: "a1-sf-55",
+        type: "Subject of Formulas",
+        question: "If \\(k = \\frac{7}{3m} - n\\), then \\(m =\\)\nA. \\(\\frac{3(n - k)}{7}\\)\nB. \\(\\frac{3(k + n)}{7}\\)\nC. \\(\\frac{7}{3(k - n)}\\)\nD. \\(\\frac{7}{3(k + n)}\\)",
+        answer: "D",
+        steps: "\\(k + n = \\frac{7}{3m}\\)\n\\(m = \\frac{7}{3(k + n)}\\) (D)"
+      },
+      {
+        id: "a1-sf-56",
+        type: "Subject of Formulas",
+        question: "If \\((2c + 3)(d - 5) = d(4c - 1)\\), then \\(c =\\)\nA. \\(\\frac{4d + 15}{2d + 10}\\)\nB. \\(\\frac{4d - 15}{2d + 10}\\)\nC. \\(\\frac{4d - 15}{2d - 10}\\)\nD. \\(\\frac{4d + 15}{2d - 10}\\)",
+        answer: "B",
+        steps: "\\(2cd - 10c + 3d - 15 = 4cd - d\\)\n\\(4d - 15 = 2cd + 10c = c(2d + 10)\\)\n\\(c = \\frac{4d - 15}{2d + 10}\\) (B)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-9",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(4ab - 4a^{2} - b^{2} =\\)\nA. \\((2a - b)^{2}\\)\nB. \\((-2a + b)^{2}\\)\nC. \\((-2a - b)^{2}\\)\nD. \\(-(2a - b)^{2}\\)\nE. \\(-(2a + b)^{2}\\)",
+        answer: "D",
+        steps: "\\(4ab - 4a^{2} - b^{2} = -(4a^{2} - 4ab + b^{2})\\)\n\\(= -(2a - b)^{2}\\) (D)"
+      },
+      {
+        id: "a1-ef-10",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{2}{x + 2} + \\frac{2}{x - 2} + \\frac{x + \\frac{4}{x}}{x - \\frac{4}{x}} =\\)\nA. \\(\\frac{1}{x + 2}\\)\nB. \\(\\frac{1}{(x + 2)(x - 2)}\\)\nC. \\(\\frac{x^{2} + 4x + 8}{(x + 2)(x - 2)}\\)\nD. \\(\\frac{x + 2}{x - 2}\\)\nE. \\(\\frac{1}{x - 2}\\)",
+        answer: "D",
+        steps: "\\(\\frac{2}{x + 2} + \\frac{2}{x - 2} = \\frac{2(x - 2) + 2(x + 2)}{(x + 2)(x - 2)} = \\frac{4x}{x^{2} - 4}\\)\n\\(\\frac{x + \\frac{4}{x}}{x - \\frac{4}{x}} = \\frac{x^{2} + 4}{x^{2} - 4}\\) (multiply the numerator and the denominator by \\(x\\))\n\\(\\text{Expression} = \\frac{4x + x^{2} + 4}{x^{2} - 4} = \\frac{(x + 2)^{2}}{(x + 2)(x - 2)} = \\frac{x + 2}{x - 2}\\) (D)"
+      },
+      {
+        id: "a1-ef-11",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\left(\\frac{\\frac{x}{y} + \\frac{y}{x} - 2}{\\frac{x}{y} - \\frac{y}{x}}\\right)^{-1} =\\)\nA. \\(\\frac{x^{2} + y^{2}}{x^{2} - y^{2}}\\)\nB. \\(\\frac{x + y}{x - y}\\)\nC. \\(\\frac{x^{2} - y^{2}}{x^{2} + y^{2}}\\)\nD. \\(\\frac{x - y}{x + y}\\)\nE. \\(-\\frac{x + y}{x - y}\\)",
+        answer: "B",
+        steps: "\\(\\frac{x}{y} + \\frac{y}{x} - 2 = \\frac{x^{2} + y^{2} - 2xy}{xy} = \\frac{(x - y)^{2}}{xy}\\) and \\(\\frac{x}{y} - \\frac{y}{x} = \\frac{x^{2} - y^{2}}{xy}\\)\n\\(\\frac{\\frac{x}{y} + \\frac{y}{x} - 2}{\\frac{x}{y} - \\frac{y}{x}} = \\frac{(x - y)^{2}}{(x + y)(x - y)} = \\frac{x - y}{x + y}\\)\nThe reciprocal is \\(\\frac{x + y}{x - y}\\) (B)"
+      },
+      {
+        id: "a1-ef-12",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{4a}{a^{2} - 4b^{2}} + \\frac{2}{2b - a} =\\)\nA. \\(\\frac{4a + 2}{(a + 2b)(a - 2b)}\\)\nB. \\(\\frac{6a + 4b}{(a + 2b)(a - 2b)}\\)\nC. \\(\\frac{a + 2b}{(a + 2b)(a - 2b)}\\)\nD. \\(\\frac{4a - 2}{(a + 2b)(a - 2b)}\\)\nE. \\(\\frac{2}{a + 2b}\\)",
+        answer: "E",
+        steps: "\\(\\frac{4a}{(a + 2b)(a - 2b)} - \\frac{2}{a - 2b} = \\frac{4a - 2(a + 2b)}{(a + 2b)(a - 2b)}\\)\n\\(= \\frac{2(a - 2b)}{(a + 2b)(a - 2b)} = \\frac{2}{a + 2b}\\) (E)"
+      },
+      {
+        id: "a1-ef-13",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{8}{x^{2} - 16} - \\frac{7}{x^{2} + x - 12} =\\)\nA. \\(\\frac{x - 52}{(x - 4)(x + 4)(x - 3)}\\)\nB. \\(\\frac{1}{(x - 3)(x - 4)}\\)\nC. \\(\\frac{1}{(x + 3)(x + 4)}\\)\nD. \\(\\frac{1}{(x - 3)(x + 4)}\\)\nE. \\(\\frac{1}{(x + 3)(x - 4)}\\)",
+        answer: "B",
+        steps: "\\(x^{2} - 16 = (x - 4)(x + 4)\\) and \\(x^{2} + x - 12 = (x + 4)(x - 3)\\)\n\\(\\frac{8(x - 3) - 7(x - 4)}{(x - 4)(x + 4)(x - 3)} = \\frac{x + 4}{(x - 4)(x + 4)(x - 3)}\\)\n\\(= \\frac{1}{(x - 4)(x - 3)}\\) (B)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-14",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{\\frac{1}{a^{3}} - \\frac{1}{b^{3}}}{\\frac{1}{a} - \\frac{1}{b}} =\\)\nA. \\(a^{2} + ab + b^{2}\\)\nB. \\(a^{2} - ab + b^{2}\\)\nC. \\(\\frac{1}{a^{2}} - \\frac{1}{ab} + \\frac{1}{b^{2}}\\)\nD. \\(\\frac{1}{a^{2}} + \\frac{1}{ab} + \\frac{1}{b^{2}}\\)\nE. \\(\\frac{1}{a^{2}} - \\frac{1}{b^{2}}\\)",
+        answer: "D",
+        steps: "Numerator \\(= \\frac{b^{3} - a^{3}}{a^{3}b^{3}}\\) and denominator \\(= \\frac{b - a}{ab}\\)\n\\(\\text{Expression} = \\frac{(b - a)(b^{2} + ab + a^{2})}{a^{3}b^{3}} \\times \\frac{ab}{b - a} = \\frac{a^{2} + ab + b^{2}}{a^{2}b^{2}}\\)\n\\(= \\frac{1}{b^{2}} + \\frac{1}{ab} + \\frac{1}{a^{2}}\\) (D)"
+      },
+      {
+        id: "a1-ef-15",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{6}{(x - 3)(x + 2)} - \\frac{5}{x^{2} - 4} =\\)\nA. \\(\\frac{1}{(x - 2)^{2}(x + 2)}\\)\nB. \\(\\frac{11x - 27}{(x - 3)(x + 2)(x - 2)}\\)\nC. \\(\\frac{x + 3}{(x - 3)(x + 2)(x - 2)}\\)\nD. \\(\\frac{x^{2} - 3x - 27}{(x - 3)(x + 2)(x - 2)^{2}}\\)\nE. \\(\\frac{x - 27}{(x - 3)(x + 2)(x - 2)}\\)",
+        answer: "C",
+        steps: "\\(x^{2} - 4 = (x + 2)(x - 2)\\), so the common denominator is \\((x - 3)(x + 2)(x - 2)\\)\n\\(\\text{Expression} = \\frac{6(x - 2) - 5(x - 3)}{(x - 3)(x + 2)(x - 2)}\\)\n\\(= \\frac{6x - 12 - 5x + 15}{(x - 3)(x + 2)(x - 2)} = \\frac{x + 3}{(x - 3)(x + 2)(x - 2)}\\) (C)"
+      },
+      {
+        id: "a1-ef-16",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{3}{1 + x} + \\frac{3}{1 - x} + \\frac{6x}{x^{2} - 1} =\\)\nA. \\(\\frac{6x - 6}{1 - x^{2}}\\)\nB. \\(\\frac{6}{1 - x}\\)\nC. \\(\\frac{6 + 12x}{1 - x^{2}}\\)\nD. \\(\\frac{6 - 12x}{x^{2} - 1}\\)\nE. \\(\\frac{6}{1 + x}\\)",
+        answer: "E",
+        steps: "\\(\\frac{3}{1 + x} + \\frac{3}{1 - x} = \\frac{3(1 - x) + 3(1 + x)}{1 - x^{2}} = \\frac{6}{1 - x^{2}}\\)\n\\(\\frac{6x}{x^{2} - 1} = -\\frac{6x}{1 - x^{2}}\\)\n\\(\\text{Expression} = \\frac{6 - 6x}{1 - x^{2}} = \\frac{6(1 - x)}{(1 + x)(1 - x)} = \\frac{6}{1 + x}\\) (E)"
+      },
+      {
+        id: "a1-ef-17",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{\\frac{a}{b} - \\frac{b}{a}}{\\frac{1}{a} - \\frac{1}{b}} =\\)\nA. \\(-a + b\\)\nB. \\(a + b\\)\nC. \\(-a - b\\)\nD. \\(\\frac{1}{a} + \\frac{1}{b}\\)\nE. \\(a - b\\)",
+        answer: "C",
+        steps: "\\(\\frac{a}{b} - \\frac{b}{a} = \\frac{a^{2} - b^{2}}{ab}\\) and \\(\\frac{1}{a} - \\frac{1}{b} = \\frac{b - a}{ab}\\)\n\\(\\text{Expression} = \\frac{(a + b)(a - b)}{ab} \\times \\frac{ab}{b - a} = \\frac{(a + b)(a - b)}{-(a - b)} = -a - b\\) (C)"
+      },
+      {
+        id: "a1-ef-18",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{\\frac{x^{2}}{4} - 9y^{2}}{\\frac{2}{3}(x - 6y)} =\\)\nA. \\(\\frac{3}{8}(x - 6y)\\)\nB. \\(\\frac{3}{8}(x + 6y)\\)\nC. \\(2(x + 6y)\\)\nD. \\(\\frac{1}{2}(x - 6y)\\)\nE. \\(\\frac{3}{4}(x + 6y)\\)",
+        answer: "B",
+        steps: "\\(\\frac{x^{2}}{4} - 9y^{2} = \\frac{1}{4}(x^{2} - 36y^{2}) = \\frac{1}{4}(x + 6y)(x - 6y)\\)\n\\(\\text{Expression} = \\frac{1}{4}(x + 6y)(x - 6y) \\times \\frac{3}{2(x - 6y)} = \\frac{3}{8}(x + 6y)\\) (B)"
+      },
+      {
+        id: "a1-ef-19",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\left(\\frac{x + 2}{x}\\right)^{2} - \\left(\\frac{x - 2}{x}\\right)^{2} =\\)\nA. \\(\\frac{8}{x}\\)\nB. \\(\\frac{4}{x}\\)\nC. \\(\\frac{4}{x^{2}}\\)\nD. \\(\\frac{8}{x^{2}}\\)\nE. \\(0\\)",
+        answer: "A",
+        steps: "\\(\\text{Expression} = \\frac{(x + 2)^{2} - (x - 2)^{2}}{x^{2}} = \\frac{(x^{2} + 4x + 4) - (x^{2} - 4x + 4)}{x^{2}}\\)\n\\(= \\frac{8x}{x^{2}} = \\frac{8}{x}\\) (A)"
+      },
+      {
+        id: "a1-ef-20",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{x^{2} - 3x}{x^{3} - 16x} \\times \\frac{x^{2} - x - 12}{x^{2} + 2x - 3} =\\)\nA. \\(\\frac{x - 3}{(x - 4)(x - 1)}\\)\nB. \\(\\frac{1}{x + 4}\\)\nC. \\(\\frac{x - 3}{(x + 4)(x - 1)}\\)\nD. \\(\\frac{x - 3}{x - 1}\\)\nE. \\(\\frac{1}{x}\\)",
+        answer: "C",
+        steps: "\\(\\frac{x^{2} - 3x}{x^{3} - 16x} = \\frac{x(x - 3)}{x(x - 4)(x + 4)}\\) and \\(\\frac{x^{2} - x - 12}{x^{2} + 2x - 3} = \\frac{(x - 4)(x + 3)}{(x + 3)(x - 1)}\\)\n\\(\\text{Expression} = \\frac{x(x - 3)}{x(x - 4)(x + 4)} \\times \\frac{(x - 4)(x + 3)}{(x + 3)(x - 1)} = \\frac{x - 3}{(x + 4)(x - 1)}\\) (C)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-21",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{3x - x^{2}} + \\frac{1}{x^{2} + 2x - 15} =\\)\nA. \\(\\frac{-5}{x(x + 3)(x - 5)}\\)\nB. \\(\\frac{2x + 5}{x(3 - x)(x + 5)}\\)\nC. \\(\\frac{x - 5}{x(3 - x)(x + 5)(x - 3)}\\)\nD. \\(\\frac{5}{x(3 - x)(x + 5)}\\)\nE. \\(\\frac{2x + 5}{x(3 - x)(x + 3)}\\)",
+        answer: "D",
+        steps: "\\(3x - x^{2} = x(3 - x)\\) and \\(x^{2} + 2x - 15 = (x + 5)(x - 3) = -(x + 5)(3 - x)\\)\n\\(\\text{Expression} = \\frac{1}{x(3 - x)} - \\frac{1}{(x + 5)(3 - x)} = \\frac{(x + 5) - x}{x(3 - x)(x + 5)}\\)\n\\(= \\frac{5}{x(3 - x)(x + 5)}\\) (D)"
+      },
+      {
+        id: "a1-ef-22",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Which of the following expressions CANNOT be factorized?\nA. \\(9x^{2} + 25y^{2}\\)\nB. \\(x^{3} - 64\\)\nC. \\(2x^{2} + 8xy + 8y^{2}\\)\nD. \\(9x^{2} - 16y^{2}\\)\nE. \\(x^{3} + 27\\)",
+        answer: "A",
+        steps: "\\(x^{3} - 64 = (x - 4)(x^{2} + 4x + 16)\\), \\(9x^{2} - 16y^{2} = (3x + 4y)(3x - 4y)\\), \\(x^{3} + 27 = (x + 3)(x^{2} - 3x + 9)\\) and \\(2x^{2} + 8xy + 8y^{2} = 2(x + 2y)^{2}\\) can all be factorized\n\\(9x^{2} + 25y^{2}\\) is a sum of two squares, so it cannot be factorized over the real numbers (A)"
+      },
+      {
+        id: "a1-ef-23",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{64x^{3} - 27}{4x - 3} =\\)\nA. \\(16x^{2} + 12x + 9\\)\nB. \\((4x - 3)^{2}\\)\nC. \\(16x^{2} - 12x + 9\\)\nD. \\(16x^{2} - 9\\)\nE. \\(16x^{2} + 9\\)",
+        answer: "A",
+        steps: "\\(64x^{3} - 27 = (4x)^{3} - 3^{3} = (4x - 3)(16x^{2} + 12x + 9)\\)\n\\(\\frac{64x^{3} - 27}{4x - 3} = 16x^{2} + 12x + 9\\) (A)"
+      },
+      {
+        id: "a1-ef-24",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1 + \\frac{x - y}{x + y}}{1 - \\frac{x + y}{x - y}} =\\)\nA. \\(x + y\\)\nB. \\(\\frac{x - y}{x + y}\\)\nC. \\(\\frac{x(x - y)}{y(x + y)}\\)\nD. \\(\\frac{x}{y}\\)\nE. \\(\\frac{x(y - x)}{y(x + y)}\\)",
+        answer: "E",
+        steps: "Numerator \\(= \\frac{(x + y) + (x - y)}{x + y} = \\frac{2x}{x + y}\\)\nDenominator \\(= \\frac{(x - y) - (x + y)}{x - y} = \\frac{-2y}{x - y}\\)\n\\(\\text{Expression} = \\frac{2x}{x + y} \\times \\frac{x - y}{-2y} = \\frac{x(y - x)}{y(x + y)}\\) (E)"
+      },
+      {
+        id: "a1-ef-25",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(a^{3} + 27a^{-3} =\\)\nA. \\(\\left(a + \\frac{3}{a}\\right)\\left(a^{2} + 3 + \\frac{9}{a^{2}}\\right)\\)\nB. \\(\\left(a + \\frac{1}{3a}\\right)\\left(a^{2} - \\frac{1}{3} + \\frac{1}{9a^{2}}\\right)\\)\nC. \\(\\left(a - \\frac{3}{a}\\right)\\left(a^{2} + 3 + \\frac{9}{a^{2}}\\right)\\)\nD. \\(\\left(a + \\frac{3}{a}\\right)\\left(a^{2} - 3 + \\frac{9}{a^{2}}\\right)\\)\nE. \\(\\left(a + \\frac{3}{a}\\right)\\left(a^{2} - 6 + \\frac{9}{a^{2}}\\right)\\)",
+        answer: "D",
+        steps: "\\(a^{3} + 27a^{-3} = a^{3} + \\left(\\frac{3}{a}\\right)^{3}\\)\n\\(= \\left(a + \\frac{3}{a}\\right)\\left[a^{2} - a \\cdot \\frac{3}{a} + \\left(\\frac{3}{a}\\right)^{2}\\right]\\) (sum of two cubes)\n\\(= \\left(a + \\frac{3}{a}\\right)\\left(a^{2} - 3 + \\frac{9}{a^{2}}\\right)\\) (D)"
+      },
+      {
+        id: "a1-ef-26",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{1 - x^{2}} - \\frac{1}{(1 - x)^{2}} =\\)\nA. \\(\\frac{-2}{(1 - x)(1 + x)^{2}}\\)\nB. \\(\\frac{-2x}{(1 - x)^{2}(1 + x)}\\)\nC. \\(\\frac{2}{(1 - x)^{2}(1 + x)}\\)\nD. \\(\\frac{-2x}{(1 - x)(1 + x)^{2}}\\)\nE. \\(\\frac{2x}{(1 - x)^{2}(1 + x)}\\)",
+        answer: "B",
+        steps: "The common denominator is \\((1 - x)^{2}(1 + x)\\)\n\\(\\text{Expression} = \\frac{(1 - x) - (1 + x)}{(1 - x)^{2}(1 + x)} = \\frac{-2x}{(1 - x)^{2}(1 + x)}\\) (B)"
+      },
+      {
+        id: "a1-ef-27",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Which one of the following is a factor of \\(x^{3} - 7x^{2} + 7x + 15\\)?\nA. \\((x + 1)(x - 5)\\)\nB. \\((x - 1)(x + 3)\\)\nC. \\((x + 1)(x + 5)\\)\nD. \\((x - 1)(x - 3)\\)\nE. \\((x + 3)(x - 5)\\)",
+        answer: "A",
+        steps: "Let \\(f(x) = x^{3} - 7x^{2} + 7x + 15\\). \\(f(-1) = -1 - 7 - 7 + 15 = 0\\), so \\(x + 1\\) is a factor.\n\\(f(5) = 125 - 175 + 35 + 15 = 0\\), so \\(x - 5\\) is a factor.\nHence \\((x + 1)(x - 5)\\) is a factor of \\(f(x)\\); in fact \\(f(x) = (x + 1)(x - 3)(x - 5)\\) (A)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-28",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{a} - \\frac{1}{b} =\\)\nA. \\(\\frac{2}{a - b}\\)\nB. \\(\\frac{ab}{b - a}\\)\nC. \\(\\frac{b - a}{ab}\\)\nD. \\(\\frac{1}{b - a}\\)\nE. \\(\\frac{a - b}{ab}\\)",
+        answer: "C",
+        steps: "\\(\\frac{1}{a} - \\frac{1}{b} = \\frac{b}{ab} - \\frac{a}{ab}\\)\n\\(= \\frac{b - a}{ab}\\) (C)"
+      },
+      {
+        id: "a1-ef-29",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Which of the following is a factor of \\(9(a + b)^{2} - 4(a - b)^{2}\\)?\nA. \\(5a - b\\)\nB. \\(b - 5a\\)\nC. \\(a + 5b\\)\nD. \\(a + 3b\\)\nE. \\(a - 5b\\)",
+        answer: "C",
+        steps: "\\(9(a + b)^{2} - 4(a - b)^{2} = [3(a + b)]^{2} - [2(a - b)]^{2}\\)\n\\(= [3(a + b) + 2(a - b)][3(a + b) - 2(a - b)] = (5a + b)(a + 5b)\\)\nSo \\(a + 5b\\) is a factor (C)"
+      },
+      {
+        id: "a1-ef-30",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Simplify \\((x^{2} - \\sqrt{5}x + 1)(x^{2} + \\sqrt{5}x + 1)\\).\nA. \\(x^{4} - 3x^{2} + 1\\)\nB. \\(x^{4} + 5x^{2} + 1\\)\nC. \\(x^{4} + x^{2} + 1\\)\nD. \\(x^{4} - 5x^{2} + 1\\)\nE. \\(x^{4} + 1\\)",
+        answer: "A",
+        steps: "\\((x^{2} - \\sqrt{5}x + 1)(x^{2} + \\sqrt{5}x + 1) = (x^{2} + 1)^{2} - (\\sqrt{5}x)^{2}\\)\n\\(= x^{4} + 2x^{2} + 1 - 5x^{2} = x^{4} - 3x^{2} + 1\\) (A)"
+      },
+      {
+        id: "a1-ef-31",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "In factorizing the expression \\(x^{4} + 4x^{2}y^{2} + 16y^{4}\\), we find that\nA. \\(\\((x^{2} - 4y^{2})\\) is a factor.\\)\nB. \\(\\((x^{2} - 2xy - 4y^{2})\\) is a factor.\\)\nC. \\(\\((x^{2} + 4y^{2})\\) is a factor.\\)\nD. \\(It cannot be factorized.\\)\nE. \\(\\((x^{2} - 2xy + 4y^{2})\\) is a factor.\\)",
+        answer: "E",
+        steps: "\\(x^{4} + 4x^{2}y^{2} + 16y^{4} = (x^{4} + 8x^{2}y^{2} + 16y^{4}) - 4x^{2}y^{2} = (x^{2} + 4y^{2})^{2} - (2xy)^{2}\\)\n\\(= (x^{2} + 4y^{2} + 2xy)(x^{2} + 4y^{2} - 2xy) = (x^{2} + 2xy + 4y^{2})(x^{2} - 2xy + 4y^{2})\\)\nSo \\((x^{2} - 2xy + 4y^{2})\\) is a factor (E)"
+      },
+      {
+        id: "a1-ef-32",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Factorize \\(x^{2} - 2xy + y^{2} + 2x - 2y\\).\nA. \\((x + y)(x - y + 2)\\)\nB. \\((x - y)(x - y + 2)\\)\nC. \\((x - y + 1)^{2}\\)\nD. \\((x - y)(x - y - 2)\\)\nE. \\((x - y)(x + y + 2)\\)",
+        answer: "B",
+        steps: "\\(x^{2} - 2xy + y^{2} + 2x - 2y = (x - y)^{2} + 2(x - y)\\)\n\\(= (x - y)(x - y + 2)\\) (B)"
+      },
+      {
+        id: "a1-ef-33",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{\\frac{3}{x} - \\frac{1}{y}}{\\frac{9y}{x} - \\frac{x}{y}} =\\)\nA. \\(\\frac{1}{3y - x}\\)\nB. \\(3y + x\\)\nC. \\(\\frac{1}{9y - x}\\)\nD. \\(3y - x\\)\nE. \\(\\frac{1}{3y + x}\\)",
+        answer: "E",
+        steps: "Numerator \\(= \\frac{3y - x}{xy}\\) and denominator \\(= \\frac{9y^{2} - x^{2}}{xy}\\)\n\\(\\text{Expression} = \\frac{3y - x}{(3y - x)(3y + x)} = \\frac{1}{3y + x}\\) (E)"
+      },
+      {
+        id: "a1-ef-34",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Factorize \\(3a^{n + 1} - 10a^{n} - 8a^{n - 1}\\).\nA. \\(a^{n - 1}(a + 4)(3a - 2)\\)\nB. \\(a^{n - 1}(3a + 2)(a - 4)\\)\nC. \\(a^{n}(a - 4)(3a + 2)\\)\nD. \\(a^{n}(a + 4)(3a - 2)\\)\nE. \\(a^{n - 1}(3a - 2)(a - 4)\\)",
+        answer: "B",
+        steps: "\\(3a^{n + 1} - 10a^{n} - 8a^{n - 1} = a^{n - 1}(3a^{2} - 10a - 8)\\)\n\\(= a^{n - 1}(3a + 2)(a - 4)\\) (B)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-35",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Simplify \\(\\frac{\\left(\\frac{y}{x} - 1\\right)\\left(1 + \\frac{x}{y}\\right)}{\\frac{x}{y} - \\frac{y}{x}}\\).\nA. \\(\\frac{x + y}{x - y}\\)\nB. \\(-1\\)\nC. \\(-\\frac{x - y}{x + y}\\)\nD. \\(\\frac{x - y}{x + y}\\)\nE. \\(-\\frac{x + y}{x - y}\\)",
+        answer: "B",
+        steps: "\\(\\left(\\frac{y}{x} - 1\\right)\\left(1 + \\frac{x}{y}\\right) = \\frac{y - x}{x} \\times \\frac{y + x}{y} = \\frac{y^{2} - x^{2}}{xy}\\)\n\\(\\frac{x}{y} - \\frac{y}{x} = \\frac{x^{2} - y^{2}}{xy}\\)\n\\(\\text{Expression} = \\frac{y^{2} - x^{2}}{x^{2} - y^{2}} = -1\\) (B)"
+      },
+      {
+        id: "a1-ef-36",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Which of the following expressions has / have \\(b - c\\) as a factor?\nI. \\(a(b - c) + 2(c - b)\\)\nII. \\(a(b - c) - 2b - 2c\\)\nIII. \\(3b - 3c - ab + ac\\)\nA. I only\nB. I and II only\nC. I and III only\nD. II and III only\nE. I, II and III",
+        answer: "C",
+        steps: "I: \\(a(b - c) + 2(c - b) = a(b - c) - 2(b - c) = (a - 2)(b - c)\\) has the factor \\(b - c\\).\nII: \\(a(b - c) - 2b - 2c = a(b - c) - 2(b + c)\\) does not have the factor \\(b - c\\).\nIII: \\(3b - 3c - ab + ac = 3(b - c) - a(b - c) = (3 - a)(b - c)\\) has the factor \\(b - c\\).\nSo only I and III have the factor \\(b - c\\) (C)"
+      },
+      {
+        id: "a1-ef-37",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Simplify \\(\\frac{1}{x - 2} + \\frac{1}{x + 2} + \\frac{3x + 2}{4 - x^{2}}\\).\nA. \\(\\frac{1}{2 + x}\\)\nB. \\(-\\frac{1}{2 + x}\\)\nC. \\(\\frac{1}{2 - x}\\)\nD. \\(\\frac{2 - 5x}{4 - x^{2}}\\)\nE. \\(\\frac{3x + 2}{4 - x^{2}}\\)",
+        answer: "C",
+        steps: "\\(\\frac{1}{x - 2} + \\frac{1}{x + 2} = \\frac{2x}{x^{2} - 4} = -\\frac{2x}{4 - x^{2}}\\)\n\\(\\text{Expression} = \\frac{-2x + 3x + 2}{4 - x^{2}} = \\frac{x + 2}{(2 - x)(2 + x)}\\)\n\\(= \\frac{1}{2 - x}\\) (C)"
+      },
+      {
+        id: "a1-ef-38",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(16 - a^{2} - 4b^{2} + 4ab =\\)\nA. \\((4 - a + 2b)(4 + a + 2b)\\)\nB. \\((4 - a - 2b)(4 + a - 2b)\\)\nC. \\((4 - a + 2b)(4 + a - 2b)\\)\nD. \\((4 - a - 2b)(4 - a + 2b)\\)\nE. \\((4 - a - 2b)(4 + a + 2b)\\)",
+        answer: "C",
+        steps: "\\(16 - a^{2} - 4b^{2} + 4ab = 16 - (a^{2} - 4ab + 4b^{2}) = 4^{2} - (a - 2b)^{2}\\)\n\\(= [4 - (a - 2b)][4 + (a - 2b)] = (4 - a + 2b)(4 + a - 2b)\\) (C)"
+      },
+      {
+        id: "a1-ef-39",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Simplify \\(\\frac{3}{x^{2} - 9} - \\frac{2}{x^{2} - 2x - 3}\\).\nA. \\(\\frac{1}{(x + 1)(x - 3)}\\)\nB. \\(\\frac{1}{(x + 1)(x + 3)}\\)\nC. \\(\\frac{x - 9}{(x + 1)(x - 3)(x + 3)}\\)\nD. \\(\\frac{x + 9}{(x + 1)(x - 3)(x + 3)}\\)\nE. \\(\\frac{1}{(x - 1)(x + 3)}\\)",
+        answer: "B",
+        steps: "\\(x^{2} - 9 = (x - 3)(x + 3)\\) and \\(x^{2} - 2x - 3 = (x - 3)(x + 1)\\)\n\\(\\text{Expression} = \\frac{3(x + 1) - 2(x + 3)}{(x - 3)(x + 3)(x + 1)} = \\frac{x - 3}{(x - 3)(x + 3)(x + 1)}\\)\n\\(= \\frac{1}{(x + 1)(x + 3)}\\) (B)"
+      },
+      {
+        id: "a1-ef-40",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Factorize \\(x^{2} - 4y^{2} + 6x + 9\\).\nA. \\((x - 2y + 3)(x - 2y - 3)\\)\nB. \\((x + 2y - 3)(x - 2y - 3)\\)\nC. \\((x + 2y + 3)(x - 2y + 3)\\)\nD. \\((x + 2y + 3)(x + 2y - 3)\\)\nE. \\((x + 2y - 3)(x - 2y + 3)\\)",
+        answer: "C",
+        steps: "\\(x^{2} - 4y^{2} + 6x + 9 = (x^{2} + 6x + 9) - 4y^{2} = (x + 3)^{2} - (2y)^{2}\\)\n\\(= (x + 3 + 2y)(x + 3 - 2y) = (x + 2y + 3)(x - 2y + 3)\\) (C)"
+      },
+      {
+        id: "a1-ef-41",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{4}{x^{2} - 4} - \\frac{5}{x^{2} + x - 6} =\\)\nA. \\(\\frac{-1}{(x + 2)(x + 3)}\\)\nB. \\(\\frac{-1}{(x + 2)(x - 3)}\\)\nC. \\(\\frac{-x - 23}{(x - 2)(x + 2)(x + 3)}\\)\nD. \\(\\frac{-1}{(x - 2)(x - 3)}\\)\nE. \\(\\frac{-1}{(x - 2)(x + 3)}\\)",
+        answer: "A",
+        steps: "\\(x^{2} - 4 = (x - 2)(x + 2)\\) and \\(x^{2} + x - 6 = (x - 2)(x + 3)\\)\n\\(\\text{Expression} = \\frac{4(x + 3) - 5(x + 2)}{(x - 2)(x + 2)(x + 3)} = \\frac{2 - x}{(x - 2)(x + 2)(x + 3)}\\)\n\\(= \\frac{-1}{(x + 2)(x + 3)}\\) (A)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-42",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Factorize \\(4a^{2} - b^{2} - 2a - b\\).\nA. \\((2a + b)(2a - b + 1)\\)\nB. \\((2a + b + 1)(2a - b - 1)\\)\nC. \\((2a - b)(2a + b - 1)\\)\nD. \\((2a + b)(2a - b - 1)\\)\nE. \\((2a - b)(2a + b + 1)\\)",
+        answer: "D",
+        steps: "\\(4a^{2} - b^{2} - 2a - b = (2a - b)(2a + b) - (2a + b)\\)\n\\(= (2a + b)(2a - b - 1)\\) (D)"
+      },
+      {
+        id: "a1-ef-43",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{3}{x^{2} - 4} - \\frac{x - 2}{x^{2} - x - 6} =\\)\nA. \\(\\frac{-x^{2} + 7x - 13}{(x - 2)(x + 2)(x - 3)}\\)\nB. \\(\\frac{-x^{2} + 4x - 13}{(x - 2)(x + 2)(x - 3)}\\)\nC. \\(\\frac{-x^{2} - x + 5}{(x - 2)(x + 2)(x - 3)}\\)\nD. \\(\\frac{x^{2} - 7x + 13}{(x - 2)(x + 2)(x - 3)}\\)\nE. \\(\\frac{-x^{2} + 7x - 5}{(x - 2)(x + 2)(x - 3)}\\)",
+        answer: "A",
+        steps: "\\(x^{2} - 4 = (x - 2)(x + 2)\\) and \\(x^{2} - x - 6 = (x - 3)(x + 2)\\)\n\\(\\text{Expression} = \\frac{3(x - 3) - (x - 2)(x - 2)}{(x - 2)(x + 2)(x - 3)} = \\frac{3x - 9 - x^{2} + 4x - 4}{(x - 2)(x + 2)(x - 3)}\\)\n\\(= \\frac{-x^{2} + 7x - 13}{(x - 2)(x + 2)(x - 3)}\\) (A)"
+      },
+      {
+        id: "a1-ef-44",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Factorize \\(x^{2} - 3x - xy + 3y\\).\nA. \\((x - y)(x - 3)\\)\nB. \\((x + y)(x - 3)\\)\nC. \\((3 - x)(x + y)\\)\nD. \\((x - y)(x + 3)\\)\nE. \\((3 + x)(y - x)\\)",
+        answer: "A",
+        steps: "\\(x^{2} - 3x - xy + 3y = x(x - 3) - y(x - 3)\\)\n\\(= (x - y)(x - 3)\\) (A)"
+      },
+      {
+        id: "a1-ef-45",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Simplify \\(\\frac{a}{a + 2b} + \\frac{2b}{2b - a} + \\frac{3ab}{a^{2} - 4b^{2}}\\).\nA. \\(1\\)\nB. \\(\\frac{a + 2b}{a - 2b}\\)\nC. \\(\\frac{a^{2} - ab - 4b^{2}}{a^{2} - 4b^{2}}\\)\nD. \\(\\frac{a^{2} + ab - 4b^{2}}{a^{2} - 4b^{2}}\\)\nE. \\(-\\frac{a - 2b}{a + 2b}\\)",
+        answer: "C",
+        steps: "\\(\\frac{2b}{2b - a} = -\\frac{2b}{a - 2b}\\) and \\(a^{2} - 4b^{2} = (a + 2b)(a - 2b)\\)\n\\(\\text{Expression} = \\frac{a(a - 2b) - 2b(a + 2b) + 3ab}{(a + 2b)(a - 2b)} = \\frac{a^{2} - 2ab - 2ab - 4b^{2} + 3ab}{a^{2} - 4b^{2}}\\)\n\\(= \\frac{a^{2} - ab - 4b^{2}}{a^{2} - 4b^{2}}\\) (C)"
+      },
+      {
+        id: "a1-ef-46",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((3x^{2} - 2x + 1)(2 - 5x) =\\)\nA. \\(-15x^{3} + 16x^{2} + 9x + 2\\)\nB. \\(-15x^{3} + 4x^{2} - 9x + 2\\)\nC. \\(-15x^{3} + 16x^{2} - 9x + 2\\)\nD. \\(15x^{3} - 16x^{2} + 9x - 2\\)\nE. \\(15x^{3} - 4x^{2} - 9x - 2\\)",
+        answer: "C",
+        steps: "\\((3x^{2} - 2x + 1)(2 - 5x) = 6x^{2} - 15x^{3} - 4x + 10x^{2} + 2 - 5x\\)\n\\(= -15x^{3} + 16x^{2} - 9x + 2\\) (C)"
+      },
+      {
+        id: "a1-ef-47",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Which of the following is a factor of \\(3(a - b)^{2} - a^{2} + b^{2}\\)?\nA. \\(a - 3b\\)\nB. \\(2a + b\\)\nC. \\(a + b\\)\nD. \\(a + 2b\\)\nE. \\(a - 2b\\)",
+        answer: "E",
+        steps: "\\(3(a - b)^{2} - a^{2} + b^{2} = 3(a - b)^{2} - (a - b)(a + b)\\)\n\\(= (a - b)[3(a - b) - (a + b)] = (a - b)(2a - 4b) = 2(a - b)(a - 2b)\\)\nSo \\(a - 2b\\) is a factor (E)"
+      },
+      {
+        id: "a1-ef-48",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{2 - x}{x^{2} + x - 6} + \\frac{x - 2}{x - 1} =\\)\nA. \\(\\frac{x^{2} - 5}{(x - 1)(x + 3)}\\)\nB. \\(\\frac{x^{2} - 5}{(x - 1)(x - 3)}\\)\nC. \\(\\frac{x^{2} + 3x - 6}{(x - 1)(x + 3)}\\)\nD. \\(\\frac{x^{2} - x - 5}{(x - 1)(x + 3)}\\)\nE. \\(\\frac{x^{2} + 2x - 7}{(x - 1)(x + 3)}\\)",
+        answer: "A",
+        steps: "\\(x^{2} + x - 6 = (x + 3)(x - 2)\\), so \\(\\frac{2 - x}{x^{2} + x - 6} = \\frac{-(x - 2)}{(x + 3)(x - 2)} = -\\frac{1}{x + 3}\\)\n\\(\\text{Expression} = \\frac{-(x - 1) + (x - 2)(x + 3)}{(x - 1)(x + 3)} = \\frac{-x + 1 + x^{2} + x - 6}{(x - 1)(x + 3)}\\)\n\\(= \\frac{x^{2} - 5}{(x - 1)(x + 3)}\\) (A)"
+      },
+      {
+        id: "a1-ef-49",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(1 - \\frac{3x}{x + \\frac{1}{x}} =\\)\nA. \\(\\frac{x^{2} - 1}{x^{2} + 1}\\)\nB. \\(\\frac{1 - 2x^{2}}{x^{2} + 1}\\)\nC. \\(\\frac{2x^{2} - 1}{x^{2} + 1}\\)\nD. \\(\\frac{1 - 3x^{2}}{x^{2} + 1}\\)\nE. \\(\\frac{1 + 2x^{2}}{x^{2} + 1}\\)",
+        answer: "B",
+        steps: "\\(\\frac{3x}{x + \\frac{1}{x}} = \\frac{3x^{2}}{x^{2} + 1}\\) (multiply the numerator and the denominator by \\(x\\))\n\\(1 - \\frac{3x^{2}}{x^{2} + 1} = \\frac{x^{2} + 1 - 3x^{2}}{x^{2} + 1} = \\frac{1 - 2x^{2}}{x^{2} + 1}\\) (B)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-50",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{12}{x^{2} + 2x - 8} - \\frac{2}{x - 2} =\\)\nA. \\(\\frac{2}{x + 4}\\)\nB. \\(\\frac{-2}{x + 4}\\)\nC. \\(\\frac{16 - 2x}{(x + 4)(x - 2)}\\)\nD. \\(\\frac{20 - 2x}{(x + 4)(x - 2)}\\)",
+        answer: "B",
+        steps: "\\(x^{2} + 2x - 8 = (x + 4)(x - 2)\\)\n\\(\\text{Expression} = \\frac{12 - 2(x + 4)}{(x + 4)(x - 2)} = \\frac{4 - 2x}{(x + 4)(x - 2)}\\)\n\\(= \\frac{-2(x - 2)}{(x + 4)(x - 2)} = \\frac{-2}{x + 4}\\) (B)"
+      },
+      {
+        id: "a1-ef-51",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(x^{3} - \\frac{64}{x^{3}} =\\)\nA. \\(\\left(x + \\frac{4}{x}\\right)\\left(x^{2} - 4 + \\frac{16}{x^{2}}\\right)\\)\nB. \\(\\left(x - \\frac{4}{x}\\right)\\left(x^{2} + 8 + \\frac{16}{x^{2}}\\right)\\)\nC. \\(\\left(x + \\frac{4}{x}\\right)\\left(x^{2} - 8 + \\frac{16}{x^{2}}\\right)\\)\nD. \\(\\left(x - \\frac{4}{x}\\right)\\left(x^{2} + 4 + \\frac{16}{x^{2}}\\right)\\)",
+        answer: "D",
+        steps: "\\(x^{3} - \\frac{64}{x^{3}} = x^{3} - \\left(\\frac{4}{x}\\right)^{3}\\)\n\\(= \\left(x - \\frac{4}{x}\\right)\\left[x^{2} + x \\cdot \\frac{4}{x} + \\left(\\frac{4}{x}\\right)^{2}\\right]\\) (difference of two cubes)\n\\(= \\left(x - \\frac{4}{x}\\right)\\left(x^{2} + 4 + \\frac{16}{x^{2}}\\right)\\) (D)"
+      },
+      {
+        id: "a1-ef-52",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{\\frac{5}{x} - \\frac{2}{y}}{\\frac{4x}{y} - \\frac{25y}{x}} =\\)\nA. \\(\\frac{1}{2x - 5y}\\)\nB. \\(\\frac{-1}{2x - 5y}\\)\nC. \\(\\frac{-1}{2x + 5y}\\)\nD. \\(\\frac{1}{2x + 5y}\\)",
+        answer: "C",
+        steps: "Numerator \\(= \\frac{5y - 2x}{xy}\\) and denominator \\(= \\frac{4x^{2} - 25y^{2}}{xy}\\)\n\\(\\text{Expression} = \\frac{5y - 2x}{(2x - 5y)(2x + 5y)} = \\frac{-(2x - 5y)}{(2x - 5y)(2x + 5y)} = \\frac{-1}{2x + 5y}\\) (C)"
+      },
+      {
+        id: "a1-ef-53",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((3x - 2)(x^{2} + 2x - 4) =\\)\nA. \\(3x^{3} + 4x^{2} + 16x + 8\\)\nB. \\(3x^{3} + 4x^{2} + 16x - 8\\)\nC. \\(3x^{3} + 4x^{2} - 16x - 8\\)\nD. \\(3x^{3} + 4x^{2} - 16x + 8\\)",
+        answer: "D",
+        steps: "\\((3x - 2)(x^{2} + 2x - 4) = 3x^{3} + 6x^{2} - 12x - 2x^{2} - 4x + 8\\)\n\\(= 3x^{3} + 4x^{2} - 16x + 8\\) (D)"
+      },
+      {
+        id: "a1-ef-54",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{x + 2} - \\frac{1}{x - 2} =\\)\nA. \\(\\frac{4x}{x^{2} - 4}\\)\nB. \\(\\frac{4}{4 - x^{2}}\\)\nC. \\(\\frac{4x}{4 - x^{2}}\\)\nD. \\(\\frac{4}{x^{2} - 4}\\)",
+        answer: "B",
+        steps: "\\(\\frac{1}{x + 2} - \\frac{1}{x - 2} = \\frac{(x - 2) - (x + 2)}{(x + 2)(x - 2)}\\)\n\\(= \\frac{-4}{x^{2} - 4} = \\frac{4}{4 - x^{2}}\\) (B)"
+      },
+      {
+        id: "a1-ef-55",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(2pr + 2qr - ps - qs =\\)\nA. \\((p - q)(s - 2r)\\)\nB. \\((p + q)(2s - r)\\)\nC. \\((p + q)(2r - s)\\)\nD. \\((p - q)(2r - s)\\)",
+        answer: "C",
+        steps: "\\(2pr + 2qr - ps - qs = 2r(p + q) - s(p + q)\\)\n\\(= (p + q)(2r - s)\\) (C)"
+      },
+      {
+        id: "a1-ef-56",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{n + 4} - \\frac{1}{4 - n} =\\)\nA. \\(\\frac{8}{16 - n^{2}}\\)\nB. \\(\\frac{2n}{n^{2} - 16}\\)\nC. \\(\\frac{8}{n^{2} - 16}\\)\nD. \\(\\frac{2n}{16 - n^{2}}\\)",
+        answer: "B",
+        steps: "\\(\\frac{1}{n + 4} - \\frac{1}{4 - n} = \\frac{(4 - n) - (n + 4)}{(n + 4)(4 - n)}\\)\n\\(= \\frac{-2n}{16 - n^{2}} = \\frac{2n}{n^{2} - 16}\\) (B)"
+      },
+      {
+        id: "a1-ef-57",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((x + x)(y + y + y + y) =\\)\nA. \\(8xy\\)\nB. \\(8x^{2}y^{4}\\)\nC. \\(x^{2}y^{4}\\)\nD. \\(2x + 4y\\)",
+        answer: "A",
+        steps: "\\(x + x = 2x\\) and \\(y + y + y + y = 4y\\)\n\\((x + x)(y + y + y + y) = 2x \\times 4y = 8xy\\) (A)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-58",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{-3k}{1 - k} - \\frac{1}{k - 1} =\\)\nA. \\(\\frac{3k - 1}{k - 1}\\)\nB. \\(\\frac{3k^{2} + 1}{k^{2} - 1}\\)\nC. \\(1\\)\nD. \\(\\frac{k + 1}{k - 1}\\)",
+        answer: "A",
+        steps: "\\(\\frac{-3k}{1 - k} - \\frac{1}{k - 1} = \\frac{-3k}{1 - k} + \\frac{1}{1 - k} = \\frac{1 - 3k}{1 - k}\\)\n\\(= \\frac{3k - 1}{k - 1}\\) (A)"
+      },
+      {
+        id: "a1-ef-59",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((3x^{2} - 2x + 4) - 2(x^{2} - 3x + 1) =\\)\nA. \\(x^{2} + 4x + 2\\)\nB. \\(5x^{2} - 8x + 6\\)\nC. \\(5x^{2} + 4x + 2\\)\nD. \\(x^{2} - 8x + 2\\)",
+        answer: "A",
+        steps: "\\((3x^{2} - 2x + 4) - 2(x^{2} - 3x + 1) = 3x^{2} - 2x + 4 - 2x^{2} + 6x - 2\\)\n\\(= x^{2} + 4x + 2\\) (A)"
+      },
+      {
+        id: "a1-ef-60",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "Which of the following must have \\(x + y\\) as a factor?\nI. \\(x^{2} - y^{2}\\)\nII. \\(x(x + y) - 2x - 2y\\)\nIII. \\(x^{2} + y^{2} + 2x\\)\nA. I only\nB. II only\nC. I and II only\nD. II and III only",
+        answer: "C",
+        steps: "I: \\(x^{2} - y^{2} = (x + y)(x - y)\\) has the factor \\(x + y\\).\nII: \\(x(x + y) - 2x - 2y = x(x + y) - 2(x + y) = (x + y)(x - 2)\\) has the factor \\(x + y\\).\nIII: \\(x^{2} + y^{2} + 2x\\) does not have the factor \\(x + y\\) (it is not zero when \\(y = -x\\)).\nSo I and II only (C)"
+      },
+      {
+        id: "a1-ef-61",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{3}{a - 2} - \\frac{2}{1 - a} =\\)\nA. \\(\\frac{5a - 1}{(a - 1)(a - 2)}\\)\nB. \\(\\frac{a - 7}{(a - 1)(a - 2)}\\)\nC. \\(\\frac{5}{(a - 1)(a - 2)}\\)\nD. \\(\\frac{5a - 7}{(a - 1)(a - 2)}\\)",
+        answer: "D",
+        steps: "\\(\\frac{3}{a - 2} - \\frac{2}{1 - a} = \\frac{3}{a - 2} + \\frac{2}{a - 1}\\)\n\\(= \\frac{3(a - 1) + 2(a - 2)}{(a - 1)(a - 2)} = \\frac{5a - 7}{(a - 1)(a - 2)}\\) (D)"
+      },
+      {
+        id: "a1-ef-62",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((4x - 3)(2x^{2} - 3x + 5) =\\)\nA. \\(8x^{3} - 18x^{2} + 29x - 15\\)\nB. \\(8x^{3} - 18x^{2} - 29x - 15\\)\nC. \\(8x^{3} - 6x^{2} + 29x - 15\\)\nD. \\(8x^{3} + 18x^{2} + 29x + 15\\)",
+        answer: "A",
+        steps: "\\((4x - 3)(2x^{2} - 3x + 5) = 8x^{3} - 12x^{2} + 20x - 6x^{2} + 9x - 15\\)\n\\(= 8x^{3} - 18x^{2} + 29x - 15\\) (A)"
+      },
+      {
+        id: "a1-ef-63",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{3x - 2} + \\frac{1}{3x + 2} =\\)\nA. \\(\\frac{6x}{3x^{2} - 2}\\)\nB. \\(\\frac{6}{3x^{2} - 2}\\)\nC. \\(\\frac{6x}{9x^{2} - 4}\\)\nD. \\(\\frac{6}{9x^{2} - 4}\\)",
+        answer: "C",
+        steps: "\\(\\frac{1}{3x - 2} + \\frac{1}{3x + 2} = \\frac{(3x + 2) + (3x - 2)}{(3x - 2)(3x + 2)}\\)\n\\(= \\frac{6x}{9x^{2} - 4}\\) (C)"
+      },
+      {
+        id: "a1-ef-64",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(ab - ac - b^{2} + bc =\\)\nA. \\((a + b)(c - b)\\)\nB. \\((a - c)(b + c)\\)\nC. \\((a - b)(b - c)\\)\nD. \\((a - b)(b + c)\\)",
+        answer: "C",
+        steps: "\\(ab - ac - b^{2} + bc = a(b - c) - b(b - c)\\)\n\\(= (a - b)(b - c)\\) (C)"
+      },
+      {
+        id: "a1-ef-65",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((x - 3y)(x + 3y - 2) =\\)\nA. \\(x^{2} + 3y^{2} - 2x + 6y\\)\nB. \\(x^{2} - 9y^{2} - 2x + 6y\\)\nC. \\(x^{2} + 3y^{2} + 2x + 6y\\)\nD. \\(x^{2} - 9y^{2} + 2x + 6y\\)",
+        answer: "B",
+        steps: "\\((x - 3y)(x + 3y - 2) = x^{2} + 3xy - 2x - 3xy - 9y^{2} + 6y\\)\n\\(= x^{2} - 9y^{2} - 2x + 6y\\) (B)"
+      },
+      {
+        id: "a1-ef-66",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(a^{2} - b^{2} + 4b - 4 =\\)\nA. \\((a - b - 2)(a + b - 2)\\)\nB. \\((a - b + 2)(a + b + 2)\\)\nC. \\((a - b + 2)(a + b - 2)\\)\nD. \\((a - b - 2)(a + b + 2)\\)",
+        answer: "C",
+        steps: "\\(a^{2} - b^{2} + 4b - 4 = a^{2} - (b^{2} - 4b + 4) = a^{2} - (b - 2)^{2}\\)\n\\(= [a - (b - 2)][a + (b - 2)] = (a - b + 2)(a + b - 2)\\) (C)"
+      },
+      {
+        id: "a1-ef-67",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{2}{3 - x} + \\frac{x - 1}{(x - 3)^{2}} =\\)\nA. \\(\\frac{x - 7}{(3 - x)^{2}}\\)\nB. \\(\\frac{7 - x}{(3 - x)^{2}}\\)\nC. \\(\\frac{x + 5}{(3 - x)^{2}}\\)\nD. \\(\\frac{5 - x}{(3 - x)^{2}}\\)",
+        answer: "D",
+        steps: "\\(\\frac{2}{3 - x} = -\\frac{2}{x - 3} = \\frac{-2(x - 3)}{(x - 3)^{2}}\\)\n\\(\\text{Expression} = \\frac{-2(x - 3) + (x - 1)}{(x - 3)^{2}} = \\frac{5 - x}{(x - 3)^{2}} = \\frac{5 - x}{(3 - x)^{2}}\\) (D)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-68",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(p^{2} - 9q^{2} - p - 3q =\\)\nA. \\((p + 3q)(p - 3q - 1)\\)\nB. \\((p - 3q)(p + 3q - 1)\\)\nC. \\((p + 3q)(p + 3q - 1)\\)\nD. \\((p - 3q)(p - 3q + 1)\\)",
+        answer: "A",
+        steps: "\\(p^{2} - 9q^{2} - p - 3q = (p + 3q)(p - 3q) - (p + 3q)\\)\n\\(= (p + 3q)(p - 3q - 1)\\) (A)"
+      },
+      {
+        id: "a1-ef-69",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((3x + 2y)^{2} - (3x - 2y)^{2} =\\)\nA. \\(24xy\\)\nB. \\(12xy\\)\nC. \\(8y^{2}\\)\nD. \\(0\\)",
+        answer: "A",
+        steps: "\\((3x + 2y)^{2} - (3x - 2y)^{2} = (9x^{2} + 12xy + 4y^{2}) - (9x^{2} - 12xy + 4y^{2})\\)\n\\(= 24xy\\) (A)"
+      },
+      {
+        id: "a1-ef-70",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(xp - yp - xq + yq + xr - yr =\\)\nA. \\((x - y)(p - q + r)\\)\nB. \\((x - y)(p + q - r)\\)\nC. \\((x + y)(p + q - r)\\)\nD. \\((x + y)(p - q + r)\\)",
+        answer: "A",
+        steps: "\\(xp - yp - xq + yq + xr - yr = p(x - y) - q(x - y) + r(x - y)\\)\n\\(= (x - y)(p - q + r)\\) (A)"
+      },
+      {
+        id: "a1-ef-71",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(u^{2} - v^{2} - 7u - 7v =\\)\nA. \\((u + v)(u - v - 7)\\)\nB. \\((u + v)(u - v + 7)\\)\nC. \\((u - v)(u + v - 7)\\)\nD. \\((u - v)(u + v + 7)\\)",
+        answer: "A",
+        steps: "\\(u^{2} - v^{2} - 7u - 7v = (u + v)(u - v) - 7(u + v)\\)\n\\(= (u + v)(u - v - 7)\\) (A)"
+      },
+      {
+        id: "a1-ef-72",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((x - 1)(x^{2} - x + 1) =\\)\nA. \\((x - 1)^{3}\\)\nB. \\(x^{3} - 1\\)\nC. \\(x^{3} - 2x^{2} + 2x - 1\\)\nD. \\(x^{3} - x^{2} + x - 1\\)",
+        answer: "C",
+        steps: "\\((x - 1)(x^{2} - x + 1) = x^{3} - x^{2} + x - x^{2} + x - 1\\)\n\\(= x^{3} - 2x^{2} + 2x - 1\\) (C)"
+      },
+      {
+        id: "a1-ef-73",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{x^{2} - 4x + 4} - \\frac{1}{x^{2} + x - 6} =\\)\nA. \\(\\frac{1}{(x - 2)^{2}(x + 3)}\\)\nB. \\(\\frac{2x + 1}{(x - 2)^{2}(x + 3)}\\)\nC. \\(\\frac{5}{(x - 2)^{2}(x + 3)}\\)\nD. \\(\\frac{1}{(x - 2)(x + 3)}\\)",
+        answer: "C",
+        steps: "\\(x^{2} - 4x + 4 = (x - 2)^{2}\\) and \\(x^{2} + x - 6 = (x - 2)(x + 3)\\)\n\\(\\text{Expression} = \\frac{(x + 3) - (x - 2)}{(x - 2)^{2}(x + 3)}\\)\n\\(= \\frac{5}{(x - 2)^{2}(x + 3)}\\) (C)"
+      },
+      {
+        id: "a1-ef-74",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(25 - (3x - 2y)^{2} =\\)\nA. \\((5 - 3x - 2y)(5 + 3x - 2y)\\)\nB. \\((5 - 3x + 2y)(5 + 3x + 2y)\\)\nC. \\((5 - 3x + 2y)(5 + 3x - 2y)\\)\nD. \\((5 - 3x - 2y)(5 + 3x + 2y)\\)",
+        answer: "C",
+        steps: "\\(25 - (3x - 2y)^{2} = 5^{2} - (3x - 2y)^{2}\\)\n\\(= [5 - (3x - 2y)][5 + (3x - 2y)] = (5 - 3x + 2y)(5 + 3x - 2y)\\) (C)"
+      },
+      {
+        id: "a1-ef-75",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(2m^{2} - 5mn + 3n^{2} + m - n =\\)\nA. \\((m + n)(2m + 3n - 1)\\)\nB. \\((m - n)(2m - 3n + 1)\\)\nC. \\((m + n)(2m - 3n - 1)\\)\nD. \\((m - n)(2m + 3n + 1)\\)",
+        answer: "B",
+        steps: "\\(2m^{2} - 5mn + 3n^{2} = (m - n)(2m - 3n)\\)\n\\(2m^{2} - 5mn + 3n^{2} + m - n = (m - n)(2m - 3n) + (m - n)\\)\n\\(= (m - n)(2m - 3n + 1)\\) (B)"
+      },
+      {
+        id: "a1-ef-76",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(h^{2} - 9k^{2} - 2h - 6k =\\)\nA. \\((h + 3k)(h - 3k + 2)\\)\nB. \\((h + 3k)(h - 3k - 2)\\)\nC. \\((h - 3k)(h + 3k + 2)\\)\nD. \\((h - 3k)(h + 3k - 2)\\)",
+        answer: "B",
+        steps: "\\(h^{2} - 9k^{2} - 2h - 6k = (h + 3k)(h - 3k) - 2(h + 3k)\\)\n\\(= (h + 3k)(h - 3k - 2)\\) (B)"
+      },
+      {
+        id: "a1-ef-77",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{1}{2x + 5} - \\frac{1}{2x - 5} =\\)\nA. \\(\\frac{4x}{4x^{2} - 25}\\)\nB. \\(\\frac{10}{25 - 4x^{2}}\\)\nC. \\(\\frac{10}{4x^{2} - 25}\\)\nD. \\(\\frac{4x}{25 - 4x^{2}}\\)",
+        answer: "B",
+        steps: "\\(\\frac{1}{2x + 5} - \\frac{1}{2x - 5} = \\frac{(2x - 5) - (2x + 5)}{(2x + 5)(2x - 5)}\\)\n\\(= \\frac{-10}{4x^{2} - 25} = \\frac{10}{25 - 4x^{2}}\\) (B)"
+      },
+      {
+        id: "a1-ef-78",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((a + b)(a^{2} - ab - b^{2}) =\\)\nA. \\((a + b)^{3}\\)\nB. \\(a^{3} + b^{3}\\)\nC. \\(a^{3} - 2a^{2}b + 2ab^{2} - b^{3}\\)\nD. \\(a^{3} - 2ab^{2} - b^{3}\\)",
+        answer: "D",
+        steps: "\\((a + b)(a^{2} - ab - b^{2}) = a^{3} - a^{2}b - ab^{2} + a^{2}b - ab^{2} - b^{3}\\)\n\\(= a^{3} - 2ab^{2} - b^{3}\\) (D)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-79",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{3}{5k + 2} - \\frac{4}{5k - 2} =\\)\nA. \\(\\frac{-5k - 2}{25k^{2} - 4}\\)\nB. \\(\\frac{35k - 2}{25k^{2} - 4}\\)\nC. \\(\\frac{-5k + 14}{25k^{2} - 4}\\)\nD. \\(\\frac{-5k - 14}{25k^{2} - 4}\\)",
+        answer: "D",
+        steps: "\\(\\frac{3}{5k + 2} - \\frac{4}{5k - 2} = \\frac{3(5k - 2) - 4(5k + 2)}{(5k + 2)(5k - 2)}\\)\n\\(= \\frac{15k - 6 - 20k - 8}{25k^{2} - 4} = \\frac{-5k - 14}{25k^{2} - 4}\\) (D)"
+      },
+      {
+        id: "a1-ef-80",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((2a + 3b)(5a - 4b) - a(4a + 6b) =\\)\nA. \\((2a + 3b)(3a - 4b)\\)\nB. \\((2a - 3b)(3a - 4b)\\)\nC. \\((2a + 3b)(3a + 4b)\\)\nD. \\((2a - 3b)(3a + 4b)\\)",
+        answer: "A",
+        steps: "\\((2a + 3b)(5a - 4b) - a(4a + 6b) = (2a + 3b)(5a - 4b) - 2a(2a + 3b)\\)\n\\(= (2a + 3b)[(5a - 4b) - 2a] = (2a + 3b)(3a - 4b)\\) (A)"
+      },
+      {
+        id: "a1-ef-81",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((u + v)(u - v)(u + 2) =\\)\nA. \\(u^{3} - 2u^{2} - uv^{2} - 2v^{2}\\)\nB. \\(u^{3} + 2u^{2} + uv^{2} + 2v^{2}\\)\nC. \\(u^{3} + 2u^{2} - uv^{2} + 2v^{2}\\)\nD. \\(u^{3} + 2u^{2} - uv^{2} - 2v^{2}\\)",
+        answer: "D",
+        steps: "\\((u + v)(u - v)(u + 2) = (u^{2} - v^{2})(u + 2)\\)\n\\(= u^{3} + 2u^{2} - uv^{2} - 2v^{2}\\) (D)"
+      },
+      {
+        id: "a1-ef-82",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{4}{n - 3} - \\frac{5}{n - 4} =\\)\nA. \\(\\frac{n - 31}{(n - 3)(4 - n)}\\)\nB. \\(\\frac{n + 1}{(n - 3)(n - 4)}\\)\nC. \\(\\frac{9n - 31}{(n - 3)(n - 4)}\\)\nD. \\(\\frac{n + 1}{(n - 3)(4 - n)}\\)",
+        answer: "D",
+        steps: "\\(\\frac{4}{n - 3} - \\frac{5}{n - 4} = \\frac{4(n - 4) - 5(n - 3)}{(n - 3)(n - 4)}\\)\n\\(= \\frac{4n - 16 - 5n + 15}{(n - 3)(n - 4)} = \\frac{-n - 1}{(n - 3)(n - 4)} = \\frac{n + 1}{(n - 3)(4 - n)}\\) (D)"
+      },
+      {
+        id: "a1-ef-83",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\alpha^{2} - 2\\alpha - \\beta^{2} - 2\\beta =\\)\nA. \\((\\alpha + \\beta)(\\alpha - \\beta - 2)\\)\nB. \\((\\alpha + \\beta)(\\alpha - \\beta + 2)\\)\nC. \\((\\alpha - \\beta)(\\alpha + \\beta + 2)\\)\nD. \\((\\alpha - \\beta)(\\alpha + \\beta - 2)\\)",
+        answer: "A",
+        steps: "\\(\\alpha^{2} - 2\\alpha - \\beta^{2} - 2\\beta = (\\alpha + \\beta)(\\alpha - \\beta) - 2(\\alpha + \\beta)\\)\n\\(= (\\alpha + \\beta)(\\alpha - \\beta - 2)\\) (A)"
+      },
+      {
+        id: "a1-ef-84",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{3}{4 - 3x} - \\frac{2}{4 + 3x} =\\)\nA. \\(\\frac{4 - 15x}{16 - 9x^{2}}\\)\nB. \\(\\frac{4 + 3x}{16 - 9x^{2}}\\)\nC. \\(\\frac{20 + 3x}{16 - 9x^{2}}\\)\nD. \\(\\frac{4 + 15x}{16 - 9x^{2}}\\)",
+        answer: "D",
+        steps: "\\(\\frac{3}{4 - 3x} - \\frac{2}{4 + 3x} = \\frac{3(4 + 3x) - 2(4 - 3x)}{(4 - 3x)(4 + 3x)}\\)\n\\(= \\frac{12 + 9x - 8 + 6x}{16 - 9x^{2}} = \\frac{4 + 15x}{16 - 9x^{2}}\\) (D)"
+      },
+      {
+        id: "a1-ef-85",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(3x^{2} + 2xy - y^{2} + 6x + 6y =\\)\nA. \\((x - y)(3x + y + 6)\\)\nB. \\((x + y)(3x + y - 6)\\)\nC. \\((x + y)(3x - y + 6)\\)\nD. \\((x - y)(3x - y - 6)\\)",
+        answer: "C",
+        steps: "\\(3x^{2} + 2xy - y^{2} = (3x - y)(x + y)\\) and \\(6x + 6y = 6(x + y)\\)\n\\(3x^{2} + 2xy - y^{2} + 6x + 6y = (x + y)(3x - y) + 6(x + y) = (x + y)(3x - y + 6)\\) (C)"
+      },
+      {
+        id: "a1-ef-86",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((x + 5y)^{2} - (x - 5y)^{2} =\\)\nA. \\(2x^{2} + 50y^{2}\\)\nB. \\(2x^{2}\\)\nC. \\(20xy\\)\nD. \\(10xy\\)",
+        answer: "C",
+        steps: "\\((x + 5y)^{2} - (x - 5y)^{2} = (x^{2} + 10xy + 25y^{2}) - (x^{2} - 10xy + 25y^{2})\\)\n\\(= 20xy\\) (C)"
+      },
+      {
+        id: "a1-ef-87",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(49 - (2m + 5n)^{2} =\\)\nA. \\((7 + 2m + 5n)(7 - 2m - 5n)\\)\nB. \\((7 + 2m - 5n)(7 - 2m + 5n)\\)\nC. \\((7 + 2m - 5n)(7 - 2m - 5n)\\)\nD. \\((7 + 2m + 5n)(7 - 2m + 5n)\\)",
+        answer: "A",
+        steps: "\\(49 - (2m + 5n)^{2} = 7^{2} - (2m + 5n)^{2}\\)\n\\(= [7 - (2m + 5n)][7 + (2m + 5n)] = (7 - 2m - 5n)(7 + 2m + 5n)\\) (A)"
+      },
+      {
+        id: "a1-ef-88",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "The L.C.M. of \\(p^{2} - 9q^{2}\\), \\(p^{3} - 27q^{3}\\) and \\((p + 3q)(p^{2} - 9q^{2})\\) is\nA. \\(p^{2} - 9q^{2}\\).\nB. \\(p - 3q\\).\nC. \\((p + 3q)^{2}(p^{3} - 27q^{3})\\).\nD. \\((p + 3q)(p^{2} - 9q^{2})(p^{3} - 27q^{3})\\).",
+        answer: "C",
+        steps: "\\(p^{2} - 9q^{2} = (p + 3q)(p - 3q)\\), \\(p^{3} - 27q^{3} = (p - 3q)(p^{2} + 3pq + 9q^{2})\\) and \\((p + 3q)(p^{2} - 9q^{2}) = (p + 3q)^{2}(p - 3q)\\)\nL.C.M. \\(= (p + 3q)^{2}(p - 3q)(p^{2} + 3pq + 9q^{2}) = (p + 3q)^{2}(p^{3} - 27q^{3})\\) (C)"
+      },
+      // Expansion, Factorization and Algebraic Fractions (continued)
+      {
+        id: "a1-ef-89",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\(\\frac{2}{k + 3} + \\frac{5}{3k - 7} =\\)\nA. \\(\\frac{-11k - 1}{(k + 3)(3k - 7)}\\)\nB. \\(\\frac{11k - 1}{(k + 3)(3k - 7)}\\)\nC. \\(\\frac{11k + 1}{(k + 3)(3k - 7)}\\)\nD. \\(\\frac{k - 29}{(k + 3)(3k - 7)}\\)",
+        answer: "C",
+        steps: "\\(\\frac{2}{k + 3} + \\frac{5}{3k - 7} = \\frac{2(3k - 7) + 5(k + 3)}{(k + 3)(3k - 7)}\\)\n\\(= \\frac{6k - 14 + 5k + 15}{(k + 3)(3k - 7)} = \\frac{11k + 1}{(k + 3)(3k - 7)}\\) (C)"
+      },
+      {
+        id: "a1-ef-90",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "\\((3\\alpha - \\beta)^{2} + (\\alpha - 3\\beta)^{2} =\\)\nA. \\(8\\alpha^{2} - 12\\alpha\\beta + 8\\beta^{2}\\)\nB. \\(10\\alpha^{2} - 6\\alpha\\beta + 10\\beta^{2}\\)\nC. \\(8\\alpha^{2} - 6\\alpha\\beta + 8\\beta^{2}\\)\nD. \\(10\\alpha^{2} - 12\\alpha\\beta + 10\\beta^{2}\\)",
+        answer: "D",
+        steps: "\\((3\\alpha - \\beta)^{2} = 9\\alpha^{2} - 6\\alpha\\beta + \\beta^{2}\\) and \\((\\alpha - 3\\beta)^{2} = \\alpha^{2} - 6\\alpha\\beta + 9\\beta^{2}\\)\nSum \\(= 10\\alpha^{2} - 12\\alpha\\beta + 10\\beta^{2}\\) (D)"
+      },
+      {
+        id: "a1-ef-91",
+        type: "Expansion, Factorization and Algebraic Fractions",
+        question: "The H.C.F. and L.C.M. of three expressions are \\(xyz^{2}\\) and \\(x^{3}y^{5}z^{4}\\) respectively. If the first expression and the second expression are \\(x^{2}y^{3}z^{4}\\) and \\(xy^{5}z^{4}\\) respectively, then the third expression is\nA. \\(x^{2}y^{5}z^{2}\\)\nB. \\(x^{3}yz^{2}\\)\nC. \\(x^{3}yz^{4}\\)\nD. \\(x^{3}y^{3}z^{2}\\)",
+        answer: "B",
+        steps: "The \\(x\\)-part: the L.C.M. has \\(x^{3}\\), but the first two expressions have only \\(x^{2}\\) and \\(x\\), so the third has \\(x^{3}\\).\nThe \\(y\\)-part: the H.C.F. has \\(y\\), but the first two have \\(y^{3}\\) and \\(y^{5}\\), so the third has \\(y\\).\nThe \\(z\\)-part: the H.C.F. has \\(z^{2}\\), but the first two have \\(z^{4}\\), so the third has \\(z^{2}\\).\nThe third expression is \\(x^{3}yz^{2}\\) (B)"
+      },
+      // Percentage (continued)
+      {
+        id: "a1-pc-9",
+        type: "Percentage",
+        question: "A man sold a car for \\(\\$42\\,000\\) at a loss of 20% on the cost price. What would have been the loss or gain percent if he had sold it for \\(\\$63\\,000\\)?\nA. A gain of 2%\nB. No gain nor loss\nC. A loss of 2%\nD. A loss of 20%\nE. A gain of 20%",
+        answer: "E",
+        steps: "Selling price \\(= 80\\%\\) of cost, so cost \\(= \\$42\\,000 \\div 0.8 = \\$52\\,500\\).\nIf sold for \\$63 000: gain \\(= \\frac{63\\,000 - 52\\,500}{52\\,500} \\times 100\\% = 20\\%\\). (E)"
+      },
+      {
+        id: "a1-pc-10",
+        type: "Percentage",
+        question: "If the length of a rectangle is increased by 20% and the width decreased by 20%, which of the following is true?\nA. Its area is increased by 4%.\nB. Its area is increased by 20%.\nC. Its area is decreased by 4%.\nD. Its area remains the same.\nE. Its area is decreased by 20%.",
+        answer: "C",
+        steps: "New area \\(= (1 + 20\\%)(1 - 20\\%) \\times \\text{original area} = 1.2 \\times 0.8 = 0.96\\) of the original area.\nSo the area is decreased by \\(4\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-11",
+        type: "Percentage",
+        question: "\\(\\$A\\) amounts to \\(\\$B\\) in \\(t\\) years at simple interest. The rate per annum is\nA. \\(\\frac{100t(B - A)}{A}\\%\\)\nB. \\(\\frac{100(B - A)}{tA}\\%\\)\nC. \\(100\\left[\\left(\\frac{B}{A}\\right)^{\\frac{1}{t}} - 1\\right]\\%\\)\nD. \\(\\frac{100(B - A)}{tB}\\%\\)\nE. \\(\\frac{100(B - A)}{t}\\%\\)",
+        answer: "B",
+        steps: "Interest \\(= B - A\\). Simple interest \\(= \\frac{A \\times r \\times t}{100}\\), so \\(B - A = \\frac{Art}{100}\\).\n\\(r = \\frac{100(B - A)}{tA}\\%\\) (B)"
+      },
+      {
+        id: "a1-pc-12",
+        type: "Percentage",
+        question: "The marked price of a book is \\(\\$x\\). 40% of this price is profit. If the book is sold at a discount of 25%, what will the profit then be?\nA. \\(\\$0.55x\\)\nB. \\(\\$0.03x\\)\nC. \\(\\$0.35x\\)\nD. \\(\\$0.25x\\)\nE. \\(\\$0.15x\\)",
+        answer: "E",
+        steps: "Cost \\(= x - 0.4x = 0.6x\\).\nSelling price \\(= 0.75x\\), so profit \\(= 0.75x - 0.6x = \\$0.15x\\). (E)"
+      },
+      {
+        id: "a1-pc-13",
+        type: "Percentage",
+        question: "A group consists of \\(n\\) boys and \\(n\\) girls. If three of the girls are replaced by three other boys, then 53% of the group members will be boys. What is \\(n\\)?\nA. \\(50\\)\nB. \\(53\\)\nC. \\(100\\)\nD. \\(25\\)\nE. \\(106\\)",
+        answer: "A",
+        steps: "After the change there are \\(n + 3\\) boys among \\(2n\\) members.\n\\(n + 3 = 0.53 \\times 2n = 1.06n\\), so \\(0.06n = 3\\) and \\(n = 50\\). (A)"
+      },
+      {
+        id: "a1-pc-14",
+        type: "Percentage",
+        question: "A merchant sold 100 chairs. 70 of them were sold at a profit of 20% on each chair, while 30 of them were sold at a loss of 30% on each chair. What is his percentage gain or loss on the whole stock?\nA. A loss of 5%\nB. A gain of 15%\nC. A loss of 10%\nD. A gain of 5%\nE. A gain of 10%",
+        answer: "D",
+        steps: "Let the cost of each chair be \\(\\$c\\). Total cost \\(= 100c\\).\nTotal selling price \\(= 70 \\times 1.2c + 30 \\times 0.7c = 84c + 21c = 105c\\).\nGain \\(= \\frac{105c - 100c}{100c} \\times 100\\% = 5\\%\\). (D)"
+      },
+      {
+        id: "a1-pc-15",
+        type: "Percentage",
+        question: "What will \\(\\$P\\) amount to in 5 years' time if interest is compounded quarterly at 8% per annum?\nA. \\(\\$P\\left(1 + \\frac{2}{100}\\right)^{20}\\)\nB. \\(\\$P\\left(1 + \\frac{2}{100}\\right)^{4}\\)\nC. \\(\\$P\\left(1 + \\frac{2}{100}\\right)^{5}\\)\nD. \\(\\$P\\left(1 + \\frac{8}{100}\\right)^{20}\\)\nE. \\(\\$P\\left(1 + \\frac{8}{100}\\right)^{5}\\)",
+        answer: "A",
+        steps: "Rate per quarter \\(= \\frac{8\\%}{4} = 2\\%\\) and the number of quarters \\(= 5 \\times 4 = 20\\).\nAmount \\(= \\$P\\left(1 + \\frac{2}{100}\\right)^{20}\\). (A)"
+      },
+      {
+        id: "a1-pc-16",
+        type: "Percentage",
+        question: "A child spent \\(\\frac{1}{5}\\) of his savings on a shirt and \\(\\frac{1}{4}\\) of his savings on a pair of trousers. He then spent 40% of the rest of his savings on books. What percentage of his savings did he spend altogether?\nA. 65%\nB. 67%\nC. 72%\nD. 70%\nE. 62%",
+        answer: "B",
+        steps: "Spent on shirt and trousers \\(= \\frac{1}{5} + \\frac{1}{4} = 45\\%\\); the rest \\(= 55\\%\\).\nBooks \\(= 40\\% \\times 55\\% = 22\\%\\).\nTotal spent \\(= 45\\% + 22\\% = 67\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-17",
+        type: "Percentage",
+        question: "The rent of a flat is raised by 25% every three years beginning from a fixed date. Counting from that date, after how many years will the rent just exceed three times the original rent?\nA. 12 years\nB. 18 years\nC. 9 years\nD. 15 years\nE. Over 18 years",
+        answer: "D",
+        steps: "After \\(n\\) increases the rent is \\(1.25^{n}\\) times the original.\n\\(1.25^{4} \\approx 2.44 < 3\\) but \\(1.25^{5} \\approx 3.05 > 3\\), so 5 increases are needed.\nTime \\(= 5 \\times 3 = 15\\) years. (D)"
+      },
+      {
+        id: "a1-pc-18",
+        type: "Percentage",
+        question: "The marked price of a book is \\(\\$360\\). If the book is sold at a discount of 25%, the profit will be 50% of the cost price. What is the cost price of the book?\nA. \\(\\$240\\)\nB. \\(\\$270\\)\nC. \\(\\$180\\)\nD. \\(\\$135\\)\nE. \\(\\$202.5\\)",
+        answer: "C",
+        steps: "Selling price \\(= \\$360 \\times 75\\% = \\$270\\).\nSelling price \\(= 150\\%\\) of the cost, so cost \\(= \\$270 \\div 1.5 = \\$180\\). (C)"
+      },
+      {
+        id: "a1-pc-19",
+        type: "Percentage",
+        question: "Some air escapes from a spherical balloon of volume \\(64a^{3}\\). The balloon keeps its spherical shape and is now of volume \\(27b^{3}\\). What is the percentage decrease in the radius?\nA. \\(\\frac{4a - 3b}{3b} \\times 100\\%\\)\nB. \\(\\frac{a - b}{a} \\times 100\\%\\)\nC. \\(\\frac{4a - 3b}{4a} \\times 100\\%\\)\nD. \\(\\frac{64a^{3} - 27b^{3}}{27b^{3}} \\times 100\\%\\)\nE. \\(\\frac{64a^{3} - 27b^{3}}{64a^{3}} \\times 100\\%\\)",
+        answer: "C",
+        steps: "Radius is proportional to the cube root of the volume: the radius changes from \\(4a\\) to \\(3b\\) (in the same unit).\nPercentage decrease \\(= \\frac{4a - 3b}{4a} \\times 100\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-20",
+        type: "Percentage",
+        question: "A man marks his goods at a price that will bring him a profit of 60% on the cost price. If he wants to sell his goods to a friend at the cost price, the percentage discount on the marked price should be\nA. 60%\nB. 40%\nC. 35%\nD. 37.5%\nE. 30%",
+        answer: "D",
+        steps: "Let the cost be \\(c\\); the marked price \\(= 1.6c\\).\nDiscount \\(= \\frac{1.6c - c}{1.6c} \\times 100\\% = 37.5\\%\\). (D)"
+      },
+      {
+        id: "a1-pc-21",
+        type: "Percentage",
+        question: "It took Paul 45 minutes to walk from Town A to Town B. If the return journey took him 36 minutes, the percentage increase in his speed was\nA. 36%\nB. 25%\nC. 20%\nD. 30%\nE. 45%",
+        answer: "B",
+        steps: "Speed is inversely proportional to time: new speed \\(\\div\\) old speed \\(= \\frac{45}{36} = 1.25\\).\nThe speed increased by \\(25\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-22",
+        type: "Percentage",
+        question: "A merchant sold 2 articles each at \\(\\$1200\\). For the first article, he gained 20% on the cost price. For the second article, he lost 25% on the cost price. Altogether\nA. he lost \\(\\$50\\).\nB. he lost \\(\\$100\\).\nC. he gained \\(\\$100\\).\nD. he gained \\(\\$200\\).\nE. he lost \\(\\$200\\).",
+        answer: "E",
+        steps: "First: cost \\(= \\$1200 \\div 1.2 = \\$1000\\), gain \\(= \\$200\\).\nSecond: cost \\(= \\$1200 \\div 0.75 = \\$1600\\), loss \\(= \\$400\\).\nNet result: \\(200 - 400 = -200\\), i.e. he lost \\(\\$200\\). (E)"
+      },
+      {
+        id: "a1-pc-23",
+        type: "Percentage",
+        question: "\\(\\$20\\,000\\) is invested for 1 year at 12% per annum, compounded quarterly. The compound interest, correct to the nearest dollar, is\nA. \\(\\$2360\\)\nB. \\(\\$2000\\)\nC. \\(\\$2510\\)\nD. \\(\\$22\\,510\\)\nE. \\(\\$2400\\)",
+        answer: "C",
+        steps: "Rate per quarter \\(= 3\\%\\) and there are 4 quarters.\nAmount \\(= \\$20\\,000 \\times 1.03^{4} \\approx \\$22\\,510\\).\nCompound interest \\(\\approx \\$22\\,510 - \\$20\\,000 = \\$2510\\). (C)"
+      },
+      // Percentage (continued)
+      {
+        id: "a1-pc-24",
+        type: "Percentage",
+        question: "The marked price of a book is 30% above the cost price. If the book is sold at a discount of 15% off the marked price, what is the gain per cent based on the cost price?\nA. 15%\nB. None of the above.\nC. 10.5%\nD. 5.5%\nE. 10%",
+        answer: "C",
+        steps: "Let the cost be \\(c\\). Marked price \\(= 1.3c\\); selling price \\(= 1.3c \\times 0.85 = 1.105c\\).\nGain \\(= \\frac{1.105c - c}{c} \\times 100\\% = 10.5\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-25",
+        type: "Percentage",
+        question: "Last year, a man saved 20% of his income. By how much per cent must his income be increased if his expenditure increased by 25% and he wants to save 25% of his income?\nA. 20%\nB. 40%\nC. 33⅓%\nD. 25%\nE. 50%",
+        answer: "C",
+        steps: "Let last year's income be \\(I\\). Last year's expenditure \\(= 0.8I\\), so this year's expenditure \\(= 1.25 \\times 0.8I = I\\).\nLet the new income be \\(y\\). Saving \\(= 25\\%\\) of \\(y\\), so expenditure \\(= 75\\%\\) of \\(y\\): \\(0.75y = I\\), \\(y = \\frac{4}{3}I\\).\nThe income must increase by \\(33\\frac{1}{3}\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-26",
+        type: "Percentage",
+        question: "A hawker bought 150 apples and the cost was \\(\\$120\\). It was found that \\(\\frac{1}{6}\\) of the apples were rotten and could not be sold. He sold the rest at \\(\\$1.2\\) each. What percentage of the cost was his profit?\nA. 12.5%\nB. 25%\nC. 20%\nD. 30%\nE. 33⅓%",
+        answer: "B",
+        steps: "Apples sold \\(= 150 \\times \\frac{5}{6} = 125\\), so the selling price \\(= 125 \\times \\$1.2 = \\$150\\).\nProfit \\(= \\$150 - \\$120 = \\$30\\), which is \\(\\frac{30}{120} \\times 100\\% = 25\\%\\) of the cost. (B)"
+      },
+      {
+        id: "a1-pc-27",
+        type: "Percentage",
+        question: "The marked price of a book is 80% above its cost. In a sale, what percentage discount was given if the profit made was 26% of the cost?\nA. 20%\nB. 30%\nC. 10%\nD. 25%\nE. 40%",
+        answer: "B",
+        steps: "Let the cost be \\(c\\). Marked price \\(= 1.8c\\) and selling price \\(= 1.26c\\).\nSelling price \\(= (1 - d) \\times 1.8c\\), so \\(1 - d = \\frac{1.26}{1.8} = 0.7\\) and \\(d = 30\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-28",
+        type: "Percentage",
+        question: "40% of the students in a school are boys. 50% of the boys and 30% of the girls wear glasses. If 570 students wear glasses, how many students are there in the school?\nA. 1800\nB. 1425\nC. 1140\nD. 1500\nE. 1000",
+        answer: "D",
+        steps: "Let there be \\(N\\) students. Glasses \\(= 40\\% \\times 50\\%N + 60\\% \\times 30\\%N = 0.2N + 0.18N = 0.38N\\).\n\\(0.38N = 570\\), so \\(N = 1500\\). (D)"
+      },
+      {
+        id: "a1-pc-29",
+        type: "Percentage",
+        question: "A number is first increased by \\(p\\%\\) and then decreased by \\(x\\%\\). If the number so obtained is the same as the original number, then \\(x =\\)\nA. \\(\\frac{100p}{100 + p}\\)\nB. \\(\\frac{p}{1 + p}\\)\nC. \\(\\frac{p}{100}\\)\nD. \\(p\\)\nE. \\(\\frac{100}{100 + p}\\)",
+        answer: "A",
+        steps: "Let the original number be \\(N\\). \\(N\\left(1 + \\frac{p}{100}\\right)\\left(1 - \\frac{x}{100}\\right) = N\\).\n\\(1 - \\frac{x}{100} = \\frac{100}{100 + p}\\), so \\(x = 100 - \\frac{10\\,000}{100 + p} = \\frac{100p}{100 + p}\\). (A)"
+      },
+      {
+        id: "a1-pc-30",
+        type: "Percentage",
+        question: "The length and width of a cuboid are each increased by 30% and the height remains unchanged. The percentage increase in volume is\nA. 69%\nB. 99%\nC. 60%\nD. 30%\nE. 90%",
+        answer: "A",
+        steps: "New volume \\(= 1.3 \\times 1.3 \\times \\) original volume \\(= 1.69\\) of the original.\nThe percentage increase is \\(69\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-31",
+        type: "Percentage",
+        question: "If the compound interest on \\(\\$2000\\) for three years at 6% p.a., paid quarterly is \\(\\$x\\), find \\(x\\).\nA. \\(2000\\left(1 + \\frac{1.5}{100}\\right)^{12} - 2000\\)\nB. \\(2000\\left(1 + \\frac{6}{100}\\right)^{3} - 2000\\)\nC. \\(2000\\left(1 + \\frac{6}{100}\\right)^{12}\\)\nD. \\(2000\\left(1 + \\frac{1.5}{100}\\right)^{12}\\)\nE. \\(2000\\left(\\frac{1.5}{100}\\right)^{12}\\)",
+        answer: "A",
+        steps: "Rate per quarter \\(= \\frac{6\\%}{4} = 1.5\\%\\); number of quarters \\(= 3 \\times 4 = 12\\).\nAmount \\(= 2000\\left(1 + \\frac{1.5}{100}\\right)^{12}\\), so the compound interest \\(x = 2000\\left(1 + \\frac{1.5}{100}\\right)^{12} - 2000\\). (A)"
+      },
+      {
+        id: "a1-pc-32",
+        type: "Percentage",
+        question: "The marked price of an article is originally \\(P\\). The marked price is then increased so that when a discount of 20% is made on the new marked price, the selling price is still \\(P\\). What is the new marked price?\nA. \\(\\frac{4}{5}P\\)\nB. \\(\\frac{5}{6}P\\)\nC. \\(\\frac{5}{4}P\\)\nD. \\(\\frac{6}{5}P\\)\nE. \\(\\frac{21}{20}P\\)",
+        answer: "C",
+        steps: "Let the new marked price be \\(M\\). \\(0.8M = P\\).\n\\(M = \\frac{P}{0.8} = \\frac{5}{4}P\\). (C)"
+      },
+      {
+        id: "a1-pc-33",
+        type: "Percentage",
+        question: "Twelve litres of a mixture contain 50% of alcohol and 50% of water by volume. How many litres of water should be added so that it contains 20% of alcohol by volume?\nA. 6\nB. 30\nC. 12\nD. 24\nE. 18",
+        answer: "E",
+        steps: "Alcohol \\(= 6\\) litres. For 20% alcohol the total volume must be \\(6 \\div 0.2 = 30\\) litres.\nWater to be added \\(= 30 - 12 = 18\\) litres. (E)"
+      },
+      {
+        id: "a1-pc-34",
+        type: "Percentage",
+        question: "Find, correct to the nearest dollar, the compound interest on \\(\\$8000\\) at 6% p.a. for 3 years, compounded half-yearly.\nA. \\(\\$1440\\)\nB. \\(\\$9552\\)\nC. \\(\\$9600\\)\nD. \\(\\$1561\\)\nE. \\(\\$1552\\)",
+        answer: "E",
+        steps: "Rate per half-year \\(= 3\\%\\); number of half-years \\(= 6\\).\nAmount \\(= \\$8000 \\times 1.03^{6} \\approx \\$9552\\), so the interest \\(\\approx \\$9552 - \\$8000 = \\$1552\\). (E)"
+      },
+      {
+        id: "a1-pc-35",
+        type: "Percentage",
+        question: "If the selling price of 8 pens is the same as the cost price of 11 pens, the percentage profit in selling a pen will be\nA. 37.5%\nB. 137.5%\nC. 30%\nD. 72.7%\nE. 25%",
+        answer: "A",
+        steps: "Let the cost of a pen be \\(c\\). Selling price of a pen \\(= \\frac{11c}{8} = 1.375c\\).\nPercentage profit \\(= 37.5\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-36",
+        type: "Percentage",
+        question: "Peter bought an article for $x. He sold it to Mary at a profit of 25%. Mary then sold it to John for \\(\\$150\\) at a loss of 20%. Find x.\nA. 187.5\nB. 150\nC. 120\nD. 125\nE. 135",
+        answer: "B",
+        steps: "Mary's cost \\(= \\$150 \\div 0.8 = \\$187.5\\).\n\\(1.25x = 187.5\\), so \\(x = 150\\). (B)"
+      },
+      {
+        id: "a1-pc-37",
+        type: "Percentage",
+        question: "Find the difference between simple interest and compound interest (compounded annually) on a loan of \\(\\$2000\\) for 3 years at 5% per annum. (The answer should be correct to the nearest dollar.)\nA. \\(\\$315\\)\nB. \\(\\$15\\)\nC. \\(\\$615\\)\nD. \\(\\$300\\)\nE. \\(\\$2315\\)",
+        answer: "B",
+        steps: "Simple interest \\(= 2000 \\times 5\\% \\times 3 = \\$300\\).\nCompound interest \\(= 2000 \\times (1.05^{3} - 1) \\approx \\$315.25\\).\nDifference \\(\\approx \\$15\\). (B)"
+      },
+      {
+        id: "a1-pc-38",
+        type: "Percentage",
+        question: "Last year, the cost of a school magazine consisted of:\ncost of paper --------------- \\(\\$10\\)\ncost of printing ------------ \\(\\$6\\)\ncost of binding ------------ \\(\\$4\\)\nThis year, the cost of paper will increase by 30% and the cost of printing will increase by 50% while the cost of binding will remain unchanged. The cost of a school magazine will increase by\nA. 20%\nB. 25%\nC. 80%\nD. 40%\nE. 30%",
+        answer: "E",
+        steps: "New cost \\(= 10 \\times 1.3 + 6 \\times 1.5 + 4 = 13 + 9 + 4 = \\$26\\); old cost \\(= \\$20\\).\nIncrease \\(= \\frac{26 - 20}{20} \\times 100\\% = 30\\%\\). (E)"
+      },
+      // Percentage (continued)
+      {
+        id: "a1-pc-39",
+        type: "Percentage",
+        question: "X sells an article to Y at a profit. Y then sells it to Z for \\(\\$84\\) at a profit of 40%. If X had sold the article directly to Z for \\(\\$84\\), how much MORE profit would he have made?\nA. \\(\\$144\\)\nB. \\(\\$12\\)\nC. \\(\\$24\\)\nD. It cannot be found.\nE. \\(\\$60\\)",
+        answer: "C",
+        steps: "Y's cost \\(= \\$84 \\div 1.4 = \\$60\\), which is the price at which X sold to Y.\nIf X sold directly to Z for \\$84, he would get \\(\\$84 - \\$60 = \\$24\\) more. (C)"
+      },
+      {
+        id: "a1-pc-40",
+        type: "Percentage",
+        question: "A car travels from P to Q. If its speed is decreased by \\(k\\%\\), then the time it takes to travel the same distance is increased by\nA. \\(\\frac{100k}{100 + k}\\%\\)\nB. \\(\\frac{k}{100 - k}\\%\\)\nC. \\(\\frac{100}{k}\\%\\)\nD. \\(\\frac{100k}{100 - k}\\%\\)\nE. \\(k\\%\\)",
+        answer: "D",
+        steps: "Let the original speed be \\(v\\) and the distance \\(d\\). The new speed is \\(v\\left(1 - \\frac{k}{100}\\right)\\).\nNew time \\(= \\frac{d}{v} \\times \\frac{100}{100 - k}\\), so the time increases by \\(\\left(\\frac{100}{100 - k} - 1\\right) \\times 100\\% = \\frac{100k}{100 - k}\\%\\). (D)"
+      },
+      {
+        id: "a1-pc-41",
+        type: "Percentage",
+        question: "A bag contains n balls of which 70% are red and 30% are white. After 20 red balls are taken out from the bag, the percentage of red balls becomes 60%. Find n.\nA. 40\nB. 60\nC. 200\nD. 80\nE. 100",
+        answer: "D",
+        steps: "\\(0.7n - 20 = 0.6(n - 20)\\)\n\\(0.7n - 20 = 0.6n - 12\\), so \\(0.1n = 8\\) and \\(n = 80\\). (D)"
+      },
+      {
+        id: "a1-pc-42",
+        type: "Percentage",
+        question: "A cylindrical hole of radius r is drilled through the centre of a solid cylinder of base radius 3r and height 2r, from the top face to the bottom face. The percentage increase in the total surface area is\nA. 20%\nB. 10%\nC. 6⅔%\nD. 33⅓%\nE. 0%",
+        answer: "C",
+        steps: "Original total surface area \\(= 2\\pi(3r)^{2} + 2\\pi(3r)(2r) = 18\\pi r^{2} + 12\\pi r^{2} = 30\\pi r^{2}\\).\nDrilling removes two circles of area \\(\\pi r^{2}\\) each (\\(-2\\pi r^{2}\\)) and adds the curved surface of the hole \\(2\\pi r(2r) = 4\\pi r^{2}\\). Net change \\(= +2\\pi r^{2}\\).\nPercentage increase \\(= \\frac{2\\pi r^{2}}{30\\pi r^{2}} \\times 100\\% = 6\\frac{2}{3}\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-43",
+        type: "Percentage",
+        question: "If A is greater than B by 30% and B is smaller than C by 40%, then\nA. A is greater than C by 18%.\nB. A is smaller than C by 22%.\nC. A is greater than C by 10%.\nD. A is greater than C by 22%.\nE. A is smaller than C by 10%.",
+        answer: "B",
+        steps: "\\(A = 1.3B\\) and \\(B = 0.6C\\), so \\(A = 1.3 \\times 0.6C = 0.78C\\).\nSo A is smaller than C by \\(22\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-44",
+        type: "Percentage",
+        question: "At the beginning of a year, a man borrows \\(\\$2000\\) from a bank at 6% per annum, compounded yearly. He promises to repay \\(\\$700\\) at the end of each year. How much will he still owe the bank just after the second repayment?\nA. \\(\\$760\\)\nB. \\(\\$1020\\)\nC. \\(\\$1205.20\\)\nD. \\(\\$805.20\\)\nE. \\(\\$840\\)",
+        answer: "D",
+        steps: "After 1 year: \\(2000 \\times 1.06 - 700 = \\$1420\\).\nAfter 2 years: \\(1420 \\times 1.06 - 700 = 1505.2 - 700 = \\$805.20\\). (D)"
+      },
+      {
+        id: "a1-pc-45",
+        type: "Percentage",
+        question: "Find the amount (correct to the nearest dollar) of \\(\\$15\\,000\\) at 6% p.a., compounded monthly, for 3 years.\nA. \\(\\$17\\,950\\)\nB. \\(\\$540\\,000\\)\nC. \\(\\$17\\,700\\)\nD. \\(\\$18\\,000\\)\nE. \\(\\$17\\,820\\)",
+        answer: "A",
+        steps: "Rate per month \\(= 0.5\\%\\); number of months \\(= 36\\).\nAmount \\(= \\$15\\,000 \\times 1.005^{36} \\approx \\$17\\,950\\). (A)"
+      },
+      {
+        id: "a1-pc-46",
+        type: "Percentage",
+        question: "If a flat is sold for \\(\\$660\\,000\\), the gain is 10%. Find the percentage loss if the flat is sold for \\(\\$510\\,000\\).\nA. 20%\nB. 5%\nC. 15%\nD. 12.5%\nE. 10%",
+        answer: "C",
+        steps: "Cost \\(= \\$660\\,000 \\div 1.1 = \\$600\\,000\\).\nLoss \\(= \\frac{600\\,000 - 510\\,000}{600\\,000} \\times 100\\% = 15\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-47",
+        type: "Percentage",
+        question: "If A is 20% greater than B and B is 20% less than C, then\nA. C is 4% greater than A.\nB. A is 4% less than C.\nC. C is 4% less than A.\nD. A = C.\nE. A is 4% greater than C.",
+        answer: "B",
+        steps: "\\(A = 1.2B\\) and \\(B = 0.8C\\), so \\(A = 0.96C\\).\nSo A is \\(4\\%\\) less than C. (B)"
+      },
+      {
+        id: "a1-pc-48",
+        type: "Percentage",
+        question: "A blanket loses 15% of its length and 10% of its width after washing. The percentage loss in area is\nA. 22.5%\nB. 23.5%\nC. 12.5%\nD. 10%\nE. 25%",
+        answer: "B",
+        steps: "New area \\(= 0.85 \\times 0.9 = 0.765\\) of the original.\nPercentage loss \\(= 1 - 0.765 = 23.5\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-49",
+        type: "Percentage",
+        question: "A man borrows \\(\\$12\\,000\\) from a bank at 6% per annum compounded monthly. He repays the bank \\(\\$3\\,000\\) at the end of each month. How much does he still owe the bank just after the second repayment?\nA. \\(\\$6\\,000\\)\nB. \\(\\$9\\,105.30\\)\nC. \\(\\$6\\,120\\)\nD. \\(\\$6\\,105.30\\)\nE. \\(\\$9\\,000\\)",
+        answer: "D",
+        steps: "Rate per month \\(= 0.5\\%\\). After month 1: \\(12\\,000 \\times 1.005 - 3000 = \\$9060\\).\nAfter month 2: \\(9060 \\times 1.005 - 3000 = 9105.3 - 3000 = \\$6105.30\\). (D)"
+      },
+      {
+        id: "a1-pc-50",
+        type: "Percentage",
+        question: "4 kg of a solution contains 30% of alcohol by weight. How much alcohol should be added to obtain a solution containing 50% of alcohol by weight?\nA. 1.6 kg\nB. 2 kg\nC. 1.2 kg\nD. 0.8 kg\nE. 3.2 kg",
+        answer: "A",
+        steps: "Let \\(x\\) kg of alcohol be added: \\(1.2 + x = 0.5(4 + x)\\).\n\\(0.5x = 0.8\\), so \\(x = 1.6\\) kg. (A)"
+      },
+      {
+        id: "a1-pc-51",
+        type: "Percentage",
+        question: "P sold an article to Q at a profit of 20%. Q sold it to R at a profit of 25%. If Q gained \\(\\$750\\), how much did P gain?\nA. \\(\\$300\\)\nB. \\(\\$500\\)\nC. \\(\\$600\\)\nD. \\(\\$450\\)\nE. \\(\\$750\\)",
+        answer: "B",
+        steps: "Q's cost \\(= \\$750 \\div 25\\% = \\$3000\\).\nP's cost \\(= \\$3000 \\div 1.2 = \\$2500\\), so P gained \\(\\$3000 - \\$2500 = \\$500\\). (B)"
+      },
+      {
+        id: "a1-pc-52",
+        type: "Percentage",
+        question: "A sum of \\(\\$12\\,000\\) is deposited at 5% p.a., compounded yearly. Find the interest earned in the second year.\nA. \\(\\$600\\)\nB. \\(\\$1230\\)\nC. \\(\\$1260\\)\nD. \\(\\$12\\,630\\)\nE. \\(\\$630\\)",
+        answer: "E",
+        steps: "Amount after 1 year \\(= 12\\,000 \\times 1.05 = \\$12\\,600\\).\nInterest in the second year \\(= 12\\,600 \\times 5\\% = \\$630\\). (E)"
+      },
+      {
+        id: "a1-pc-53",
+        type: "Percentage",
+        question: "By selling an article at 20% discount off the marked price, a shop still makes 28% profit. If the cost price of the article is \\(\\$15\\,000\\), then the marked price is\nA. \\(\\$24\\,600\\).\nB. \\(\\$20\\,250\\).\nC. \\(\\$27\\,000\\).\nD. \\(\\$24\\,000\\).\nE. \\(\\$19\\,200\\).",
+        answer: "D",
+        steps: "Selling price \\(= \\$15\\,000 \\times 1.28 = \\$19\\,200\\).\nMarked price \\(= \\$19\\,200 \\div 0.8 = \\$24\\,000\\). (D)"
+      },
+      {
+        id: "a1-pc-54",
+        type: "Percentage",
+        question: "A merchant marks his goods 40% above the cost. He allows 15% discount on the marked price for a cash sale. Find the percentage profit the merchant makes for a cash sale.\nA. 19%\nB. 11%\nC. 25%\nD. 55%\nE. 15%",
+        answer: "A",
+        steps: "Let the cost be \\(c\\). Selling price \\(= 1.4c \\times 0.85 = 1.19c\\).\nPercentage profit \\(= 19\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-55",
+        type: "Percentage",
+        question: "Which of the following gives the compound interest on \\(\\$5000\\) at 9% p.a. for two years, compounded quarterly?\nA. \\(\\$5000\\left[\\left(1 + \\frac{0.9}{4}\\right)^{8} - 1\\right]\\)\nB. \\(\\$5000\\left[\\left(1 + \\frac{0.09}{4}\\right)^{8} - 1\\right]\\)\nC. \\(\\$5000\\left(1 + \\frac{0.09}{4}\\right)^{8}\\)\nD. \\(\\$5000(1.09^{8} - 1)\\)\nE. \\(\\$5000\\left(\\frac{0.09}{4}\\right)^{8}\\)",
+        answer: "B",
+        steps: "Rate per quarter \\(= \\frac{0.09}{4}\\) and the number of quarters \\(= 2 \\times 4 = 8\\).\nCompound interest \\(=\\) amount \\(-\\) principal \\(= \\$5000\\left[\\left(1 + \\frac{0.09}{4}\\right)^{8} - 1\\right]\\). (B)"
+      },
+      {
+        id: "a1-pc-56",
+        type: "Percentage",
+        question: "Originally \\(\\frac{3}{5}\\) of the students in a class failed in an examination. After taking a re-examination, 50% of the failed students passed. Find the total pass percentage of the class.\nA. 30%\nB. 60%\nC. 70%\nD. 40%\nE. 50%",
+        answer: "C",
+        steps: "Originally passed \\(= \\frac{2}{5} = 40\\%\\).\nPassed in the re-examination \\(= 50\\% \\times 60\\% = 30\\%\\).\nTotal pass percentage \\(= 40\\% + 30\\% = 70\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-57",
+        type: "Percentage",
+        question: "Mr Chan bought a car for \\(\\$185\\,000\\). If the value of the car goes down by 15% each year, find its value at the end of the third year. (Give your answer correct to the nearest hundred dollars.)\nA. \\(\\$113\\,600\\)\nB. \\(\\$157\\,300\\)\nC. \\(\\$133\\,700\\)\nD. \\(\\$101\\,800\\)\nE. \\(\\$134\\,900\\)",
+        answer: "A",
+        steps: "Value after 3 years \\(= \\$185\\,000 \\times 0.85^{3}\\).\n\\(\\approx \\$113\\,613 \\approx \\$113\\,600\\). (A)"
+      },
+      {
+        id: "a1-pc-58",
+        type: "Percentage",
+        question: "A wholesaler sells an article to a retailer at a profit of 25%. The retailer sells it to a customer for \\(\\$4500\\) at a profit of \\(\\$900\\). Find the original cost of the article to the wholesaler.\nA. \\(\\$2700\\)\nB. \\(\\$2000\\)\nC. \\(\\$2880\\)\nD. \\(\\$3600\\)\nE. \\(\\$3000\\)",
+        answer: "C",
+        steps: "Retailer's cost \\(= \\$4500 - \\$900 = \\$3600\\).\nWholesaler's cost \\(= \\$3600 \\div 1.25 = \\$2880\\). (C)"
+      },
+      {
+        id: "a1-pc-59",
+        type: "Percentage",
+        question: "Find the interest on \\(\\$P\\) at \\(r\\%\\) p.a. for \\(n\\) years, compounded quarterly.\nA. \\(\\$P\\left(1 + \\frac{r}{4}\\%\\right)^{n} - \\$P\\)\nB. \\(\\$P(1 + r\\%)^{n} - \\$P\\)\nC. \\(\\$P(1 + 4r\\%)^{n} - \\$P\\)\nD. \\(\\$P(1 + r\\%)^{4n} - \\$P\\)\nE. \\(\\$P\\left(1 + \\frac{r}{4}\\%\\right)^{4n} - \\$P\\)",
+        answer: "E",
+        steps: "Rate per quarter \\(= \\frac{r}{4}\\%\\) and number of quarters \\(= 4n\\).\nInterest \\(=\\) amount \\(-\\) principal \\(= \\$P\\left(1 + \\frac{r}{4}\\%\\right)^{4n} - \\$P\\). (E)"
+      },
+      {
+        id: "a1-pc-60",
+        type: "Percentage",
+        question: "The marked price of a toy is \\(\\$180\\) and the percentage profit is 50% when it is sold at the marked price. If the toy is sold at a discount of 25%, the profit is\nA. \\(\\$60\\).\nB. \\(\\$45\\).\nC. \\(\\$15\\).\nD. \\(\\$30\\).\nE. \\(\\$9\\).",
+        answer: "C",
+        steps: "Cost \\(= \\$180 \\div 1.5 = \\$120\\).\nSelling price \\(= \\$180 \\times 0.75 = \\$135\\), so profit \\(= \\$135 - \\$120 = \\$15\\). (C)"
+      },
+      {
+        id: "a1-pc-61",
+        type: "Percentage",
+        question: "Shop A offers a 25% discount on a book marked at \\(\\$P\\). Shop B offers a 20% discount on the same book marked at \\(\\$Q\\). If the selling price of the book is the same in both shops, express \\(Q\\) in terms of \\(P\\).\nA. \\(Q = \\frac{4}{5}P\\)\nB. \\(Q = \\frac{16}{15}P\\)\nC. \\(Q = P - 5\\)\nD. \\(Q = \\frac{5}{4}P\\)\nE. \\(Q = \\frac{15}{16}P\\)",
+        answer: "E",
+        steps: "\\(0.75P = 0.8Q\\)\n\\(Q = \\frac{0.75}{0.8}P = \\frac{15}{16}P\\) (E)"
+      },
+      {
+        id: "a1-pc-62",
+        type: "Percentage",
+        question: "The length of a rectangle is decreased by 25%. If the area remains unchanged, find the percentage increase of its width.\nA. 20%\nB. 33⅓%\nC. 25%\nD. 75%\nE. 30%",
+        answer: "B",
+        steps: "Let the length be \\(l\\) and the width \\(w\\). The new length is \\(0.75l\\), so the new width is \\(\\frac{lw}{0.75l} = \\frac{4}{3}w\\).\nThe width increases by \\(33\\frac{1}{3}\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-63",
+        type: "Percentage",
+        question: "There are 1 500 students in a school, of which 900 are boys and 600 are girls. If 40% of the boys and 70% of the girls wear glasses, what percentage of students in the school wear glasses?\nA. 55%\nB. 50%\nC. 48%\nD. 52%\nE. 56%",
+        answer: "D",
+        steps: "Boys with glasses \\(= 0.4 \\times 900 = 360\\); girls with glasses \\(= 0.7 \\times 600 = 420\\).\nPercentage \\(= \\frac{360 + 420}{1500} \\times 100\\% = 52\\%\\). (D)"
+      },
+      {
+        id: "a1-pc-64",
+        type: "Percentage",
+        question: "Find the interest on \\(\\$20\\,000\\) at 12% per annum for 2 years, compounded half-yearly. Give the answer correct to the nearest dollar.\nA. \\(\\$25\\,250\\)\nB. \\(\\$5\\,250\\)\nC. \\(\\$4\\,800\\)\nD. \\(\\$2\\,400\\)\nE. \\(\\$5\\,500\\)",
+        answer: "B",
+        steps: "Rate per half-year \\(= 6\\%\\); number of half-years \\(= 4\\).\nInterest \\(= \\$20\\,000 \\times (1.06^{4} - 1) \\approx \\$5250\\). (B)"
+      },
+      {
+        id: "a1-pc-65",
+        type: "Percentage",
+        question: "A man bought a box of 250 oranges for \\(\\$600\\). 15 of the oranges were rotten and the rest were sold at \\(\\$3.5\\) each. Find his percentage profit correct to 2 significant figures.\nA. 61%\nB. 44%\nC. 33%\nD. 27%\nE. 37%",
+        answer: "E",
+        steps: "Oranges sold \\(= 250 - 15 = 235\\), so the income \\(= 235 \\times \\$3.5 = \\$822.5\\).\nProfit \\(= \\$822.5 - \\$600 = \\$222.5\\), so the percentage profit \\(= \\frac{222.5}{600} \\times 100\\% \\approx 37\\%\\). (E)"
+      },
+      // Percentage (continued)
+      {
+        id: "a1-pc-66",
+        type: "Percentage",
+        question: "In a class, students study either History or Geography, but not both. If the number of students studying Geography is 25% more than those studying History, what is the percentage of students studying History?\nA. 80%\nB. 25%\nC. 20%\nD. 55⁵⁄₉%\nE. 44⁴⁄₉%",
+        answer: "E",
+        steps: "Let the number studying History be \\(4k\\). Then Geography \\(= 1.25 \\times 4k = 5k\\).\nPercentage studying History \\(= \\frac{4k}{4k + 5k} \\times 100\\% = 44\\frac{4}{9}\\%\\). (E)"
+      },
+      {
+        id: "a1-pc-67",
+        type: "Percentage",
+        question: "A man bought two books at \\(\\$50\\) and \\(\\$150\\) respectively. He sold the first one at a profit of 30% and the second one at a loss of 20%. On the whole, he\nA. gained 7.5%.\nB. lost 5%.\nC. lost 10%.\nD. gained 10%.\nE. lost 7.5%.",
+        answer: "E",
+        steps: "Total cost \\(= 50 + 150 = \\$200\\). Total selling price \\(= 50 \\times 1.3 + 150 \\times 0.8 = 65 + 120 = \\$185\\).\nLoss \\(= \\frac{200 - 185}{200} \\times 100\\% = 7.5\\%\\). (E)"
+      },
+      {
+        id: "a1-pc-68",
+        type: "Percentage",
+        question: "A bank offers loans at an interest rate of 12% per annum, compounded monthly. A man took a loan of \\(\\$30\\,000\\) and repays the bank in monthly instalments of \\(\\$5\\,000\\). Find the outstanding balance after his first instalment.\nA. \\(\\$25\\,300\\)\nB. \\(\\$29\\,700\\)\nC. \\(\\$25\\,000\\)\nD. \\(\\$25\\,600\\)\nE. \\(\\$25\\,360\\)",
+        answer: "A",
+        steps: "Rate per month \\(= 1\\%\\).\nBalance \\(= 30\\,000 \\times 1.01 - 5000 = 30\\,300 - 5000 = \\$25\\,300\\). (A)"
+      },
+      {
+        id: "a1-pc-69",
+        type: "Percentage",
+        question: "35% of the students in a class failed in a test. They had to sit for another test in which 60% of them failed again. Find the percentage of students who failed in both tests.\nA. 35%\nB. 25%\nC. 14%\nD. 21%\nE. 60%",
+        answer: "D",
+        steps: "Percentage failing both \\(= 35\\% \\times 60\\% = 21\\%\\). (D)"
+      },
+      {
+        id: "a1-pc-70",
+        type: "Percentage",
+        question: "The simple interest on a sum of money at r% p.a. for 3 years is equal to the compound interest on the same amount at 6% p.a. for 3 years compounded half-yearly. The value of r, correct to 2 significant figures, is\nA. 6.0.\nB. 19.\nC. 6.5.\nD. 6.2.",
+        answer: "C",
+        steps: "Let the principal be \\(P\\). Compound interest \\(= P(1.03^{6} - 1) \\approx 0.19405P\\).\nSimple interest \\(= P \\times \\frac{r}{100} \\times 3\\), so \\(\\frac{3r}{100} = 0.19405\\) and \\(r \\approx 6.5\\). (C)"
+      },
+      {
+        id: "a1-pc-71",
+        type: "Percentage",
+        question: "The cost price of a toy is \\(\\$240\\) and the marked price is \\(\\$360\\). If the toy is sold at 15% discount of the marked price, the profit is\nA. \\(\\$120\\).\nB. \\(\\$66\\).\nC. \\(\\$54\\).\nD. \\(\\$84\\).",
+        answer: "B",
+        steps: "Selling price \\(= 360 \\times 0.85 = \\$306\\).\nProfit \\(= \\$306 - \\$240 = \\$66\\). (B)"
+      },
+      {
+        id: "a1-pc-72",
+        type: "Percentage",
+        question: "John's daily working hours have increased from 6 hours to 9 hours but his hourly pay has decreased by 20%. Find the percentage change in John's daily income.\nA. An increase of 10%\nB. An increase of 20%\nC. 0%\nD. A decrease of 20%",
+        answer: "B",
+        steps: "New daily income \\(= (9 \\times 0.8) \\times \\text{old hourly pay} = 7.2\\), old \\(= 6\\).\nPercentage change \\(= \\frac{7.2 - 6}{6} \\times 100\\% = +20\\%\\). (B)"
+      },
+      {
+        id: "a1-pc-73",
+        type: "Percentage",
+        question: "A sum of \\(\\$12\\,000\\) is deposited at 2% p.a., compounded yearly. Find the interest earned after 3 years. Give the answer correct to the nearest dollar.\nA. \\(\\$760\\)\nB. \\(\\$720\\)\nC. \\(\\$734\\)\nD. \\(\\$735\\)",
+        answer: "C",
+        steps: "Interest \\(= 12\\,000 \\times (1.02^{3} - 1) \\approx \\$734\\). (C)"
+      },
+      {
+        id: "a1-pc-74",
+        type: "Percentage",
+        question: "The marked price of a book is 25% above the cost. If the book is sold at a 12% discount on the marked price, then the percentage profit is\nA. 10%.\nB. 3%.\nC. 15%.\nD. 13%.",
+        answer: "A",
+        steps: "Let the cost be \\(c\\). Selling price \\(= 1.25c \\times 0.88 = 1.1c\\).\nPercentage profit \\(= 10\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-75",
+        type: "Percentage",
+        question: "Peter sold two flats for \\(\\$660\\,000\\) each. He lost 20% on one and gained 20% on the other. After the two transactions, Peter\nA. gained \\(\\$110\\,000\\).\nB. gained \\(\\$55\\,000\\).\nC. lost \\(\\$110\\,000\\).\nD. lost \\(\\$55\\,000\\).",
+        answer: "D",
+        steps: "Flat with loss: cost \\(= 660\\,000 \\div 0.8 = \\$825\\,000\\), loss \\(= \\$165\\,000\\).\nFlat with gain: cost \\(= 660\\,000 \\div 1.2 = \\$550\\,000\\), gain \\(= \\$110\\,000\\).\nNet result \\(= 110\\,000 - 165\\,000 = -55\\,000\\), i.e. he lost \\(\\$55\\,000\\). (D)"
+      },
+      {
+        id: "a1-pc-76",
+        type: "Percentage",
+        question: "The marked price of a car is 80% higher than the cost. If the car is sold at a 30% discount on the marked price, then the percentage profit is\nA. 36%.\nB. 16%.\nC. 10%.\nD. 26%.",
+        answer: "D",
+        steps: "Selling price \\(= 1.8c \\times 0.7 = 1.26c\\), so the profit is \\(26\\%\\). (D)"
+      },
+      {
+        id: "a1-pc-77",
+        type: "Percentage",
+        question: "A sum of \\(\\$16\\,000\\) is deposited at 3% per annum for 6 years, compounded yearly. Find the interest correct to the nearest dollar.\nA. \\(\\$3\\,104\\)\nB. \\(\\$2\\,880\\)\nC. \\(\\$3\\,105\\)\nD. \\(\\$19\\,105\\)",
+        answer: "C",
+        steps: "Interest \\(= 16\\,000 \\times (1.03^{6} - 1) \\approx \\$3105\\). (C)"
+      },
+      {
+        id: "a1-pc-78",
+        type: "Percentage",
+        question: "If the bus fare is increased from \\(\\$5\\) to \\(\\$7\\), then the percentage increase of the fare is\nA. 40%.\nB. 28.6%.\nC. 2%.\nD. 140%.",
+        answer: "A",
+        steps: "Percentage increase \\(= \\frac{7 - 5}{5} \\times 100\\% = 40\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-79",
+        type: "Percentage",
+        question: "A sum of \\(\\$25\\,000\\) is deposited at an interest rate of 6% per annum for 5 years, compounded monthly. Find the amount correct to the nearest dollar.\nA. \\(\\$33\\,721\\)\nB. \\(\\$34\\,105\\)\nC. \\(\\$33\\,456\\)\nD. \\(\\$32\\,500\\)",
+        answer: "A",
+        steps: "Rate per month \\(= 0.5\\%\\); number of months \\(= 60\\).\nAmount \\(= 25\\,000 \\times 1.005^{60} \\approx \\$33\\,721\\). (A)"
+      },
+      {
+        id: "a1-pc-80",
+        type: "Percentage",
+        question: "The marked price of a bag is \\(\\$1\\,200\\). If the bag is sold at the marked price, then the percentage profit is 60%. If the bag is sold at a 25% discount on the marked price, then the profit is\nA. \\(\\$100\\).\nB. \\(\\$450\\).\nC. \\(\\$300\\).\nD. \\(\\$150\\).",
+        answer: "D",
+        steps: "Cost \\(= 1200 \\div 1.6 = \\$750\\).\nSelling price \\(= 1200 \\times 0.75 = \\$900\\), so profit \\(= \\$150\\). (D)"
+      },
+      {
+        id: "a1-pc-81",
+        type: "Percentage",
+        question: "If a dictionary is sold at its marked price, then the percentage profit is 40%. If the dictionary is sold at a 25% discount on its marked price, then the profit is \\(\\$6\\). Find the cost of the dictionary.\nA. \\(\\$120\\).\nB. \\(\\$105\\).\nC. \\(\\$100\\).\nD. \\(\\$126\\).",
+        answer: "A",
+        steps: "Let the cost be \\(c\\). Selling price after discount \\(= 1.4c \\times 0.75 = 1.05c\\).\nProfit \\(= 0.05c = 6\\), so \\(c = \\$120\\). (A)"
+      },
+      {
+        id: "a1-pc-82",
+        type: "Percentage",
+        question: "A sum of \\(\\$40\\,000\\) is deposited at an interest rate of 6% per annum for 2 years, compounded yearly. Find the interest correct to the nearest dollar.\nA. \\(\\$5\\,000\\).\nB. \\(\\$4\\,950\\).\nC. \\(\\$4\\,944\\).\nD. \\(\\$4\\,800\\).",
+        answer: "C",
+        steps: "Interest \\(= 40\\,000 \\times (1.06^{2} - 1) = \\$4944\\). (C)"
+      },
+      {
+        id: "a1-pc-83",
+        type: "Percentage",
+        question: "If the price of a magazine is 150% higher than the price of a newspaper, then the price of the newspaper is\nA. 75% lower than the price of the magazine.\nB. 66⅔% lower than the price of the magazine.\nC. 40% lower than the price of the magazine.\nD. 60% lower than the price of the magazine.",
+        answer: "D",
+        steps: "Let the newspaper price be \\(n\\); the magazine price \\(= 2.5n\\).\n\\(\\frac{2.5n - n}{2.5n} \\times 100\\% = 60\\%\\), so the newspaper is \\(60\\%\\) lower than the magazine. (D)"
+      },
+      {
+        id: "a1-pc-84",
+        type: "Percentage",
+        question: "A sum of \\(\\$50\\,000\\) is deposited at an interest rate of 6% per annum for 2 years, compounded quarterly. Find the amount correct to the nearest dollar.\nA. \\(\\$56\\,325\\).\nB. \\(\\$56\\,357\\).\nC. \\(\\$56\\,180\\).\nD. \\(\\$56\\,000\\).",
+        answer: "A",
+        steps: "Rate per quarter \\(= 1.5\\%\\); number of quarters \\(= 8\\).\nAmount \\(= 50\\,000 \\times 1.015^{8} \\approx \\$56\\,325\\). (A)"
+      },
+      {
+        id: "a1-pc-85",
+        type: "Percentage",
+        question: "A sum of \\(\\$20\\,000\\) is deposited at an interest rate of 6% per annum for 5 years, compounded monthly. Find the interest correct to the nearest dollar.\nA. \\(\\$6\\,000\\)\nB. \\(\\$6\\,977\\)\nC. \\(\\$6\\,765\\)\nD. \\(\\$26\\,977\\)",
+        answer: "B",
+        steps: "Amount \\(= 20\\,000 \\times 1.005^{60} \\approx \\$26\\,977\\).\nInterest \\(\\approx \\$26\\,977 - \\$20\\,000 = \\$6977\\). (B)"
+      },
+      {
+        id: "a1-pc-86",
+        type: "Percentage",
+        question: "The length of a rectangle is decreased by 50% but its breadth is increased by k%. If the area of the rectangle remains unchanged, find the value of k.\nA. 100\nB. 75\nC. 150\nD. 50",
+        answer: "A",
+        steps: "\\(0.5 \\times \\left(1 + \\frac{k}{100}\\right) = 1\\), so \\(1 + \\frac{k}{100} = 2\\) and \\(k = 100\\). (A)"
+      },
+      {
+        id: "a1-pc-87",
+        type: "Percentage",
+        question: "Mary sold two bags for \\(\\$360\\) each. She gained 25% on one and lost 25% on the other. After the two transactions, Mary\nA. gained \\(\\$24\\).\nB. lost \\(\\$48\\).\nC. had no gain and no loss.\nD. gained \\(\\$48\\).",
+        answer: "B",
+        steps: "Bag with gain: cost \\(= 360 \\div 1.25 = \\$288\\), gain \\(= \\$72\\).\nBag with loss: cost \\(= 360 \\div 0.75 = \\$480\\), loss \\(= \\$120\\).\nNet result \\(= 72 - 120 = -48\\), i.e. she lost \\(\\$48\\). (B)"
+      },
+      {
+        id: "a1-pc-88",
+        type: "Percentage",
+        question: "If the length and the width of a rectangle are increased by 30% and \\(x\\%\\) respectively so that its area is increased by 56%, then \\(x =\\)\nA. 26.\nB. 20.\nC. 10.\nD. 30.",
+        answer: "B",
+        steps: "\\(1.3 \\times \\left(1 + \\frac{x}{100}\\right) = 1.56\\), so \\(1 + \\frac{x}{100} = 1.2\\) and \\(x = 20\\). (B)"
+      },
+      {
+        id: "a1-pc-89",
+        type: "Percentage",
+        question: "Peter invests $P at the beginning of each month in a year at an interest rate of 12% per annum, compounded monthly. If he gets \\(\\$10\\,000\\) at the end of the year, find P correct to 2 decimal places.\nA. 788.49\nB. 833.33\nC. 887.45\nD. 780.68",
+        answer: "D",
+        steps: "Rate per month \\(= 1\\%\\). The deposit made at the start of month \\(k\\) grows for \\(13 - k\\) months.\n\\(P(1.01 + 1.01^{2} + \\ldots + 1.01^{12}) = 10\\,000\\), i.e. \\(P \\times \\frac{1.01(1.01^{12} - 1)}{0.01} = 10\\,000\\)\n\\(P \\approx 780.68\\) (D)"
+      },
+      {
+        id: "a1-pc-90",
+        type: "Percentage",
+        question: "John buys a vase for \\(\\$2\\,000\\). He then sells the vase to Susan at a profit of 25%. At what price should Susan sell the vase in order to have a profit of 25%?\nA. \\(\\$3\\,000\\)\nB. \\(\\$3\\,200\\)\nC. \\(\\$2\\,800\\)\nD. \\(\\$3\\,125\\)",
+        answer: "D",
+        steps: "Susan's cost \\(= 2000 \\times 1.25 = \\$2500\\).\nSusan's selling price \\(= 2500 \\times 1.25 = \\$3125\\). (D)"
+      },
+      {
+        id: "a1-pc-91",
+        type: "Percentage",
+        question: "If the circumference of a circle is increased by 20%, then the area of the circle is increased by\nA. 44%.\nB. 20%.\nC. 40%.\nD. 96%.",
+        answer: "A",
+        steps: "The radius is also increased by \\(20\\%\\), so the area becomes \\(1.2^{2} = 1.44\\) times.\nThe area is increased by \\(44\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-92",
+        type: "Percentage",
+        question: "In a company, 40% of the employees are female. If 50% of the male employees and 75% of the female employees are married, then the percentage of married employees in the company is\nA. 62.5%.\nB. 52.5%.\nC. 60%.\nD. 57.5%.",
+        answer: "C",
+        steps: "Married \\(= 60\\% \\times 50\\% + 40\\% \\times 75\\% = 30\\% + 30\\% = 60\\%\\). (C)"
+      },
+      {
+        id: "a1-pc-93",
+        type: "Percentage",
+        question: "Susan sells two cars for \\(\\$84\\,000\\) each. She gains 40% on one and loses 40% on the other. After the two transactions, Susan\nA. loses \\(\\$32\\,000\\).\nB. has no gain and no loss.\nC. gains \\(\\$56\\,000\\).\nD. gains \\(\\$24\\,000\\).",
+        answer: "A",
+        steps: "Car with gain: cost \\(= 84\\,000 \\div 1.4 = \\$60\\,000\\), gain \\(= \\$24\\,000\\).\nCar with loss: cost \\(= 84\\,000 \\div 0.6 = \\$140\\,000\\), loss \\(= \\$56\\,000\\).\nNet result \\(= 24\\,000 - 56\\,000 = -32\\,000\\), i.e. she loses \\(\\$32\\,000\\). (A)"
+      },
+      // Percentage (continued)
+      {
+        id: "a1-pc-94",
+        type: "Percentage",
+        question: "A sum of \\(\\$60\\,000\\) is deposited at an interest rate of 6% per annum for 1 year, compounded monthly. Find the interest correct to the nearest dollar.\nA. \\(\\$3\\,600\\)\nB. \\(\\$3\\,720\\)\nC. \\(\\$3\\,701\\)\nD. \\(\\$3\\,682\\)",
+        answer: "C",
+        steps: "Rate per month \\(= 0.5\\%\\); number of months \\(= 12\\).\nInterest \\(= 60\\,000 \\times (1.005^{12} - 1) \\approx \\$3701\\). (C)"
+      },
+      {
+        id: "a1-pc-95",
+        type: "Percentage",
+        question: "There are 1 080 workers in a factory. If the number of male workers is 20% less than that of female workers, then the number of male workers is\nA. 480.\nB. 600.\nC. 432.\nD. 540.",
+        answer: "A",
+        steps: "Let the number of female workers be \\(F\\). Male workers \\(= 0.8F\\).\n\\(F + 0.8F = 1080\\), so \\(F = 600\\) and the number of male workers \\(= 0.8 \\times 600 = 480\\). (A)"
+      },
+      {
+        id: "a1-pc-96",
+        type: "Percentage",
+        question: "If the angle and the radius of a sector are decreased by \\(x\\%\\) and 40% respectively so that its area is decreased by 82%, then \\(x =\\)\nA. 64.\nB. 50.\nC. 36.\nD. 25.",
+        answer: "B",
+        steps: "Area of a sector \\(= \\frac{\\theta}{360^{\\circ}}\\pi r^{2}\\). The new area is \\(\\left(1 - \\frac{x}{100}\\right)(0.6)^{2} = 0.18\\) of the old area.\n\\(1 - \\frac{x}{100} = \\frac{0.18}{0.36} = 0.5\\), so \\(x = 50\\). (B)"
+      },
+      {
+        id: "a1-pc-97",
+        type: "Percentage",
+        question: "If the price of a souvenir is increased by 40% and then decreased by 30%, find the percentage change in the price of the souvenir.\nA. −2%.\nB. −70%.\nC. 10%.\nD. 2%.",
+        answer: "A",
+        steps: "New price \\(= 1.4 \\times 0.7 = 0.98\\) of the original.\nPercentage change \\(= 0.98 - 1 = -2\\%\\). (A)"
+      },
+      {
+        id: "a1-pc-98",
+        type: "Percentage",
+        question: "A sum of \\(\\$60\\,000\\) is deposited at an interest rate of 8% per annum for 2 years, compounded quarterly. Find the amount correct to the nearest dollar.\nA. \\(\\$70\\,192\\)\nB. \\(\\$70\\,300\\)\nC. \\(\\$69\\,984\\)\nD. \\(\\$69\\,600\\)",
+        answer: "B",
+        steps: "Rate per quarter \\(= 2\\%\\); number of quarters \\(= 8\\).\nAmount \\(= 60\\,000 \\times 1.02^{8} \\approx \\$70\\,300\\). (B)"
+      },
+      {
+        id: "a1-pc-99",
+        type: "Percentage",
+        question: "The monthly salary of Donald is 20% higher than that of Peter while the monthly salary of Peter is 40% lower than that of Teresa. It is given that the monthly salary of Donald is \\(\\$43\\,200\\). The monthly salary of Teresa is\nA. \\(\\$30\\,000\\)\nB. \\(\\$43\\,200\\)\nC. \\(\\$51\\,840\\)\nD. \\(\\$60\\,000\\)",
+        answer: "D",
+        steps: "Peter's salary \\(= 43\\,200 \\div 1.2 = \\$36\\,000\\).\nTeresa's salary \\(= 36\\,000 \\div 0.6 = \\$60\\,000\\). (D)"
+      },
+      {
+        id: "a1-pc-100",
+        type: "Percentage",
+        question: "A sum of \\(\\$3\\,000\\) is deposited at an interest rate of 6% per annum for 3 years, compounded half-yearly. Find the interest correct to the nearest dollar.\nA. \\(\\$590\\)\nB. \\(\\$573\\)\nC. \\(\\$582\\)\nD. \\(\\$540\\)",
+        answer: "C",
+        steps: "Rate per half-year \\(= 3\\%\\); number of half-years \\(= 6\\).\nInterest \\(= 3000 \\times (1.03^{6} - 1) \\approx \\$582\\). (C)"
+      },
+      {
+        id: "a1-pc-101",
+        type: "Percentage",
+        question: "A sum of \\(\\$80\\,000\\) is deposited at an interest rate of 3% per annum for 4 years, compounded monthly. Find the interest correct to the nearest dollar.\nA. \\(\\$10\\,200\\)\nB. \\(\\$10\\,041\\)\nC. \\(\\$9\\,600\\)\nD. \\(\\$10\\,186\\)",
+        answer: "D",
+        steps: "Rate per month \\(= 0.25\\%\\); number of months \\(= 48\\).\nInterest \\(= 80\\,000 \\times (1.0025^{48} - 1) \\approx \\$10\\,186\\). (D)"
+      },
+      {
+        id: "a1-pc-102",
+        type: "Percentage",
+        question: "A sum of \\(\\$48\\,000\\) is deposited at an interest rate of 5% per annum for 6 years, compounded quarterly. Find the amount correct to the nearest dollar.\nA. \\(\\$62\\,400\\)\nB. \\(\\$64\\,325\\)\nC. \\(\\$64\\,800\\)\nD. \\(\\$64\\,673\\)",
+        answer: "D",
+        steps: "Rate per quarter \\(= 1.25\\%\\); number of quarters \\(= 24\\).\nAmount \\(= 48\\,000 \\times 1.0125^{24} \\approx \\$64\\,673\\). (D)"
+      },
+      {
+        id: "a1-pc-103",
+        type: "Percentage",
+        question: "The cost of a toy is \\(x\\%\\) lower than its selling price. After selling the toy, the percentage profit is 60%. Find \\(x\\).\nA. 40\nB. 60\nC. 62.5\nD. 37.5",
+        answer: "D",
+        steps: "Let the cost be \\(c\\); the selling price \\(= 1.6c\\).\n\\(x\\% = \\frac{1.6c - c}{1.6c} \\times 100\\% = 37.5\\%\\), so \\(x = 37.5\\). (D)"
+      },
+      {
+        id: "a1-pc-104",
+        type: "Percentage",
+        question: "The angle of a sector is decreased by 20% but its radius is increased by \\(k\\%\\). If the arc length of the sector remains unchanged, find the value of \\(k\\).\nA. 125\nB. 20\nC. 80\nD. 25",
+        answer: "D",
+        steps: "Arc length \\(= \\frac{\\theta}{360^{\\circ}} \\times 2\\pi r\\) is proportional to \\(\\theta r\\).\n\\(0.8 \\times \\left(1 + \\frac{k}{100}\\right) = 1\\), so \\(1 + \\frac{k}{100} = 1.25\\) and \\(k = 25\\). (D)"
+      },
+      {
+        id: "a1-pc-105",
+        type: "Percentage",
+        question: "In a school, 38% of the students are overweight. It is given that 60% of the students in the school are girls and 50% of the girls are overweight. If \\(x\\%\\) of the boys in the school are overweight, then \\(x =\\)\nA. 8.\nB. 30.\nC. 20.\nD. 12.",
+        answer: "C",
+        steps: "Let there be 100 students: 60 girls and 40 boys. Overweight girls \\(= 50\\% \\times 60 = 30\\).\nOverweight boys \\(= 38 - 30 = 8\\), so \\(x = \\frac{8}{40} \\times 100 = 20\\). (C)"
+      },
+      {
+        id: "a1-pc-106",
+        type: "Percentage",
+        question: "A sum of \\(\\$64\\,000\\) is deposited at an interest rate of 9% per annum for 3 years, compounded monthly. Find the interest correct to the nearest dollar.\nA. \\(\\$19\\,587\\)\nB. \\(\\$18\\,882\\)\nC. \\(\\$19\\,753\\)\nD. \\(\\$17\\,280\\)",
+        answer: "C",
+        steps: "Rate per month \\(= 0.75\\%\\); number of months \\(= 36\\).\nInterest \\(= 64\\,000 \\times (1.0075^{36} - 1) \\approx \\$19\\,753\\). (C)"
+      },
+      {
+        id: "a1-pc-107",
+        type: "Percentage",
+        question: "The marked price of a jacket is 80% above its cost. A profit of \\(\\$130\\) is made by selling the jacket at a discount of 30% on its marked price. Find the cost of the jacket.\nA. \\(\\$1\\,000\\).\nB. \\(\\$650\\).\nC. \\(\\$500\\).\nD. \\(\\$325\\).",
+        answer: "C",
+        steps: "Let the cost be \\(c\\). Selling price \\(= 1.8c \\times 0.7 = 1.26c\\).\nProfit \\(= 0.26c = 130\\), so \\(c = \\$500\\). (C)"
+      },
+      {
+        id: "a1-pc-108",
+        type: "Percentage",
+        question: "In a school, 50% of the students are girls and \\(\\beta\\%\\) of the girls are foreign students. It is given that 30% of the boys in the school are foreign students. In the school, the number of foreign students and the number of girls are equal. Find \\(\\beta\\).\nA. 70\nB. 30\nC. 50\nD. 85",
+        answer: "A",
+        steps: "Let there be 100 students: 50 girls and 50 boys. Foreign boys \\(= 30\\% \\times 50 = 15\\).\nForeign students \\(= 50\\) (equal to the number of girls), so foreign girls \\(= 35\\) and \\(\\beta = \\frac{35}{50} \\times 100 = 70\\). (A)"
+      },
+      {
+        id: "a1-pc-109",
+        type: "Percentage",
+        question: "A sum of \\(\\$50\\,000\\) is deposited at an interest rate of 4% per annum for 6 years, compounded half-yearly. Find the amount correct to the nearest dollar.\nA. \\(\\$62\\,000\\)\nB. \\(\\$63\\,412\\)\nC. \\(\\$63\\,266\\)\nD. \\(\\$63\\,537\\)",
+        answer: "B",
+        steps: "Rate per half-year \\(= 2\\%\\); number of half-years \\(= 12\\).\nAmount \\(= 50\\,000 \\times 1.02^{12} \\approx \\$63\\,412\\). (B)"
+      },
+      {
+        id: "a1-pc-110",
+        type: "Percentage",
+        question: "A sum of \\(\\$P\\) is deposited at an interest rate of 6% per annum for 4 years, compounded quarterly. If the amount is \\(\\$90\\,000\\), find \\(P\\) correct to the nearest integer.\nA. 72 581\nB. 71 288\nC. 70 923\nD. 79 894",
+        answer: "C",
+        steps: "Rate per quarter \\(= 1.5\\%\\); number of quarters \\(= 16\\).\n\\(P \\times 1.015^{16} = 90\\,000\\), so \\(P = \\frac{90\\,000}{1.015^{16}} \\approx 70\\,923\\). (C)"
+      },
+      // Estimation and Numbers (continued)
+      {
+        id: "a1-en-9",
+        type: "Estimation and Numbers",
+        question: "The Highest Common Factor of two unequal positive integers a and b is 6. Which of the following must be true?\nI. The difference between a and b is divisible by 6.\nII. ab is divisible by 36.\nIII. (a + b) is divisible by 12.\nA. III only\nB. I and II only\nC. I and III only\nD. II and III only\nE. I, II and III",
+        answer: "B",
+        steps: "Let \\(a = 6m\\) and \\(b = 6n\\), where \\(m\\) and \\(n\\) have no common factor other than 1.\nI: \\(a - b = 6(m - n)\\) is divisible by 6. II: \\(ab = 36mn\\) is divisible by 36.\nIII: \\(a + b = 6(m + n)\\) need not be divisible by 12, e.g. \\(a = 6\\), \\(b = 12\\) gives \\(18\\).\nSo I and II only (B)"
+      },
+      {
+        id: "a1-en-10",
+        type: "Estimation and Numbers",
+        question: "w, x, y and z are four consecutive positive integers. Which of the following is true?\nA. wxyz must be odd.\nB. w + x + y + z must be divisible by 4.\nC. w² + x² + y² + z² must be odd.\nD. wxyz must be divisible by 24.\nE. w + x + y + z must be odd.",
+        answer: "D",
+        steps: "Among four consecutive integers there are two even numbers, one of which is a multiple of 4, and one multiple of 3. So \\(wxyz\\) is divisible by \\(2 \\times 4 \\times 3 = 24\\).\nThe sum \\(= 4w + 6\\) is even but not always divisible by 4, and \\(w^{2} + x^{2} + y^{2} + z^{2}\\) is even (two odd squares and two even squares). (D)"
+      },
+      {
+        id: "a1-en-11",
+        type: "Estimation and Numbers",
+        question: "x is a positive integer such that \\(x^{2} + 3x + 4\\) is even. What are the possible values of x?\nA. x can be any positive integer.\nB. x must be a positive odd number greater than 10 000.\nC. x can be any positive even number.\nD. x can be any positive odd number.\nE. x must be an even number greater than 10 000.",
+        answer: "A",
+        steps: "\\(x^{2} + 3x = x(x + 3)\\). One of \\(x\\) and \\(x + 3\\) is even for any integer \\(x\\), so \\(x(x + 3)\\) is always even.\nHence \\(x^{2} + 3x + 4\\) is always even, and \\(x\\) can be any positive integer. (A)"
+      },
+      {
+        id: "a1-en-12",
+        type: "Estimation and Numbers",
+        question: "If n is a positive integer, which of the following numbers is/are odd?\nI. \\(2^{n + 1} + 3\\)\nII. \\((2n)^{3} + 1\\)\nIII. \\(3n^{2} + n\\)\nA. II only\nB. III only\nC. I and II only\nD. I and III only\nE. I, II and III",
+        answer: "C",
+        steps: "I: \\(2^{n + 1}\\) is even, so \\(2^{n + 1} + 3\\) is odd. II: \\((2n)^{3}\\) is even, so \\((2n)^{3} + 1\\) is odd.\nIII: \\(3n^{2} + n = n(3n + 1)\\), and one of \\(n\\) and \\(3n + 1\\) is even, so it is even.\nSo I and II only (C)"
+      },
+      {
+        id: "a1-en-13",
+        type: "Estimation and Numbers",
+        question: "Which of the following is equal to the real number \\(\\pi\\)?\nA. \\(\\text{the ratio of the circumference of a circle to its diameter}\\)\nB. \\(\\frac{355}{113}\\)\nC. \\(\\text{the ratio of the area of a circle to the square of its diameter}\\)\nD. \\(3.14159\\)\nE. \\(\\text{the ratio of the circumference of a circle to its radius}\\)",
+        answer: "A",
+        steps: "\\(\\pi\\) is an irrational number, so it is not equal to the fractions or terminating decimals in A and B.\nThe ratio of the area to the square of the diameter is \\(\\frac{\\pi r^{2}}{4r^{2}} = \\frac{\\pi}{4}\\), and the ratio of the circumference to the radius is \\(2\\pi\\).\nBy definition \\(\\pi = \\frac{\\text{circumference}}{\\text{diameter}}\\) (A)"
+      },
+      {
+        id: "a1-en-14",
+        type: "Estimation and Numbers",
+        question: "Which of the following is/are true?\nI. If both 4 and 6 are factors of m, then 24 is also a factor of m.\nII. If 12 is a factor of n, then both 3 and 4 are factors of n.\nIII. If p is a multiple of both 3 and 8, then p is also a multiple of 24.\nA. I only\nB. II only\nC. I and II only\nD. II and III only\nE. I, II and III",
+        answer: "D",
+        steps: "I is false: \\(m = 12\\) has both 4 and 6 as factors but 24 is not a factor of 12.\nII is true: \\(3\\) and \\(4\\) are factors of \\(12\\), hence of every multiple of \\(12\\).\nIII is true: 3 and 8 have no common factor other than 1, so a common multiple is a multiple of \\(3 \\times 8 = 24\\).\nSo II and III only (D)"
+      },
+      {
+        id: "a1-en-15",
+        type: "Estimation and Numbers",
+        question: "Under which of the following conditions must the mean of n consecutive positive even integers also be an integer?\nA. n is any multiple of 3.\nB. n is any positive even integer.\nC. n is any positive integer.\nD. n is the square of any positive integer.\nE. n is any positive odd integer.",
+        answer: "C",
+        steps: "The integers are \\(a, a + 2, \\ldots, a + 2(n - 1)\\) with \\(a\\) even.\nTheir mean is \\(a + (n - 1)\\), which is an integer for every positive integer \\(n\\). (C)"
+      },
+      {
+        id: "a1-en-16",
+        type: "Estimation and Numbers",
+        question: "Round off the number 0.0366652 to 3 significant figures.\nA. 0.04\nB. 0.0366\nC. 0.0367\nD. 0.0368\nE. 0.037",
+        answer: "C",
+        steps: "The first three significant figures are 3, 6, 6 and the next digit is 6 (\\(\\geq 5\\)), so round up: \\(0.0367\\). (C)"
+      },
+      {
+        id: "a1-en-17",
+        type: "Estimation and Numbers",
+        question: "Evaluate \\(2.35 \\div 18\\) correct to 3 significant figures.\nA. 0.131\nB. 0.130\nC. 0.13\nD. 0.132\nE. 0.1306",
+        answer: "A",
+        steps: "\\(2.35 \\div 18 = 0.130555\\ldots\\)\nCorrect to 3 significant figures, it is \\(0.131\\). (A)"
+      },
+      {
+        id: "a1-en-18",
+        type: "Estimation and Numbers",
+        question: "m and n are multiples of 4 and 6 respectively. Which of the following must be true?\nI. mn is a multiple of 24.\nII. The H.C.F. of m and n is even.\nIII. The H.C.F. of m and n is a multiple of 4.\nA. I only\nB. I and II only\nC. I and III only\nD. II and III only\nE. I, II and III",
+        answer: "B",
+        steps: "Let \\(m = 4a\\) and \\(n = 6b\\). I: \\(mn = 24ab\\) is a multiple of 24. II: both \\(m\\) and \\(n\\) are even, so their H.C.F. is even.\nIII: for \\(m = 4\\) and \\(n = 6\\) the H.C.F. is \\(2\\), which is not a multiple of 4.\nSo I and II only (B)"
+      },
+      {
+        id: "a1-en-19",
+        type: "Estimation and Numbers",
+        question: "Express \\(\\pi^{3}\\) as a decimal correct to 3 significant figures.\nA. \\(31.1\\)\nB. \\(31.0\\)\nC. \\(31.006\\)\nD. \\(31.00\\)\nE. \\(31\\)",
+        answer: "B",
+        steps: "\\(\\pi^{3} = 31.00627\\ldots\\)\nCorrect to 3 significant figures: \\(31.0\\). (B)"
+      },
+      {
+        id: "a1-en-20",
+        type: "Estimation and Numbers",
+        question: "Let a and b be two consecutive positive integers. Which of the following must be true?\nI. a + b is odd.\nII. ab is even.\nIII. a² + b² is even.\nA. III only\nB. I and II only\nC. I and III only\nD. II and III only\nE. I, II and III",
+        answer: "B",
+        steps: "One of \\(a\\) and \\(b\\) is odd and the other is even.\nI: odd + even is odd. II: odd \\(\\times\\) even is even. III: odd\\(^{2}\\) + even\\(^{2}\\) = odd + even is odd, so III is false.\nSo I and II only (B)"
+      },
+      {
+        id: "a1-en-21",
+        type: "Estimation and Numbers",
+        question: "Let m be a positive integer. Which of the following must be true?\nI. m(m + 1) is even.\nII. m(m + 2) is even.\nIII. m² + m + 2 is even.\nA. I only\nB. II only\nC. III only\nD. I and III only\nE. II and III only",
+        answer: "D",
+        steps: "I: one of \\(m\\) and \\(m + 1\\) is even, so \\(m(m + 1)\\) is even. II: if \\(m\\) is odd, then \\(m(m + 2)\\) is odd, so II is false.\nIII: \\(m^{2} + m + 2 = m(m + 1) + 2\\) is even + even = even.\nSo I and III only (D)"
+      },
+      {
+        id: "a1-en-22",
+        type: "Estimation and Numbers",
+        question: "If \\(0.3648 < a < 0.3652\\), which of the following must be true?\nA. a = 0.365 (correct to 3 significant figures)\nB. a = 0.37 (correct to 2 significant figures)\nC. a = 0.3 (correct to 1 significant figure)\nD. a = 0.3650 (correct to 4 significant figures)",
+        answer: "A",
+        steps: "\\(0.3648\\) rounds to \\(0.36\\) and \\(0.3652\\) rounds to \\(0.37\\) (2 s.f.), so ‘0.37 (2 s.f.)’ is not always true; also \\(a\\) rounds to \\(0.4\\) (1 s.f.), not \\(0.3\\).\n\\(0.3648\\) and \\(0.3652\\) both round to \\(0.365\\) (3 s.f.), so \\(a = 0.365\\) (correct to 3 significant figures) must be true.\n\\(0.3648\\) and \\(0.3652\\) differ in the 4 s.f. values, so ‘0.3650 (4 s.f.)’ is not always true. (A)"
+      },
+      {
+        id: "a1-en-23",
+        type: "Estimation and Numbers",
+        question: "Express \\(\\sqrt{3011}\\) as a decimal correct to 5 significant figures.\nA. \\(54.8726\\)\nB. \\(54.87\\)\nC. \\(54.873\\)\nD. \\(54.900\\)",
+        answer: "C",
+        steps: "\\(\\sqrt{3011} = 54.87258\\ldots\\)\nCorrect to 5 significant figures: \\(54.873\\). (C)"
+      },
+      {
+        id: "a1-en-24",
+        type: "Estimation and Numbers",
+        question: "If the radius of a sphere is measured as 6 cm correct to the nearest cm, then the least possible surface area of the sphere is\nA. \\(144\\pi\\ \\text{cm}^{2}\\)\nB. \\(121\\pi\\ \\text{cm}^{2}\\)\nC. \\(100\\pi\\ \\text{cm}^{2}\\)\nD. \\(169\\pi\\ \\text{cm}^{2}\\)",
+        answer: "B",
+        steps: "The least possible radius is \\(5.5\\) cm.\nLeast surface area \\(= 4\\pi(5.5)^{2} = 121\\pi\\ \\text{cm}^{2}\\). (B)"
+      },
+      {
+        id: "a1-en-25",
+        type: "Estimation and Numbers",
+        question: "\\(0.0364875 =\\)\nA. 0.04 (correct to 2 decimal places)\nB. 0.036 (correct to 3 significant figures)\nC. 0.03649 (correct to 5 significant figures)\nD. 0.0364 (correct to 4 decimal places)",
+        answer: "A",
+        steps: "2 d.p.: \\(0.04\\) ✓. 3 s.f.: \\(0.0365\\) (not 0.036). 4 d.p.: \\(0.0365\\) (not 0.0364). 5 s.f.: \\(0.036488\\) (not 0.03649).\nSo only ‘0.04 (correct to 2 decimal places)’ is correct. (A)"
+      },
+      {
+        id: "a1-en-26",
+        type: "Estimation and Numbers",
+        question: "On a number line, the real numbers \\(a\\), \\(b\\) and \\(c\\) are located at approximately \\(-2.1\\), \\(0.9\\) and \\(2.8\\) respectively. Which of the following is the best estimate of \\(c(a - b)\\)?\nA. \\(12\\)\nB. \\(8\\)\nC. \\(-8\\)\nD. \\(-12\\)",
+        answer: "C",
+        steps: "\\(a - b \\approx -2.1 - 0.9 = -3.0\\).\n\\(c(a - b) \\approx 2.8 \\times (-3.0) = -8.4\\), so the best estimate is \\(-8\\). (C)"
+      },
+      {
+        id: "a1-en-27",
+        type: "Estimation and Numbers",
+        question: "If the length and the breadth of a rectangle are measured as 15 cm and 8 cm respectively and all the measurements are correct to the nearest cm, then the least possible area of the rectangle is\nA. 131.75 cm².\nB. 108.75 cm².\nC. 120 cm².\nD. 100 cm².",
+        answer: "B",
+        steps: "Least length \\(= 14.5\\) cm and least breadth \\(= 7.5\\) cm.\nLeast area \\(= 14.5 \\times 7.5 = 108.75\\ \\text{cm}^{2}\\). (B)"
+      },
+      {
+        id: "a1-en-28",
+        type: "Estimation and Numbers",
+        question: "On a number line, the real numbers \\(p\\), \\(q\\), \\(r\\) and \\(s\\) are located at approximately \\(-3.2\\), \\(-0.8\\), \\(1.1\\) and \\(2.9\\) respectively. Which of the following is the best estimate of \\((p - q)(r + s)\\)?\nA. \\(-16\\)\nB. \\(16\\)\nC. \\(-10\\)\nD. \\(10\\)",
+        answer: "C",
+        steps: "\\(p - q \\approx -3.2 - (-0.8) = -2.4\\) and \\(r + s \\approx 1.1 + 2.9 = 4.0\\).\n\\((p - q)(r + s) \\approx -2.4 \\times 4.0 = -9.6\\), so the best estimate is \\(-10\\). (C)"
+      },
+      {
+        id: "a1-en-29",
+        type: "Estimation and Numbers",
+        question: "The lengths of the three sides of a triangle are measured as 12 cm, 16 cm and 20 cm respectively. If the three measurements are correct to the nearest cm, find the percentage error in calculating the perimeter of the triangle correct to the nearest 0.1%.\nA. 6.3%\nB. 1.6%\nC. 12.5%\nD. 3.1%",
+        answer: "D",
+        steps: "Perimeter \\(= 12 + 16 + 20 = 48\\) cm. The maximum absolute error \\(= 3 \\times 0.5 = 1.5\\) cm.\nPercentage error \\(= \\frac{1.5}{48} \\times 100\\% \\approx 3.1\\%\\). (D)"
+      },
+      {
+        id: "a1-en-30",
+        type: "Estimation and Numbers",
+        question: "If \\(k\\) is a real number, then \\(5k - \\frac{8 + ki}{i} =\\)\nA. \\(4k + 8i\\)\nB. \\(6k - 8i\\)\nC. \\(4k - 8i\\)\nD. \\(6k + 8i\\)",
+        answer: "A",
+        steps: "\\(\\frac{8 + ki}{i} = \\frac{8}{i} + k = -8i + k\\) (since \\(\\frac{1}{i} = -i\\)).\n\\(5k - (-8i + k) = 4k + 8i\\). (A)"
+      },
+      {
+        id: "a1-en-31",
+        type: "Estimation and Numbers",
+        question: "\\(0.0720499 =\\)\nA. 0.07205 (correct to 4 decimal places)\nB. 0.072 (correct to 3 decimal places)\nC. 0.0720 (correct to 5 decimal places)\nD. 0.0721 (correct to 3 significant figures)",
+        answer: "B",
+        steps: "3 d.p.: \\(0.072\\) ✓. 3 s.f.: \\(0.0720\\) (not 0.0721). 4 d.p.: \\(0.0720\\) (not 0.07205). 5 d.p.: \\(0.07205\\) (not 0.0720).\nSo only ‘0.072 (correct to 3 decimal places)’ is correct. (B)"
+      },
+      {
+        id: "a1-en-32",
+        type: "Estimation and Numbers",
+        question: "If \\(x\\) is a real number, then the real part of \\((x + 2i)(4 + i)\\) is\nA. \\(4x - 2\\)\nB. \\(4x + 2\\)\nC. \\(4x\\)\nD. \\(x - 2\\)",
+        answer: "A",
+        steps: "\\((x + 2i)(4 + i) = 4x + xi + 8i + 2i^{2} = (4x - 2) + (x + 8)i\\).\nThe real part is \\(4x - 2\\). (A)"
+      },
+      {
+        id: "a1-en-33",
+        type: "Estimation and Numbers",
+        question: "\\(0.0713624 =\\)\nA. 0.071363 (correct to 5 significant figures)\nB. 0.0714 (correct to 5 decimal places)\nC. 0.071 (correct to 3 significant figures)\nD. 0.07136 (correct to 4 significant figures)",
+        answer: "D",
+        steps: "3 s.f.: \\(0.0714\\) (not 0.071). 5 d.p.: \\(0.07136\\) (not 0.0714). 4 s.f.: \\(0.07136\\) ✓. 5 s.f.: \\(0.071362\\) (not 0.071363).\nSo only ‘0.07136 (correct to 4 significant figures)’ is correct. (D)"
+      },
+      {
+        id: "a1-en-34",
+        type: "Estimation and Numbers",
+        question: "The length of a piece of thin string is measured as 18 m correct to the nearest m. If the string is cut into n pieces such that the length of each piece is measured as 8 cm correct to the nearest cm, find the greatest possible value of n.\nA. 247\nB. 225\nC. 246\nD. 250",
+        answer: "C",
+        steps: "The greatest possible length of the string \\(= 18.5\\) m \\(= 1850\\) cm; the least possible length of a piece \\(= 7.5\\) cm.\n\\(n \\leq \\frac{1850}{7.5} = 246.67\\ldots\\), so the greatest possible integer value of \\(n\\) is \\(246\\). (C)"
+      },
+      {
+        id: "a1-en-35",
+        type: "Estimation and Numbers",
+        question: "\\(i^{3}(\\beta i + 4) =\\)\nA. \\(\\beta - 4i\\)\nB. \\(-\\beta - 4i\\)\nC. \\(\\beta + 4i\\)\nD. \\(-\\beta + 4i\\)",
+        answer: "A",
+        steps: "\\(i^{3} = -i\\), so \\(i^{3}(\\beta i + 4) = -i(\\beta i + 4) = -\\beta i^{2} - 4i\\)\n\\(= \\beta - 4i\\) (A)"
+      },
+      {
+        id: "a1-en-36",
+        type: "Estimation and Numbers",
+        question: "\\(0.0608639 =\\)\nA. 0.061 (correct to 4 decimal places)\nB. 0.0609 (correct to 3 significant figures)\nC. 0.06087 (correct to 5 decimal places)\nD. 0.0608 (correct to 4 significant figures)",
+        answer: "B",
+        steps: "3 s.f.: \\(0.0609\\) ✓. 4 d.p.: \\(0.0609\\) (not 0.061). 4 s.f.: \\(0.06086\\) (not 0.0608). 5 d.p.: \\(0.06086\\) (not 0.06087).\nSo only ‘0.0609 (correct to 3 significant figures)’ is correct. (B)"
+      },
+      {
+        id: "a1-en-37",
+        type: "Estimation and Numbers",
+        question: "The real part of \\(i + 3i^{2} + 5i^{3} + 7i^{4}\\) is\nA. \\(4\\)\nB. \\(10\\)\nC. \\(-4\\)\nD. \\(-10\\)",
+        answer: "A",
+        steps: "\\(i^{2} = -1\\), \\(i^{3} = -i\\), \\(i^{4} = 1\\).\n\\(i + 3(-1) + 5(-i) + 7(1) = (-3 + 7) + (i - 5i) = 4 - 4i\\), so the real part is \\(4\\). (A)"
+      },
+      // Estimation and Numbers (continued)
+      {
+        id: "a1-en-38",
+        type: "Estimation and Numbers",
+        question: "The width and the length of a thin rectangular metal sheet are measured as 6 cm and 9 cm correct to the nearest cm respectively. Let \\(x\\ \\text{cm}^{2}\\) be the actual area of the metal sheet. Find the range of values of \\(x\\).\nA. \\(46.75 < x \\leq 61.75\\)\nB. \\(46.75 \\leq x < 61.75\\)\nC. \\(53.5 \\leq x < 54.5\\)\nD. \\(53.5 < x \\leq 54.5\\)",
+        answer: "B",
+        steps: "The width is at least \\(5.5\\) cm and less than \\(6.5\\) cm; the length is at least \\(8.5\\) cm and less than \\(9.5\\) cm.\nLeast area \\(= 5.5 \\times 8.5 = 46.75\\) (attainable) and the area is less than \\(6.5 \\times 9.5 = 61.75\\) (not attainable).\nSo \\(46.75 \\leq x < 61.75\\). (B)"
+      },
+      {
+        id: "a1-en-39",
+        type: "Estimation and Numbers",
+        question: "If \\(\\beta\\) is a real number, then \\(\\frac{\\beta^{2} + 9}{\\beta - 3i} =\\)\nA. \\(3 - \\beta i\\)\nB. \\(\\beta + 3i\\)\nC. \\(3 + \\beta i\\)\nD. \\(\\beta - 3i\\)",
+        answer: "B",
+        steps: "\\(\\beta^{2} + 9 = (\\beta + 3i)(\\beta - 3i)\\), since \\((3i)^{2} = -9\\).\n\\(\\frac{\\beta^{2} + 9}{\\beta - 3i} = \\beta + 3i\\). (B)"
+      },
+      {
+        id: "a1-en-40",
+        type: "Estimation and Numbers",
+        question: "\\(0.0037246789 =\\)\nA. 0.00372468 (correct to 6 significant figures)\nB. 0.00373 (correct to 6 decimal places)\nC. 0.003724 (correct to 6 decimal places)\nD. 0.003725 (correct to 6 significant figures)",
+        answer: "A",
+        steps: "6 d.p.: \\(0.003725\\) (so 0.00373 and 0.003724 are not correct). 6 s.f.: the digits are 3, 7, 2, 4, 6, 7 followed by 8, so round up to \\(0.00372468\\).\nSo only ‘0.00372468 (correct to 6 significant figures)’ is correct. (A)"
+      },
+      {
+        id: "a1-en-41",
+        type: "Estimation and Numbers",
+        question: "There is a bag of rice. The weight of rice in the bag is measured as 8 kg correct to the nearest kg. If the rice is packed into n packets such that the weight of rice in each packet is measured as 20 g correct to the nearest g, find the greatest possible value of n.\nA. 425\nB. 435\nC. 400\nD. 436",
+        answer: "B",
+        steps: "The greatest possible weight of rice \\(= 8.5\\) kg \\(= 8500\\) g; the least possible weight of a packet \\(= 19.5\\) g.\n\\(n \\leq \\frac{8500}{19.5} = 435.9\\ldots\\), so the greatest possible integer value of \\(n\\) is \\(435\\). (B)"
+      },
+      {
+        id: "a1-en-42",
+        type: "Estimation and Numbers",
+        question: "Let \\(z = (a + 6)i^{9} + (a - 4)i^{10}\\), where \\(a\\) is a real number. If \\(z\\) is a real number, then \\(a =\\)\nA. \\(6\\)\nB. \\(4\\)\nC. \\(-6\\)\nD. \\(-4\\)",
+        answer: "C",
+        steps: "\\(i^{9} = i\\) and \\(i^{10} = -1\\), so \\(z = (a + 6)i - (a - 4) = -(a - 4) + (a + 6)i\\).\n\\(z\\) is real, so the imaginary part \\(a + 6 = 0\\) and \\(a = -6\\). (C)"
+      },
+      {
+        id: "a1-en-43",
+        type: "Estimation and Numbers",
+        question: "\\(0.0873407 =\\)\nA. 0.08735 (correct to 4 significant figures)\nB. 0.0873 (correct to 3 significant figures)\nC. 0.087 (correct to 4 decimal places)\nD. 0.08734 (correct to 5 significant figures)",
+        answer: "B",
+        steps: "3 s.f.: \\(0.0873\\) ✓. 4 d.p.: \\(0.0873\\) (not 0.087). 5 s.f.: \\(0.087341\\) (not 0.08734). 4 s.f.: \\(0.08734\\) (not 0.08735).\nSo only ‘0.0873 (correct to 3 significant figures)’ is correct. (B)"
+      },
+      {
+        id: "a1-en-44",
+        type: "Estimation and Numbers",
+        question: "Let \\(u = \\frac{5}{a + 2i}\\) and \\(v = \\frac{5}{a - 2i}\\), where \\(a\\) is a real number. Which of the following must be true?\nI. \\(uv\\) is a real number.\nII. The real part of \\(u\\) is equal to the real part of \\(v\\).\nIII. The imaginary part of \\(\\frac{1}{u}\\) is equal to the imaginary part of \\(\\frac{1}{v}\\).\nA. I only\nB. II only\nC. I and II only\nD. II and III only",
+        answer: "C",
+        steps: "\\(uv = \\frac{25}{(a + 2i)(a - 2i)} = \\frac{25}{a^{2} + 4}\\), a real number: I is true.\n\\(u = \\frac{5(a - 2i)}{a^{2} + 4}\\) and \\(v = \\frac{5(a + 2i)}{a^{2} + 4}\\) both have real part \\(\\frac{5a}{a^{2} + 4}\\): II is true.\n\\(\\frac{1}{u} = \\frac{a + 2i}{5}\\) has imaginary part \\(\\frac{2}{5}\\) but \\(\\frac{1}{v} = \\frac{a - 2i}{5}\\) has imaginary part \\(-\\frac{2}{5}\\): III is false.\nSo I and II only (C)"
+      },
+      {
+        id: "a1-en-45",
+        type: "Estimation and Numbers",
+        question: "\\(\\frac{1}{\\pi^{5}} =\\)\nA. 0.003268 (correct to 4 decimal places)\nB. 0.00327 (correct to 3 significant figures)\nC. 0.003268 (correct to 6 significant figures)\nD. 0.0033 (correct to 5 decimal places)",
+        answer: "B",
+        steps: "\\(\\frac{1}{\\pi^{5}} = 0.0032677\\ldots\\). 3 s.f.: \\(0.00327\\) ✓. 4 d.p.: \\(0.0033\\). 5 d.p.: \\(0.00327\\). 6 s.f.: \\(0.00326776\\).\nSo only ‘0.00327 (correct to 3 significant figures)’ is correct. (B)"
+      },
+      {
+        id: "a1-en-46",
+        type: "Estimation and Numbers",
+        question: "If \\(k\\) and \\(\\frac{10}{1 - 2i} + ki\\) are real numbers, then \\(k =\\)\nA. \\(4\\)\nB. \\(-4\\)\nC. \\(-2\\)\nD. \\(2\\)",
+        answer: "B",
+        steps: "\\(\\frac{10}{1 - 2i} = \\frac{10(1 + 2i)}{5} = 2 + 4i\\).\n\\(\\frac{10}{1 - 2i} + ki = 2 + (4 + k)i\\) is real, so \\(4 + k = 0\\) and \\(k = -4\\). (B)"
+      },
+      {
+        id: "a1-en-47",
+        type: "Estimation and Numbers",
+        question: "ABCDEFGH is an octagon obtained from a rectangle ABCD, with AB = 6 cm and BC = 9 cm, by cutting out a rectangular notch from the side AD: the notch has width GF = 3 cm and depth HG = EF = 2 cm, and AH = ED = 3 cm. All the measurements are correct to the nearest cm. Let x cm² be the actual area of the octagon. Find the range of values of x.\nA. 38 < x < 58\nB. 40 < x < 58\nC. 38 < x < 56\nD. 40 < x < 56",
+        answer: "A",
+        steps: "Area \\(= 9 \\times 6 - 3 \\times 2 = 48\\ \\text{cm}^{2}\\) using the measured values.\nGreatest area \\(< 9.5 \\times 6.5 - 2.5 \\times 1.5 = 61.75 - 3.75 = 58\\); least area \\(> 8.5 \\times 5.5 - 3.5 \\times 2.5 = 46.75 - 8.75 = 38\\).\nSo \\(38 < x < 58\\). (A)"
+      },
+      {
+        id: "a1-en-48",
+        type: "Estimation and Numbers",
+        question: "The real part of \\(\\frac{3i^{8} + 4i^{9} + 5i^{10} + 6i^{11} + 7i^{12}}{1 + i}\\) is\nA. \\(\\frac{3}{2}\\)\nB. \\(3\\)\nC. \\(-\\frac{3}{2}\\)\nD. \\(-\\frac{7}{2}\\)",
+        answer: "A",
+        steps: "\\(i^{8} = 1\\), \\(i^{9} = i\\), \\(i^{10} = -1\\), \\(i^{11} = -i\\), \\(i^{12} = 1\\). Numerator \\(= 3 + 4i - 5 - 6i + 7 = 5 - 2i\\).\n\\(\\frac{5 - 2i}{1 + i} = \\frac{(5 - 2i)(1 - i)}{2} = \\frac{3 - 7i}{2}\\), so the real part is \\(\\frac{3}{2}\\). (A)"
+      },
+      {
+        id: "a1-en-49",
+        type: "Estimation and Numbers",
+        question: "If \\(0.07868 \\leq x < 0.07874\\), which of the following is true?\nA. x = 0.078 (correct to 2 significant figures)\nB. x = 0.078 (correct to 3 decimal places)\nC. x = 0.0787 (correct to 3 significant figures)\nD. x = 0.0787 (correct to 5 decimal places)",
+        answer: "C",
+        steps: "\\(0.07868\\) and \\(0.07874\\) both round to \\(0.0787\\) (3 s.f.), and both round to \\(0.079\\) (3 d.p. and 2 s.f.).\nSo ‘x = 0.0787 (correct to 3 significant figures)’ is true, while \\(0.078\\) is wrong for both 3 d.p. and 2 s.f., and \\(0.0787\\) is not correct to 5 d.p. (the values give \\(0.07868\\) to \\(0.07874\\)). (C)"
+      },
+      {
+        id: "a1-en-50",
+        type: "Estimation and Numbers",
+        question: "If \\(a\\) is a real number, then the real part of \\(\\frac{3 + i^{7}}{a + 2i} - i^{6}\\) is\nA. \\(\\frac{3a - 2}{a^{2} + 4}\\)\nB. \\(\\frac{a^{2} + 3a + 2}{a^{2} - 4}\\)\nC. \\(\\frac{a^{2} + 3a + 2}{a^{2} + 4}\\)\nD. \\(\\frac{3a - 2}{a^{2} - 4}\\)",
+        answer: "C",
+        steps: "\\(i^{7} = -i\\) and \\(i^{6} = -1\\), so the expression is \\(\\frac{3 - i}{a + 2i} + 1\\).\n\\(\\frac{3 - i}{a + 2i} = \\frac{(3 - i)(a - 2i)}{a^{2} + 4} = \\frac{(3a - 2) - (a + 6)i}{a^{2} + 4}\\).\nReal part \\(= \\frac{3a - 2}{a^{2} + 4} + 1 = \\frac{a^{2} + 3a + 2}{a^{2} + 4}\\). (C)"
+      },
+      // Estimation and Numbers (continued)
+      {
+        id: "a1-en-51",
+        type: "Estimation and Numbers",
+        question: "Define \\(z_{1} = \\frac{3 + ki}{1 - i}\\) and \\(z_{2} = \\frac{k + 3i}{1 + 2i}\\), where \\(k\\) is a real number. If the imaginary part of \\(z_{1}\\) is equal to the imaginary part of \\(z_{2}\\), then \\(z_{1} - z_{2} =\\)\nA. \\(1\\)\nB. \\(0\\)\nC. \\(5\\)\nD. \\(-3\\)",
+        answer: "A",
+        steps: "\\(z_{1} = \\frac{(3 + ki)(1 + i)}{2} = \\frac{(3 - k) + (3 + k)i}{2}\\) and \\(z_{2} = \\frac{(k + 3i)(1 - 2i)}{5} = \\frac{(k + 6) + (3 - 2k)i}{5}\\).\nEqual imaginary parts: \\(\\frac{3 + k}{2} = \\frac{3 - 2k}{5}\\), so \\(15 + 5k = 6 - 4k\\) and \\(k = -1\\).\nThen \\(z_{1} = 2 + i\\) and \\(z_{2} = 1 + i\\), so \\(z_{1} - z_{2} = 1\\). (A)"
+      },
+      {
+        id: "a1-en-52",
+        type: "Estimation and Numbers",
+        question: "If \\(x = 3.58\\) (correct to 2 decimal places), find the range of values of \\(x\\).\nA. \\(3.57 \\leq x < 3.59\\)\nB. \\(3.57 < x \\leq 3.59\\)\nC. \\(3.575 < x \\leq 3.585\\)\nD. \\(3.575 \\leq x < 3.585\\)",
+        answer: "D",
+        steps: "Correct to 2 decimal places means the error is at most \\(0.005\\): the values from \\(3.575\\) (included) up to \\(3.585\\) (not included) round to \\(3.58\\).\nSo \\(3.575 \\leq x < 3.585\\). (D)"
+      },
+      {
+        id: "a1-en-53",
+        type: "Estimation and Numbers",
+        question: "Let \\(\\alpha\\) be a real number. Define \\(u = w + \\frac{1}{w}\\) and \\(v = w - \\frac{1}{w}\\), where \\(w = \\frac{\\alpha + 2i}{\\alpha - 2i}\\). Which of the following must be true?\nI. \\(v\\) is a real number.\nII. \\(u\\) is a real number.\nIII. The real part of \\(v\\) is equal to 0.\nA. I only\nB. I and II only\nC. II and III only\nD. I, II and III",
+        answer: "C",
+        steps: "\\(|w| = 1\\), so \\(\\frac{1}{w} = \\bar{w}\\) (the conjugate of \\(w\\)).\n\\(u = w + \\bar{w} = 2\\,\\text{Re}(w)\\) is real: II is true. \\(v = w - \\bar{w} = 2i\\,\\text{Im}(w)\\) has real part \\(0\\): III is true, but \\(v\\) is not real unless \\(\\text{Im}(w) = 0\\): I is false.\nSo II and III only (C)"
+      },
+      {
+        id: "a1-en-54",
+        type: "Estimation and Numbers",
+        question: "It is given that \\(x\\) is a real number. If \\(x\\) is rounded down to 3 significant figures, then the result is 5.27. Find the range of values of \\(x\\).\nA. \\(5.27 \\leq x < 5.28\\)\nB. \\(5.27 < x \\leq 5.275\\)\nC. \\(5.265 \\leq x < 5.275\\)\nD. \\(5.26 < x \\leq 5.27\\)",
+        answer: "A",
+        steps: "Rounding down to 3 significant figures gives \\(5.27\\) exactly when \\(5.27 \\leq x < 5.28\\). (A)"
+      },
+      {
+        id: "a1-en-55",
+        type: "Estimation and Numbers",
+        question: "Let \\(z = 3 + 4i^{6} - ki^{13} + 5i^{19} + 3ki^{20}\\), where \\(k\\) is a real number. If the real part and the imaginary part of \\(z\\) are equal, then the real part of \\(z\\) is\nA. \\(-4\\)\nB. \\(-1\\)\nC. \\(4\\)\nD. \\(8\\)",
+        answer: "A",
+        steps: "\\(i^{6} = -1\\), \\(i^{13} = i\\), \\(i^{19} = -i\\), \\(i^{20} = 1\\).\n\\(z = 3 - 4 - ki - 5i + 3k = (3k - 1) + (-k - 5)i\\).\n\\(3k - 1 = -k - 5\\) gives \\(k = -1\\), so the real part \\(= 3(-1) - 1 = -4\\). (A)"
+      },
+      {
+        id: "a1-en-56",
+        type: "Estimation and Numbers",
+        question: "If \\(y = 0.462\\) (correct to 3 significant figures), find the range of values of \\(y\\).\nA. \\(0.461 \\leq y < 0.463\\)\nB. \\(0.4615 < y \\leq 0.4625\\)\nC. \\(0.4615 \\leq y < 0.4625\\)\nD. \\(0.461 < y \\leq 0.463\\)",
+        answer: "C",
+        steps: "Correct to 3 significant figures the error is at most \\(0.0005\\): the values from \\(0.4615\\) (included) up to \\(0.4625\\) (not included) round to \\(0.462\\).\nSo \\(0.4615 \\leq y < 0.4625\\). (C)"
+      },
+      {
+        id: "a1-en-57",
+        type: "Estimation and Numbers",
+        question: "If \\(k\\) is a real number, then the real part of \\(\\frac{2i}{k - i} + \\frac{3}{k + i}\\) is\nA. \\(\\frac{3k - 2}{k^{2} + 1}\\)\nB. \\(\\frac{3k + 2}{k^{2} - 1}\\)\nC. \\(\\frac{3k - 2}{k^{2} - 1}\\)\nD. \\(\\frac{3k + 2}{k^{2} + 1}\\)",
+        answer: "A",
+        steps: "\\(\\frac{2i}{k - i} = \\frac{2i(k + i)}{k^{2} + 1} = \\frac{-2 + 2ki}{k^{2} + 1}\\) and \\(\\frac{3}{k + i} = \\frac{3(k - i)}{k^{2} + 1} = \\frac{3k - 3i}{k^{2} + 1}\\).\nThe real part of the sum is \\(\\frac{-2 + 3k}{k^{2} + 1} = \\frac{3k - 2}{k^{2} + 1}\\). (A)"
+      },
+      // Estimation and Numbers (continued)
+      {
+        id: "a1-en-58",
+        type: "Estimation and Numbers",
+        question: "\\(\\sqrt{555} =\\)\nA. 24 (correct to the nearest integer).\nB. 23.5583 (correct to 4 decimal places).\nC. 23.558 (correct to 3 significant figures).\nD. 23.55 (correct to 2 decimal places).",
+        answer: "A",
+        steps: "\\(\\sqrt{555} = 23.558437\\ldots\\)\nNearest integer: \\(24\\) ✓. 2 d.p.: \\(23.56\\) (not 23.55). 3 s.f.: \\(23.6\\) (not 23.558). 4 d.p.: \\(23.5584\\) (not 23.5583).\nSo only ‘24 (correct to the nearest integer)’ is correct. (A)"
+      },
+      {
+        id: "a1-en-59",
+        type: "Estimation and Numbers",
+        question: "Let \\(z = (a - 6)i + \\frac{(a + 1)i}{2 + i}\\). If \\(a\\) and \\(z\\) are real numbers, then \\(a - z =\\)\nA. \\(5\\)\nB. \\(3\\)\nC. \\(2\\)\nD. \\(4\\)",
+        answer: "B",
+        steps: "\\(\\frac{(a + 1)i}{2 + i} = \\frac{(a + 1)i(2 - i)}{5} = \\frac{(a + 1)(1 + 2i)}{5}\\).\n\\(z = \\frac{a + 1}{5} + \\left[(a - 6) + \\frac{2(a + 1)}{5}\\right]i\\). Since \\(z\\) is real, \\((a - 6) + \\frac{2(a + 1)}{5} = 0\\), i.e. \\(7a = 28\\) and \\(a = 4\\).\nThen \\(z = \\frac{4 + 1}{5} = 1\\), so \\(a - z = 4 - 1 = 3\\). (B)"
+      },
+      {
+        id: "a1-en-60",
+        type: "Estimation and Numbers",
+        question: "If \\(x = 8.25\\) (correct to 2 decimal places), find the range of values of \\(x\\).\nA. \\(8.24 < x \\leq 8.26\\)\nB. \\(8.24 \\leq x < 8.26\\)\nC. \\(8.245 \\leq x < 8.255\\)\nD. \\(8.245 < x \\leq 8.255\\)",
+        answer: "C",
+        steps: "Correct to 2 decimal places: the values from \\(8.245\\) (included) up to \\(8.255\\) (not included) round to \\(8.25\\).\nSo \\(8.245 \\leq x < 8.255\\). (C)"
+      },
+      {
+        id: "a1-en-61",
+        type: "Estimation and Numbers",
+        question: "\\(i^{13} + i^{14} + i^{15} + \\ldots + i^{1002} =\\)\nA. \\(1 + i\\)\nB. \\(1 - i\\)\nC. \\(-1 + i\\)\nD. \\(-1 - i\\)",
+        answer: "C",
+        steps: "Any 4 consecutive powers of \\(i\\) add up to 0: \\(i^{n} + i^{n + 1} + i^{n + 2} + i^{n + 3} = 0\\).\nThere are \\(1002 - 13 + 1 = 990\\) terms \\(= 4 \\times 247 + 2\\), so the first 988 terms cancel (up to \\(i^{1000}\\)).\nThe remaining terms are \\(i^{1001} + i^{1002} = i + (-1) = -1 + i\\). (C)"
+      },
+      {
+        id: "a1-en-62",
+        type: "Estimation and Numbers",
+        question: "\\(410.082763 =\\)\nA. 410.0827 (correct to 4 decimal places).\nB. 410.08276 (correct to 4 decimal places).\nC. 410.1 (correct to 4 significant figures).\nD. 410.083 (correct to 4 significant figures).",
+        answer: "C",
+        steps: "4 s.f.: \\(410.1\\) ✓ (not 410.083). 4 d.p.: \\(410.0828\\) (not 410.0827, and 410.08276 has 5 decimal places).\nSo only ‘410.1 (correct to 4 significant figures)’ is correct. (C)"
+      },
+      {
+        id: "a1-en-63",
+        type: "Estimation and Numbers",
+        question: "If \\(\\beta\\) and \\(\\frac{i^{4} + 3i^{3} + 2i^{2} + 5i}{\\beta i - 2}\\) are real numbers, then \\(\\beta =\\)\nA. \\(4\\)\nB. \\(-4\\)\nC. \\(-2\\)\nD. \\(2\\)",
+        answer: "A",
+        steps: "\\(i^{4} + 3i^{3} + 2i^{2} + 5i = 1 - 3i - 2 + 5i = -1 + 2i\\).\n\\(\\frac{-1 + 2i}{\\beta i - 2} = \\frac{(-1 + 2i)(-2 - \\beta i)}{4 + \\beta^{2}} = \\frac{(2 + 2\\beta) + (\\beta - 4)i}{4 + \\beta^{2}}\\).\nThe expression is real, so \\(\\beta - 4 = 0\\) and \\(\\beta = 4\\). (A)"
       }
     ]
   },
